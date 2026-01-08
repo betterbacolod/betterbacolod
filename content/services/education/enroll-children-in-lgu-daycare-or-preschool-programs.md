@@ -1,78 +1,85 @@
 # Enroll Children in LGU Daycare or Preschool Programs — Bacolod City
 
-The Bacolod City Government, through the **City Social Welfare and Development Office (CSWDO)** and barangays, operates **daycare centers** and supports **public preschool education**.
+The Bacolod City Government operates daycare centers through barangays and supports public preschool education.
 
 ---
 
-## 1) LGU Daycare Programs
+## LGU Daycare Programs
 
-**What’s offered**
+**What's offered:**
 
-- Early childhood care and development for children aged **3–4 years old**.
-- Daily activities on socialization, basic learning skills, play-based lessons, and health/nutrition monitoring.
-- Free or minimal-cost supplementary feeding (depending on barangay program).
+- Early childhood care for children aged 3–4 years old
+- Play-based learning and socialization activities
+- Health and nutrition monitoring
+- Supplementary feeding programs
 
-**Who can join**
+**Who can join:**
 
-- Children aged **3–4 years old** who are residents of the barangay.
-- Priority is often given to **indigent families** or those referred by barangay officials.
+- Children aged 3–4 years old
+- Residents of the barangay
+- Priority given to indigent families
 
-**Requirements (typical)**
+**Requirements:**
 
-- Child’s **birth certificate** (PSA copy or local civil registrar copy).
-- **Barangay clearance** or proof of residency.
-- 1×1 ID photo of the child (for records).
-- Filled-out **Daycare Enrollment Form** (available at the center).
+- Child's PSA Birth Certificate
+- Barangay Certificate (proof of residency)
+- 1x1 ID photo of the child
+- Daycare Enrollment Form (from the center)
 
-**How to enroll**
+**How to enroll:**
 
-1. Visit your **Barangay Daycare Center** or **Barangay Hall** to ask for the enrollment schedule.
-2. Submit required documents and fill out the enrollment form.
-3. Attend the orientation session for parents/guardians (usually held before classes start).
+1. Visit your Barangay Daycare Center or Barangay Hall
+2. Ask for enrollment schedule
+3. Submit required documents
+4. Attend parent orientation
 
-**Cost:** Free (LGU-funded), though some barangays may request voluntary contributions for class materials.
-
----
-
-## 2) Public Preschool (Kindergarten)
-
-**What’s offered**
-
-- Department of Education (DepEd) **Kindergarten Program** for **5-year-old children**, implemented in public elementary schools.
-- Focus on school readiness: literacy, numeracy, and social skills.
-
-**Who can join**
-
-- Children aged **5 years old** by the opening of the school year.
-- Priority for residents within the school’s catchment area.
-
-**Requirements (typical DepEd)**
-
-- Child’s **birth certificate** (PSA).
-- Proof of residency (Barangay Certificate).
-- 2×2 ID photo of the child.
-- Accomplished **DepEd Kindergarten Registration Form** (given at school).
-
-**How to enroll**
-
-1. Proceed to the **nearest public elementary school** during the announced **DepEd early registration** or regular enrollment period.
-2. Submit required documents to the school registrar.
-3. Attend orientation for parents and guardians.
-
-**Cost:** Free (government-funded).
+**Cost:** Free (LGU-funded)
 
 ---
 
-## Contact & Updates
+## Public Kindergarten (DepEd)
 
-- **Barangay Daycare Centers** — Enrollment schedules and requirements are usually announced by barangay officials.
-- **City Social Welfare and Development Office (CSWDO)** — Oversees daycare programs.
-- **DepEd Bacolod City Division** — Manages public kindergarten enrollment.
+**What's offered:**
+
+- Kindergarten program for 5-year-old children
+- School readiness: literacy, numeracy, social skills
+- Implemented in public elementary schools
+
+**Who can join:**
+
+- Children aged 5 years old by school opening
+- Residents within school catchment area
+
+**Requirements:**
+
+- Child's PSA Birth Certificate
+- Barangay Certificate
+- 2x2 ID photo
+- DepEd Kindergarten Registration Form
+
+**How to enroll:**
+
+1. Go to nearest public elementary school during DepEd enrollment period
+2. Submit required documents to school registrar
+3. Attend parent orientation
+
+**Cost:** Free (government-funded)
 
 ---
 
-### Quick Tips
+## Contact Information
 
-- Enroll early — daycare and preschool slots may be limited per barangay/school.
-- Keep copies of your child’s **birth certificate** and **barangay certificate** ready.
-- Attend parent orientations to understand your role in supporting your child’s early education.
+- **City Social Welfare and Development Office (CSWDO)**
+- **Location**: Bacolod City Government Center
+- **Phone**: (034) 434-9122
+
+- **DepEd Bacolod City Division**
+- **Website**: [deped-bacolod.com](https://deped-bacolod.com)
+
+---
+
+## Tips
+
+- Enroll early — slots may be limited
+- Keep copies of birth certificate and barangay certificate ready
+- Attend parent orientations

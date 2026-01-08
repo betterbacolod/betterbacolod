@@ -1,116 +1,82 @@
 # Access Educational Support Programs from the LGU — Bacolod City
 
-Below are **city-led** or **LGU-facilitated** programs you can use for study support: free school supplies, e-library access, student employment (SPES) via PESO, scholarships, and cash/education assistance. Links point to official pages or recent announcements.
+Bacolod City offers various educational support programs for students.
 
 ---
 
-## 1) Free School Supplies (SEF-funded)
+## PESO Scholarship Program
 
-**What it is**
+The city's main scholarship program through the Public Employment Services Office.
 
-- The City provides **free school supplies** to public school learners using the **Special Education Fund (SEF)**, announced each school year with distribution schedules.
+- **814+ scholars** currently enrolled
+- **₱3,000 allowance** per distribution
+- Regular payouts throughout the school year
 
-**How to access**
-
-1. Watch your school’s advisory and the **DepEd Bacolod** Division memos for **distribution schedules**.
-2. Learners (with parent/guardian) claim supplies at the school on the announced date.
-
-**Links**
-
-- DepEd Bacolod memo: **Distribution of School Supplies (SEF)** (2025 schedule) — depedlapulapu.net.ph
-- News: **City to distribute free school supplies** — SunStar Cebu (June 7, 2025)
-- City info posts often echo the distribution dates via DepEd/City channels.
+**How to apply:** Visit PESO Bacolod or watch for announcements on their Facebook page.
 
 ---
 
-## 2) City e-Library (Free Study Space, Wi-Fi, Computers & Printing)
+## Special Program for Employment of Students (SPES)
 
-**What it is**
+Work opportunities for students during school breaks.
 
-- A **government-run e-Library** offering **free internet, computer use, and printing** for students; open **daily 8:00 a.m.–12:00 midnight** at **Hoops Dome, Brgy. Gun-ob**.
+**What it is:**
 
-**How to access**
+- Part-time work for students aged 15–30
+- Earn while gaining work experience
+- Implemented through PESO with DOLE
 
-1. Go to the **Bacolod City e-Library (Hoops Dome)** during operating hours.
-2. Sign the logbook; follow usage limits (to give everyone a turn).
+**Who can join:**
 
-**Links**
+- Students from low-income families
+- Out-of-school youth (OSY)
 
-- SunStar: **E-Library reopens; open daily 8 a.m.–12 midnight** (July 26, 2025)
-- The POST: **City library reopens, free digital access & printing** (July 28, 2025)
-- Background: **City launched first gov’t e-Library** (2019) — Cebu Daily News
+**How to apply:**
 
----
-
-## 3) Student Employment (SPES) via PESO Bacolod
-
-**What it is**
-
-- The **Special Program for the Employment of Students (SPES)** lets poor but deserving **students/OSYs (15–30)** work during breaks to earn and gain experience.
-- Implemented locally through the **Public Employment Service Office (PESO)** with DOLE.
-
-**How to access**
-
-1. Follow **PESO Bacolod City** on Facebook for **SPES application windows** and job fair advisories.
-2. Prepare IDs, school docs, and income/indigency proofs per announcement.
-3. Submit online or at the PESO office; attend orientation when shortlisted.
-
-**Links**
-
-- **PESO Bacolod City** Facebook page (official announcements)
-- DepEd/BLSS-YFD: **SPES 2025 guidelines & timelines**
-- City press: **PESO career fair / youth employment events** — City Information Office
+1. Follow PESO Bacolod on Facebook for SPES announcements
+2. Prepare school documents and income proof
+3. Submit application during announced period
+4. Attend orientation if selected
 
 ---
 
-## 4) LGU-linked Scholarships & Incentives
+## Educational Assistance (DSWD-AICS)
 
-**What it is**
+Cash assistance for students coordinated with DSWD.
 
-- The City (and Congressional office) **periodically opens scholarship calls** or **educational incentives** for local students, separate from school-based grants.
+**How to access:**
 
-**How to access**
-
-1. Monitor the **Bacolod City Government / City Information Office** and the **Office of the Mayor / Congresswoman** for official **calls**.
-2. Prepare residency and academic documents; submit by deadline; attend screening/orientation.
-
-**Links (examples & history)**
-
-- News: **Bacolod City offers college scholarship to poor residents** — The Freeman/Philstar (program history)
-- Sample: **Cindi “Skwela” Scholarship** highlights via official pages (video updates)
-- Also check school-based options in-city (e.g., **LCIC scholarships**, **UC scholarships**) which can complement LGU aid.
+1. Watch announcements from DSWD Region 6 and City Information Office
+2. Bring student ID and enrollment proof on payout date
+3. Follow requirements per announcement
 
 ---
 
-## 5) Educational / Cash Assistance (LGU-facilitated with DSWD)
+## Free School Supplies
 
-**What it is**
+The city distributes school supplies to public school students using the Special Education Fund (SEF).
 
-- **Educational assistance pay-outs** (e.g., AICS) are nationally run by DSWD but are often **coordinated locally** with the **City** for venue and beneficiary management.
+**How to access:**
 
-**How to access**
-
-1. Watch announcements from **DSWD-7** and the **City Information Office** for **Bacolod payout schedules**.
-2. Bring student ID, enrollment proof, and required forms on your assigned date.
-
-**Links (context)**
-
-- SunStar Cebu: **Education assistance payout in Bacolod** (local coverage)
-- Cebu Daily News: **DSWD-7 educational assistance** (program overview & amounts)
+1. Watch DepEd Bacolod announcements for distribution schedules
+2. Claim supplies at your school on announced date
 
 ---
 
-## Quick Directory
+## Contact Information
 
-- **City Information Office (Bacolod City)** — city-wide program announcements
-- **PESO Bacolod City** — SPES, job fairs, recruitment & youth work programs
-- **DepEd Bacolod Division** — school memos (SEF supplies, schedules)
-- **Bacolod City e-Library (Hoops Dome, Gun-ob)** — free study space & digital access
+- **PESO Bacolod**
+- **Location**: Bacolod City Government Center
+- **Phone**: (034) 434-9122
+- **Facebook**: PESO Bacolod City
+
+- **City Social Welfare and Development Office (CSWDO)**
+- **Location**: Bacolod City Government Center
 
 ---
 
-## Tips to Maximize Support
+## Tips
 
-- **Stack benefits** where allowed: e.g., SEF school supplies **+** SPES stipend **+** school-based scholarship.
-- Keep a folder with **PSA Birth Cert**, **Barangay Residency**, **School ID**, **Report Cards/COE**, and **2x2 photos** ready.
-- Turn on notifications for **PESO** and **City Information** pages so you don’t miss application windows.
+- Follow PESO Bacolod on Facebook for announcements
+- Keep documents ready: birth certificate, barangay certificate, school ID, report cards
+- Apply to multiple programs where allowed

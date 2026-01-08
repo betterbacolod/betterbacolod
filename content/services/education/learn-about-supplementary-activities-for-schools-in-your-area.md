@@ -1,86 +1,76 @@
-# Learn About Supplementary Activities for Schools in Your Area — Bacolod City
+# Learn About Supplementary Activities for Schools — Bacolod City
 
-This guide shows where to find **clubs, student organizations, competitions, service groups, and enrichment programs** available to learners in Bacolod City.
-
----
-
-## Where to Look First (Local)
-
-1. **Your school’s official page or FB** — most clubs post tryout/enlistment dates there.
-2. **DepEd Bacolod City Division** — division-wide contests, trainings, and circulars:
-   - Website: https://depedlapulapu.net.ph/
-   - FB page: https://www.facebook.com/DepEDLLC/
-3. **City facilities** — the **Bacolod City e-Library (Hoops Dome, Gun-ob)** runs study support and computer/printing access (open daily 8:00 a.m.–12:00 midnight):
+Find clubs, student organizations, competitions, and enrichment programs for students in Bacolod City.
 
 ---
 
-## Core Student Organizations (DepEd-recognized)
+## Where to Look
 
-| Organization                                              | What it does                                                                        | Learn more                                                                                                                         |
-| --------------------------------------------------------- | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| **Supreme Pupil/Student Government (SPG/SSG)**            | Student leadership, school/community projects, assemblies, advocacy campaigns       | DepEd policy brief (PDF): https://www.deped.gov.ph/wp-content/uploads/2014/12/DO_s2014_47.pdf                                      |
-| **YES-O (Youth for Environment in Schools Organization)** | Environmental projects: clean-ups, waste management, tree-planting, 4 o’clock habit | Overview: https://www.deped.gov.ph/2003/09/01/do-72-s-2003-establishment-of-the-youth-for-environment-in-schools-yes-organization/ |
-| **Campus Journalism (School Papers)**                     | Writing, editing, layout, radio/TV script, participation in press conferences       | Start with your English/Filipino department; division circulars are posted on DepEd Bacolod site/FB                                |
+1. **Your school's official page or Facebook** — clubs post tryout dates there
+2. **DepEd Bacolod City Division** — division-wide contests and announcements
+3. **Barangay youth programs** — SK (Sangguniang Kabataan) activities
 
 ---
 
-## Service & Skills Organizations (Often School-Based Chapters)
+## Student Organizations (DepEd-recognized)
 
-| Organization                             | Typical activities                                         | Learn more                               |
-| ---------------------------------------- | ---------------------------------------------------------- | ---------------------------------------- |
-| **Red Cross Youth**                      | First aid basics, disaster preparedness, volunteer service | https://redcross.org.ph/red-cross-youth/ |
-| **Boy Scouts of the Philippines (BSP)**  | Scouting skills, leadership camps, community service       | National site: https://scouts.gov.ph/    |
-| **Girl Scouts of the Philippines (GSP)** | Leadership, life skills, community projects, camping       | https://girlscouts.org.ph/               |
-
-> Ask your school for **recognition and membership schedules** if you want to start or reactivate a chapter.
+| Organization                         | What it does                                     |
+| ------------------------------------ | ------------------------------------------------ |
+| **Supreme Student Government (SSG)** | Student leadership, school projects, advocacy    |
+| **YES-O**                            | Environmental projects, clean-ups, tree planting |
+| **Campus Journalism**                | School paper, writing, press conferences         |
 
 ---
 
-## Academic & Interest Clubs (examples you’ll commonly find)
+## Service Organizations
 
-- **STEM/Math/Science clubs** — science fairs, investigatory projects, robotics/ICT showcases
-- **Araling Panlipunan & Social Science clubs** — quiz bowls, heritage walks, civic advocacy
-- **MAPEH / Arts, Music, Dance & Theater** — talent showcases, chorale, dance troupe, theater guild
-- **TLE/ICT clubs** — coding basics, multimedia, entrepreneurship pop-ups
-- **Sports teams** — tryouts announced by the school’s MAPEH/sports coordinator (division meets posted by DepEd)
-
-> Tip: Most schools post **club enlistment** in the first month of classes and **tryout notices** before division meets. Keep an eye on your school’s channels.
+| Organization                       | Activities                                          |
+| ---------------------------------- | --------------------------------------------------- |
+| **Red Cross Youth**                | First aid, disaster preparedness, volunteer service |
+| **Boy Scouts of the Philippines**  | Scouting skills, leadership camps                   |
+| **Girl Scouts of the Philippines** | Leadership, life skills, community projects         |
 
 ---
 
-## Enrichment & Alternative Pathways
+## Academic & Interest Clubs
 
-- **ALS (Alternative Learning System)** — if you’re out-of-school youth or need flexible learning.
-  - DepEd Bacolod Division contact page lists ALS focal persons: https://depedlapulapu.net.ph/contact-us/
-- **City e-Library Programs** — occasional **digital skills** and study support activities (ask staff at Hoops Dome).
-- **Youth & Environment / Disaster Readiness** — often led by YES-O, RCY, and school DRRM coordinators.
+Common clubs found in Bacolod schools:
 
----
-
-## How to Join (Quick Steps)
-
-1. **Scan your school’s bulletin/FB** for club fair dates, sign-up links, or adviser contacts.
-2. **Prepare simple requirements** (school ID, parent consent form if needed).
-3. **Attend the orientation/tryouts** and take note of meeting schedules.
-4. **Commit to service hours or outputs** (e.g., events, training, competitions).
-5. **Track division-level announcements** via DepEd Bacolod for contests and training invitations.
+- **STEM/Math/Science clubs** — science fairs, robotics
+- **Arts, Music, Dance & Theater** — performances, chorale, dance troupe
+- **Sports teams** — tryouts announced by school sports coordinator
+- **TLE/ICT clubs** — coding, multimedia, entrepreneurship
 
 ---
 
-## Parent/Guardian Pointers
+## How to Join
 
-- Ask advisers about **safety protocols**, **meeting times**, and **fees (if any)**. Many activities are free or school-supported.
-- Balance: set a weekly schedule so academics and extracurriculars both thrive.
-- Encourage roles that build **leadership and documentation** (e.g., secretary, treasurer, logistics head).
+1. Check your school's bulletin or Facebook for club fair dates
+2. Prepare requirements (school ID, parent consent if needed)
+3. Attend orientation or tryouts
+4. Commit to meeting schedules and activities
 
 ---
 
-### Quick Links Recap
+## Enrichment Programs
 
-- DepEd Bacolod Division — https://depedlapulapu.net.ph/
-- DepEd Bacolod FB — https://www.facebook.com/DepEDLLC/
-- YES-O overview — https://www.deped.gov.ph/2003/09/01/do-72-s-2003-establishment-of-the-youth-for-environment-in-schools-yes-organization/
-- SPG/SSG policy (PDF) — https://www.deped.gov.ph/wp-content/uploads/2014/12/DO_s2014_47.pdf
-- Red Cross Youth — https://redcross.org.ph/red-cross-youth/
-- Boy Scouts — https://scouts.gov.ph/
-- Girl Scouts — https://girlscouts.org.ph/
+- **Alternative Learning System (ALS)** — for out-of-school youth needing flexible learning
+- **SK Youth Programs** — activities organized by Sangguniang Kabataan in your barangay
+- **Pasidungog Awards** — city recognition for student athletes and academic achievers
+
+---
+
+## Contact Information
+
+- **DepEd Bacolod City Division**
+- **Website**: [deped-bacolod.com](https://deped-bacolod.com)
+
+- **Your Barangay SK Office** — for local youth programs
+
+---
+
+## Tips for Parents
+
+- Ask advisers about safety protocols and meeting times
+- Balance academics and extracurriculars
+- Encourage leadership roles (secretary, treasurer, etc.)
