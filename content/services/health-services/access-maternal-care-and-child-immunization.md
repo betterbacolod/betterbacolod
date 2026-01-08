@@ -53,3 +53,7 @@ Bacolod City provides **free maternal health services** and **child immunization
 - **Location**: BBB Street, Bacolod City, 6100 Negros Occidental
 - **Hours**: Mon–Fri, 8 AM–5 PM
 - **Website**: [bacolodcity.gov.ph](https://bacolodcity.gov.ph)
+
+---
+
+**Note:** Maternal and child health programs follow Department of Health (DOH) guidelines. For more information, visit [doh.gov.ph](https://doh.gov.ph)

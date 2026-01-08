@@ -48,3 +48,7 @@ The Bacolod City Government offers free **check-ups, medicines, and vaccines** t
 - **Phone**: (034) 434-9122
 - **Location**: BBB Street, Bacolod City, 6100 Negros Occidental
 - **Hours**: Mon–Fri, 8 AM–5 PM
+
+---
+
+**Note:** Immunization programs follow the Department of Health (DOH) Expanded Program on Immunization (EPI) guidelines. For more information, visit [doh.gov.ph](https://doh.gov.ph)
