@@ -104,13 +104,7 @@ export default function Document({
   }, [documentSlug]);
 
   if (loading) {
-    return (
-      <Section className="p-3 mb-12">
-        <div className="flex items-center justify-center py-12">
-          <div className="text-gray-600">Loading document...</div>
-        </div>
-      </Section>
-    );
+    return <div className="min-h-screen bg-white" />;
   }
 
   if (error) {

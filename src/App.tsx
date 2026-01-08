@@ -14,13 +14,15 @@ function App() {
         <div className="min-h-screen flex flex-col">
           <Navbar />
           <ScrollToTop />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/services/:category" element={<Services />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/:lang/:documentSlug" element={<Document />} />
-            <Route path="/:documentSlug" element={<Document />} />
-          </Routes>
+          <div className="flex-grow flex flex-col">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/services/:category" element={<Services />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/:lang/:documentSlug" element={<Document />} />
+              <Route path="/:documentSlug" element={<Document />} />
+            </Routes>
+          </div>
           <Footer />
         </div>
       </NuqsAdapter>
