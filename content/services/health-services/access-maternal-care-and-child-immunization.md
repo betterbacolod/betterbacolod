@@ -50,10 +50,20 @@ Bacolod City provides **free maternal health services** and **child immunization
 
 - **City Health Office (CHO)**
 - **Phone**: (034) 434-9122
-- **Location**: BBB Street, Bacolod City, 6100 Negros Occidental
+- **Email**: cho@bacolodcity.gov.ph
+- **Location**: Bacolod City Government Center, Circumferential Rd, Brgy. Villamonte, Bacolod City, 6100 Negros Occidental
 - **Hours**: Mon–Fri, 8 AM–5 PM
 - **Website**: [bacolodcity.gov.ph](https://bacolodcity.gov.ph)
+- **Facebook**: [Bacolod City Comprehensive Health Program](https://www.facebook.com/bacchp2022)
 
 ---
 
-**Note:** Maternal and child health programs follow Department of Health (DOH) guidelines. For more information, visit [doh.gov.ph](https://doh.gov.ph)
+**Note:** Maternal and child health programs follow Department of Health (DOH) guidelines.
+
+---
+
+**Sources:**
+
+- [Bacolod City Comprehensive Health Program](https://bacolodcity.gov.ph/bacolod-city-comprehensive-health-program/) — Jan 8, 2026
+- [Bacolod City Contact Information](https://bacolodcity.gov.ph/contact-us/) — Jan 8, 2026
+- **FB:** [Bacolod City Comprehensive Health Program](https://www.facebook.com/bacchp2022) (Verified)

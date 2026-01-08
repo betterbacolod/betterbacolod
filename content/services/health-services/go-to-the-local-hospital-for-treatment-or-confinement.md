@@ -50,5 +50,17 @@ Bacolod City has several private hospitals for more specialized care. Contact th
 ## Contact Information
 
 - **City Health Office**: (034) 434-9122
+- **Email**: cho@bacolodcity.gov.ph
 - **Emergency Hotline**: Check [bacolodcity.gov.ph/hotlines](https://bacolodcity.gov.ph/hotlines/)
-- **Main Office**: BBB Street, Bacolod City, 6100 Negros Occidental
+- **Main Office**: Bacolod City Government Center, Circumferential Rd, Brgy. Villamonte, Bacolod City, 6100 Negros Occidental
+- **Website**: [bacolodcity.gov.ph](https://bacolodcity.gov.ph)
+- **Facebook**: [Bacolod City Comprehensive Health Program](https://www.facebook.com/bacchp2022)
+
+---
+
+**Sources:**
+
+- [Bacolod City Comprehensive Health Program](https://bacolodcity.gov.ph/bacolod-city-comprehensive-health-program/) — Jan 8, 2026
+- [Bacolod City Contact Information](https://bacolodcity.gov.ph/contact-us/) — Jan 8, 2026
+- [Bacolod City Hotlines](https://bacolodcity.gov.ph/hotlines/) — Jan 8, 2026
+- **FB:** [Bacolod City Comprehensive Health Program](https://www.facebook.com/bacchp2022) (Verified)
