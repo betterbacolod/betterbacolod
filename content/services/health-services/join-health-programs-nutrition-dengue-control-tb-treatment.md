@@ -1,4 +1,4 @@
-# Join Health Programs — Lapu-Lapu City (Nutrition, Dengue Control, TB Treatment)
+# Join Health Programs — Bacolod City (Nutrition, Dengue Control, TB Treatment)
 
 Below are city-led and national programs you can join through your **Barangay Health Center** and the **City Health Office (CHO)**.
 
@@ -53,7 +53,7 @@ Below are city-led and national programs you can join through your **Barangay He
 
 **Where**
 
-- Lapu-Lapu City Health Office (DOTS facility) and affiliated barangay health centers.
+- Bacolod City Health Office (DOTS facility) and affiliated barangay health centers.
 
 **How to join**
 
@@ -68,7 +68,7 @@ Below are city-led and national programs you can join through your **Barangay He
 ## Contact & Updates
 
 - **Barangay Health Centers** — First point of contact for nutrition, dengue, and TB programs.
-- **Lapu-Lapu City Health Office (CHO)** — Main office for program schedules and services.
+- **Bacolod City Health Office (CHO)** — Main office for program schedules and services.
 - **City Information Office** — Posts updates on city-wide campaigns and health events.
 
 ---

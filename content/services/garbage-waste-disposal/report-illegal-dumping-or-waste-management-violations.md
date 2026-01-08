@@ -1,6 +1,6 @@
-# Report Illegal Dumping & Waste Management Violations — Lapu-Lapu City
+# Report Illegal Dumping & Waste Management Violations — Bacolod City
 
-Illegal dumping, open burning, and improper waste practices are violations of **Republic Act 9003 (Ecological Solid Waste Management Act)** and city ordinances. Residents are encouraged to report offenders to help keep Lapu-Lapu City clean and safe.
+Illegal dumping, open burning, and improper waste practices are violations of **Republic Act 9003 (Ecological Solid Waste Management Act)** and city ordinances. Residents are encouraged to report offenders to help keep Bacolod City clean and safe.
 
 ---
 
@@ -26,7 +26,7 @@ Illegal dumping, open burning, and improper waste practices are violations of **
 2. **City Environment and Natural Resources Office (CENRO)**
    - If the violation is large-scale, recurring, or unaddressed by the barangay, contact **CENRO** at City Hall.
    - Phone: (032) 340-0004 (City Hall trunkline, ask for CENRO)
-   - Updates and announcements: [Lapu-Lapu City Government Facebook Page](https://www.facebook.com/lapulapucitygovernment)
+   - Updates and announcements: [Bacolod City Government Facebook Page](https://www.facebook.com/lapulapucitygovernment)
 
 3. **Other Hotlines**
    - **City Information Office (CIO):** (032) 340-1615 (for reports and follow-up).
@@ -62,4 +62,4 @@ Illegal dumping, open burning, and improper waste practices are violations of **
 
 ### Key Reminder
 
-✅ Reporting waste violations is a **civic duty**. By promptly alerting your barangay or CENRO, you help protect your community’s health, prevent flooding, and keep Lapu-Lapu City sustainable.
+✅ Reporting waste violations is a **civic duty**. By promptly alerting your barangay or CENRO, you help protect your community’s health, prevent flooding, and keep Bacolod City sustainable.

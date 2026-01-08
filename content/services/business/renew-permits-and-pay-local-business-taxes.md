@@ -1,4 +1,4 @@
-# Renew Permits and Pay Local Business Taxes — Lapu-Lapu City
+# Renew Permits and Pay Local Business Taxes — Bacolod City
 
 Use this guide to renew your **Mayor’s/Business Permit** and **Local Business Taxes (LBT)** with the City Government.
 
@@ -6,7 +6,7 @@ Use this guide to renew your **Mayor’s/Business Permit** and **Local Business 
 
 ## Who Must Renew
 
-- All businesses operating in Lapu-Lapu City: **sole proprietors, partnerships, corporations, NGOs, cooperatives, online sellers with local presence**, and professionals with a business office.
+- All businesses operating in Bacolod City: **sole proprietors, partnerships, corporations, NGOs, cooperatives, online sellers with local presence**, and professionals with a business office.
 - Renewal applies to **main office and each branch**.
 
 ---

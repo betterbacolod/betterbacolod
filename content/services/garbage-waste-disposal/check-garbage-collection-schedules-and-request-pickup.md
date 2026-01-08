@@ -1,6 +1,6 @@
-# Check Garbage Collection Schedules and Request Pickup — Lapu-Lapu City
+# Check Garbage Collection Schedules and Request Pickup — Bacolod City
 
-The City Government of Lapu-Lapu manages **regular garbage collection** through the **City Environment and Natural Resources Office (CENRO)** and barangays. Residents and business owners are encouraged to follow the schedule and proper segregation rules.
+The City Government of Bacolod manages **regular garbage collection** through the **City Environment and Natural Resources Office (CENRO)** and barangays. Residents and business owners are encouraged to follow the schedule and proper segregation rules.
 
 ---
 
@@ -44,7 +44,7 @@ For **bulk waste** (e.g., furniture, appliances, construction debris, yard trimm
 ## 3) Contact Information
 
 - **City Environment and Natural Resources Office (CENRO)**  
-  Lapu-Lapu City Hall, Government Complex, Brgy. Pajo  
+  Bacolod City Hall, Government Complex, Brgy. Pajo  
   Phone: (032) 340-0004 (City Hall trunkline, ask for CENRO)  
   Updates: via **City Information Office** FB page
 

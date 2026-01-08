@@ -1,6 +1,6 @@
-# Enroll Children in LGU Daycare or Preschool Programs — Lapu-Lapu City
+# Enroll Children in LGU Daycare or Preschool Programs — Bacolod City
 
-The Lapu-Lapu City Government, through the **City Social Welfare and Development Office (CSWDO)** and barangays, operates **daycare centers** and supports **public preschool education**.
+The Bacolod City Government, through the **City Social Welfare and Development Office (CSWDO)** and barangays, operates **daycare centers** and supports **public preschool education**.
 
 ---
 
@@ -67,7 +67,7 @@ The Lapu-Lapu City Government, through the **City Social Welfare and Development
 
 - **Barangay Daycare Centers** — Enrollment schedules and requirements are usually announced by barangay officials.
 - **City Social Welfare and Development Office (CSWDO)** — Oversees daycare programs.
-- **DepEd Lapu-Lapu City Division** — Manages public kindergarten enrollment.
+- **DepEd Bacolod City Division** — Manages public kindergarten enrollment.
 
 ---
 

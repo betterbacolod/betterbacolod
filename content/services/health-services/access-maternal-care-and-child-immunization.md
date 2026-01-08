@@ -1,4 +1,4 @@
-# Access Maternal Care & Child Immunization — Lapu-Lapu City
+# Access Maternal Care & Child Immunization — Bacolod City
 
 The City Health Office (CHO) and barangay health centers provide **prenatal care**, **family planning**, and **free routine child immunization** for residents.
 
@@ -45,5 +45,5 @@ Routine childhood vaccines are provided **free** under the Expanded Program on I
 
 **References**
 
-- [Lapu-Lapu City Government – Services](https://lapulapucity.gov.ph)
+- [Bacolod City Government – Services](https://lapulapucity.gov.ph)
 - [Department of Health – Expanded Program on Immunization](https://doh.gov.ph)

@@ -1,6 +1,6 @@
-# Guidelines for Proper Waste Segregation and Disposal — Lapu-Lapu City
+# Guidelines for Proper Waste Segregation and Disposal — Bacolod City
 
-Proper waste segregation is **mandatory** in Lapu-Lapu City under **Republic Act 9003 (Ecological Solid Waste Management Act)** and local ordinances. Following these rules helps keep the city clean, prevents flooding, and protects health.
+Proper waste segregation is **mandatory** in Bacolod City under **Republic Act 9003 (Ecological Solid Waste Management Act)** and local ordinances. Following these rules helps keep the city clean, prevents flooding, and protects health.
 
 ---
 
@@ -62,12 +62,12 @@ Proper waste segregation is **mandatory** in Lapu-Lapu City under **Republic Act
 ## Contact for Support
 
 - **City Environment and Natural Resources Office (CENRO)**  
-  Lapu-Lapu City Hall, Government Complex, Brgy. Pajo  
+  Bacolod City Hall, Government Complex, Brgy. Pajo  
   Phone: (032) 340-0004 (ask for CENRO)  
-  Updates via: [Lapu-Lapu City Information Office Facebook Page](https://www.facebook.com/lapulapucitygovernment)
+  Updates via: [Bacolod City Information Office Facebook Page](https://www.facebook.com/lapulapucitygovernment)
 
 ---
 
 ### Key Reminder
 
-✅ Proper segregation is a **shared responsibility**. By separating waste correctly, you help reduce landfill use, promote recycling, and keep Lapu-Lapu City safe and sustainable.
+✅ Proper segregation is a **shared responsibility**. By separating waste correctly, you help reduce landfill use, promote recycling, and keep Bacolod City safe and sustainable.
