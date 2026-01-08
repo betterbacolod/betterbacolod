@@ -68,6 +68,26 @@
 3. **Final review** - Check for any remaining issues
 4. **Deploy** - Push to production
 
+## 📁 Project Structure
+
+```
+docs/bacolod/
+├── README.md                           # This folder's guide
+├── BACOLODIZATION-CHECKLIST.md        # 📋 THE BIBLE - Our todo list
+├── BACOLOD-CUSTOMIZATION-GUIDE.md     # How to customize
+└── BACOLOD-DATA-COLLECTION.md         # Bacolod data
+```
+
+## 🤖 For Kiro CLI
+
+**Always reference `docs/bacolod/` for:**
+
+- Current progress (BACOLODIZATION-CHECKLIST.md)
+- Customization steps (BACOLOD-CUSTOMIZATION-GUIDE.md)
+- Bacolod data (BACOLOD-DATA-COLLECTION.md)
+
+**Don't hallucinate - check the docs first!**
+
 ---
 
 Last updated: January 8, 2026
