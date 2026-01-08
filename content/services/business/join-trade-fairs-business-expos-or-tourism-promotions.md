@@ -126,13 +126,11 @@ Use these offices when coordinating for **trade fairs, business expos, permits, 
 
 ---
 
-| Office / Role                                                                 | Address / Location                                  | Contact Number  | Email / Other Contact Info                                                                                                                                   |
-| ----------------------------------------------------------------------------- | --------------------------------------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Business Permit & Licensing Office (BPLO)**                                 | City Hall Main Building, Bacolod Government Complex | (032) 340-0004  | —                                                                                                                                                            |
-| **PESO Bacolod City** (Student Employment, Local Promotions)                  | Pajo, Bacolod City, Cebu 6015                       | (032) 340-8264  | Facebook: [PESO Bacolod City](https://ph.locale.online/peso-lapu-lapu-city-47947610.html)                                                                    |
-| **City Information Office / Treasurer’s Office**                              | Bacolod City Hall / Hoops Dome during events        | (032) 340-1615  | Updates: [Official Facebook Page](https://www.facebook.com/photo.php?fbid=122128211810564979&id=61566949391179&set=a.122105111324564979)                     |
-| **Bacolod City Tourism Office**                                               | City Government / Tourism Department                | +63 32 495-5593 | Email: llctourism.inquiry@gmail.com • [Instagram Location Page](https://www.instagram.com/explore/locations/2149053888682923/lapu-lapu-city-tourism-office/) |
-| **City-Wide Trade Fair / Renewal Venue** (used for permit renewals and expos) | Hoops Dome, Barangay Gun-ob                         | —               | News: [SunStar — Biz Permit Renewals at Hoops Dome](https://www.sunstar.com.ph/cebu/lapu-launches-new-system-for-biz-permit-renewals)                        |
+| Office / Role                                                                 | Address / Location                                  | Contact Number | Email / Other Contact Info                                                                                                               |
+| ----------------------------------------------------------------------------- | --------------------------------------------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| **Business Permit & Licensing Office (BPLO)**                                 | City Hall Main Building, Bacolod Government Complex | (032) 340-0004 | —                                                                                                                                        |
+| **City Information Office / Treasurer’s Office**                              | Bacolod City Hall / Hoops Dome during events        | (032) 340-1615 | Updates: [Official Facebook Page](https://www.facebook.com/photo.php?fbid=122128211810564979&id=61566949391179&set=a.122105111324564979) |
+| **City-Wide Trade Fair / Renewal Venue** (used for permit renewals and expos) | Hoops Dome, Barangay Gun-ob                         | —              | News: [SunStar — Biz Permit Renewals at Hoops Dome](https://www.sunstar.com.ph/cebu/lapu-launches-new-system-for-biz-permit-renewals)    |
 
 ---
 
