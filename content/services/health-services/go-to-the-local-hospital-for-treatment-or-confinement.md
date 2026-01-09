@@ -9,9 +9,15 @@ This guide covers **where to go**, **what to bring**, and **how admission works*
 ### City Health Office / Public Health Centers
 
 - **Type**: Primary care, outpatient services
-- **Location**: BBB Street, Bacolod City, 6100 Negros Occidental
+- **Location**: Bacolod City Government Center, Circumferential Rd, Brgy. Villamonte
 - **Phone**: (034) 434-9122
 - **Services**: General consultation, basic treatment, referrals
+
+### City Health Complex (Under Construction)
+
+- **Status**: 20% complete as of February 2025
+- **Type**: Comprehensive health facility
+- **Note**: Once completed, will provide expanded hospital services for Bacolod residents
 
 ---
 

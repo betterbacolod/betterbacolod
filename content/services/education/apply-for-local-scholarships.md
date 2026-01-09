@@ -11,7 +11,7 @@ The Bacolod City Government provides scholarship assistance to deserving student
 **What's offered:**
 
 - Financial allowance for scholars (₱3,000 per distribution)
-- Over 800 scholars currently enrolled in the program
+- 814 scholars currently enrolled in the program (as of December 2024)
 - Regular allowance releases throughout the school year
 
 **Who can apply:**
