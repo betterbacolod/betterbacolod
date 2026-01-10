@@ -39,7 +39,13 @@ categories:
     slug: 'infrastructure-public-works'
     description: 'How to report damaged roads or drainage, where to request water supply, and how to access public facilities and markets.'
     icon: 'Wrench'
-  
+
+  # Transportation Services
+  - category: 'Transportation'
+    slug: 'transportation'
+    description: 'Public transport routes and schedules, jeepney and bus info, parking zones and permits, traffic violations, and transport franchise registration.'
+    icon: 'Bus'
+
   # Garbage and Waste Disposal Services
   - category: 'Garbage and Waste Disposal'
     slug: 'garbage-waste-disposal'
@@ -57,7 +63,13 @@ categories:
     slug: 'disaster-preparedness'
     description: 'Disaster preparedness plans, emergency response information, and evacuation procedures.'
     icon: 'Shield'
-  
+
+  # Public Safety Services
+  - category: 'Public Safety'
+    slug: 'public-safety'
+    description: 'Emergency hotlines (911, DRRMO, BFP), fire safety certificates, crime reporting, disaster response, and public safety concerns.'
+    icon: 'ShieldAlert'
+
   # Housing & Land Use Services
   - category: 'Housing & Land Use'
     slug: 'housing-land-use'
