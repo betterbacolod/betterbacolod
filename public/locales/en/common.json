@@ -1,9 +1,9 @@
 {
-  "site_name": "Lapu Lapu City Portal",
-  "site_description": "A community-run portal for the Lapu Lapu City",
+  "site_name": "Bacolod City Portal",
+  "site_description": "Official Government Website",
   "hero": {
-    "title": "Welcome to BetterGov.ph",
-    "subtitle": "A community-run portal to find information of the Lapu Lapu City Government",
+    "title": "Welcome to Bacolod City",
+    "subtitle": "Official portal for Bacolod City Government services and information",
     "nationalId": "National ID",
     "birthCertificate": "Birth Certificate",
     "businessRegistration": "Business Registration"

@@ -92,11 +92,8 @@ const Navbar: React.FC = () => {
                 className="h-12 w-auto mr-3"
               />
               <div>
-                <div className="text-black font-bold">
+                <div className="text-black font-bold text-lg">
                   {import.meta.env.VITE_GOVERNMENT_NAME}
-                </div>
-                <div className="text-xs text-gray-800">
-                  {t('site_description')}
                 </div>
               </div>
             </Link>
