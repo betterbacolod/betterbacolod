@@ -2,18 +2,18 @@
 # This file contains all the pages/services available under the Social Welfare category
 
 pages:
-  - name: 'Apply for senior citizen, solo parent, or PWD assistance'
-    slug: 'apply-for-senior-citizen-solo-parent-or-pwd-assistance'
-    description: 'Information about applying for assistance programs for senior citizens, solo parents, and persons with disabilities.'
-    
-  - name: 'Receive relief goods or cash aid during disasters'
-    slug: 'receive-relief-goods-or-cash-aid-during-disasters'
-    description: 'How to access relief goods and cash assistance during natural disasters and emergencies.'
-    
-  - name: 'Join livelihood or skills training programs'
-    slug: 'join-livelihood-or-skills-training-programs'
-    description: 'Participate in livelihood and skills training programs offered by your local government.'
-    
-  - name: 'Get family and community welfare support'
-    slug: 'get-family-and-community-welfare-support'
-    description: 'Access family and community welfare support services from your local government.'
+  - name: 'Apply for Senior Citizen Benefits and Discounts'
+    slug: 'apply-for-senior-citizen-benefits-and-discounts'
+    description: 'Get your Senior Citizen ID and avail of 20% discounts, VAT exemption, and social pension programs.'
+
+  - name: 'Register for PWD ID and Disability Benefits'
+    slug: 'register-for-pwd-id-and-disability-benefits'
+    description: 'Apply for FREE PWD ID and access 20% discounts, assistive devices, and disability programs.'
+
+  - name: 'Apply for Solo Parent ID and Benefits'
+    slug: 'apply-for-solo-parent-id-and-benefits'
+    description: 'Get your Solo Parent ID for 20% discounts, 7 days parental leave, and educational assistance.'
+
+  - name: 'Access Social Welfare Programs and Financial Assistance'
+    slug: 'access-social-welfare-programs-and-financial-assistance'
+    description: 'Medical assistance, burial aid, 4Ps, livelihood programs, and emergency assistance from DSSD.'
