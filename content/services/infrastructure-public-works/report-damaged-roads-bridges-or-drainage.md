@@ -1,47 +1,48 @@
 # Report Damaged Infrastructure — Bacolod City
 
-Report damaged roads, bridges, drainage, and other public infrastructure to the **City Engineer's Office (CEO)** for repair and maintenance.
+Report damaged roads, bridges, drainage, flooding, and other public infrastructure to the **City Engineer's Office (CEO)** and **DRRMO** for repair and emergency response.
 
 ---
 
 ## 1. What to Report
 
-| Infrastructure Type | Examples                                          |
-| ------------------- | ------------------------------------------------- |
-| Roads               | Potholes, cracks, damaged pavement, road collapse |
-| Bridges             | Damaged railings, cracks, structural issues       |
-| Drainage            | Clogged drains, broken drainage covers, flooding  |
-| Sidewalks           | Broken tiles, uneven surfaces, obstructions       |
-| Street lights       | Non-functioning lights, damaged posts             |
-| Public facilities   | Damaged public buildings, parks, plazas           |
+| Infrastructure Type        | Report To                     |
+| -------------------------- | ----------------------------- |
+| Roads (potholes, cracks)   | City Engineer's Office (CEO)  |
+| Bridges (damage, cracks)   | City Engineer's Office (CEO)  |
+| Drainage (clogged, broken) | City Engineer's Office (CEO)  |
+| Flooding (emergency)       | DRRMO 24/7 Hotline            |
+| Street lights              | City Engineer's Office (CEO)  |
+| Public buildings           | General Services Office (GSO) |
 
 ---
 
 ## 2. How to Report
 
-### Option 1: City Engineer's Office
+### For Non-Emergency Infrastructure Issues:
 
-- Visit **CEO** at Bacolod City Government Center
-- File written report with location and description
-- Provide photos if available
+**City Engineer's Office (CEO):**
 
-### Option 2: Hotline
+- **OIC:** Engr. Luben Rafael D. Ceballos
+- **Phone:** (034) 432-3098
+- **Email:** ceobacolod@yahoo.com, ceo@bacolodcity.gov.ph
+- **Hours:** Monday-Friday, 8:00 AM - 5:00 PM
 
-- Call **Bacolod City Hall:** (034) 434-9122
-- Ask to be connected to City Engineer's Office
-- Report damage details
+### For Flooding and Emergencies:
 
-### Option 3: Email
+**DRRMO 24/7 Hotlines:**
 
-- Send report to: **ceobacolod@yahoo.com** or **ceo@bacolodcity.gov.ph**
-- Include: location, description, photos
-- Provide contact info for follow-up
+- **Admin (office hours):** (034) 432-3879
+- **24/7 Hotline:** (034) 432-3871 to 73
+- **LDRRMO Office:** (034) 469-8932
+- **Mobile Hotline:** +63 930 243 4706
+- **Email:** drrmobacolodcity@yahoo.com
+- **Head:** Dr. Anna Maria Laarni Pornan
 
-### Option 4: Barangay Hall
+### For General Complaints:
 
-- Report to your **Barangay Hall**
-- Barangay will coordinate with CEO
-- For minor repairs, barangay may handle directly
+- **Bacolod City Hall:** (034) 434-9122
+- Visit your **Barangay Hall** for local issues
 
 ---
 
@@ -49,24 +50,27 @@ Report damaged roads, bridges, drainage, and other public infrastructure to the 
 
 When reporting, include:
 
-- **Location:** Exact address, street name, landmark
-- **Type of damage:** Road, bridge, drainage, etc.
+- **Location:** Exact address, street name, barangay, landmark
+- **Type of damage:** Road, bridge, drainage, flooding
 - **Description:** Size, severity, safety hazard
-- **Photos:** If possible, take photos of damage
+- **Photos:** If possible, take photos
 - **Your contact info:** For follow-up
 
 ---
 
-## 4. What Happens After Reporting
+## 4. Flood Control and Drainage
 
-1. **CEO receives report** and logs complaint
-2. **Inspection** - CEO engineers inspect the site
-3. **Assessment** - Determine repair priority and cost
-4. **Scheduling** - Repair is scheduled based on budget and priority
-5. **Repair** - Contractor or CEO crew performs repair
-6. **Follow-up** - Reporter may be updated on status
+**For Flooding Issues:**
 
-**Note:** Emergency repairs (safety hazards) are prioritized.
+- Report to **DRRMO** for emergency response
+- Report to **CEO** for drainage infrastructure repairs
+- Bacolod has ongoing flood control projects - check [Disaster Risk Reduction And Management Plan 2023-2025](https://bacolodcity.gov.ph/disaster-risk-reduction-and-management-plan/)
+
+**Flood-Prone Areas:**
+
+- Contact DRRMO for updated flood hazard maps
+- Check barangay evacuation plans
+- Monitor weather advisories during rainy season
 
 ---
 
@@ -74,49 +78,52 @@ When reporting, include:
 
 ### City Engineer's Office (CEO)
 
-- **Officer In Charge:** Engr. Luben Rafael D. Ceballos
-- **Address:** Bacolod City Government Center, Circumferential Rd, Brgy. Villamonte, Bacolod City
+- **OIC:** Engr. Luben Rafael D. Ceballos
+- **Address:** Bacolod City Government Center, Circumferential Rd, Brgy. Villamonte
 - **Phone:** (034) 432-3098
 - **Email:** ceobacolod@yahoo.com, ceo@bacolodcity.gov.ph
 - **Hours:** Monday-Friday, 8:00 AM - 5:00 PM
 
-### For Emergency Infrastructure Issues:
+### DRRMO (Disaster Risk Reduction and Management Office)
 
-- **Call 911** for immediate safety hazards
-- **DRRMO:** (034) 432-3871 to 73 (for disaster-related damage)
+- **Head:** Dr. Anna Maria Laarni Pornan
+- **Admin (office hours):** (034) 432-3879
+- **24/7 Hotline:** (034) 432-3871 to 73
+- **LDRRMO Office:** (034) 469-8932
+- **Mobile Hotline:** +63 930 243 4706
+- **Email:** drrmobacolodcity@yahoo.com
+
+### General Services Office (GSO)
+
+- **OIC:** Victor Espina
+- **Phone:** (034) 435-6067
+- **Email:** gso@bacolodcity.gov.ph
 
 ---
 
-## 6. Priority Repairs
+## 6. Ongoing Infrastructure Projects (as of Feb 2025)
 
-**High Priority (Immediate):**
-
-- Safety hazards (road collapse, bridge damage)
-- Major flooding or drainage issues
-- Damage affecting emergency routes
-
-**Medium Priority (Scheduled):**
-
-- Potholes, cracks, minor damage
-- Drainage maintenance
-- Sidewalk repairs
-
-**Low Priority (Routine Maintenance):**
-
-- Cosmetic repairs
-- Minor improvements
-- Non-urgent maintenance
+| Project                                    | Completion |
+| ------------------------------------------ | ---------- |
+| Old City Hall Rehabilitation               | 39.70%     |
+| City Health Complex                        | 20%        |
+| Legislative Building                       | 56%        |
+| Coliseum                                   | 70.01%     |
+| Multi-Purpose Building with Skate Park     | 95%        |
+| Romanito Maravilla NHS Athletes' Dormitory | 80%        |
+| Bacolod City Recovery and Recycling Center | Ongoing    |
 
 ---
 
 ## 7. Important Reminders
 
-- **Report immediately** - especially safety hazards
-- **Provide accurate location** - helps CEO locate damage quickly
-- **Include photos** - visual evidence speeds up assessment
-- **Follow up** - check status of your report with CEO
-- **Be patient** - repairs depend on budget and priority
+- **For emergencies (flooding, road collapse):** Call DRRMO 24/7 hotline first
+- **For non-urgent repairs:** Report to CEO during office hours
+- **Provide accurate location** - helps crews respond quickly
+- **Include photos** - speeds up assessment
+- **Follow up** - check status with CEO or DRRMO
 
 ---
 
-**Source:** [Bacolod City Government - City Engineer's Office](https://bacolodcity.gov.ph/city-engineering-office/) — January 11, 2026
+**Source:** [Bacolod City Government - Departments](https://bacolodcity.gov.ph/departments/) — Scraped January 10, 2026  
+**Source:** [Bacolod City Hotlines](https://bacolodcity.gov.ph/hotlines/) — Scraped January 10, 2026

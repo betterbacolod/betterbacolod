@@ -1,6 +1,6 @@
 # Clean-up Drives and Tree Planting — Bacolod City
 
-The **Bacolod Environment and Natural Resources Office (BENRO)** organizes environmental activities including clean-up drives, tree planting, and coastal rehabilitation programs.
+The **Environment and Natural Resources Office (ENRO/BENRO)** organizes environmental activities including clean-up drives, tree planting, and coastal rehabilitation programs.
 
 ---
 
@@ -8,10 +8,10 @@ The **Bacolod Environment and Natural Resources Office (BENRO)** organizes envir
 
 | Activity                    | Organizer | When                              | Who Can Join                      |
 | --------------------------- | --------- | --------------------------------- | --------------------------------- |
-| Clean-up drives             | BENRO     | Regular schedules, special events | Residents, schools, organizations |
-| Tree planting               | BENRO     | Rainy season (June-November)      | Volunteers, barangays, groups     |
-| Coastal clean-up            | BENRO     | Quarterly or as scheduled         | Coastal barangays, volunteers     |
-| Waste segregation campaigns | BENRO     | Ongoing                           | All residents                     |
+| Clean-up drives             | ENRO      | Regular schedules, special events | Residents, schools, organizations |
+| Tree planting               | ENRO      | Rainy season (June-November)      | Volunteers, barangays, groups     |
+| Coastal clean-up            | ENRO      | Quarterly or as scheduled         | Coastal barangays, volunteers     |
+| Waste segregation campaigns | DPS/ENRO  | Ongoing                           | All residents                     |
 
 ---
 
@@ -19,17 +19,17 @@ The **Bacolod Environment and Natural Resources Office (BENRO)** organizes envir
 
 ### For Individuals/Volunteers:
 
-1. Follow **BENRO** social media for announcements
-2. Contact BENRO office to register
-3. Attend scheduled activity
+1. Contact **ENRO** office to inquire about upcoming activities
+2. Register for scheduled activity
+3. Attend on scheduled date
 4. Bring gloves, water, sun protection
 
 ### For Schools/Organizations:
 
-1. Contact **BENRO** to coordinate group participation
+1. Contact **ENRO** to coordinate group participation
 2. Submit list of participants
 3. Arrange transportation and logistics
-4. BENRO provides materials (trash bags, seedlings, tools)
+4. ENRO provides materials (trash bags, seedlings, tools)
 
 ---
 
@@ -53,16 +53,23 @@ The **Bacolod Environment and Natural Resources Office (BENRO)** organizes envir
 
 ## 4. Contact Information
 
-### Bacolod Environment and Natural Resources Office (BENRO)
+### Environment and Natural Resources Office (ENRO/BENRO)
 
-- **Address:** Bacolod City Government Center, Circumferential Rd, Brgy. Villamonte, Bacolod City
-- **Email:** enrobcd@bacolodcity.gov.ph
+- **OIC:** Ramel Palalon
+- **Address:** Bacolod City Government Center, Circumferential Rd, Brgy. Villamonte
+- **Phone:** 0995-187-4725
+- **Email:** enrobcd@gmail.com, enrobcd@bacolodcity.gov.ph
 - **Hours:** Monday-Friday, 8:00 AM - 5:00 PM
 
-**For inquiries:**
+### Department of Public Services (DPS) - Solid Waste
 
-- Call **Bacolod City Hall:** (034) 434-9122
-- Visit BENRO office at City Government Center
+- **OIC:** Ramel M. Palalon
+- **Phone:** (034) 708-1755, (034) 433-3532
+- **Email:** dpsbacolodcity@gmail.com, dps@bacolodcity.gov.ph
+
+### Bacolod City Recovery and Recycling Center
+
+- Check [waste collection schedule](https://bacolodcity.gov.ph/waste-collection-schedule/)
 
 ---
 
@@ -76,4 +83,4 @@ The **Bacolod Environment and Natural Resources Office (BENRO)** organizes envir
 
 ---
 
-**Source:** [Bacolod Environment and Natural Resources](https://bacolodcity.gov.ph/bacolod-environment-and-natural-resources/) — January 11, 2026
+**Source:** [Bacolod City Government - Departments](https://bacolodcity.gov.ph/departments/) — Scraped January 10, 2026

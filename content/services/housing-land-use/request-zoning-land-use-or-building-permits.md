@@ -1,6 +1,6 @@
 # Building Permits, Zoning, and Land Use — Bacolod City
 
-Apply for building permits, zoning clearances, and land use permits through the **Office of the Building Official (OBO)** and **City Engineer's Office (CEO)**.
+Apply for building permits, zoning clearances, and land use permits through the **Office of the Building Official (OBO)** and **City Planning and Development Office (CPDO)**.
 
 ---
 
@@ -32,36 +32,9 @@ Apply for building permits, zoning clearances, and land use permits through the 
 - Barangay clearance
 - Valid IDs of owner and professionals
 
-**For Renovation/Repair:**
-
-- Application form
-- Proof of ownership (title, tax declaration)
-- Plans and specifications (if major renovation)
-- Barangay clearance
-- Valid IDs
-
 ---
 
-## 3. Fees
-
-Building permit fees are based on:
-
-- Total floor area
-- Type of construction (residential, commercial, industrial)
-- Estimated project cost
-
-**Typical Fees:**
-
-- Small residential (up to 50 sqm): ₱2,000-₱5,000
-- Medium residential (50-100 sqm): ₱5,000-₱15,000
-- Large residential (100+ sqm): ₱15,000-₱50,000+
-- Commercial buildings: Based on project cost
-
-**Note:** Fees include building permit, electrical permit, plumbing permit, and other related fees.
-
----
-
-## 4. How to Apply
+## 3. How to Apply
 
 ### Step 1: Get Zoning Clearance
 
@@ -73,14 +46,12 @@ Building permit fees are based on:
 ### Step 2: Prepare Building Plans
 
 - Hire licensed architect or engineer
-- Prepare building plans, structural, electrical, plumbing plans
-- Plans must comply with National Building Code and local ordinances
+- Plans must comply with National Building Code (PD 1096)
 
 ### Step 3: Get Fire Safety Clearance
 
 - Submit plans to **Bureau of Fire Protection (BFP)**
 - BFP evaluates fire safety compliance
-- Receive fire safety evaluation clearance
 
 ### Step 4: Submit to OBO
 
@@ -90,24 +61,18 @@ Building permit fees are based on:
 - Pay building permit fees
 - Receive building permit
 
-**Processing Time:** 7-20 working days (depending on project complexity)
+**Processing Time:** 7-20 working days
 
 ---
 
-## 5. Contact Information
+## 4. Contact Information
 
 ### Office of the Building Official (OBO)
 
-- **Address:** Bacolod City Government Center, Circumferential Rd, Brgy. Villamonte, Bacolod City
-- **Email:** obo@bacolodcity.gov.ph
-- **Phone:** (034) 434-9122 (City Hall main line)
-- **Hours:** Monday-Friday, 8:00 AM - 5:00 PM
-
-### City Engineer's Office (CEO)
-
-- **Officer In Charge:** Engr. Luben Rafael D. Ceballos
-- **Phone:** (034) 432-3098
-- **Email:** ceobacolod@yahoo.com, ceo@bacolodcity.gov.ph
+- **OIC:** Isidro Sun, Jr.
+- **Address:** Bacolod City Government Center, Circumferential Rd, Brgy. Villamonte
+- **Phone:** (034) 433-8286
+- **Email:** bldngofficial@gmail.com, obo@bacolodcity.gov.ph
 - **Hours:** Monday-Friday, 8:00 AM - 5:00 PM
 
 ### City Planning & Development Office (CPDO)
@@ -116,9 +81,21 @@ Building permit fees are based on:
 - **Phone:** (034) 434-3184, 0906-326-3026
 - **Email:** cpdobacolod@gmail.com, cpdo@bacolodcity.gov.ph
 
+### City Engineer's Office (CEO)
+
+- **OIC:** Engr. Luben Rafael D. Ceballos
+- **Phone:** (034) 432-3098
+- **Email:** ceobacolod@yahoo.com, ceo@bacolodcity.gov.ph
+
+### Bureau of Fire Protection (BFP)
+
+- **OIC:** Chief Inspector Rodel Legaspi
+- **Phone:** (034) 434-5022, (034) 434-5023, 0921-341-7002
+- **Email:** bacolodcityfs@gmail.com, bacolodcityfs@bacolodcity.gov.ph
+
 ---
 
-## 6. Important Reminders
+## 5. Important Reminders
 
 - **Secure building permit before construction** - building without permit is illegal
 - **Display permit** - building permit must be displayed at construction site
@@ -129,7 +106,7 @@ Building permit fees are based on:
 
 ---
 
-## 7. Penalties for Violations
+## 6. Penalties for Violations
 
 Building without permit or violating building code:
 
@@ -140,4 +117,5 @@ Building without permit or violating building code:
 
 ---
 
-**Source:** [Bacolod City Government - Office of the Building Officials](https://bacolodcity.gov.ph/office-of-the-building-officials-obo/) — January 11, 2026
+**Source:** [Bacolod City Government - Office of the Building Officials](https://bacolodcity.gov.ph/office-of-the-building-officials-obo/) — Scraped January 10, 2026  
+**Source:** [Bacolod City Government - Departments](https://bacolodcity.gov.ph/departments/) — Scraped January 10, 2026

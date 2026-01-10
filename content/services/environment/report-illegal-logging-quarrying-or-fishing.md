@@ -1,6 +1,6 @@
 # Report Environmental Violations — Bacolod City
 
-Report illegal logging, quarrying, fishing, dumping, and other environmental violations to the **Bacolod Environment and Natural Resources Office (BENRO)**.
+Report illegal logging, quarrying, fishing, dumping, and other environmental violations to the **Environment and Natural Resources Office (ENRO/BENRO)**.
 
 ---
 
@@ -20,28 +20,25 @@ Report illegal logging, quarrying, fishing, dumping, and other environmental vio
 
 ## 2. How to Report
 
-### Option 1: BENRO Office
+### ENRO/BENRO Office
 
-- Visit **BENRO** at Bacolod City Government Center
-- File written complaint with details
-- Provide evidence (photos, videos, witness statements)
+- **OIC:** Ramel Palalon
+- **Phone:** 0995-187-4725
+- **Email:** enrobcd@gmail.com, enrobcd@bacolodcity.gov.ph
+- **Hours:** Monday-Friday, 8:00 AM - 5:00 PM
 
-### Option 2: Hotline
+### For Solid Waste/Garbage Issues
 
-- Call **Bacolod City Hall:** (034) 434-9122
-- Ask to be connected to BENRO
-- Report violation details
+**Department of Public Services (DPS):**
 
-### Option 3: Email
+- **OIC:** Ramel M. Palalon
+- **Phone:** (034) 708-1755, (034) 433-3532
+- **Email:** dpsbacolodcity@gmail.com, dps@bacolodcity.gov.ph
 
-- Send report to: **enrobcd@bacolodcity.gov.ph**
-- Include: location, date/time, description, photos/evidence
-- Provide your contact info for follow-up
-
-### Option 4: Barangay Hall
+### Barangay Hall
 
 - Report to your **Barangay Captain** or **Barangay Tanod**
-- Barangay will coordinate with BENRO
+- Barangay will coordinate with ENRO
 - For urgent cases, barangay can respond immediately
 
 ---
@@ -51,7 +48,7 @@ Report illegal logging, quarrying, fishing, dumping, and other environmental vio
 When reporting, include:
 
 - **What:** Type of violation
-- **Where:** Exact location (address, landmark, GPS coordinates)
+- **Where:** Exact location (address, landmark, barangay)
 - **When:** Date and time observed
 - **Who:** Description of violators (if safe to observe)
 - **Evidence:** Photos, videos, documents
@@ -61,8 +58,8 @@ When reporting, include:
 
 ## 4. What Happens After Reporting
 
-1. **BENRO receives report** and logs complaint
-2. **Investigation** - BENRO inspects the site
+1. **ENRO receives report** and logs complaint
+2. **Investigation** - ENRO inspects the site
 3. **Verification** - Evidence is gathered
 4. **Action** - Violators are issued notice, fined, or prosecuted
 5. **Follow-up** - Reporter is updated on case status
@@ -71,40 +68,35 @@ When reporting, include:
 
 ## 5. Contact Information
 
-### Bacolod Environment and Natural Resources Office (BENRO)
+### Environment and Natural Resources Office (ENRO/BENRO)
 
-- **Address:** Bacolod City Government Center, Circumferential Rd, Brgy. Villamonte, Bacolod City
-- **Email:** enrobcd@bacolodcity.gov.ph
-- **Phone:** (034) 434-9122 (City Hall main line)
+- **OIC:** Ramel Palalon
+- **Address:** Bacolod City Government Center, Circumferential Rd, Brgy. Villamonte
+- **Phone:** 0995-187-4725
+- **Email:** enrobcd@gmail.com, enrobcd@bacolodcity.gov.ph
 - **Hours:** Monday-Friday, 8:00 AM - 5:00 PM
+
+### Department of Public Services (DPS) - Solid Waste
+
+- **OIC:** Ramel M. Palalon
+- **Phone:** (034) 708-1755, (034) 433-3532
+- **Email:** dpsbacolodcity@gmail.com, dps@bacolodcity.gov.ph
 
 ### For Urgent Environmental Emergencies:
 
 - **Call 911** for immediate response
-- **DRRMO:** (034) 432-3871 to 73 (for disasters/hazards)
+- **DRRMO 24/7:** (034) 432-3871 to 73
 
 ---
 
-## 6. Legal Basis
-
-Environmental violations are punishable under:
-
-- **Presidential Decree No. 1067** - Water Code of the Philippines
-- **Republic Act No. 8749** - Clean Air Act
-- **Republic Act No. 9003** - Ecological Solid Waste Management Act
-- **Republic Act No. 8550** - Philippine Fisheries Code
-- **Local ordinances** - Bacolod City environmental regulations
-
----
-
-## 7. Important Reminders
+## 6. Important Reminders
 
 - **Do not confront violators** - report to authorities
 - **Document safely** - take photos/videos from safe distance
-- **Protect your identity** - request anonymity if concerned about safety
-- **Follow up** - check status of your report with BENRO
+- **Protect your identity** - request anonymity if concerned
+- **Follow up** - check status of your report with ENRO
 - **Be accurate** - provide truthful information only
 
 ---
 
-**Source:** [Bacolod Environment and Natural Resources](https://bacolodcity.gov.ph/bacolod-environment-and-natural-resources/) — January 11, 2026
+**Source:** [Bacolod City Government - Departments](https://bacolodcity.gov.ph/departments/) — Scraped January 10, 2026
