@@ -70,15 +70,22 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left section with title */}
           <div className="animate-fade-in">
-            <Text transform="uppercase" className="text-primary-100 text-xs">
+            <Text
+              transform="uppercase"
+              className="text-primary-100 text-sm font-semibold tracking-wider mb-3"
+            >
               Welcome to
             </Text>
-            <Heading className="text-4xl md:text-5xl font-bold mb-3">
+            <Heading className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               {import.meta.env.VITE_GOVERNMENT_NAME}
             </Heading>
-            <Text className="text-base text-primary-50">
+            <Text className="text-lg md:text-xl text-primary-50 leading-relaxed mb-6">
               {t('hero.subtitle')}
             </Text>
+            <p className="text-base text-primary-100 leading-relaxed">
+              Access government services, permits, and information for Bacolod
+              City residents and businesses.
+            </p>
           </div>
 
           {/* Right section with search box */}
