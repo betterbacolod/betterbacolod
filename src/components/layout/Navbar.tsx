@@ -87,7 +87,7 @@ const Navbar: React.FC = () => {
           <div className="flex items-center" style={{ minWidth: '200px' }}>
             <Link to="/" className="flex items-center">
               <img
-                src="/nav-logo.jpg"
+                src="/nav-logo.png"
                 alt="Bacolod City Logo"
                 className="h-12 w-auto"
               />
