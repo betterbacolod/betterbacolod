@@ -1,0 +1,19 @@
+# Public Safety Category Pages
+# This file contains all the pages/services available under the Public Safety category
+
+pages:
+  - name: 'Apply for Fire Safety Inspection Certificate'
+    slug: 'apply-for-fire-safety-inspection-certificate'
+    description: 'Get FSIC from BFP for business permits. Fire safety requirements, inspections, and compliance.'
+
+  - name: 'Access Emergency Hotlines and Disaster Response'
+    slug: 'access-emergency-hotlines-and-disaster-response'
+    description: 'Call 911 for emergencies. DRRMO, BFP, and PNP hotlines. 24/7 disaster response services.'
+
+  - name: 'Prepare for Disasters and Emergencies'
+    slug: 'prepare-for-disasters-and-emergencies'
+    description: 'Disaster preparedness, emergency kits, evacuation plans, and DRRMO programs for typhoons, earthquakes, fires.'
+
+  - name: 'Report Crimes and Public Safety Concerns'
+    slug: 'report-crimes-and-public-safety-concerns'
+    description: 'Report crimes to 911 or PNP. Domestic violence, drug activities, suspicious persons, and safety hazards.'

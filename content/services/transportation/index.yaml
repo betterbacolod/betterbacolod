@@ -1,0 +1,19 @@
+# Transportation Category Pages
+# This file contains all the pages/services available under the Transportation category
+
+pages:
+  - name: 'Check Public Transport Routes and Schedules'
+    slug: 'check-public-transport-routes-and-schedules'
+    description: 'Access real-time transit info via CommuteBacolod.com. Jeepney routes, ferry schedules, and commute guides.'
+
+  - name: 'Apply for Transport Permits and Franchise Registration'
+    slug: 'apply-for-transport-permits-and-franchise-registration'
+    description: 'Get LTFRB franchise, Mayor's Permit for PUVs, and tricycle franchise. For jeepneys, taxis, and public transport.'
+
+  - name: 'Report Traffic Violations and Check Penalties'
+    slug: 'report-traffic-violations-and-check-penalties'
+    description: 'Report traffic violations to BTAO. Check penalties, pay fines, and claim impounded vehicles.'
+
+  - name: 'Find Parking Zones and Apply for Parking Permits'
+    slug: 'find-parking-zones-and-apply-for-parking-permits'
+    description: 'Public parking zones, metered parking, business parking permits, and residential parking in Bacolod.'
