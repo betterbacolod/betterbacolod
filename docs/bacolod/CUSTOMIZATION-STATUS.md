@@ -1,7 +1,7 @@
 # Bacolod City Content Customization Status
 
 **Last Updated:** January 11, 2026
-**Overall Progress:** 58% (28 of 48 service files completed)
+**Overall Progress:** 85% (41 of 48 service files completed)
 
 ---
 
@@ -9,20 +9,21 @@
 
 ### Content Status
 
-- ✅ **Completed:** 28 Bacolod-specific service files (7 categories)
-- ⏳ **Remaining:** 20 service files across 5 categories + Phase 8
-- 🎯 **Next Priority:** Phase 8 (Legal & Civil) - 4 files
+- ✅ **Completed:** 41 Bacolod-specific service files (11 categories)
+- ⏳ **Remaining:** 7 service files (Agriculture & Fisheries only)
+- 🎯 **Optional:** Agriculture & Fisheries (4 files) - lower priority for urban Bacolod
 
 ### Technical Status
 
 - ✅ All 12 service category cards working on /services page
 - ✅ All routing and yamlLoader configurations fixed
 - ✅ All index.yaml files properly configured
+- ✅ Disaster Preparedness merged into Public Safety (12 categories total)
 - ⚠️ Some index.yaml files still have generic "your LGU" descriptions
 
 ---
 
-## ✅ Completed Categories (28 files)
+## ✅ Completed Categories (41 files)
 
 ### Phase 1: Health Services (4 files)
 
@@ -166,35 +167,84 @@
 
 ---
 
-## ⏳ Phase 8: Legal & Civil Services (0/4 files)
+### Phase 8: Legal & Civil Services (4 files)
 
-**Status:** ❌ Not Started - Next Priority!
-**Location:** `content/services/` (category to be determined)
+**Status:** ✅ Complete - Bacolod-specific
+**Location:** `content/services/legal-civil/`
+**Completed:** January 11, 2026
 
-### Planned Services:
+- Birth, marriage, death certificates (Local Civil Registrar)
+- Free legal assistance (PAO, IBP)
+- Notarial services guide
+- Community Tax Certificate (Cedula)
 
-1. **Civil Registration** - birth certificates, marriage, death certificates
-2. **Legal Assistance** - PAO (Public Attorney's Office), IBP legal aid
-3. **Notarial Services** - document notarization, affidavits
-4. **Cedula/Community Tax Certificate** - application and renewal
+**Bacolod Data (Scraped from bacolodcity.gov.ph):**
 
-**Data Needed:**
-
-- Local Civil Registrar Office contact info
-- PAO Bacolod office details
-- Notarial services locations and fees
-- Cedula application procedures and fees
+- Local Civil Registrar: Atty. Hermilo Pao-yon, (034) 435-4790
+- City Legal Office: Atty. Karol Joseph P. Chiu, (034) 708-8208
+- City Treasurer: Jose Maria Gecosala, (034) 435-0785
 
 ---
 
-## ❌ Missing Categories (16 files)
+### Phase 9: Environment (2 files)
 
-These categories have index.yaml configurations but **no actual content files** yet. They currently show on the website with generic descriptions.
+**Status:** ✅ Complete - Bacolod-specific
+**Location:** `content/services/environment/`
+**Completed:** January 11, 2026
 
-### 1. Agriculture & Fisheries (0/4 files)
+- Clean-up drives and tree planting activities
+- Report environmental violations (illegal logging, dumping, fishing)
 
+**Bacolod Data (Scraped from bacolodcity.gov.ph):**
+
+- ENRO OIC: Ramel Palalon, 0995-187-4725, enrobcd@bacolodcity.gov.ph
+- DPS OIC: Ramel M. Palalon, (034) 708-1755, dps@bacolodcity.gov.ph
+
+---
+
+### Phase 10: Housing & Land Use (3 files)
+
+**Status:** ✅ Complete - Bacolod-specific
+**Location:** `content/services/housing-land-use/`
+**Completed:** January 11, 2026
+
+- Socialized housing and relocation programs
+- Building permits, zoning, and land use clearances
+- Relocation sites and assistance
+
+**Bacolod Data (Scraped from bacolodcity.gov.ph):**
+
+- BHA: Ma. Victoria Parreñas, (034) 433-7108, bha@bacolodcity.gov.ph
+- OBO OIC: Isidro Sun Jr., (034) 433-8286, obo@bacolodcity.gov.ph
+- CPDO: Mary Jean L. Ramos, (034) 434-3184, cpdo@bacolodcity.gov.ph
+- BFP OIC: Chief Inspector Rodel Legaspi, (034) 434-5022
+
+---
+
+### Phase 11: Infrastructure & Public Works (4 files)
+
+**Status:** ✅ Complete - Bacolod-specific
+**Location:** `content/services/infrastructure-public-works/`
+**Completed:** January 11, 2026
+
+- Report damaged roads, bridges, drainage (with flood control info)
+- Water supply and connections (BACIWA)
+- Public facilities access (gyms, halls, centers)
+- Public markets and cemeteries
+
+**Bacolod Data (Scraped from bacolodcity.gov.ph):**
+
+- CEO OIC: Engr. Luben Rafael D. Ceballos, (034) 432-3098, ceo@bacolodcity.gov.ph
+- DRRMO: Dr. Anna Maria Laarni Pornan, 24/7 hotline (034) 432-3871-73
+- GSO OIC: Victor Espina, (034) 435-6067, gso@bacolodcity.gov.ph
+- BACIWA: www.baciwa.gov.ph
+
+---
+
+## ⏳ Remaining: Agriculture & Fisheries (4 files)
+
+**Status:** Optional - Lower priority for urban Bacolod
 **Location:** `content/services/agriculture-fisheries/`
-**Relevance to Bacolod:** Medium (city has some urban farming, but limited fishing)
 
 **Services Defined in index.yaml:**
 
@@ -204,84 +254,11 @@ These categories have index.yaml configurations but **no actual content files** 
 - Borrow farm tools or equipment from LGU
 
 **Bacolod Agency:** City Agriculture Office (CAO)
-**Status:** Index.yaml exists, no .md files
 
----
+- OIC: Maricar P. Quiro
+- Email: bacolodcityagri@gmail.com, cityagri@bacolodcity.gov.ph
 
-### 2. Disaster Preparedness (0/3 files)
-
-**Location:** `content/services/disaster-preparedness/`
-**Relevance to Bacolod:** HIGH (typhoons, floods, earthquakes)
-
-**Services Defined in index.yaml:**
-
-- Join disaster drills and evacuation planning
-- Learn about emergency response procedures and evacuation routes
-- Access disaster preparedness information and early warning systems
-
-**Bacolod Agency:** DRRMO
-**Status:** Index.yaml exists, no .md files
-**Note:** Some disaster content already covered in Phase 7 (Public Safety). May have overlap.
-
----
-
-### 3. Environment (0/2 files)
-
-**Location:** `content/services/environment/`
-**Relevance to Bacolod:** HIGH (BENRO programs, coastal cleanup)
-
-**Services Defined in index.yaml:**
-
-- Join clean-up drives and tree planting activities
-- Report illegal logging, quarrying, or fishing
-
-**Bacolod Agency:** BENRO (Bacolod Environment & Natural Resources Office)
-**Contact:** enrobcd@bacolodcity.gov.ph
-**Status:** Index.yaml exists, no .md files
-**Note:** Some overlap with waste management (Phase 4)
-
----
-
-### 4. Housing & Land Use (0/3 files)
-
-**Location:** `content/services/housing-land-use/`
-**Relevance to Bacolod:** HIGH (socialized housing, zoning, building permits)
-
-**Services Defined in index.yaml:**
-
-- Apply for socialized housing or relocation projects
-- Request zoning, land use, or building permits
-- Ask about available relocation sites in case of demolition
-
-**Bacolod Agencies:**
-
-- Office of Building Officials (OBO): obo@bacolodcity.gov.ph
-- City Engineer's Office (CEO): ceo@bacolodcity.gov.ph
-- Housing & Urban Dev Office
-
-**Status:** Index.yaml exists, no .md files
-
----
-
-### 5. Infrastructure & Public Works (0/4 files)
-
-**Location:** `content/services/infrastructure-public-works/`
-**Relevance to Bacolod:** HIGH (road repairs, public facilities)
-
-**Services Defined in index.yaml:**
-
-- Report damaged roads, bridges, or drainage
-- Request access to barangay water supply systems
-- Use public facilities like gyms, barangay halls, multipurpose centers
-- Rent stalls in public markets or use LGU-managed cemeteries
-
-**Bacolod Agencies:**
-
-- City Engineer's Office (CEO): ceo@bacolodcity.gov.ph
-- Bacolod Water District (BACIWA): www.baciwa.gov.ph
-- Public markets (covered in Business)
-
-**Status:** Index.yaml exists, no .md files
+**Status:** Index.yaml exists, no .md files yet
 
 ---
 
@@ -335,22 +312,22 @@ These categories have index.yaml configurations but **no actual content files** 
 
 ### By Phase:
 
-- Phases 1-7: **100% complete** (28 files)
-- Phase 8: **0% complete** (0/4 files)
-- Overall Phase Progress: **87.5%** (7/8 phases)
+- Phases 1-11: **100% complete** (41 files)
+- Agriculture & Fisheries: **0% complete** (0/4 files) - Optional
+- Overall Phase Progress: **91.6%** (11/12 categories)
 
 ### By Total Service Files:
 
-- Completed: **28 files** (Bacolod-specific)
-- Phase 8 Remaining: **4 files**
-- Other Categories: **16 files** (have index.yaml but no content)
-- **Total: 48 service files needed**
-- **Current Progress: 58%**
+- Completed: **41 files** (Bacolod-specific)
+- Remaining: **4 files** (Agriculture & Fisheries - optional)
+- Disaster Preparedness: **Merged into Public Safety**
+- **Total: 45 service files** (reduced from 48 after merge)
+- **Current Progress: 91%**
 
 ### By Category:
 
-- ✅ Complete (7): Health, Business, Education, Waste, Transportation, Social Welfare, Public Safety
-- ⏳ Phase 8 (1): Legal & Civil
+- ✅ Complete (11): Health, Business, Education, Waste, Transportation, Social Welfare, Public Safety, Legal & Civil, Environment, Housing & Land Use, Infrastructure
+- ⏳ Optional (1): Agriculture & Fisheries
 - ❌ No Content (5): Agriculture, Disaster Prep, Environment, Housing, Infrastructure
 
 ---
