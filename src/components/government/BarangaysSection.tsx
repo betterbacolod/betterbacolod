@@ -10,7 +10,6 @@ interface Barangay {
 interface BarangayGroup {
   id: string;
   title: string;
-  shortTitle: string;
   barangays: Barangay[];
 }
 
@@ -18,7 +17,6 @@ const barangayGroups: BarangayGroup[] = [
   {
     id: 'urban-1-10',
     title: 'Brgy. 1-10',
-    shortTitle: '1-10',
     barangays: [
       { name: 'Barangay 1', captain: 'Cesar B. Rellos, Jr.' },
       { name: 'Barangay 2', captain: 'Imelda J. Banguanga', phone: '431-1986' },
@@ -39,7 +37,6 @@ const barangayGroups: BarangayGroup[] = [
   {
     id: 'urban-11-20',
     title: 'Brgy. 11-20',
-    shortTitle: '11-20',
     barangays: [
       { name: 'Barangay 11', captain: 'Evelyn C. Ta-asan', phone: '708-4992' },
       {
@@ -76,7 +73,6 @@ const barangayGroups: BarangayGroup[] = [
   {
     id: 'urban-21-30',
     title: 'Brgy. 21-30',
-    shortTitle: '21-30',
     barangays: [
       {
         name: 'Barangay 21',
@@ -109,7 +105,6 @@ const barangayGroups: BarangayGroup[] = [
   {
     id: 'urban-31-41',
     title: 'Brgy. 31-41',
-    shortTitle: '31-41',
     barangays: [
       {
         name: 'Barangay 31',
@@ -139,7 +134,6 @@ const barangayGroups: BarangayGroup[] = [
   {
     id: 'named-a-g',
     title: 'A - G',
-    shortTitle: 'A-G',
     barangays: [
       { name: 'Alangilan', captain: 'Roy C. Retiza', phone: '708-9458' },
       { name: 'Alijis', captain: 'Deogracias De La Vega', phone: '432-3908' },
@@ -154,7 +148,6 @@ const barangayGroups: BarangayGroup[] = [
   {
     id: 'named-h-p',
     title: 'H - P',
-    shortTitle: 'H-P',
     barangays: [
       { name: 'Handumanan', captain: 'Ma. Febe F. Legaspi', phone: '445-1711' },
       { name: 'Mandalagan', captain: 'Paul B. Anieve', phone: '709-1963' },
@@ -175,7 +168,6 @@ const barangayGroups: BarangayGroup[] = [
   {
     id: 'named-s-v',
     title: 'S - V',
-    shortTitle: 'S-V',
     barangays: [
       {
         name: 'Singcang-Airport',
@@ -199,32 +191,45 @@ const barangayGroups: BarangayGroup[] = [
   },
 ];
 
-export default function BarangaysSection() {
+interface Props {
+  searchQuery?: string;
+}
+
+export default function BarangaysSection({ searchQuery = '' }: Props) {
+  const q = searchQuery.toLowerCase();
   const [activeSection, setActiveSection] = useState(barangayGroups[0].id);
   const contentRef = useRef<HTMLDivElement>(null);
 
+  const filteredGroups = barangayGroups
+    .map(group => ({
+      ...group,
+      barangays: group.barangays.filter(
+        b =>
+          b.name.toLowerCase().includes(q) ||
+          b.captain.toLowerCase().includes(q)
+      ),
+    }))
+    .filter(group => group.barangays.length > 0);
+
+  const groups = q ? filteredGroups : barangayGroups;
+
   useEffect(() => {
+    if (q) return;
     const container = contentRef.current;
     if (!container) return;
-
     const handleScroll = () => {
       const sections = container.querySelectorAll('section[id]');
       let current = barangayGroups[0].id;
-
       sections.forEach(section => {
         const rect = section.getBoundingClientRect();
         const containerRect = container.getBoundingClientRect();
-        if (rect.top <= containerRect.top + 100) {
-          current = section.id;
-        }
+        if (rect.top <= containerRect.top + 100) current = section.id;
       });
-
       setActiveSection(current);
     };
-
     container.addEventListener('scroll', handleScroll);
     return () => container.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [q]);
 
   const scrollTo = (id: string) => {
     const element = document.getElementById(id);
@@ -236,94 +241,24 @@ export default function BarangaysSection() {
     setActiveSection(id);
   };
 
-  return (
-    <div className="flex flex-col lg:flex-row gap-4 h-auto lg:h-[600px]">
-      {/* Mobile: Horizontal scrollable tabs */}
-      <nav className="lg:hidden overflow-x-auto pb-2 border-b border-gray-200 -mx-2 px-2">
-        <div className="flex gap-2 min-w-max">
-          <span className="text-xs text-gray-400 py-1.5">Urban:</span>
-          {barangayGroups.slice(0, 4).map(group => (
-            <button
-              key={group.id}
-              onClick={() => scrollTo(group.id)}
-              className={`px-3 py-1.5 text-xs rounded-full whitespace-nowrap transition-colors ${
-                activeSection === group.id
-                  ? 'bg-primary-600 text-white'
-                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-              }`}
-            >
-              {group.shortTitle}
-            </button>
-          ))}
-          <span className="text-xs text-gray-400 py-1.5 ml-2">Named:</span>
-          {barangayGroups.slice(4).map(group => (
-            <button
-              key={group.id}
-              onClick={() => scrollTo(group.id)}
-              className={`px-3 py-1.5 text-xs rounded-full whitespace-nowrap transition-colors ${
-                activeSection === group.id
-                  ? 'bg-primary-600 text-white'
-                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-              }`}
-            >
-              {group.shortTitle}
-            </button>
-          ))}
-        </div>
-      </nav>
+  if (q && filteredGroups.length === 0) {
+    return (
+      <p className="text-gray-500 text-center py-8">
+        No barangays found matching "{searchQuery}"
+      </p>
+    );
+  }
 
-      {/* Desktop: Sidebar */}
-      <nav className="hidden lg:block w-36 flex-shrink-0 border-r border-gray-200 pr-4 overflow-y-auto">
-        <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">
-          61 Barangays
-        </p>
-
-        <p className="text-xs text-gray-400 uppercase tracking-wide mt-3 mb-1">
-          Urban
-        </p>
-        {barangayGroups.slice(0, 4).map(group => (
-          <button
-            key={group.id}
-            onClick={() => scrollTo(group.id)}
-            className={`block w-full text-left text-xs px-2 py-1.5 rounded transition-colors ${
-              activeSection === group.id
-                ? 'bg-primary-100 text-primary-700 font-medium'
-                : 'text-gray-600 hover:text-primary-600 hover:bg-gray-50'
-            }`}
-          >
-            {group.title}
-          </button>
-        ))}
-
-        <p className="text-xs text-gray-400 uppercase tracking-wide mt-3 mb-1">
-          Named
-        </p>
-        {barangayGroups.slice(4).map(group => (
-          <button
-            key={group.id}
-            onClick={() => scrollTo(group.id)}
-            className={`block w-full text-left text-xs px-2 py-1.5 rounded transition-colors ${
-              activeSection === group.id
-                ? 'bg-primary-100 text-primary-700 font-medium'
-                : 'text-gray-600 hover:text-primary-600 hover:bg-gray-50'
-            }`}
-          >
-            {group.title}
-          </button>
-        ))}
-      </nav>
-
-      {/* Scrollable Content */}
-      <div
-        ref={contentRef}
-        className="flex-1 lg:overflow-y-auto pr-2 space-y-6"
-      >
-        {barangayGroups.map(group => (
-          <section key={group.id} id={group.id}>
-            <h2 className="text-sm font-semibold text-gray-900 mb-3 pb-2 border-b border-gray-300 uppercase tracking-wide sticky top-0 bg-white">
+  // Mobile: simple list
+  if (typeof window !== 'undefined' && window.innerWidth < 1024) {
+    return (
+      <div className="space-y-6">
+        {groups.map(group => (
+          <section key={group.id}>
+            <h2 className="text-sm font-semibold text-gray-900 mb-3 pb-2 border-b border-gray-300 uppercase tracking-wide">
               {group.title}
             </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            <div className="grid grid-cols-2 gap-3">
               {group.barangays.map((brgy, bi) => (
                 <div
                   key={bi}
@@ -346,7 +281,85 @@ export default function BarangaysSection() {
             </div>
           </section>
         ))}
+        <p className="text-xs text-gray-500 pt-4 border-t border-gray-200">
+          All phone numbers use area code (034). Source:
+          bacolodcity.gov.ph/barangay-officials
+        </p>
+      </div>
+    );
+  }
 
+  // Desktop: sidebar + scrollable content
+  return (
+    <div className="flex gap-4 h-[500px]">
+      {!q && (
+        <nav className="w-36 flex-shrink-0 border-r border-gray-200 pr-4 overflow-y-auto">
+          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">
+            61 Barangays
+          </p>
+          <p className="text-xs text-gray-400 uppercase tracking-wide mt-3 mb-1">
+            Urban
+          </p>
+          {barangayGroups.slice(0, 4).map(group => (
+            <button
+              key={group.id}
+              onClick={() => scrollTo(group.id)}
+              className={`block w-full text-left text-xs px-2 py-1.5 rounded transition-colors ${
+                activeSection === group.id
+                  ? 'bg-primary-100 text-primary-700 font-medium'
+                  : 'text-gray-600 hover:text-primary-600 hover:bg-gray-50'
+              }`}
+            >
+              {group.title}
+            </button>
+          ))}
+          <p className="text-xs text-gray-400 uppercase tracking-wide mt-3 mb-1">
+            Named
+          </p>
+          {barangayGroups.slice(4).map(group => (
+            <button
+              key={group.id}
+              onClick={() => scrollTo(group.id)}
+              className={`block w-full text-left text-xs px-2 py-1.5 rounded transition-colors ${
+                activeSection === group.id
+                  ? 'bg-primary-100 text-primary-700 font-medium'
+                  : 'text-gray-600 hover:text-primary-600 hover:bg-gray-50'
+              }`}
+            >
+              {group.title}
+            </button>
+          ))}
+        </nav>
+      )}
+      <div ref={contentRef} className="flex-1 overflow-y-auto pr-2 space-y-6">
+        {groups.map(group => (
+          <section key={group.id} id={group.id}>
+            <h2 className="text-sm font-semibold text-gray-900 mb-3 pb-2 border-b border-gray-300 uppercase tracking-wide sticky top-0 bg-white">
+              {group.title}
+            </h2>
+            <div className="grid grid-cols-4 gap-3">
+              {group.barangays.map((brgy, bi) => (
+                <div
+                  key={bi}
+                  className="bg-white border border-gray-300 rounded-lg p-3 hover:border-primary-400 hover:shadow-sm transition-all"
+                >
+                  <h3 className="font-medium text-gray-900 text-sm">
+                    {brgy.name}
+                  </h3>
+                  <p className="text-xs text-gray-600 mt-1 leading-tight">
+                    {brgy.captain}
+                  </p>
+                  {brgy.phone && (
+                    <p className="flex items-center gap-1.5 text-xs text-gray-700 mt-2">
+                      <Phone className="h-3 w-3 text-primary-500" />
+                      {brgy.phone}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </section>
+        ))}
         <p className="text-xs text-gray-500 pt-4 border-t border-gray-200">
           All phone numbers use area code (034). Source:
           bacolodcity.gov.ph/barangay-officials
