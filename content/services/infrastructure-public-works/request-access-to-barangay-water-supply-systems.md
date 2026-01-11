@@ -1,122 +1,84 @@
-# Water Supply and Connections — Bacolod City
+# Water Connection & Services
 
-Access water supply services through the **Bacolod City Water District (BACIWA)** or barangay water systems.
-
----
-
-## 1. Water Service Providers
-
-| Provider                | Coverage                     | Services                                   |
-| ----------------------- | ---------------------------- | ------------------------------------------ |
-| BACIWA (Water District) | Most of Bacolod City         | Water connections, billing, maintenance    |
-| Barangay water systems  | Some barangays (rural areas) | Community water supply, shared connections |
+Get water service through **BACIWA-PrimeWater**, the water utility serving Bacolod City.
 
 ---
 
-## 2. BACIWA Services
+## Water Service Provider
 
-**Available Services:**
+**Bacolod City Water District (BACIWA)** operates through a joint venture with **PrimeWater Infrastructure Corp.** (since 2020).
 
-- New water connection application
+> **Note:** As of December 2025, PrimeWater was acquired by Crystal Bridges Holdings Corp. Service continues under the existing joint venture agreement with BACIWA.
+
+---
+
+## Services Available
+
+- New water connection
 - Water meter installation
 - Billing and payment
 - Leak repairs and maintenance
-- Water quality testing
 - Disconnection and reconnection
 
 ---
 
-## 3. How to Apply for Water Connection
+## How to Apply for Water Connection
 
-### Requirements:
+### Requirements
 
-- Accomplished application form (from BACIWA)
+- Accomplished application form
 - Proof of ownership (land title, tax declaration) or lease contract
 - Barangay clearance
 - Valid IDs
 - Location sketch or map
-- Electrical permit (if new construction)
 
-### Process:
+### Process
 
-1. Visit **BACIWA office** or nearest branch
+1. Visit BACIWA-PrimeWater office
 2. Submit application form and requirements
 3. Pay application and connection fees
-4. BACIWA conducts site inspection
-5. Water meter installation scheduled
-6. Connection completed (7-14 days)
-
-### Fees:
-
-- Application fee: ₱500-₱1,000
-- Connection fee: ₱3,000-₱10,000 (depending on pipe size and distance)
-- Meter deposit: ₱1,500-₱3,000
+4. Site inspection scheduled
+5. Water meter installation
+6. Connection completed
 
 ---
 
-## 4. Barangay Water Systems
+## Report Water Problems
 
-**For areas not covered by BACIWA:**
-
-- Contact your **Barangay Hall**
-- Ask about barangay water supply system
-- Requirements and fees vary by barangay
-- Usually community-based or shared connections
-
----
-
-## 5. Water Bill Payment
-
-**Payment Options:**
-
-- BACIWA office (main and branches)
-- Authorized payment centers
-- Banks and remittance centers
-- Online payment (if available)
-
-**Billing Cycle:** Monthly
-
-**Due Date:** Check your water bill
+| Problem              | What to Do                        |
+| -------------------- | --------------------------------- |
+| No water supply      | Call BACIWA-PrimeWater hotline    |
+| Leaks in pipes       | Report to maintenance             |
+| High water bill      | Visit billing department          |
+| Water quality issues | Report to water quality section   |
+| Illegal connections  | Report to BACIWA or your barangay |
 
 ---
 
-## 6. Report Water Problems
+## Contact Information
 
-| Problem                   | Contact                      |
-| ------------------------- | ---------------------------- |
-| No water supply           | BACIWA hotline or office     |
-| Leaks in water pipes      | BACIWA maintenance           |
-| High water bill           | BACIWA billing department    |
-| Water quality issues      | BACIWA water quality section |
-| Illegal water connections | BACIWA or barangay           |
+### BACIWA-PrimeWater Bacolod
 
----
+- **Customer Care (National):** (02) 8851-5055 / (02) 7368-2779
+- **Email:** customercare@primewatercorp.com
+- **Website:** [primewatercorp.com](https://primewatercorp.com)
 
-## 7. Contact Information
+### For Barangay Water Systems
 
-### Bacolod City Water District (BACIWA)
-
-- **Website:** [www.baciwa.gov.ph](https://www.baciwa.gov.ph)
-- **Main Office:** Bacolod City (check website for exact address)
-- **Customer Service:** Check BACIWA website for hotline
-- **Hours:** Monday-Friday, 8:00 AM - 5:00 PM
-
-### For Barangay Water Systems:
-
-- Contact your **Barangay Hall**
-- Ask for **Barangay Water Committee** or **Barangay Captain**
+Some rural barangays have community water systems. Contact your **Barangay Hall** for information.
 
 ---
 
-## 8. Water Conservation Tips
+## Water Conservation Tips
 
 - Fix leaks immediately
 - Use water-saving fixtures
 - Collect rainwater for plants
 - Turn off taps when not in use
-- Report water wastage to BACIWA
 
 ---
 
-**Source:** [Bacolod City Government](https://bacolodcity.gov.ph) — January 11, 2026  
-**Additional:** BACIWA website (www.baciwa.gov.ph)
+**Sources:**
+
+- [PrimeWater Infrastructure Corp.](https://primewatercorp.com) — Official Website
+- [Bacolod water utility enters transition](https://www.panaynews.net/bacolod-water-utility-enters-transition-amid-reported-ownership-change/) — Panay News, Dec 2025
