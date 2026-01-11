@@ -78,4 +78,4 @@ MIT License - see [LICENSE](LICENSE)
 
 💸 Cost to build this site: ₱435.39
 
-Inspired by [BetterGov.ph](https://bettergov.ph)
+Forked from [iyanski/betterlocalgov](https://github.com/iyanski/betterlocalgov) · Inspired by [BetterGov.ph](https://bettergov.ph)
