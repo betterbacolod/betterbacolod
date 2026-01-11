@@ -5,24 +5,31 @@ import { governmentActivitCategories } from '../data/yamlLoader';
 import * as LucideIcons from 'lucide-react';
 import SEO from '../components/SEO';
 import { Card, CardContent } from '../components/ui/Card';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import OfficialsSection from '../components/government/OfficialsSection';
 import DepartmentsSection from '../components/government/DepartmentsSection';
 import BarangaysSection from '../components/government/BarangaysSection';
 
 const Government: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string | null>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  // Scroll to content on mobile when section is selected
+  useEffect(() => {
+    if (activeSection && contentRef.current && window.innerWidth < 768) {
+      setTimeout(() => {
+        contentRef.current?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      }, 100);
+    }
+  }, [activeSection]);
 
   const renderContent = () => {
-    if (activeSection === 'officials') {
-      return <OfficialsSection />;
-    }
-    if (activeSection === 'departments') {
-      return <DepartmentsSection />;
-    }
-    if (activeSection === 'barangays') {
-      return <BarangaysSection />;
-    }
+    if (activeSection === 'officials') return <OfficialsSection />;
+    if (activeSection === 'departments') return <DepartmentsSection />;
+    if (activeSection === 'barangays') return <BarangaysSection />;
     return null;
   };
 
@@ -34,16 +41,16 @@ const Government: React.FC = () => {
         keywords="government, city officials, departments, barangays, Bacolod City"
       />
       <Section className="min-h-[60vh]">
-        <div className="text-center mb-10">
+        <div className="text-center mb-6 md:mb-10">
           <Heading level={2}>Bacolod City Government</Heading>
-          <Text className="text-gray-600 max-w-2xl mx-auto">
+          <Text className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
             Learn about your city officials, government departments, and
             barangays.
           </Text>
         </div>
 
-        {/* Category Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {/* Category Cards - smaller on mobile */}
+        <div className="grid grid-cols-3 md:grid-cols-3 gap-2 md:gap-6">
           {governmentActivitCategories.categories.map(cat => {
             const CatIcon = LucideIcons[
               cat.icon as keyof typeof LucideIcons
@@ -56,18 +63,22 @@ const Government: React.FC = () => {
                 className={`border-t-4 cursor-pointer transition-all ${isActive ? 'border-primary-600 ring-2 ring-primary-200' : 'border-primary-500'}`}
                 onClick={() => setActiveSection(isActive ? null : cat.slug)}
               >
-                <CardContent className="flex flex-col h-full p-6">
-                  <div className="flex gap-2">
+                <CardContent className="flex flex-col h-full p-3 md:p-6">
+                  {/* Mobile: stacked, Desktop: side by side */}
+                  <div className="flex flex-col md:flex-row md:gap-2 items-center md:items-start">
                     <div
-                      className={`p-3 rounded-md mb-4 self-start ${isActive ? 'bg-primary-600 text-white' : 'bg-primary-100 text-primary-600'}`}
+                      className={`p-2 md:p-3 rounded-md mb-2 md:mb-4 ${isActive ? 'bg-primary-600 text-white' : 'bg-primary-100 text-primary-600'}`}
                     >
-                      {CatIcon && <CatIcon className="h-6 w-6" />}
+                      {CatIcon && <CatIcon className="h-5 w-5 md:h-6 md:w-6" />}
                     </div>
-                    <h3 className="text-lg font-semibold mb-4 text-gray-900 self-center">
+                    <h3 className="text-xs md:text-lg font-semibold text-gray-900 text-center md:text-left md:self-center">
                       {cat.category}
                     </h3>
                   </div>
-                  <Text className="text-gray-800">{cat.description}</Text>
+                  {/* Hide description on mobile */}
+                  <Text className="text-gray-800 hidden md:block">
+                    {cat.description}
+                  </Text>
                 </CardContent>
               </Card>
             );
@@ -76,9 +87,11 @@ const Government: React.FC = () => {
 
         {/* Content Section */}
         {activeSection && (
-          <div className="mt-8">
+          <div ref={contentRef} className="mt-6 md:mt-8 scroll-mt-4">
             <Card>
-              <CardContent className="p-6">{renderContent()}</CardContent>
+              <CardContent className="p-4 md:p-6">
+                {renderContent()}
+              </CardContent>
             </Card>
           </div>
         )}

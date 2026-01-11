@@ -332,12 +332,12 @@ export default function BarangaysSection() {
                   <h3 className="font-medium text-gray-900 text-sm">
                     {brgy.name}
                   </h3>
-                  <p className="text-sm text-gray-600 mt-1 truncate">
+                  <p className="text-xs text-gray-600 mt-1 leading-tight">
                     {brgy.captain}
                   </p>
                   {brgy.phone && (
-                    <p className="flex items-center gap-1.5 text-sm text-gray-700 mt-2">
-                      <Phone className="h-3.5 w-3.5 text-primary-500" />
+                    <p className="flex items-center gap-1.5 text-xs text-gray-700 mt-2">
+                      <Phone className="h-3 w-3 text-primary-500" />
                       {brgy.phone}
                     </p>
                   )}
