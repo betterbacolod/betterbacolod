@@ -10,8 +10,13 @@ import {
   Building2,
   FileText,
   ExternalLink,
+  TrendingUp,
+  FileSearch,
+  FolderOpen,
+  ShoppingCart,
 } from 'lucide-react';
 import FloodControlSection from '../components/transparency/FloodControlSection';
+import budgetData from '../data/transparency/budget-region6.json';
 
 const categories = [
   {
@@ -21,16 +26,16 @@ const categories = [
     description: '39 DPWH flood control projects in Bacolod City',
   },
   {
+    slug: 'reports',
+    name: 'Budget & Procurement',
+    icon: FileText,
+    description: 'Regional budget allocation and government contracts',
+  },
+  {
     slug: 'infrastructure',
     name: 'Infrastructure (DIME)',
     icon: Building2,
     description: 'Major infrastructure projects tracking',
-  },
-  {
-    slug: 'reports',
-    name: 'Reports & Documents',
-    icon: FileText,
-    description: 'Budget, audit, and FOI information',
   },
 ];
 
@@ -150,115 +155,214 @@ const Transparency: React.FC = () => {
 // Infrastructure Section - Links to BetterGov DIME
 const InfrastructureSection = () => (
   <div className="space-y-4">
-    <p className="text-gray-600">
-      Track major infrastructure projects in Negros Occidental through the DPWH
-      Digital Information for Monitoring and Evaluation (DIME) system.
+    <p className="text-gray-600 text-sm">
+      Track major infrastructure projects through the DPWH Digital Information
+      for Monitoring and Evaluation (DIME) system. Data is loaded live from the
+      DPWH database.
     </p>
-    <a
-      href="https://visualizations.bettergov.ph/dime?province=NEGROS+OCCIDENTAL"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
-    >
-      View DIME Projects <ExternalLink className="h-4 w-4" />
-    </a>
-    <p className="text-xs text-gray-500 mt-4">
-      Data source: DPWH DIME via BetterGov.ph
+
+    <div className="flex flex-wrap gap-2">
+      <a
+        href="https://visualizations.bettergov.ph/dime?city=BACOLOD+CITY"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-1 px-3 py-1.5 bg-primary-600 text-white rounded text-sm hover:bg-primary-700"
+      >
+        Bacolod City Projects <ExternalLink className="h-3 w-3" />
+      </a>
+      <a
+        href="https://visualizations.bettergov.ph/dime?province=NEGROS+OCCIDENTAL"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-1 px-3 py-1.5 border border-primary-600 text-primary-600 rounded text-sm hover:bg-primary-50"
+      >
+        Negros Occidental <ExternalLink className="h-3 w-3" />
+      </a>
+    </div>
+
+    <p className="text-xs text-gray-500">
+      Source:{' '}
+      <a
+        href="https://dime.dpwh.gov.ph"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline"
+      >
+        DPWH DIME
+      </a>{' '}
+      via{' '}
+      <a
+        href="https://bettergov.ph"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline"
+      >
+        BetterGov.ph
+      </a>{' '}
+      • Report issues:{' '}
+      <a
+        href="https://sumbongsapangulo.ph/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline"
+      >
+        sumbongsapangulo.ph
+      </a>
     </p>
   </div>
 );
 
-// Reports Section - Links to official documents
+// Reports Section - Budget & Procurement
 const ReportsSection = () => (
   <div className="space-y-6">
-    <div>
-      <h3 className="text-sm font-semibold text-gray-900 mb-3 pb-2 border-b border-gray-300 uppercase tracking-wide">
-        Budget & Finance
-      </h3>
-      <ul className="space-y-2 text-sm">
-        <li>
-          <a
-            href="https://transparency.bettergov.ph/budget/regional"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary-600 hover:underline flex items-center gap-1"
-          >
-            Regional Budget Data (GAA) <ExternalLink className="h-3 w-3" />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://bacolodcity.gov.ph"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary-600 hover:underline flex items-center gap-1"
-          >
-            City Budget Documents <ExternalLink className="h-3 w-3" />
-          </a>
-        </li>
-      </ul>
+    {/* Procurement */}
+    <div className="bg-primary-50 border border-primary-200 rounded-lg p-4">
+      <div className="flex items-center gap-2 mb-2">
+        <ShoppingCart className="h-4 w-4 text-primary-600" />
+        <h3 className="text-sm font-semibold text-primary-800 uppercase tracking-wide">
+          Government Procurement
+        </h3>
+      </div>
+      <p className="text-sm text-primary-700 mb-3">
+        View all government bids, awards, and contracts in Negros Occidental.
+        Track how public funds are spent.
+      </p>
+      <div className="flex flex-wrap gap-2">
+        <a
+          href="https://transparency.bettergov.ph/locations/Negros%20Occidental"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1 px-3 py-1.5 bg-primary-600 text-white rounded text-sm hover:bg-primary-700"
+        >
+          View Negros Occidental Procurement{' '}
+          <ExternalLink className="h-3 w-3" />
+        </a>
+        <a
+          href="https://www.philgeps.gov.ph"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1 px-3 py-1.5 border border-primary-600 text-primary-700 rounded text-sm hover:bg-primary-100"
+        >
+          PhilGEPS Portal <ExternalLink className="h-3 w-3" />
+        </a>
+      </div>
     </div>
 
+    {/* Budget Chart */}
     <div>
-      <h3 className="text-sm font-semibold text-gray-900 mb-3 pb-2 border-b border-gray-300 uppercase tracking-wide">
-        Procurement
-      </h3>
-      <ul className="space-y-2 text-sm">
-        <li>
-          <a
-            href="https://transparency.bettergov.ph/locations/Negros%20Occidental"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary-600 hover:underline flex items-center gap-1"
-          >
-            PhilGEPS Procurement Data (Negros Occidental){' '}
-            <ExternalLink className="h-3 w-3" />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.philgeps.gov.ph"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary-600 hover:underline flex items-center gap-1"
-          >
-            PhilGEPS Official Portal <ExternalLink className="h-3 w-3" />
-          </a>
-        </li>
-      </ul>
+      <div className="flex items-center gap-2 mb-3 pb-2 border-b border-gray-300">
+        <TrendingUp className="h-4 w-4 text-gray-600" />
+        <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wide">
+          Region VI Budget (GAA)
+        </h3>
+      </div>
+      <p className="text-xs text-gray-500 mb-3">
+        General Appropriations Act allocation for Western Visayas (includes
+        Bacolod City)
+      </p>
+      <div className="space-y-2">
+        {budgetData.data.slice(-4).map(item => (
+          <div key={item.year} className="flex items-center gap-3">
+            <span className="text-sm text-gray-600 w-12">{item.year}</span>
+            <div className="flex-1 bg-gray-100 rounded-full h-6 overflow-hidden">
+              <div
+                className="bg-primary-500 h-full rounded-full flex items-center justify-end pr-2"
+                style={{ width: `${(item.gaa / 200000000000) * 100}%` }}
+              >
+                <span className="text-xs text-white font-medium">
+                  ₱{(item.gaa / 1e9).toFixed(0)}B
+                </span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <a
+        href="https://transparency.bettergov.ph/budget/regional"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-1 text-xs text-primary-600 hover:underline mt-2"
+      >
+        View full budget data <ExternalLink className="h-3 w-3" />
+      </a>
     </div>
 
+    {/* Audit & Accountability */}
     <div>
-      <h3 className="text-sm font-semibold text-gray-900 mb-3 pb-2 border-b border-gray-300 uppercase tracking-wide">
-        Audit & Accountability
-      </h3>
-      <ul className="space-y-2 text-sm">
-        <li>
-          <a
-            href="https://www.coa.gov.ph"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary-600 hover:underline flex items-center gap-1"
-          >
-            Commission on Audit Reports <ExternalLink className="h-3 w-3" />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.foi.gov.ph"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary-600 hover:underline flex items-center gap-1"
-          >
-            Freedom of Information Portal <ExternalLink className="h-3 w-3" />
-          </a>
-        </li>
-      </ul>
+      <div className="flex items-center gap-2 mb-3 pb-2 border-b border-gray-300">
+        <FileSearch className="h-4 w-4 text-gray-600" />
+        <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wide">
+          Audit & Accountability
+        </h3>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <a
+          href="https://www.coa.gov.ph"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-3 p-3 border border-gray-200 rounded-lg hover:border-primary-300 hover:bg-primary-50 transition-colors"
+        >
+          <div className="p-2 bg-primary-100 rounded-lg text-primary-600">
+            <FileText className="h-4 w-4" />
+          </div>
+          <div>
+            <p className="font-medium text-gray-900 text-sm">
+              COA Audit Reports
+            </p>
+            <p className="text-xs text-gray-500">
+              Commission on Audit findings
+            </p>
+          </div>
+        </a>
+        <a
+          href="https://www.foi.gov.ph"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-3 p-3 border border-gray-200 rounded-lg hover:border-primary-300 hover:bg-primary-50 transition-colors"
+        >
+          <div className="p-2 bg-primary-100 rounded-lg text-primary-600">
+            <FolderOpen className="h-4 w-4" />
+          </div>
+          <div>
+            <p className="font-medium text-gray-900 text-sm">
+              Freedom of Information
+            </p>
+            <p className="text-xs text-gray-500">
+              Request government documents
+            </p>
+          </div>
+        </a>
+      </div>
     </div>
 
-    <p className="text-xs text-gray-500 pt-4 border-t border-gray-200">
-      For specific Bacolod City documents, visit the official city website or
-      contact the City Information Office.
+    <p className="text-xs text-gray-500 pt-2">
+      Source:{' '}
+      <a
+        href="https://dbm.gov.ph"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline"
+      >
+        DBM
+      </a>{' '}
+      via{' '}
+      <a
+        href="https://bettergov.ph"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline"
+      >
+        BetterGov.ph
+      </a>{' '}
+      • Report issues:{' '}
+      <a
+        href="https://sumbongsapangulo.ph/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="underline"
+      >
+        sumbongsapangulo.ph
+      </a>
     </p>
   </div>
 );
