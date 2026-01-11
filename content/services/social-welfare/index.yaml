@@ -2,18 +2,18 @@
 # This file contains all the pages/services available under the Social Welfare category
 
 pages:
-  - name: 'Social Welfare Programs & Financial Assistance'
+  - name: 'Financial Assistance (Medical, Burial, Emergency)'
     slug: 'access-social-welfare-programs-and-financial-assistance'
-    description: 'Medical assistance, burial aid, 4Ps, livelihood programs, and emergency assistance from DSSD.'
+    description: 'Apply for medical assistance, burial aid, calamity relief, and other DSSD programs for indigent residents.'
 
-  - name: 'Senior Citizen ID & Benefits'
+  - name: 'Senior Citizen ID & Discounts'
     slug: 'apply-for-senior-citizen-benefits-and-discounts'
-    description: '20% discounts, VAT exemption, and social pension. Get your Senior Citizen ID at your barangay or DSSD.'
+    description: 'Get your Senior Citizen ID for 20% discounts, VAT exemption, and social pension benefits.'
 
-  - name: 'PWD ID & Disability Benefits'
+  - name: 'PWD ID & Discounts'
     slug: 'register-for-pwd-id-and-disability-benefits'
-    description: 'Free PWD ID with 20% discounts and VAT exemption. Apply at your barangay or DSSD.'
+    description: 'Register for a free PWD ID and get 20% discounts on medicines, food, transportation, and more.'
 
   - name: 'Solo Parent ID & Benefits'
     slug: 'apply-for-solo-parent-id-and-benefits'
-    description: 'Free Solo Parent ID for 20% discounts, 7 days parental leave, and educational assistance.'
+    description: 'Apply for Solo Parent ID for discounts, 7-day parental leave, and educational assistance for your children.'
