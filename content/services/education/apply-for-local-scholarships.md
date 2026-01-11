@@ -1,4 +1,4 @@
-# Apply for Local Scholarships — Bacolod City
+# Scholarships in Bacolod City (PESO & Local Colleges)
 
 Bacolod City offers scholarship programs through the **Public Employment Services Office (PESO)** and partners with local colleges.
 
@@ -61,12 +61,13 @@ The Bacolod City Government provides scholarship assistance to deserving student
 
 ## Contact Information
 
-- **Public Employment Services Office (PESO) Bacolod**
-- **Phone**: (034) 434-9122
-- **Email**: peso@bacolodcity.gov.ph
-- **Location**: Bacolod City Government Center, Circumferential Rd, Brgy. Villamonte, Bacolod City, 6100 Negros Occidental
-- **Website**: [bacolodcity.gov.ph](https://bacolodcity.gov.ph/trabaho-sa-peso-bacolod/)
-- **Facebook**: [PESO Bacolod LGU](https://www.facebook.com/PesoBacolodLGU)
+### Public Employment Services Office (PESO) Bacolod
+
+- **Manager:** Mae Ferrer-Llamas, PhD
+- **Email:** peso@bacolodcity.gov.ph, maellamas@bacolodcity.gov.ph
+- **Location:** Bacolod City Government Center
+- **Website:** [bacolodcity.gov.ph/trabaho-sa-peso-bacolod](https://bacolodcity.gov.ph/trabaho-sa-peso-bacolod/)
+- **Facebook:** [PESO Bacolod LGU](https://www.facebook.com/PesoBacolodLGU)
 
 ---
 

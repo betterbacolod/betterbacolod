@@ -1,4 +1,4 @@
-# Go to the Local Hospital for Treatment or Confinement — Bacolod City
+# Hospitals in Bacolod City (Public & Private)
 
 This guide covers **where to go**, **what to bring**, and **how admission works** at hospitals in Bacolod City.
 
@@ -23,7 +23,32 @@ This guide covers **where to go**, **what to bring**, and **how admission works*
 
 ## Private Hospitals
 
-Bacolod City has several private hospitals for more specialized care. Contact them directly for services and rates.
+| Hospital                                            | Address                    | Phone          | Hours |
+| --------------------------------------------------- | -------------------------- | -------------- | ----- |
+| **Riverside Medical Center, Inc.**                  | BS Aquino Dr.              | (034) 705-0000 | 24/7  |
+| **The Doctors' Hospital, Inc.**                     | BS Aquino Dr.              | (034) 468-2100 | 24/7  |
+| **Dr. Pablo O. Torre Memorial Hospital**            | BS Aquino Dr.              | (034) 433-7331 | 24/7  |
+| **Adventist Medical Center – Bacolod**              | C.V. Ramos St., Taculing   | (034) 488-7777 | 24/7  |
+| **Metro Bacolod Hospital & Medical Center**         | Burgos St.                 | (034) 488-7288 | 24/7  |
+| **South Bacolod General Hospital & Medical Center** | Araneta Ave.               | (034) 704-2911 | 24/7  |
+| **Bacolod Queen of Mercy Hospital**                 | MXQC+PM7, Brgy. Mandalagan | (034) 432-2887 | 24/7  |
+| **Asia-Pacific Medical Center Bacolod**             | —                          | (034) 703-0049 | —     |
+
+## Public Hospital
+
+| Hospital                                                           | Address    | Phone          | Hours |
+| ------------------------------------------------------------------ | ---------- | -------------- | ----- |
+| **Corazon Locsin Montelibano Memorial Regional Hospital (CLMMRH)** | Lacson St. | (034) 703-1350 | 24/7  |
+
+## Clinics & Outpatient
+
+| Clinic                                | Address                                | Phone          | Hours      |
+| ------------------------------------- | -------------------------------------- | -------------- | ---------- |
+| **The Medical City Clinic – Bacolod** | Ayala Malls Capitol Central, 2nd Floor | —              | Outpatient |
+| **Maxicare Primary Care Clinic**      | Lopues Mandalagan Bldg., Lacson St.    | (034) 458-6715 | Until 10PM |
+| **Una Konsulta**                      | SM City Bacolod North Block            | (034) 435-4052 | Until 5PM  |
+| **Healberg Lifestyle Medical Center** | Araneta Ave.                           | (034) 703-6359 | Until 3PM  |
+| **Nord Medical Hub**                  | 506 BS Aquino Dr.                      | (034) 474-2235 | —          |
 
 ---
 
@@ -68,5 +93,7 @@ Bacolod City has several private hospitals for more specialized care. Contact th
 
 - [Bacolod City Comprehensive Health Program](https://bacolodcity.gov.ph/bacolod-city-comprehensive-health-program/) — Jan 8, 2026
 - [Bacolod City Contact Information](https://bacolodcity.gov.ph/contact-us/) — Jan 8, 2026
-- [Bacolod City Hotlines](https://bacolodcity.gov.ph/hotlines/) — Jan 8, 2026
+- [The Doctors' Hospital](https://thedoctorshospital.com/contact/) — Jan 11, 2026
+- [Adventist Medical Center – Bacolod](https://adventisthealth-bcd.com/contact-us/) — Jan 11, 2026
+- Google Maps hospital listings — Jan 11, 2026
 - **FB:** [Bacolod City Comprehensive Health Program](https://www.facebook.com/bacchp2022) (Verified)

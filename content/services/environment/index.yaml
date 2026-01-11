@@ -2,10 +2,10 @@
 # This file contains all the pages/services available under the Environment category
 
 pages:
-  - name: 'Join clean-up drives and tree planting activities'
+  - name: 'Clean-up Drives & Tree Planting'
     slug: 'join-clean-up-drives-and-tree-planting-activities'
-    description: 'Information about participating in community clean-up drives and tree planting activities.'
-    
-  - name: 'Report illegal logging, quarrying, or fishing'
+    description: 'Join BENRO community clean-ups and tree planting. Volunteer programs and environmental activities.'
+
+  - name: 'Report Environmental Violations'
     slug: 'report-illegal-logging-quarrying-or-fishing'
-    description: 'How to report illegal environmental activities like logging, quarrying, or illegal fishing.'
+    description: 'Report illegal logging, quarrying, fishing, and pollution to BENRO. Hotlines and how to file complaints.'

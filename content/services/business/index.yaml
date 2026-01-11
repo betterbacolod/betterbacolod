@@ -2,18 +2,18 @@
 # This file contains all the pages/services available under the Business & Livelihood category
 
 pages:
-  - name: "Apply for barangay clearance and mayor's business permits"
+  - name: 'Business Permits in Bacolod City (New & Renewal)'
     slug: 'apply-for-barangay-clearance-and-mayors-business-permits'
-    description: "Step-by-step guide to applying for barangay clearance and mayor's business permits for your business."
+    description: 'Apply for new business permits or renew at BPLO. Includes barangay clearance, requirements, and BOSS one-stop shop info.'
     
-  - name: 'Renew permits and pay local business taxes'
+  - name: 'Business Permit Renewal & Local Business Taxes in Bacolod City'
     slug: 'renew-permits-and-pay-local-business-taxes'
-    description: 'Information about renewing business permits and paying local business taxes to your local government.'
+    description: 'Renew your business permit and pay local taxes at the City Treasurer Office. Deadlines, fees, and online payment options.'
     
-  - name: 'Rent stalls in public markets'
+  - name: 'Public Market Stall Rentals in Bacolod City'
     slug: 'rent-stalls-in-public-markets'
-    description: 'How to rent stalls in local government public markets for your business.'
+    description: 'Rent stalls at Central Market, Libertad Market, and other public markets. Requirements and application process.'
     
-  - name: 'Join trade fairs, business expos, or tourism promotions'
+  - name: 'Trade Fairs, Business Expos & Tourism Promotions in Bacolod City'
     slug: 'join-trade-fairs-business-expos-or-tourism-promotions'
-    description: 'Participate in local trade fairs, business expos, and tourism promotion activities.'
+    description: 'Join MassKara Festival trade fairs, business expos, and city tourism events. Contact LEDIP and Tourism Office.'

@@ -2,18 +2,18 @@
 # This file contains all the pages/services available under the Infrastructure & Public Works category
 
 pages:
-  - name: 'Report damaged roads, bridges, or drainage'
+  - name: 'Report Road, Bridge & Drainage Problems'
     slug: 'report-damaged-roads-bridges-or-drainage'
-    description: 'How to report damaged infrastructure like roads, bridges, and drainage systems to your local government.'
-    
-  - name: 'Request access to barangay water supply systems'
+    description: 'Report potholes, damaged bridges, clogged drainage, and flooding to the City Engineer or DPWH.'
+
+  - name: 'Water Connection (BACIWA)'
     slug: 'request-access-to-barangay-water-supply-systems'
-    description: 'Information about requesting access to barangay water supply systems and water connections.'
-    
-  - name: 'Use public facilities like gyms, barangay halls, or multipurpose centers'
+    description: 'Apply for water connection through BACIWA. Requirements, fees, and how to report water problems.'
+
+  - name: 'Use Public Facilities (Gyms, Courts, Halls)'
     slug: 'use-public-facilities-like-gyms-barangay-halls-or-multipurpose-centers'
-    description: 'How to access and use public facilities like gyms, barangay halls, and multipurpose centers.'
-    
-  - name: 'Rent stalls in public markets or use LGU-managed cemeteries'
+    description: 'Reserve barangay halls, sports courts, Panaad Stadium, and multipurpose centers for events.'
+
+  - name: 'Public Markets & City Cemeteries'
     slug: 'rent-stalls-in-public-markets-or-use-lgu-managed-cemeteries'
-    description: 'Information about renting stalls in public markets and using LGU-managed cemetery services.'
+    description: 'Rent stalls at Central Market, Libertad Market. Cemetery services and burial permits.'

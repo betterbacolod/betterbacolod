@@ -2,18 +2,18 @@
 # This file contains all the pages/services available under the Social Welfare category
 
 pages:
-  - name: 'Apply for Senior Citizen Benefits and Discounts'
-    slug: 'apply-for-senior-citizen-benefits-and-discounts'
-    description: 'Get your Senior Citizen ID and avail of 20% discounts, VAT exemption, and social pension programs.'
-
-  - name: 'Register for PWD ID and Disability Benefits'
-    slug: 'register-for-pwd-id-and-disability-benefits'
-    description: 'Apply for FREE PWD ID and access 20% discounts, assistive devices, and disability programs.'
-
-  - name: 'Apply for Solo Parent ID and Benefits'
-    slug: 'apply-for-solo-parent-id-and-benefits'
-    description: 'Get your Solo Parent ID for 20% discounts, 7 days parental leave, and educational assistance.'
-
-  - name: 'Access Social Welfare Programs and Financial Assistance'
+  - name: 'Financial Assistance (Medical, Burial, Emergency)'
     slug: 'access-social-welfare-programs-and-financial-assistance'
-    description: 'Medical assistance, burial aid, 4Ps, livelihood programs, and emergency assistance from DSSD.'
+    description: 'Apply for medical assistance, burial aid, calamity relief, and other DSSD programs for indigent residents.'
+
+  - name: 'Senior Citizen ID & Discounts'
+    slug: 'apply-for-senior-citizen-benefits-and-discounts'
+    description: 'Get your Senior Citizen ID for 20% discounts, VAT exemption, and social pension benefits.'
+
+  - name: 'PWD ID & Discounts'
+    slug: 'register-for-pwd-id-and-disability-benefits'
+    description: 'Register for a free PWD ID and get 20% discounts on medicines, food, transportation, and more.'
+
+  - name: 'Solo Parent ID & Benefits'
+    slug: 'apply-for-solo-parent-id-and-benefits'
+    description: 'Apply for Solo Parent ID for discounts, 7-day parental leave, and educational assistance for your children.'

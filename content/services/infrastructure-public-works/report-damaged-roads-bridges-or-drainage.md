@@ -6,14 +6,15 @@ Report damaged roads, bridges, drainage, flooding, and other public infrastructu
 
 ## 1. What to Report
 
-| Infrastructure Type        | Report To                     |
-| -------------------------- | ----------------------------- |
-| Roads (potholes, cracks)   | City Engineer's Office (CEO)  |
-| Bridges (damage, cracks)   | City Engineer's Office (CEO)  |
-| Drainage (clogged, broken) | City Engineer's Office (CEO)  |
-| Flooding (emergency)       | DRRMO 24/7 Hotline            |
-| Street lights              | City Engineer's Office (CEO)  |
-| Public buildings           | General Services Office (GSO) |
+| Infrastructure Type           | Report To                     |
+| ----------------------------- | ----------------------------- |
+| City roads (potholes, cracks) | City Engineer's Office (CEO)  |
+| National roads (highways)     | DPWH Bacolod City DEO         |
+| Bridges (damage, cracks)      | CEO (city) or DPWH (national) |
+| Drainage (clogged, broken)    | City Engineer's Office (CEO)  |
+| Flooding (emergency)          | DRRMO 24/7 Hotline            |
+| Street lights                 | City Engineer's Office (CEO)  |
+| Public buildings              | General Services Office (GSO) |
 
 ---
 
@@ -76,13 +77,22 @@ When reporting, include:
 
 ## 5. Contact Information
 
-### City Engineer's Office (CEO)
+### City Engineer's Office (CEO) — City Roads
 
 - **OIC:** Engr. Luben Rafael D. Ceballos
 - **Address:** Bacolod City Government Center, Circumferential Rd, Brgy. Villamonte
 - **Phone:** (034) 432-3098
 - **Email:** ceobacolod@yahoo.com, ceo@bacolodcity.gov.ph
 - **Hours:** Monday-Friday, 8:00 AM - 5:00 PM
+
+### DPWH Bacolod City DEO — National Roads
+
+- **District Engineer (OIC):** Engr. Leah G. Jamero
+- **Asst. District Engineer:** Antonio F. Valenzuela
+- **Address:** Zardonyx St., Brgy. Taculing, Bacolod City
+- **Phone:** (034) 433-2804
+- **Fax:** (034) 703-1478
+- **Email:** jamero.leah@dpwh.gov.ph
 
 ### DRRMO (Disaster Risk Reduction and Management Office)
 

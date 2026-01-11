@@ -61,10 +61,25 @@ Proper waste segregation is **mandatory** in Bacolod City under **Republic Act 9
 
 ## Contact for Support
 
-- **Bacolod Environment and Natural Resources Office (BENRO)**
-- **Phone**: (034) 434-9122
-- **Location**: Bacolod City Government Center, Circumferential Rd, Brgy. Villamonte, Bacolod City, 6100 Negros Occidental
-- **Website**: [bacolodcity.gov.ph](https://bacolodcity.gov.ph/bacolod-environment-and-natural-resources/)
+### Bacolod Environment and Natural Resources Office (BENRO)
+
+- **Phone:** (034) 434-9122
+- **Location:** Bacolod City Government Center, Circumferential Rd, Brgy. Villamonte
+- **Website:** [bacolodcity.gov.ph/bacolod-environment-and-natural-resources](https://bacolodcity.gov.ph/bacolod-environment-and-natural-resources/)
+
+### Report Violations
+
+To report illegal dumping, open burning, or waste violations:
+
+- Call BENRO at (034) 434-9122
+- Visit your Barangay Hall
+- Report to the Bacolod Garbage Hotline (see [Waste Collection Schedule](https://bacolodcity.gov.ph/waste-collection-schedule/))
+
+### Waste Collection Schedule
+
+View the complete collection schedule by barangay and zone:
+
+- **[Bacolod City Waste Collection Schedule](https://bacolodcity.gov.ph/waste-collection-schedule/)** — Official city website with maps and schedules per barangay
 
 ---
 

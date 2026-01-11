@@ -1,4 +1,4 @@
-# Access Educational Support Programs from the LGU — Bacolod City
+# Educational Support Programs in Bacolod City (SPES, Assistance, Supplies)
 
 Bacolod City offers various educational support programs for students.
 
@@ -65,17 +65,18 @@ The city distributes school supplies to public school students using the Special
 
 ## Contact Information
 
-- **Public Employment Services Office (PESO) Bacolod**
-- **Phone**: (034) 434-9122
-- **Email**: peso@bacolodcity.gov.ph
-- **Location**: Bacolod City Government Center, Circumferential Rd, Brgy. Villamonte, Bacolod City, 6100 Negros Occidental
-- **Website**: [bacolodcity.gov.ph](https://bacolodcity.gov.ph/trabaho-sa-peso-bacolod/)
-- **Facebook**: [PESO Bacolod LGU](https://www.facebook.com/PesoBacolodLGU)
+### Public Employment Services Office (PESO) Bacolod
 
-- **Department of Social Services and Development (DSSD)**
-- **Phone**: (034) 434-9122
-- **Email**: dssd@bacolodcity.gov.ph
-- **Location**: Bacolod City Government Center, Circumferential Rd, Brgy. Villamonte, Bacolod City, 6100 Negros Occidental
+- **Manager:** Mae Ferrer-Llamas, PhD
+- **Email:** peso@bacolodcity.gov.ph, maellamas@bacolodcity.gov.ph
+- **Location:** Bacolod City Government Center
+- **Facebook:** [PESO Bacolod LGU](https://www.facebook.com/PesoBacolodLGU)
+
+### Department of Social Services and Development (DSSD)
+
+- **OIC:** Sally Abelarde
+- **Phone:** (034) 432-1602
+- **Email:** dssd@bacolodcity.gov.ph
 
 ---
 

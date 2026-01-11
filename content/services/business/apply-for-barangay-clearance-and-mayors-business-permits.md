@@ -1,66 +1,82 @@
-# Apply for Business Permits — Bacolod City
+# Business Permits in Bacolod City (New & Renewal)
 
-Bacolod City offers streamlined business permit processing through the **Business Permits and Licensing Division (BPLO)** and the **Business One-Stop Shop (BOSS)**.
+Bacolod City processes business permits through the **Business Permits and Licensing Division (BPLO)** at the one-stop shop in the City Government Center.
 
 ---
 
 ## Business One-Stop Shop (BOSS)
 
-**What**: All business permit requirements processed in one location  
-**Where**: Bacolod City Government Center lobby  
-**When**: Extended until March 31, 2026  
-**Services**: Fire Safety Certificate, Sanitation Certificate, Building Permit, Occupancy Permit, Business Permit
+| Detail    | Info                                                            |
+| --------- | --------------------------------------------------------------- |
+| **What**  | All business permit requirements in one location                |
+| **Where** | Ground Floor, Bacolod City Government Center                    |
+| **When**  | January to March (peak season), year-round for new applications |
 
 ---
 
 ## Requirements
 
-### For New Business
+### New Business
 
-- Barangay Clearance
+- Barangay Clearance (from your barangay hall)
 - DTI/SEC/CDA Registration
-- Lease Contract or Proof of Ownership
+- Lease Contract or Land Title
 - Valid ID of owner
 - Other requirements depending on business type
 
-### For Renewal
+### Renewal
 
 - Previous year's Business Permit
 - Official Receipt of payment
-- Updated documents (if any changes)
+- Updated documents (if changes)
 
-**Download**: [2025 Business Permit Checklist](https://bacolodcity.gov.ph/business-permits-and-licensing-division/)
+**Download:** [2025 Business Permit Checklist (PDF)](https://bacolodcity.gov.ph/wp-content/uploads/2024/12/2025-BUSINESS-PERMIT-CHECKLIST-OF-REQUIREMENTS.pdf)
 
 ---
 
 ## How to Apply
 
-1. **Get Barangay Clearance** from your barangay
-2. **Go to BOSS** at Bacolod City Government Center lobby
-3. **Submit requirements** at the BPLO counter
+1. **Get Barangay Clearance** from your barangay hall
+2. **Go to BOSS** at City Government Center, Ground Floor
+3. **Submit requirements** at BPLO counter
 4. **Process clearances** (Fire, Sanitation, Building) at BOSS
-5. **Pay fees** at the Treasurer's Office
+5. **Pay fees** at City Treasurer's Office
 6. **Claim permit** after processing
+
+---
+
+## Barangay Clearance
+
+Barangay clearance is required before applying for a business permit. Get it from your barangay hall where your business is located.
+
+| Typical Requirements               | Typical Fee                    |
+| ---------------------------------- | ------------------------------ |
+| Valid ID                           | ₱50–₱200 (varies per barangay) |
+| Proof of business location         |                                |
+| Cedula (Community Tax Certificate) |                                |
 
 ---
 
 ## Contact Information
 
-- **Business Permits and Licensing Division (BPLO)**
-- **Phone**: (034) 434-9122
-- **Email**: bplo@bacolodcity.gov.ph
-- **Location**: Bacolod City Government Center, Circumferential Rd, Brgy. Villamonte, Bacolod City, 6100 Negros Occidental
-- **Website**: [bacolodcity.gov.ph](https://bacolodcity.gov.ph/business-permits-and-licensing-division/)
-- **Online Services**: [onlineservices.bacolodcity.gov.ph](https://onlineservices.bacolodcity.gov.ph/)
+### Business Permits and Licensing Division (BPLO)
 
----
+- **Head:** Stela Rose J. Rayos
+- **Email:** bplo@bacolodcity.gov.ph, bcdbplo@gmail.com
+- **Location:** Ground Floor, Bacolod City Government Center, Circumferential Rd, Brgy. Villamonte
+- **Hours:** Mon–Fri, 8 AM–5 PM
+- **Facebook:** [Bacolod Permits](https://www.facebook.com/bacolodpermits)
+- **Online Services:** [onlineservices.bacolodcity.gov.ph](https://onlineservices.bacolodcity.gov.ph/)
 
-**Note:** Requirements may vary by business type. Check the official checklist or contact BPLO for specific requirements.
+### Office of the Building Official (OBO)
+
+- **OIC:** Isidro Sun, Jr.
+- **Phone:** (034) 433-8286
+- **Email:** obo@bacolodcity.gov.ph, bldngofficial@gmail.com
 
 ---
 
 **Sources:**
 
-- [Business Permits and Licensing Division](https://bacolodcity.gov.ph/business-permits-and-licensing-division/) — Jan 8, 2026
-- [Bacolod City Contact Information](https://bacolodcity.gov.ph/contact-us/) — Jan 8, 2026
-- [Online Services Portal](https://onlineservices.bacolodcity.gov.ph/) — Jan 8, 2026
+- [Business Permits and Licensing Division](https://bacolodcity.gov.ph/business-permits-and-licensing-division/) — Jan 11, 2026
+- [Bacolod City Departments](https://bacolodcity.gov.ph/departments/) — Jan 11, 2026

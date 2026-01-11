@@ -2,14 +2,14 @@
 # This file contains all the pages/services available under the Housing & Land Use category
 
 pages:
-  - name: 'Apply for socialized housing or relocation projects'
+  - name: 'Socialized Housing & Relocation Programs'
     slug: 'apply-for-socialized-housing-or-relocation-projects'
-    description: 'Information about applying for socialized housing and relocation projects from your local government.'
-    
-  - name: 'Request zoning, land use, or building permits'
+    description: 'Apply for 4PH housing, NHA projects, and city relocation programs for informal settlers.'
+
+  - name: 'Zoning, Land Use & Building Permits'
     slug: 'request-zoning-land-use-or-building-permits'
-    description: 'How to request zoning, land use, and building permits from your local government.'
-    
-  - name: 'Ask about available relocation sites in case of demolition'
+    description: 'Get zoning clearance, land use permits, and building permits from CPDO and OBO.'
+
+  - name: 'Relocation Sites for Demolition'
     slug: 'ask-about-available-relocation-sites-in-case-of-demolition'
-    description: 'Information about available relocation sites in case of demolition or displacement.'
+    description: 'Available relocation sites, requirements, and assistance for families affected by demolition.'

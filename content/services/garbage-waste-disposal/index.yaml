@@ -2,18 +2,18 @@
 # This file contains all the pages/services available under the Garbage and Waste Disposal category
 
 pages:
-  - name: 'Check garbage collection schedules and request pickup'
+  - name: 'Garbage Collection Schedules'
     slug: 'check-garbage-collection-schedules-and-request-pickup'
-    description: 'Information about garbage collection schedules and how to request special garbage pickup services.'
-    
-  - name: 'Learn proper waste segregation and disposal methods'
+    description: 'Check your barangay garbage collection schedule. ISWIMS consortium and BENRO contact info.'
+
+  - name: 'Waste Segregation Guide'
     slug: 'learn-proper-waste-segregation-and-disposal-methods'
-    description: 'Guidelines for proper waste segregation and disposal methods in your area.'
-    
-  - name: 'Request special waste collection (hazardous materials, electronics)'
+    description: 'How to properly segregate biodegradable, recyclable, and residual waste. City ordinance requirements.'
+
+  - name: 'Special Waste Collection (E-Waste, Hazardous)'
     slug: 'request-special-waste-collection-hazardous-materials-electronics'
-    description: 'How to request special collection services for hazardous materials and electronic waste.'
-    
-  - name: 'Report illegal dumping or waste management violations'
+    description: 'Request pickup for electronics, batteries, chemicals, and other hazardous materials.'
+
+  - name: 'Report Illegal Dumping'
     slug: 'report-illegal-dumping-or-waste-management-violations'
-    description: 'How to report illegal dumping activities and waste management violations in your area.'
+    description: 'Report illegal dumping and waste violations to BENRO. Hotlines and how to file complaints.'

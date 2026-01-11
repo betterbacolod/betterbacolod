@@ -1,4 +1,4 @@
-# Join Trade Fairs, Business Expos, and Tourism Promotions — Bacolod City
+# Trade Fairs, Business Expos & Tourism Promotions in Bacolod City
 
 Bacolod City supports local businesses through trade fairs, expos, and tourism promotion activities organized by various city departments.
 
@@ -40,11 +40,17 @@ Bacolod City supports local businesses through trade fairs, expos, and tourism p
 
 ## Contact Information
 
-- **Department of Local Economic Development and Investment Promotions**
-- **Phone**: (034) 434-9122
-- **Email**: bcdledipoffice@bacolodcity.gov.ph
-- **Location**: Bacolod City Government Center, Circumferential Rd, Brgy. Villamonte, Bacolod City, 6100 Negros Occidental
-- **Website**: [bacolodcity.gov.ph](https://bacolodcity.gov.ph/department-of-local-economic-development-and-investment-promotions/)
+### Department of Local Economic Development and Investment Promotions (LEDIP)
+
+- **Head:** Mae Ferrer-Llamas, PhD
+- **Email:** maellamas@bacolodcity.gov.ph, bcdledipoffice@bacolodcity.gov.ph
+- **Location:** Bacolod City Government Center
+
+### City Tourism Office
+
+- **Head:** Teresa Q. Manalili
+- **Phone:** (034) 469-6062
+- **Email:** tourism@bacolodcity.gov.ph, bacolodcitytourism@gmail.com
 
 ---
 

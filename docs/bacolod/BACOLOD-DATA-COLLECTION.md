@@ -2619,3 +2619,410 @@ To download the list of requirements in PDF format, please click the DOWNLOAD bu
 
 - [City-Department-of-Agriculture](https://bacolodcity.gov.ph/wp-content/uploads/2023/12/City-Department-of-Agriculture.pdf) (PDF)
 - [Download](https://bacolodcity.gov.ph/wp-content/uploads/2023/12/City-Department-of-Agriculture.pdf) (PDF)
+
+## Business Permits and License Division | Bacolod City Government
+
+**URL:** https://bacolodcity.gov.ph/business-permits-and-licensing-division/
+**Scraped:** 2026-01-11
+
+### Content
+
+To download the list of requirements in PDF format, please click the DOWNLOAD button below:
+
+### Requirements
+
+- Bacolod Environment and Natural Resources
+- Bureau of Fire Protection
+- Business Permits and License Division
+- City Department of Agriculture
+- City Health Office
+- Office of the Building Officials (OBO)
+
+### Contact Information
+
+- **Phone:** (034) 434-9122, (034) 432-7196
+- **Email:** mayorggasataya@bacolodcity.gov.ph
+
+### Downloads
+
+- [2025 BUSINESS PERMIT CHECKLIST OF REQUIREMENTS](https://bacolodcity.gov.ph/wp-content/uploads/2024/12/2025-BUSINESS-PERMIT-CHECKLIST-OF-REQUIREMENTS.pdf) (PDF)
+- [Download](https://bacolodcity.gov.ph/wp-content/uploads/2024/12/2025-BUSINESS-PERMIT-CHECKLIST-OF-REQUIREMENTS.pdf) (PDF)
+
+## Departments | Bacolod City Government
+
+**URL:** https://bacolodcity.gov.ph/departments/
+**Scraped:** 2026-01-11
+
+### Content
+
+The Bacolod City College is tasked to provide quality education to the poor but deserving students of Bacolod through subsidized tuition fees by providing them employable skills and knowledge, imbued with Christian values. The vision of College is to have citizenry that are endowed and equipped with the necessary skills, knowledge and Christian values, for them to become assets and contributors to the development and industrialization of Bacolod and of the Philippines.
+
+College Adminstrator: Ma. Johanna Anne R. BayonetaTel. No. (034) 707-7469Email: bcc@bacolodcity.gov.ph
+
+A division under the office of the city mayor, BCYDO is mandated to conduct mandatory and continuing training of SK and LYDC members in accordance with the programs jointly designed and implemented by the Commission and the DILG. Serves as secretariat to the LYDC in the city and as such, shall provide the necessary administrative, operational, staff and technical support to the LYDC. Implements sports programs for 61 barangays and facilitates sports activities (national & international).
+
+BCYDO is composed of two sections namely: Program Development and Implementation Section (PDIS) and Sports Development Section (SDS).
+
+Officer in Charge: Carlo S. Descutido, LPTTel No. (034) 471-0308Email: bcydo6100@gmail.com
+
+The BHA is tasked to undertake housing and relocation program, community mortgage program and urban poor affairs and state management of the City’s resettlement sites.Department Head: Ma. Victoria ParreñasTel. No. (034) 433-7108Email: housing.lgubacolod@gmail.com, bha@bacolodcity.gov.ph
+
+BTTMD OIC: Atty. Reuben Mikhail P. SabigEmail Address: bttmd@bacolodcity.gov.ph
+
+This office accepts the bids proposal of the different suppliers who are interested to join the construction of projects and /or purchase of equipment of the city of Bacolod.
+
+BAC Chairperson: Atty. Hermilo B. Pa-oyon
+
+Tel. No. (034) 707-0008,Email: bacbacolod@gmail.com, bac@bacolodcity.gov.ph
+
+Officer in Charge: Chief Inspector Rodel LegaspiTel. No. (034) 434-5022, 5023, 0921-341-7002Email Address: bacolodcityfs@gmail.com, bacolodcityfs@bacolodcity.gov.ph
+
+The Permits and License Division of the Office of the City Mayor is the division normally involved in the processing of business licenses or permits forms part of the one-stop shop processing center located at the ground floor of the Bacolod City Government Center every January until February of the every year. Renewal of business permits are also processed here.Department Head: Stela Rose J. RayosEmail: bcdbplo@gmail.com. bplo@bacolodcity.gov.ph Facebook page: Bacolod Permits
+
+The Office of the City Accountant takes charge of both accounting and internal auditing services of the City. The major activities of the said Office includes audit of financial transactions such as disbursement and collections, including receipts and acceptance of deliveries maintain individual ledgers for salaries account for all issued requests for obligations and prepare journals and analysis and maintain records regarding all accounting reports.
+
+Acting City Accountant: Atty. Jeremae Ann CeriacoTel. No. (034) 435-433-8286 local 1101/1106Email: oca_bacolod@yahoo.com, accountant@bacolodcity.gov.ph
+
+The main function of this office is to coordinate the work of all city officials under the jurisdiction of the Mayor and for this purpose may convene the heads of offices and other officials of the city; and advise the City Mayor on the current local government administrative system and assist the City Mayor in the executive management and general administration of the City Government, among others.
+
+City Administrator: Atty. Mark Steven MayoTel. No. (034) 707-433-6191Email: bacolodcityad@gmail.com, cmo_admin@bacolodcity.gov.ph
+
+The City Assessor’s Office ensures all laws and policies in the attainment of maximum accuracy, efficiency and effectiveness in he appraisal assessment of real properties for taxation purposes are properly implemented or executed and establishes an organized and systematic method of real property assessment.
+
+Department Head: Atty. Maphilindo PolvoraTel. No. (034) 709-0353 local 1701/1702, (034) 707-4813Email: cityassessor@bacolodcity.gov.ph
+
+The office provides technical assistance in the application and utilization of budgetary methods and budget system, assists the City Mayor in the preparation of the executive budget, prepares the annual performance budget, and supplemental budgets then reviews and approves the budget of the different Barangays.
+
+Department Head: Maria Imelda A. WilliamsTel. No. (034) 709-1766, 433-8062Email: cbobacolod@gmail.com, citybudget@bacolodcity.gov.ph
+
+The Office of the City Civil Registrar generally takes charge of the implementation of the Civil Registration Program based on the Civil Registry Laws, Civil Code and other pertinent laws, rules and regulations issued. Specifically, the office keeps records and issues birth and death certificates, marriage licenses and coordinates with the National Statistics Office in conducting educational campaigns for vital registration and assists in the preparation of demographic and other statistics for the City.
+
+City Civil Registrar: Atty. Hermilo Pao-yonTel. No. (034) 435-4790 local 1301/1302Email: lcrbacolod@gmail.com, lcr@bacolodcity.gov.ph
+
+The CCLDO, a division under the Office of the Mayor is mandated to implement various livelihood and economic activities, utilizing primarily the cooperative approach, designed to improve the income level and/or full employment to a greater number of people in need. It shall also provide organizational, technological, and financial support to low-income individuals, associations, and organized cooperatives to improve their economic viability
+
+Department Head: Brenda C. BurdeosTel. No. Showroom: (034) 469-3768, (034) 469-4120Email: bacolodcityccldo@yahoo.com, coop@bacolodcity.gov.ph
+
+Officer-In-Charge: Maricar P. QuiroEmail Address: bacolodcityagri@gmail.com, cityagri@bacolodcity.gov.ph
+
+The CEO generally p6repares and submits plans and programs on infrastructure projects, reviews and recommends changes for infrastructure development and prepares specifications and estimates for buildings and streets, bridges and other public works.
+
+Officer In Charge: Engr. Luben Rafael D. Ceballos
+
+Tel. No. (034) 432-3098Email: ceobacolod@yahoo.com, ceo@bacolodcity.gov.ph
+
+The City Health Office is tasked with the formulation of program guidelines in order to render efficient and effective health services program. It is also tasked to prevent, promote and maintain rehabilitation programs including early diagnosis and cure of the health status of the population.
+
+Department Head: Dr. Ma. Carmela P. Gensoli
+
+Tel. No. (034) 431-3673Email: bacolodcityhealthdepartment@gmail.com, cho@bacolodcity.gov.ph
+
+The City Legal Office represents the City Government in all cases wherein the City or any of its officials sue or is sued in its/their official capacity and gives its own opinion on the matter. Its objective is to provide legal services and assistance for and in behalf of the City Government on matters affecting the City.
+
+City Legal Officer: Atty. Karol Joseph P. ChiuTel. No. (034) 708-8208Email: clo@bacolodcity.gov.ph
+
+The City Library is tasked to administer, classify, catalog, select and acquire, prepare books and materials for use, physical upkeep and care of books and materials, file, shelve and gather clippings for Vi-file. Generally, the Library is under the supervision of the City Mayor.
+
+Department Head: Greta K. MemoriaTel. No. (034) 434-4448, 435-3831Email: citylib@bacolodcity.gov.ph
+
+The Chief Executive of the city government is the City Mayor who is elected at-large by all qualified voters of the City. As Chief Executive, the City Mayor shall exercise such powers and perform such duties and functions as provided for by Commonwealth Act No. 326, otherwise known as the Charter of the City of Bacolod, Section 16 of the Local Government Code of 1991, City Ordinances and other laws.
+
+City Mayor: Hon. Greg GasatayaTel. No. (034) 435-5879Email: mayorggasataya@bacolodcity.gov.ph
+
+This office performs the development and planning services of the City. It is tasked of integrating economic, social, physical and other development plans and policies of the City Government. It also conducts and prepares feasibility studies in relation to the requirements set by both the executive and legislative offices. It coordinates with other agencies involved in the planning and implementation of all programs and projects undertaken by the City.City Planning and Development Officer: Mary Jean L. RamosTel. No. (034) 434-3184, 0906-326-3026Email: cpdobacolod@gmail.com, cpdo@bacolodcity.gov.ph
+
+The Population Office undertakes a program that influences the size, growth, distribution structure, and quality of life of the population while respecting individual values and religious beliefs in order to contribute to the well-being, health, family welfare, and national socio-economic development.
+
+Acting Department Head: MRS. GILDA F. LLUISMA, CSEETel. No. (034) 708-7366Email: popcom.bacolod2020@gmail.com, popcom@bacolodcity.gov.ph
+
+Created by virtue of City Ordinance No. 158, signed on February 13, 1996, the Bacolod City Tourism Office as a division is administratively under the Office of the Mayor. The office performs regulatory function over tourism-oriented establishments, does research and evaluation of tourism related statistics, assist the local tour operators, tourists and facilitates special tourism related promotional events.
+
+City Tourism Officer: Teresa Q. ManaliliTel. No. (034) 469-6062Email: bacolodcitytourism@gmail.com, tourism@bacolodcity.gov.ph
+
+The City Treasurer’s Office acts as custodian of funds and exercises proper management of it. At the same time takes charge of the disbursement of local funds and other funds entrusted by law or other competent authority,
+
+City Treasurer: Jose Maria GecosalaTel. No. (034) 435-0785, 434-3983Email Addresses: CTO Admin: cto_admin@bacolodcity.gov.phCTO Land Tax: cto_landtax@bacolodcity.gov.ph CTO License: cto_license@bacolodcity.gov.ph CTO Cash: cto_cash@bacolodcity.gov.ph
+
+The main function of this department is to provide efficient and effective front-line service to the people of Bacolod relative to veterinary public health, agricultural and fishery extension, regulatory and research services, animal disease prevention and meat hygiene.
+
+Department Head: Dr. Maria Agueda Trinidad F. dela TorreTel. No. 0921-602-9525Email: cvo.bcd@gmail.com, cityvet@bacolodcity.gov.ph
+
+The department takes charge of all activities related to Bacolod City Government investment facilitation and promotion activities, local enterprise development, the establishment of support mechanisms for the growth of Micro, Small and Medium Enterprises (MSMEs), providing mechanisms for business retention and expansion, and other business, and economic activities to attract investments and generate employment.
+
+MAE FERRER-LLAMAS, PhDLocal Economic Development and Investment Promotions Officermaellamas@bacolodcity.gov.phbcdledipoffice@bacolodcity.gov.ph
+
+The DPS is responsible for the day-to-day Solid Waste Management operation of the City. Specifically, the DPS is tasked to collect and dispose garbage and cleaning of the city streets. It has managed and attended to the various activities related to cleanliness and sanitation campaigns and the Clean and Green Project.
+
+OIC &#8211; Department Head: Ramel M. PalalonTel. No. (034) 708-1755, 433-3532Email: dpsbacolodcity@gmail.com, dps@bacolodcity.gov.ph
+
+The DSSD is the primary entity in the implementation of social welfare programs and services in the City and it is tasked with providing the basic social services to the less fortunate constituents of our society.
+
+Officer In Charge: Sally AbelardeTel. No. (034) 432-1602
+
+Email: dssd@bacolodcity.gov.ph
+
+Service Description: Design, Program, Coordinate and implement Disaster Risk Reduction and Management Acitivities consistent wiht the National Risk Reduction and Management Council&#8217;s standards and guidelines.
+
+DRRMO: Dr. Anna Maria Laarni Pornan034 4323879 (admin office hours only) 034 4323871- 73(hotline 24/7) 034 4698932 (LDRRMO office office hours only) +63 930 243 4706 (hotline cp #)Email: drrmobacolodcity@yahoo.com
+
+As an environmental watchdog agency of the City, ENRO is also working closely with other government agencies and non-government organizations having interest to clean and healthy environment.
+
+OIC &#8211; ENRO: Ramel Palalon Tel. No. 0995-187-4725Email: enrobcd@gmail.com, enrobcd@bacolodcity.gov.ph
+
+The GSO is primarily tasked in he acquisition of supplies and materials, properties and property record and management which includes inventory, maintenance of janitorial services and upkeep of the Public Plaza. The office effectively and efficiently discharges those functions as well as devises ways and means in order to expedite procurement processes and to plan out for the institutionalization of a centralized warehousing.
+
+Officer In Charge: Victor EspinaTel. No. (034) 435-6067Email: gso@bacolodcity.gov.ph
+
+HRMS is tasked in the preparation of appointments, leave computations, conducts training and training needs assessment, curriculum development and other matters pertaining to personnel management.To check for vacant positions please go to &#8220;http://csc.gov.ph/career/index.php&#8221;.Remember to put CGO Bacolod under Agency and Region 6 in Region.
+
+City Human Resource Management Officer: Erman A. AguirreTel. No. (034) 432-0664Email: hrms@bacolodcity.gov.ph
+
+The MITCS Department identifies, collects, integrates and processes valuable data from the various departments/offices of Bacolod City Government through the use of computerized information systems, programs and reporting.The department aims to put in place a comprehensive information systems on various data and integrate them in accordance with the accepted rules and standards in information gathering, processing and data management.Acting Department Head: Ramon C. de los ReyesTel. No. (034) 435-4168Email: mitcs@bacolodcity.gov.ph
+
+The Office of the Building Official takes charge if the implementation of Presidential Decree 1096, or the National Building Code, in the issuance of building permits as well as the inspection of all buildings. It is responsible in the enforcement of the provision of the National Building Code as well as its implementing rules and regulations and related ordinanances.
+
+Officer In Charge: Isidro Sun, Jr.Tel. No. (034) 433-8286Email: bldngofficial@gmail.com, obo@bacolodcity.gov.ph
+
+The main task is to assist the various activities of all Puroks and Barangays in terms of community projects, sports, food production, beautification, cleanliness and sanitation. PAAD is composed of the Barangay Operations Bureau.
+
+Officer in Charge: Rolando M. Villamor, Jr.Tel. No. (034) 434-8485Email: paad@bacolodcity.gov.ph
+
+The Public Employment Service Office (PESO) is a non-fee charging multi-dimenstional employment service facility or entity established in all Local Government Units (LGUs) including in the LGU of Bacolod City in coordination with the Department of Labor and Employment (DOLE) pursuant to R.A. No. 8759 or the PESO Act of 1999 as amended by R.A. No. 10691.
+
+The PESO aims to ensure prompt and efficient delivery of employment facilitation services as well as to provide timely information on labor market and DOLE Programs.
+
+MAE FERRER-LLAMAS, PhDPESO Managermaellamas@bacolodcity.gov.phpeso@bacolodcity.gov.ph
+
+The PIO is tasked with managing the communication and information flow between the government and the general public through traditional media and social media.
+
+Officer In Charge: Angelo AngoloTel. No.:Email: bacolodcitycommunicationsoffice@bacolodcity.gov.ph
+
+The SP as the Legislative Body of the City enacts ordinances, approves resolutions, and appropriates funds for the general welfare of the City and its inhabitants. Its main objective is to pass and approve ordinances and resolutions necessary for an efficient and effective City Government.City Ordinances and Resolutions passed by the SP can be viewed at E-Sections of Homepage.Secretary to the Sangguniang Panlungsod: Atty. Vicente Petierre IIIContact Numbers: (034) 431-3603Email: sprecordsbacolod@gmail.com
+
+The Secretary to the Mayor performs secretarial and administrative work of a complex, confidential, and responsible nature under the general supervision of the Mayor.
+
+Secretary to the Mayor:Email:
+
+The Urban Basic Services Division (UBSD), a division under the Office of the City Mayor is tasked to implement the City’s Nutrition Program where its main objective is to improve the nutritional status of preschoolers, pregnant and lactating mothers in the barangay community.
+
+UBSD Officer-In-Charge:
+
+The Vice Mayor acts as presiding officer of the Sangguniang Panlungsod and signs all warrants drawn on the city treasury for all expenditures appropriated for the operation of the Sangguniang Panlungsod. While the Office directs and supports the activities of the Sangguniang Panlungsod legislative measures pertinent to the smooth operation of the City Government and the interest of public service.
+
+Vice Mayor: Hon. Claudio PuentevellaTel. No. (034) 703-1284
+
+### Requirements
+
+- Bacolod Environment and Natural Resources
+- Bureau of Fire Protection
+- Business Permits and License Division
+- City Department of Agriculture
+- City Health Office
+- Office of the Building Officials (OBO)
+
+### Contact Information
+
+- **Phone:** (034) 707-7469, (034) 471-0308, (034) 433-7108, (034) 707-0008, (034) 434-5022, 921-341-7002, 435-433-8286, 707-433-6191, (034) 709-0353, (034) 707-4813, (034) 709-1766, (034) 435-4790, (034) 469-3768, (034) 469-4120, (034) 432-3098, (034) 431-3673, (034) 708-8208, (034) 434-4448, (034) 435-5879, (034) 434-3184, 906-326-3026, (034) 708-7366, (034) 469-6062, (034) 435-0785, 921-602-9525, (034) 708-1755, (034) 432-1602, 995-187-4725, (034) 435-6067, (034) 432-0664, (034) 435-4168, (034) 433-8286, (034) 434-8485, (034) 431-3603, (034) 703-1284, (034) 434-9122, (034) 432-7196
+- **Email:** bcc@bacolodcity.gov.ph, bha@bacolodcity.gov.ph, bttmd@bacolodcity.gov.ph, bac@bacolodcity.gov.ph, bacolodcityfs@bacolodcity.gov.ph, bplo@bacolodcity.gov.ph, accountant@bacolodcity.gov.ph, cmo_admin@bacolodcity.gov.ph, cityassessor@bacolodcity.gov.ph, citybudget@bacolodcity.gov.ph, lcr@bacolodcity.gov.ph, coop@bacolodcity.gov.ph, cityagri@bacolodcity.gov.ph, ceo@bacolodcity.gov.ph, cho@bacolodcity.gov.ph, clo@bacolodcity.gov.ph, citylib@bacolodcity.gov.ph, mayorggasataya@bacolodcity.gov.ph, cpdo@bacolodcity.gov.ph, popcom@bacolodcity.gov.ph, tourism@bacolodcity.gov.ph, cto_admin@bacolodcity.gov.ph, cto_landtax@bacolodcity.gov.ph, cto_license@bacolodcity.gov.ph, cto_cash@bacolodcity.gov.ph, cityvet@bacolodcity.gov.ph, maellamas@bacolodcity.gov.ph, bcdledipoffice@bacolodcity.gov.ph, dps@bacolodcity.gov.ph, dssd@bacolodcity.gov.ph, enrobcd@bacolodcity.gov.ph, gso@bacolodcity.gov.ph, hrms@bacolodcity.gov.ph, mitcs@bacolodcity.gov.ph, obo@bacolodcity.gov.ph, paad@bacolodcity.gov.ph, peso@bacolodcity.gov.ph, bacolodcitycommunicationsoffice@bacolodcity.gov.ph
+
+## Departments | Bacolod City Government
+
+**URL:** https://bacolodcity.gov.ph/departments/
+**Scraped:** 2026-01-11
+
+### Content
+
+The Bacolod City College is tasked to provide quality education to the poor but deserving students of Bacolod through subsidized tuition fees by providing them employable skills and knowledge, imbued with Christian values. The vision of College is to have citizenry that are endowed and equipped with the necessary skills, knowledge and Christian values, for them to become assets and contributors to the development and industrialization of Bacolod and of the Philippines.
+
+College Adminstrator: Ma. Johanna Anne R. BayonetaTel. No. (034) 707-7469Email: bcc@bacolodcity.gov.ph
+
+A division under the office of the city mayor, BCYDO is mandated to conduct mandatory and continuing training of SK and LYDC members in accordance with the programs jointly designed and implemented by the Commission and the DILG. Serves as secretariat to the LYDC in the city and as such, shall provide the necessary administrative, operational, staff and technical support to the LYDC. Implements sports programs for 61 barangays and facilitates sports activities (national & international).
+
+BCYDO is composed of two sections namely: Program Development and Implementation Section (PDIS) and Sports Development Section (SDS).
+
+Officer in Charge: Carlo S. Descutido, LPTTel No. (034) 471-0308Email: bcydo6100@gmail.com
+
+The BHA is tasked to undertake housing and relocation program, community mortgage program and urban poor affairs and state management of the City’s resettlement sites.Department Head: Ma. Victoria ParreñasTel. No. (034) 433-7108Email: housing.lgubacolod@gmail.com, bha@bacolodcity.gov.ph
+
+BTTMD OIC: Atty. Reuben Mikhail P. SabigEmail Address: bttmd@bacolodcity.gov.ph
+
+This office accepts the bids proposal of the different suppliers who are interested to join the construction of projects and /or purchase of equipment of the city of Bacolod.
+
+BAC Chairperson: Atty. Hermilo B. Pa-oyon
+
+Tel. No. (034) 707-0008,Email: bacbacolod@gmail.com, bac@bacolodcity.gov.ph
+
+Officer in Charge: Chief Inspector Rodel LegaspiTel. No. (034) 434-5022, 5023, 0921-341-7002Email Address: bacolodcityfs@gmail.com, bacolodcityfs@bacolodcity.gov.ph
+
+The Permits and License Division of the Office of the City Mayor is the division normally involved in the processing of business licenses or permits forms part of the one-stop shop processing center located at the ground floor of the Bacolod City Government Center every January until February of the every year. Renewal of business permits are also processed here.Department Head: Stela Rose J. RayosEmail: bcdbplo@gmail.com. bplo@bacolodcity.gov.ph Facebook page: Bacolod Permits
+
+The Office of the City Accountant takes charge of both accounting and internal auditing services of the City. The major activities of the said Office includes audit of financial transactions such as disbursement and collections, including receipts and acceptance of deliveries maintain individual ledgers for salaries account for all issued requests for obligations and prepare journals and analysis and maintain records regarding all accounting reports.
+
+Acting City Accountant: Atty. Jeremae Ann CeriacoTel. No. (034) 435-433-8286 local 1101/1106Email: oca_bacolod@yahoo.com, accountant@bacolodcity.gov.ph
+
+The main function of this office is to coordinate the work of all city officials under the jurisdiction of the Mayor and for this purpose may convene the heads of offices and other officials of the city; and advise the City Mayor on the current local government administrative system and assist the City Mayor in the executive management and general administration of the City Government, among others.
+
+City Administrator: Atty. Mark Steven MayoTel. No. (034) 707-433-6191Email: bacolodcityad@gmail.com, cmo_admin@bacolodcity.gov.ph
+
+The City Assessor’s Office ensures all laws and policies in the attainment of maximum accuracy, efficiency and effectiveness in he appraisal assessment of real properties for taxation purposes are properly implemented or executed and establishes an organized and systematic method of real property assessment.
+
+Department Head: Atty. Maphilindo PolvoraTel. No. (034) 709-0353 local 1701/1702, (034) 707-4813Email: cityassessor@bacolodcity.gov.ph
+
+The office provides technical assistance in the application and utilization of budgetary methods and budget system, assists the City Mayor in the preparation of the executive budget, prepares the annual performance budget, and supplemental budgets then reviews and approves the budget of the different Barangays.
+
+Department Head: Maria Imelda A. WilliamsTel. No. (034) 709-1766, 433-8062Email: cbobacolod@gmail.com, citybudget@bacolodcity.gov.ph
+
+The Office of the City Civil Registrar generally takes charge of the implementation of the Civil Registration Program based on the Civil Registry Laws, Civil Code and other pertinent laws, rules and regulations issued. Specifically, the office keeps records and issues birth and death certificates, marriage licenses and coordinates with the National Statistics Office in conducting educational campaigns for vital registration and assists in the preparation of demographic and other statistics for the City.
+
+City Civil Registrar: Atty. Hermilo Pao-yonTel. No. (034) 435-4790 local 1301/1302Email: lcrbacolod@gmail.com, lcr@bacolodcity.gov.ph
+
+The CCLDO, a division under the Office of the Mayor is mandated to implement various livelihood and economic activities, utilizing primarily the cooperative approach, designed to improve the income level and/or full employment to a greater number of people in need. It shall also provide organizational, technological, and financial support to low-income individuals, associations, and organized cooperatives to improve their economic viability
+
+Department Head: Brenda C. BurdeosTel. No. Showroom: (034) 469-3768, (034) 469-4120Email: bacolodcityccldo@yahoo.com, coop@bacolodcity.gov.ph
+
+Officer-In-Charge: Maricar P. QuiroEmail Address: bacolodcityagri@gmail.com, cityagri@bacolodcity.gov.ph
+
+The CEO generally p6repares and submits plans and programs on infrastructure projects, reviews and recommends changes for infrastructure development and prepares specifications and estimates for buildings and streets, bridges and other public works.
+
+Officer In Charge: Engr. Luben Rafael D. Ceballos
+
+Tel. No. (034) 432-3098Email: ceobacolod@yahoo.com, ceo@bacolodcity.gov.ph
+
+The City Health Office is tasked with the formulation of program guidelines in order to render efficient and effective health services program. It is also tasked to prevent, promote and maintain rehabilitation programs including early diagnosis and cure of the health status of the population.
+
+Department Head: Dr. Ma. Carmela P. Gensoli
+
+Tel. No. (034) 431-3673Email: bacolodcityhealthdepartment@gmail.com, cho@bacolodcity.gov.ph
+
+The City Legal Office represents the City Government in all cases wherein the City or any of its officials sue or is sued in its/their official capacity and gives its own opinion on the matter. Its objective is to provide legal services and assistance for and in behalf of the City Government on matters affecting the City.
+
+City Legal Officer: Atty. Karol Joseph P. ChiuTel. No. (034) 708-8208Email: clo@bacolodcity.gov.ph
+
+The City Library is tasked to administer, classify, catalog, select and acquire, prepare books and materials for use, physical upkeep and care of books and materials, file, shelve and gather clippings for Vi-file. Generally, the Library is under the supervision of the City Mayor.
+
+Department Head: Greta K. MemoriaTel. No. (034) 434-4448, 435-3831Email: citylib@bacolodcity.gov.ph
+
+The Chief Executive of the city government is the City Mayor who is elected at-large by all qualified voters of the City. As Chief Executive, the City Mayor shall exercise such powers and perform such duties and functions as provided for by Commonwealth Act No. 326, otherwise known as the Charter of the City of Bacolod, Section 16 of the Local Government Code of 1991, City Ordinances and other laws.
+
+City Mayor: Hon. Greg GasatayaTel. No. (034) 435-5879Email: mayorggasataya@bacolodcity.gov.ph
+
+This office performs the development and planning services of the City. It is tasked of integrating economic, social, physical and other development plans and policies of the City Government. It also conducts and prepares feasibility studies in relation to the requirements set by both the executive and legislative offices. It coordinates with other agencies involved in the planning and implementation of all programs and projects undertaken by the City.City Planning and Development Officer: Mary Jean L. RamosTel. No. (034) 434-3184, 0906-326-3026Email: cpdobacolod@gmail.com, cpdo@bacolodcity.gov.ph
+
+The Population Office undertakes a program that influences the size, growth, distribution structure, and quality of life of the population while respecting individual values and religious beliefs in order to contribute to the well-being, health, family welfare, and national socio-economic development.
+
+Acting Department Head: MRS. GILDA F. LLUISMA, CSEETel. No. (034) 708-7366Email: popcom.bacolod2020@gmail.com, popcom@bacolodcity.gov.ph
+
+Created by virtue of City Ordinance No. 158, signed on February 13, 1996, the Bacolod City Tourism Office as a division is administratively under the Office of the Mayor. The office performs regulatory function over tourism-oriented establishments, does research and evaluation of tourism related statistics, assist the local tour operators, tourists and facilitates special tourism related promotional events.
+
+City Tourism Officer: Teresa Q. ManaliliTel. No. (034) 469-6062Email: bacolodcitytourism@gmail.com, tourism@bacolodcity.gov.ph
+
+The City Treasurer’s Office acts as custodian of funds and exercises proper management of it. At the same time takes charge of the disbursement of local funds and other funds entrusted by law or other competent authority,
+
+City Treasurer: Jose Maria GecosalaTel. No. (034) 435-0785, 434-3983Email Addresses: CTO Admin: cto_admin@bacolodcity.gov.phCTO Land Tax: cto_landtax@bacolodcity.gov.ph CTO License: cto_license@bacolodcity.gov.ph CTO Cash: cto_cash@bacolodcity.gov.ph
+
+The main function of this department is to provide efficient and effective front-line service to the people of Bacolod relative to veterinary public health, agricultural and fishery extension, regulatory and research services, animal disease prevention and meat hygiene.
+
+Department Head: Dr. Maria Agueda Trinidad F. dela TorreTel. No. 0921-602-9525Email: cvo.bcd@gmail.com, cityvet@bacolodcity.gov.ph
+
+The department takes charge of all activities related to Bacolod City Government investment facilitation and promotion activities, local enterprise development, the establishment of support mechanisms for the growth of Micro, Small and Medium Enterprises (MSMEs), providing mechanisms for business retention and expansion, and other business, and economic activities to attract investments and generate employment.
+
+MAE FERRER-LLAMAS, PhDLocal Economic Development and Investment Promotions Officermaellamas@bacolodcity.gov.phbcdledipoffice@bacolodcity.gov.ph
+
+The DPS is responsible for the day-to-day Solid Waste Management operation of the City. Specifically, the DPS is tasked to collect and dispose garbage and cleaning of the city streets. It has managed and attended to the various activities related to cleanliness and sanitation campaigns and the Clean and Green Project.
+
+OIC &#8211; Department Head: Ramel M. PalalonTel. No. (034) 708-1755, 433-3532Email: dpsbacolodcity@gmail.com, dps@bacolodcity.gov.ph
+
+The DSSD is the primary entity in the implementation of social welfare programs and services in the City and it is tasked with providing the basic social services to the less fortunate constituents of our society.
+
+Officer In Charge: Sally AbelardeTel. No. (034) 432-1602
+
+Email: dssd@bacolodcity.gov.ph
+
+Service Description: Design, Program, Coordinate and implement Disaster Risk Reduction and Management Acitivities consistent wiht the National Risk Reduction and Management Council&#8217;s standards and guidelines.
+
+DRRMO: Dr. Anna Maria Laarni Pornan034 4323879 (admin office hours only) 034 4323871- 73(hotline 24/7) 034 4698932 (LDRRMO office office hours only) +63 930 243 4706 (hotline cp #)Email: drrmobacolodcity@yahoo.com
+
+As an environmental watchdog agency of the City, ENRO is also working closely with other government agencies and non-government organizations having interest to clean and healthy environment.
+
+OIC &#8211; ENRO: Ramel Palalon Tel. No. 0995-187-4725Email: enrobcd@gmail.com, enrobcd@bacolodcity.gov.ph
+
+The GSO is primarily tasked in he acquisition of supplies and materials, properties and property record and management which includes inventory, maintenance of janitorial services and upkeep of the Public Plaza. The office effectively and efficiently discharges those functions as well as devises ways and means in order to expedite procurement processes and to plan out for the institutionalization of a centralized warehousing.
+
+Officer In Charge: Victor EspinaTel. No. (034) 435-6067Email: gso@bacolodcity.gov.ph
+
+HRMS is tasked in the preparation of appointments, leave computations, conducts training and training needs assessment, curriculum development and other matters pertaining to personnel management.To check for vacant positions please go to &#8220;http://csc.gov.ph/career/index.php&#8221;.Remember to put CGO Bacolod under Agency and Region 6 in Region.
+
+City Human Resource Management Officer: Erman A. AguirreTel. No. (034) 432-0664Email: hrms@bacolodcity.gov.ph
+
+The MITCS Department identifies, collects, integrates and processes valuable data from the various departments/offices of Bacolod City Government through the use of computerized information systems, programs and reporting.The department aims to put in place a comprehensive information systems on various data and integrate them in accordance with the accepted rules and standards in information gathering, processing and data management.Acting Department Head: Ramon C. de los ReyesTel. No. (034) 435-4168Email: mitcs@bacolodcity.gov.ph
+
+The Office of the Building Official takes charge if the implementation of Presidential Decree 1096, or the National Building Code, in the issuance of building permits as well as the inspection of all buildings. It is responsible in the enforcement of the provision of the National Building Code as well as its implementing rules and regulations and related ordinanances.
+
+Officer In Charge: Isidro Sun, Jr.Tel. No. (034) 433-8286Email: bldngofficial@gmail.com, obo@bacolodcity.gov.ph
+
+The main task is to assist the various activities of all Puroks and Barangays in terms of community projects, sports, food production, beautification, cleanliness and sanitation. PAAD is composed of the Barangay Operations Bureau.
+
+Officer in Charge: Rolando M. Villamor, Jr.Tel. No. (034) 434-8485Email: paad@bacolodcity.gov.ph
+
+The Public Employment Service Office (PESO) is a non-fee charging multi-dimenstional employment service facility or entity established in all Local Government Units (LGUs) including in the LGU of Bacolod City in coordination with the Department of Labor and Employment (DOLE) pursuant to R.A. No. 8759 or the PESO Act of 1999 as amended by R.A. No. 10691.
+
+The PESO aims to ensure prompt and efficient delivery of employment facilitation services as well as to provide timely information on labor market and DOLE Programs.
+
+MAE FERRER-LLAMAS, PhDPESO Managermaellamas@bacolodcity.gov.phpeso@bacolodcity.gov.ph
+
+The PIO is tasked with managing the communication and information flow between the government and the general public through traditional media and social media.
+
+Officer In Charge: Angelo AngoloTel. No.:Email: bacolodcitycommunicationsoffice@bacolodcity.gov.ph
+
+The SP as the Legislative Body of the City enacts ordinances, approves resolutions, and appropriates funds for the general welfare of the City and its inhabitants. Its main objective is to pass and approve ordinances and resolutions necessary for an efficient and effective City Government.City Ordinances and Resolutions passed by the SP can be viewed at E-Sections of Homepage.Secretary to the Sangguniang Panlungsod: Atty. Vicente Petierre IIIContact Numbers: (034) 431-3603Email: sprecordsbacolod@gmail.com
+
+The Secretary to the Mayor performs secretarial and administrative work of a complex, confidential, and responsible nature under the general supervision of the Mayor.
+
+Secretary to the Mayor:Email:
+
+The Urban Basic Services Division (UBSD), a division under the Office of the City Mayor is tasked to implement the City’s Nutrition Program where its main objective is to improve the nutritional status of preschoolers, pregnant and lactating mothers in the barangay community.
+
+UBSD Officer-In-Charge:
+
+The Vice Mayor acts as presiding officer of the Sangguniang Panlungsod and signs all warrants drawn on the city treasury for all expenditures appropriated for the operation of the Sangguniang Panlungsod. While the Office directs and supports the activities of the Sangguniang Panlungsod legislative measures pertinent to the smooth operation of the City Government and the interest of public service.
+
+Vice Mayor: Hon. Claudio PuentevellaTel. No. (034) 703-1284
+
+### Requirements
+
+- Bacolod Environment and Natural Resources
+- Bureau of Fire Protection
+- Business Permits and License Division
+- City Department of Agriculture
+- City Health Office
+- Office of the Building Officials (OBO)
+
+### Contact Information
+
+- **Phone:** (034) 707-7469, (034) 471-0308, (034) 433-7108, (034) 707-0008, (034) 434-5022, 921-341-7002, 435-433-8286, 707-433-6191, (034) 709-0353, (034) 707-4813, (034) 709-1766, (034) 435-4790, (034) 469-3768, (034) 469-4120, (034) 432-3098, (034) 431-3673, (034) 708-8208, (034) 434-4448, (034) 435-5879, (034) 434-3184, 906-326-3026, (034) 708-7366, (034) 469-6062, (034) 435-0785, 921-602-9525, (034) 708-1755, (034) 432-1602, 995-187-4725, (034) 435-6067, (034) 432-0664, (034) 435-4168, (034) 433-8286, (034) 434-8485, (034) 431-3603, (034) 703-1284, (034) 434-9122, (034) 432-7196
+- **Email:** bcc@bacolodcity.gov.ph, bha@bacolodcity.gov.ph, bttmd@bacolodcity.gov.ph, bac@bacolodcity.gov.ph, bacolodcityfs@bacolodcity.gov.ph, bplo@bacolodcity.gov.ph, accountant@bacolodcity.gov.ph, cmo_admin@bacolodcity.gov.ph, cityassessor@bacolodcity.gov.ph, citybudget@bacolodcity.gov.ph, lcr@bacolodcity.gov.ph, coop@bacolodcity.gov.ph, cityagri@bacolodcity.gov.ph, ceo@bacolodcity.gov.ph, cho@bacolodcity.gov.ph, clo@bacolodcity.gov.ph, citylib@bacolodcity.gov.ph, mayorggasataya@bacolodcity.gov.ph, cpdo@bacolodcity.gov.ph, popcom@bacolodcity.gov.ph, tourism@bacolodcity.gov.ph, cto_admin@bacolodcity.gov.ph, cto_landtax@bacolodcity.gov.ph, cto_license@bacolodcity.gov.ph, cto_cash@bacolodcity.gov.ph, cityvet@bacolodcity.gov.ph, maellamas@bacolodcity.gov.ph, bcdledipoffice@bacolodcity.gov.ph, dps@bacolodcity.gov.ph, dssd@bacolodcity.gov.ph, enrobcd@bacolodcity.gov.ph, gso@bacolodcity.gov.ph, hrms@bacolodcity.gov.ph, mitcs@bacolodcity.gov.ph, obo@bacolodcity.gov.ph, paad@bacolodcity.gov.ph, peso@bacolodcity.gov.ph, bacolodcitycommunicationsoffice@bacolodcity.gov.ph
+
+## Hotlines | Bacolod City Government
+
+**URL:** https://bacolodcity.gov.ph/hotlines/
+**Scraped:** 2026-01-11
+
+### Content
+
+isaster Risk Reduction and Management Office (DRRMO)
+
+034 4323879 (admin office hours only) 034 4323871- 73(hotline 24/7) 034 4698932 (LDRRMO office office hours only) +63 930 243 4706 (hotline cp #)Email: drrmobacolodcity@yahoo.com
+
+### Requirements
+
+- Bacolod Environment and Natural Resources
+- Bureau of Fire Protection
+- Business Permits and License Division
+- City Department of Agriculture
+- City Health Office
+- Office of the Building Officials (OBO)
+
+### Contact Information
+
+- **Phone:** (034) 434-9122, (034) 432-7196
+- **Email:** mayorggasataya@bacolodcity.gov.ph
