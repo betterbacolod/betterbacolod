@@ -2,18 +2,18 @@
 # This file contains all the pages/services available under the Social Welfare category
 
 pages:
-  - name: 'Apply for Senior Citizen Benefits and Discounts'
-    slug: 'apply-for-senior-citizen-benefits-and-discounts'
-    description: 'Get your Senior Citizen ID and avail of 20% discounts, VAT exemption, and social pension programs.'
-
-  - name: 'Register for PWD ID and Disability Benefits'
-    slug: 'register-for-pwd-id-and-disability-benefits'
-    description: 'Apply for FREE PWD ID and access 20% discounts, assistive devices, and disability programs.'
-
-  - name: 'Apply for Solo Parent ID and Benefits'
-    slug: 'apply-for-solo-parent-id-and-benefits'
-    description: 'Get your Solo Parent ID for 20% discounts, 7 days parental leave, and educational assistance.'
-
-  - name: 'Access Social Welfare Programs and Financial Assistance'
+  - name: 'Social Welfare Programs & Financial Assistance in Bacolod City'
     slug: 'access-social-welfare-programs-and-financial-assistance'
-    description: 'Medical assistance, burial aid, 4Ps, livelihood programs, and emergency assistance from DSSD.'
+    description: 'Medical assistance, burial aid, 4Ps, livelihood programs, and emergency assistance from DSSD Bacolod.'
+
+  - name: 'Senior Citizen ID & Benefits in Bacolod City'
+    slug: 'apply-for-senior-citizen-benefits-and-discounts'
+    description: '20% discounts, VAT exemption, and social pension. Get your Senior Citizen ID at your barangay or DSSD.'
+
+  - name: 'PWD ID & Disability Benefits in Bacolod City'
+    slug: 'register-for-pwd-id-and-disability-benefits'
+    description: 'Free PWD ID with 20% discounts and VAT exemption. Apply at your barangay or DSSD Bacolod.'
+
+  - name: 'Solo Parent ID & Benefits in Bacolod City'
+    slug: 'apply-for-solo-parent-id-and-benefits'
+    description: 'Free Solo Parent ID for 20% discounts, 7 days parental leave, and educational assistance.'

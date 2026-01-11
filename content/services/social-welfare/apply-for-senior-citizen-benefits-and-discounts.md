@@ -116,12 +116,12 @@ Senior citizens are **exempt from 12% VAT** on purchases of goods and services f
 
 For assistance, complaints, or inquiries about senior citizen benefits:
 
-**Department of Social Services and Development (DSSD)**
+### Department of Social Services and Development (DSSD)
 
-- **Email:** dssd@bacolodcity.gov.ph
-- **Phone:** (034) 432-1602
+- **OIC:** Alma Gustilo
+- **Phone:** (034) 433-5924 / (034) 432-1602
+- **Location:** City Health Compound, BBB-Galo Sts., Bacolod City
 - **Main Hotline:** (034) 434-9122
-- **Location:** Bacolod City Government Center, Circumferential Rd, Brgy. Villamonte, Bacolod City, 6100 Negros Occidental
 - **Website:** [bacolodcity.gov.ph](https://bacolodcity.gov.ph)
 
 **Barangay Halls** — Senior Citizen Affairs Desk for barangay-level assistance

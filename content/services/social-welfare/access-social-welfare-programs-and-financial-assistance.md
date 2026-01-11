@@ -215,10 +215,10 @@ The **Department of Social Services and Development (DSSD)** of Bacolod City pro
 
 ### Department of Social Services and Development (DSSD)
 
-- **Email:** dssd@bacolodcity.gov.ph
-- **Phone:** (034) 432-1602
+- **OIC:** Alma Gustilo
+- **Phone:** (034) 433-5924 / (034) 432-1602
+- **Location:** City Health Compound, BBB-Galo Sts., Bacolod City
 - **Main Hotline:** (034) 434-9122
-- **Location:** Bacolod City Government Center, Circumferential Rd, Brgy. Villamonte, Bacolod City, 6100 Negros Occidental
 - **Website:** [bacolodcity.gov.ph](https://bacolodcity.gov.ph)
 
 ### Related Offices
