@@ -10,23 +10,44 @@ import remarkGfm from 'remark-gfm';
 import { createMarkdownComponents } from '../lib/markdownComponents';
 import { getTypographyTheme } from '../lib/typographyThemes';
 import { useState } from 'react';
+import OfficialsSection from '../components/government/OfficialsSection';
 
-// Import markdown files directly
-import officialsContent from '../../content/government/officials.md?raw';
+// Import markdown files for departments and barangays
 import departmentsContent from '../../content/government/departments.md?raw';
 import barangaysContent from '../../content/government/barangays.md?raw';
-
-const contentMap: { [key: string]: string } = {
-  officials: officialsContent,
-  departments: departmentsContent,
-  barangays: barangaysContent,
-};
 
 const Government: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string | null>(null);
   const markdownComponents = createMarkdownComponents(
     getTypographyTheme('default')
   );
+
+  const renderContent = () => {
+    if (activeSection === 'officials') {
+      return <OfficialsSection />;
+    }
+    if (activeSection === 'departments') {
+      return (
+        <ReactMarkdown
+          remarkPlugins={[remarkGfm]}
+          components={markdownComponents}
+        >
+          {departmentsContent}
+        </ReactMarkdown>
+      );
+    }
+    if (activeSection === 'barangays') {
+      return (
+        <ReactMarkdown
+          remarkPlugins={[remarkGfm]}
+          components={markdownComponents}
+        >
+          {barangaysContent}
+        </ReactMarkdown>
+      );
+    }
+    return null;
+  };
 
   return (
     <>
@@ -79,15 +100,8 @@ const Government: React.FC = () => {
         {/* Content Section */}
         {activeSection && (
           <div className="mt-8">
-            <Card className="markdown-content">
-              <CardContent className="p-6">
-                <ReactMarkdown
-                  remarkPlugins={[remarkGfm]}
-                  components={markdownComponents}
-                >
-                  {contentMap[activeSection] || ''}
-                </ReactMarkdown>
-              </CardContent>
+            <Card>
+              <CardContent className="p-6">{renderContent()}</CardContent>
             </Card>
           </div>
         )}
