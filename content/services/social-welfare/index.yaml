@@ -2,18 +2,18 @@
 # This file contains all the pages/services available under the Social Welfare category
 
 pages:
-  - name: 'Social Welfare Programs & Financial Assistance in Bacolod City'
+  - name: 'Social Welfare Programs & Financial Assistance'
     slug: 'access-social-welfare-programs-and-financial-assistance'
-    description: 'Medical assistance, burial aid, 4Ps, livelihood programs, and emergency assistance from DSSD Bacolod.'
+    description: 'Medical assistance, burial aid, 4Ps, livelihood programs, and emergency assistance from DSSD.'
 
-  - name: 'Senior Citizen ID & Benefits in Bacolod City'
+  - name: 'Senior Citizen ID & Benefits'
     slug: 'apply-for-senior-citizen-benefits-and-discounts'
     description: '20% discounts, VAT exemption, and social pension. Get your Senior Citizen ID at your barangay or DSSD.'
 
-  - name: 'PWD ID & Disability Benefits in Bacolod City'
+  - name: 'PWD ID & Disability Benefits'
     slug: 'register-for-pwd-id-and-disability-benefits'
-    description: 'Free PWD ID with 20% discounts and VAT exemption. Apply at your barangay or DSSD Bacolod.'
+    description: 'Free PWD ID with 20% discounts and VAT exemption. Apply at your barangay or DSSD.'
 
-  - name: 'Solo Parent ID & Benefits in Bacolod City'
+  - name: 'Solo Parent ID & Benefits'
     slug: 'apply-for-solo-parent-id-and-benefits'
     description: 'Free Solo Parent ID for 20% discounts, 7 days parental leave, and educational assistance.'
