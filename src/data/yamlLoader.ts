@@ -37,7 +37,6 @@ import agricultureFisheriesIndex from '../../content/services/agriculture-fisher
 import infrastructurePublicWorksIndex from '../../content/services/infrastructure-public-works/index.yaml?raw';
 import garbageWasteDisposalIndex from '../../content/services/garbage-waste-disposal/index.yaml?raw';
 import environmentIndex from '../../content/services/environment/index.yaml?raw';
-import disasterPreparednessIndex from '../../content/services/disaster-preparedness/index.yaml?raw';
 import housingLandUseIndex from '../../content/services/housing-land-use/index.yaml?raw';
 import transportationIndex from '../../content/services/transportation/index.yaml?raw';
 import publicSafetyIndex from '../../content/services/public-safety/index.yaml?raw';
@@ -54,7 +53,6 @@ const categoryIndexMap: { [key: string]: string } = {
   transportation: transportationIndex,
   'garbage-waste-disposal': garbageWasteDisposalIndex,
   environment: environmentIndex,
-  'disaster-preparedness': disasterPreparednessIndex,
   'public-safety': publicSafetyIndex,
   'housing-land-use': housingLandUseIndex,
   'legal-civil': legalCivilIndex,
