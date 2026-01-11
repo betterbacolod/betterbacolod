@@ -135,7 +135,7 @@ export default function OfficialsSection({ searchQuery = '' }: Props) {
     <div className="space-y-8">
       {showExec && (
         <section>
-          <h2 className="text-lg font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-300">
+          <h2 className="text-sm font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-300 uppercase tracking-wide">
             Executive Branch
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -179,7 +179,7 @@ export default function OfficialsSection({ searchQuery = '' }: Props) {
 
       {showLeg && (
         <section>
-          <h2 className="text-lg font-semibold text-gray-900 mb-1 pb-2 border-b border-gray-300">
+          <h2 className="text-sm font-semibold text-gray-900 mb-4 pb-2 border-b border-gray-300 uppercase tracking-wide">
             Legislative Branch
           </h2>
           <p className="text-sm text-gray-600 mb-4">
