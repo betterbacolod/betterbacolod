@@ -324,7 +324,7 @@ export default function DepartmentsSection() {
   };
 
   return (
-    <div className="flex gap-4 h-[500px]">
+    <div className="flex gap-4 h-[600px]">
       {/* Sidebar */}
       <nav className="w-44 flex-shrink-0 border-r border-gray-200 pr-4 overflow-y-auto">
         <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">
@@ -358,22 +358,22 @@ export default function DepartmentsSection() {
               {group.departments.map((dept, di) => (
                 <div
                   key={di}
-                  className="bg-white border border-gray-300 rounded-lg p-3 hover:border-primary-400 hover:shadow-sm transition-all"
+                  className="bg-white border border-gray-300 rounded-lg p-4 hover:border-primary-400 hover:shadow-sm transition-all"
                 >
                   <h3 className="font-medium text-gray-900 text-sm">
                     {dept.name}
                   </h3>
-                  <p className="text-xs text-gray-600 mt-1">{dept.head}</p>
-                  <div className="mt-2 space-y-1 text-xs text-gray-700">
+                  <p className="text-sm text-gray-600 mt-1">{dept.head}</p>
+                  <div className="mt-3 space-y-1.5 text-sm text-gray-700">
                     {dept.phone && (
                       <p className="flex items-center gap-1.5">
-                        <Phone className="h-3 w-3 text-primary-500 flex-shrink-0" />
+                        <Phone className="h-3.5 w-3.5 text-primary-500 flex-shrink-0" />
                         {dept.phone}
                       </p>
                     )}
                     {dept.email && (
                       <p className="flex items-center gap-1.5">
-                        <Mail className="h-3 w-3 text-primary-500 flex-shrink-0" />
+                        <Mail className="h-3.5 w-3.5 text-primary-500 flex-shrink-0" />
                         <a
                           href={`mailto:${dept.email}`}
                           className="hover:text-primary-600 break-all"

@@ -228,7 +228,7 @@ export default function BarangaysSection() {
   };
 
   return (
-    <div className="flex gap-4 h-[500px]">
+    <div className="flex gap-4 h-[600px]">
       {/* Sidebar */}
       <nav className="w-36 flex-shrink-0 border-r border-gray-200 pr-4 overflow-y-auto">
         <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">
@@ -277,21 +277,21 @@ export default function BarangaysSection() {
             <h2 className="text-sm font-semibold text-gray-900 mb-3 pb-2 border-b border-gray-300 uppercase tracking-wide sticky top-0 bg-white">
               {group.title}
             </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
               {group.barangays.map((brgy, bi) => (
                 <div
                   key={bi}
-                  className="bg-white border border-gray-300 rounded-lg p-2.5 hover:border-primary-400 hover:shadow-sm transition-all"
+                  className="bg-white border border-gray-300 rounded-lg p-3 hover:border-primary-400 hover:shadow-sm transition-all"
                 >
-                  <h3 className="font-medium text-gray-900 text-xs">
+                  <h3 className="font-medium text-gray-900 text-sm">
                     {brgy.name}
                   </h3>
-                  <p className="text-xs text-gray-600 mt-0.5 truncate">
+                  <p className="text-sm text-gray-600 mt-1 truncate">
                     {brgy.captain}
                   </p>
                   {brgy.phone && (
-                    <p className="flex items-center gap-1 text-xs text-gray-700 mt-1">
-                      <Phone className="h-2.5 w-2.5 text-primary-500" />
+                    <p className="flex items-center gap-1.5 text-sm text-gray-700 mt-2">
+                      <Phone className="h-3.5 w-3.5 text-primary-500" />
                       {brgy.phone}
                     </p>
                   )}
