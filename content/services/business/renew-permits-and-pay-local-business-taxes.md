@@ -1,4 +1,4 @@
-# Renew Business Permits and Pay Local Business Taxes — Bacolod City
+# Business Permit Renewal & Local Business Taxes in Bacolod City
 
 All businesses operating in Bacolod City must renew their business permits annually and pay local business taxes.
 
@@ -49,12 +49,19 @@ All businesses operating in Bacolod City must renew their business permits annua
 
 ## Contact Information
 
-- **Business Permits and Licensing Division (BPLO)**
-- **Phone**: (034) 434-9122
-- **Email**: bplo@bacolodcity.gov.ph
-- **Location**: Bacolod City Government Center, Circumferential Rd, Brgy. Villamonte, Bacolod City, 6100 Negros Occidental
-- **Website**: [bacolodcity.gov.ph](https://bacolodcity.gov.ph/business-permits-and-licensing-division/)
-- **Online Services**: [onlineservices.bacolodcity.gov.ph](https://onlineservices.bacolodcity.gov.ph/)
+### Business Permits and Licensing Division (BPLO)
+
+- **Head:** Stela Rose J. Rayos
+- **Email:** bplo@bacolodcity.gov.ph
+- **Location:** Ground Floor, Bacolod City Government Center
+- **Facebook:** [Bacolod Permits](https://www.facebook.com/bacolodpermits)
+- **Online Services:** [onlineservices.bacolodcity.gov.ph](https://onlineservices.bacolodcity.gov.ph/)
+
+### City Treasurer's Office
+
+- **City Treasurer:** Jose Maria Gecosala
+- **Phone:** (034) 435-0785, (034) 434-3983
+- **Email:** cto_license@bacolodcity.gov.ph
 
 ---
 

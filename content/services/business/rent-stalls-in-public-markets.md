@@ -1,4 +1,4 @@
-# Rent Stalls in Public Markets — Bacolod City
+# Public Market Stall Rentals in Bacolod City
 
 Bacolod City operates public markets where vendors can rent stalls for their businesses.
 
@@ -25,11 +25,12 @@ Bacolod City operates public markets where vendors can rent stalls for their bus
 
 ## Contact Information
 
-- **Department of Public Services / City Markets Office**
-- **Phone**: (034) 434-9122
-- **Email**: dps@bacolodcity.gov.ph
-- **Location**: Bacolod City Government Center, Circumferential Rd, Brgy. Villamonte, Bacolod City, 6100 Negros Occidental
-- **Website**: [bacolodcity.gov.ph](https://bacolodcity.gov.ph)
+### General Services Office (GSO)
+
+- **OIC:** Victor Espina
+- **Phone:** (034) 435-6067
+- **Email:** gso@bacolodcity.gov.ph
+- **Location:** Bacolod City Government Center
 
 ---
 
