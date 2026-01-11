@@ -1,4 +1,4 @@
-# Join Health Programs — Bacolod City (Nutrition, Dengue Control, TB Treatment)
+# Health Programs in Bacolod City (Nutrition, Dengue Control, TB Treatment)
 
 Bacolod City offers various **health programs** through the City Health Office and barangay health centers.
 

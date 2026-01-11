@@ -2,18 +2,18 @@
 # This file contains all the pages/services available under the Health Services category
 
 pages:
-  - name: 'Get free check-ups, basic medicines, and vaccines'
+  - name: 'Free Check-ups, Medicines & Vaccines in Bacolod City'
     slug: 'get-free-check-ups-basic-medicines-and-vaccines'
-    description: 'Access free medical check-ups, basic medicines, and vaccination services provided by your local government.'
+    description: 'Free medical check-ups, basic medicines, and vaccination services from the Bacolod City Health Office (BACCHP).'
     
-  - name: 'Access maternal care and child immunization'
+  - name: 'Maternal Care & Child Immunization Services in Bacolod City'
     slug: 'access-maternal-care-and-child-immunization'
-    description: 'Information about maternal health services and child immunization programs available in your area.'
+    description: 'Free prenatal care, maternal health services, and child immunization programs at barangay health centers.'
     
-  - name: 'Go to the local hospital for treatment or confinement'
+  - name: 'Hospitals in Bacolod City (Public & Private)'
     slug: 'go-to-the-local-hospital-for-treatment-or-confinement'
-    description: 'Details about local hospital services, treatment options, and confinement procedures.'
+    description: 'Complete list of hospitals in Bacolod City including CLMMRH, Riverside, Doctors Hospital, Adventist, and more.'
     
-  - name: 'Join health programs (nutrition, dengue control, TB treatment)'
+  - name: 'Health Programs in Bacolod City (Nutrition, Dengue Control, TB Treatment)'
     slug: 'join-health-programs-nutrition-dengue-control-tb-treatment'
-    description: 'Participate in various health programs including nutrition support, dengue control, and TB treatment initiatives.'
+    description: 'City health programs for nutrition, dengue prevention, and free TB treatment (DOTS program).'

@@ -1,6 +1,6 @@
-# Bacolod City Government: Free Health Services
+# Free Check-ups, Medicines & Vaccines in Bacolod City
 
-The Bacolod City Government offers free **check-ups, medicines, and vaccines** through the City Health Office (CHO) and barangay health centers.
+The Bacolod City Government offers free **check-ups, medicines, and vaccines** through the City Health Office (CHO) and barangay health centers under the Bacolod City Comprehensive Health Program (BACCHP).
 
 ---
 
@@ -44,13 +44,14 @@ The Bacolod City Government offers free **check-ups, medicines, and vaccines** t
 
 ## Contact Information
 
-- **City Health Office (CHO)**
+### City Health Office (CHO) — Main Office
+
+- **Address**: BBB St, Bacolod, 6100 Negros Occidental
 - **Phone**: (034) 434-9122
 - **Email**: cho@bacolodcity.gov.ph
-- **Location**: Bacolod City Government Center, Circumferential Rd, Brgy. Villamonte, Bacolod City, 6100 Negros Occidental
 - **Hours**: Mon–Fri, 8 AM–5 PM
 - **Website**: [bacolodcity.gov.ph](https://bacolodcity.gov.ph)
-- **Facebook**: [Bacolod City Comprehensive Health Program](https://www.facebook.com/bacchp2022)
+- **Facebook**: [Bacolod City Comprehensive Health Program (BACCHP)](https://www.facebook.com/bacchp2022)
 
 ---
 
