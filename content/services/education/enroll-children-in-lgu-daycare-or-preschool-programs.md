@@ -1,4 +1,4 @@
-# Enroll Children in LGU Daycare or Preschool Programs — Bacolod City
+# Daycare & Preschool Programs in Bacolod City
 
 The Bacolod City Government operates daycare centers through barangays and supports public preschool education.
 
@@ -69,14 +69,16 @@ The Bacolod City Government operates daycare centers through barangays and suppo
 
 ## Contact Information
 
-- **Department of Social Services and Development (DSSD)**
-- **Phone**: (034) 434-9122
-- **Email**: dssd@bacolodcity.gov.ph
-- **Location**: Bacolod City Government Center, Circumferential Rd, Brgy. Villamonte, Bacolod City, 6100 Negros Occidental
-- **Website**: [bacolodcity.gov.ph](https://bacolodcity.gov.ph)
+### Department of Social Services and Development (DSSD)
 
-- **DepEd Bacolod City Division**
-- **Website**: [depedbacolod.net](https://www.depedbacolod.net/)
+- **OIC:** Sally Abelarde
+- **Phone:** (034) 432-1602
+- **Email:** dssd@bacolodcity.gov.ph
+- **Location:** Bacolod City Government Center
+
+### DepEd Bacolod City Division
+
+- **Website:** [depedbacolod.net](https://www.depedbacolod.net/)
 
 ---
 

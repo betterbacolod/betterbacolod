@@ -1,4 +1,4 @@
-# Learn About Supplementary Activities for Schools — Bacolod City
+# School Clubs & Student Activities in Bacolod City
 
 Find clubs, student organizations, competitions, and enrichment programs for students in Bacolod City.
 

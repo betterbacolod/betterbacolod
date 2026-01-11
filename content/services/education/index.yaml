@@ -2,18 +2,18 @@
 # This file contains all the pages/services available under the Education category
 
 pages:
-  - name: 'Enroll children in LGU daycare or preschool programs'
+  - name: 'Daycare & Preschool Programs in Bacolod City'
     slug: 'enroll-children-in-lgu-daycare-or-preschool-programs'
-    description: 'Information about enrolling your children in local government daycare and preschool programs.'
+    description: 'Free barangay daycare for ages 3-4 and public kindergarten. Requirements, enrollment process, and DSSD contact.'
     
-  - name: 'Apply for local scholarships'
+  - name: 'Scholarships in Bacolod City (PESO & Local Colleges)'
     slug: 'apply-for-local-scholarships'
-    description: 'How to apply for scholarships and educational financial assistance from your local government.'
+    description: '814+ scholars receive ₱3,000 allowance from PESO. Plus Bacolod City College, UNO-R, STI, and national scholarships.'
     
-  - name: 'Access educational support programs from the LGU'
+  - name: 'Educational Support Programs in Bacolod City (SPES, Assistance, Supplies)'
     slug: 'access-educational-support-programs-from-the-lgu'
-    description: 'Various educational support programs and resources provided by your local government unit.'
+    description: 'SPES work program for students, DSWD educational assistance, free school supplies, and more.'
     
-  - name: 'Learn about supplementary activities for schools in your area'
+  - name: 'School Clubs & Student Activities in Bacolod City'
     slug: 'learn-about-supplementary-activities-for-schools-in-your-area'
-    description: 'Information about supplementary educational activities and programs available for schools in your area.'
+    description: 'SSG, YES-O, Campus Journalism, Red Cross Youth, sports teams, and Pasidungog Awards for achievers.'
