@@ -1,54 +1,60 @@
-import { Facebook } from 'lucide-react';
+import { Facebook, Github } from 'lucide-react';
 import { footerNavigation } from '../../data/navigation';
 import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 pt-12 pb-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className="bg-slate-900 text-white">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          {/* Brand */}
           <div>
-            <div className="flex items-center mb-4">
+            <div className="flex items-center gap-3 mb-4">
               <img
                 src="/B-Logo/BetterBacolod Icons_favicon tp.png"
                 alt="BetterBacolod"
-                className="h-12 w-12 mr-3"
+                className="h-10 w-10"
               />
-              <div>
-                <div className="font-bold">BetterBacolod</div>
-                <div className="text-xs text-gray-400">
-                  Civic Tech for Bacolod City
-                </div>
-              </div>
+              <div className="font-bold">BetterBacolod</div>
             </div>
-            <p className="text-gray-400 text-sm mb-4">
-              Open-source initiative for accessible government information.
+            <p className="text-slate-400 text-sm mb-5 leading-relaxed">
+              Open-source civic tech initiative making government information
+              accessible for Bacolodnons.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex gap-3">
               {footerNavigation.socialLinks.map(link => (
                 <a
                   key={link.label}
                   href={link.href}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="p-2 bg-slate-800 rounded-lg text-slate-400 hover:text-white hover:bg-slate-700 transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Facebook className="h-5 w-5" />
+                  <Facebook className="h-4 w-4" />
                 </a>
               ))}
+              <a
+                href="https://github.com/iyanski/betterlocalgov"
+                className="p-2 bg-slate-800 rounded-lg text-slate-400 hover:text-white hover:bg-slate-700 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github className="h-4 w-4" />
+              </a>
             </div>
           </div>
 
+          {/* Nav sections */}
           {footerNavigation.mainSections.map(section => (
             <div key={section.title}>
-              <h3 className="text-lg font-semibold mb-4">{section.title}</h3>
-              <ul className="space-y-2">
+              <h3 className="font-semibold mb-4">{section.title}</h3>
+              <ul className="space-y-2.5">
                 {section.links.map(link =>
                   link.href.startsWith('http') ? (
                     <li key={link.label}>
                       <a
                         href={link.href}
-                        className="text-gray-400 hover:text-white text-sm transition-colors"
+                        className="text-slate-400 hover:text-white text-sm transition-colors"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -59,7 +65,7 @@ const Footer: React.FC = () => {
                     <li key={link.label}>
                       <Link
                         to={link.href}
-                        className="text-gray-400 hover:text-white text-sm transition-colors"
+                        className="text-slate-400 hover:text-white text-sm transition-colors"
                       >
                         {link.label}
                       </Link>
@@ -71,29 +77,24 @@ const Footer: React.FC = () => {
           ))}
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center gap-3">
-          <p className="text-gray-500 text-xs">
-            © {new Date().getFullYear()} BetterBacolod · Not an official
-            government website
-          </p>
-          <span className="inline-flex items-center gap-1 px-2 py-1 bg-white text-gray-900 text-xs rounded-full">
-            💸 Cost to build this site: ₱435.39
-          </span>
-          <div className="flex gap-6">
-            <a
-              href="https://github.com/iyanski/betterlocalgov"
-              className="text-gray-400 hover:text-white text-xs transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Contribute on GitHub
-            </a>
-            <Link
-              to="/sitemap"
-              className="text-gray-400 hover:text-white text-xs transition-colors"
-            >
-              Sitemap
-            </Link>
+        {/* Bottom bar */}
+        <div className="border-t border-slate-800 mt-10 pt-6">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-slate-500 text-sm">
+              © {new Date().getFullYear()} BetterBacolod · Not an official
+              government website
+            </p>
+            <div className="flex items-center gap-4">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-emerald-500/10 text-emerald-400 text-xs font-medium rounded-full">
+                💸 Built for ₱435.39
+              </span>
+              <Link
+                to="/sitemap"
+                className="text-slate-500 hover:text-white text-sm transition-colors"
+              >
+                Sitemap
+              </Link>
+            </div>
           </div>
         </div>
       </div>

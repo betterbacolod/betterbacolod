@@ -118,6 +118,70 @@ const Search: React.FC = () => {
         href: '/about',
         type: 'Info',
         keywords: 'hotline emergency 911 cdrrmo police fire',
+      },
+      {
+        title: 'Birth Certificate',
+        description:
+          'Request or get copy of birth certificate from Civil Registry',
+        href: '/services/civil-registry',
+        type: 'Service',
+        keywords: 'birth certificate psa civil registry baby born',
+      },
+      {
+        title: 'Death Certificate',
+        description: 'Request death certificate from Civil Registry',
+        href: '/services/civil-registry',
+        type: 'Service',
+        keywords: 'death certificate civil registry deceased',
+      },
+      {
+        title: 'Marriage Certificate',
+        description: 'Request marriage certificate from Civil Registry',
+        href: '/services/civil-registry',
+        type: 'Service',
+        keywords: 'marriage certificate wedding civil registry kasal',
+      },
+      {
+        title: 'Barangay Clearance',
+        description: 'Get barangay clearance for employment or business',
+        href: '/government',
+        type: 'Service',
+        keywords: 'barangay clearance brgy certificate employment',
+      },
+      {
+        title: 'Real Property Tax',
+        description: 'Pay real property tax at City Treasurer Office',
+        href: '/services/tax-services',
+        type: 'Service',
+        keywords: 'real property tax amilyar land tax treasurer',
+      },
+      {
+        title: 'Community Tax Certificate (Cedula)',
+        description: 'Get cedula or community tax certificate',
+        href: '/services/tax-services',
+        type: 'Service',
+        keywords: 'cedula community tax certificate ctc',
+      },
+      {
+        title: 'Building Permit',
+        description: 'Apply for building permit at City Engineering Office',
+        href: '/services/permits-licensing',
+        type: 'Service',
+        keywords: 'building permit construction obo engineering',
+      },
+      {
+        title: 'Senior Citizen ID',
+        description: 'Apply for senior citizen ID and benefits',
+        href: '/services/social-services',
+        type: 'Service',
+        keywords: 'senior citizen id osca elderly',
+      },
+      {
+        title: 'PWD ID',
+        description: 'Apply for Person with Disability ID',
+        href: '/services/social-services',
+        type: 'Service',
+        keywords: 'pwd id disability person with disability',
       }
     );
 
@@ -217,17 +281,22 @@ const Search: React.FC = () => {
             <div className="text-center py-8">
               <p className="text-gray-400 mb-4">Start typing to search</p>
               <div className="flex flex-wrap justify-center gap-2">
-                {['business', 'health', 'barangay', 'permit', 'hotline'].map(
-                  term => (
-                    <button
-                      key={term}
-                      onClick={() => setQuery(term)}
-                      className="px-3 py-1 text-sm bg-gray-100 hover:bg-primary-100 text-gray-600 hover:text-primary-700 rounded-full transition-colors"
-                    >
-                      {term}
-                    </button>
-                  )
-                )}
+                {[
+                  'birth certificate',
+                  'business permit',
+                  'mayor',
+                  'barangay clearance',
+                  'health center',
+                  'real property tax',
+                ].map(term => (
+                  <button
+                    key={term}
+                    onClick={() => setQuery(term)}
+                    className="px-3 py-1 text-sm bg-gray-100 hover:bg-primary-100 text-gray-600 hover:text-primary-700 rounded-full transition-colors"
+                  >
+                    {term}
+                  </button>
+                ))}
               </div>
             </div>
           )}

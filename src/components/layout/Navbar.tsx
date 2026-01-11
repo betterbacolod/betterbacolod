@@ -9,9 +9,7 @@ const Navbar: React.FC = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-    if (isOpen) {
-      setActiveMenu(null);
-    }
+    if (isOpen) setActiveMenu(null);
   };
 
   const closeMenu = () => {
@@ -25,45 +23,38 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="bg-white shadow-sm sticky top-0 z-50">
-      {/* Main navigation */}
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between py-2">
-          <div className="flex items-center" style={{ minWidth: '200px' }}>
-            <Link to="/" className="flex items-center">
-              <img
-                src="/nav-logo.png"
-                alt="Bacolod City Logo"
-                className="h-12 w-auto"
-              />
-            </Link>
-          </div>
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link to="/" className="flex items-center">
+            <img
+              src="/nav-logo.png"
+              alt="BetterBacolod"
+              className="h-12 w-auto"
+            />
+          </Link>
 
           {/* Desktop navigation */}
-          <div className="hidden lg:flex items-center space-x-8 justify-center flex-1">
+          <div className="hidden lg:flex items-center gap-1">
             {mainNavigation.map(item => (
               <div key={item.label} className="relative group">
                 <Link
                   to={item.href}
-                  className="flex items-center text-gray-700 hover:text-primary-600 font-medium transition-colors"
+                  className="flex items-center px-4 py-2 text-slate-600 hover:text-primary-600 hover:bg-slate-50 rounded-lg font-medium transition-colors"
                 >
                   {item.label}
                   {item.children && (
-                    <ChevronDown className="ml-1 h-4 w-4 text-gray-800 group-hover:text-primary-600 transition-colors" />
+                    <ChevronDown className="ml-1 h-4 w-4 opacity-50" />
                   )}
                 </Link>
                 {item.children && (
-                  <div className="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                    <div
-                      className="py-1"
-                      role="menu"
-                      aria-orientation="vertical"
-                    >
+                  <div className="absolute left-0 mt-1 w-56 rounded-lg shadow-lg bg-white ring-1 ring-slate-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <div className="py-2">
                       {item.children.map(child => (
                         <Link
                           key={child.label}
                           to={child.href}
-                          className="text-left block px-4 py-2 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-600"
-                          role="menuitem"
+                          className="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600"
                         >
                           {child.label}
                         </Link>
@@ -74,92 +65,99 @@ const Navbar: React.FC = () => {
               </div>
             ))}
           </div>
-          <div
-            className="hidden lg:flex items-center space-x-6 justify-end"
-            style={{ minWidth: '200px' }}
-          >
+
+          {/* Right side */}
+          <div className="hidden lg:flex items-center gap-2">
             <Link
               to="/about"
-              className="flex items-center text-gray-700 hover:text-primary-600 font-medium transition-colors"
+              className="px-4 py-2 text-slate-600 hover:text-primary-600 hover:bg-slate-50 rounded-lg font-medium transition-colors"
             >
               About
             </Link>
             <Link
               to="/search"
-              className="flex items-center text-gray-700 hover:text-primary-600 font-medium transition-colors"
+              className="flex items-center gap-2 px-4 py-2 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-700 transition-colors"
             >
-              <Search className="h-4 w-4 mr-1" />
+              <Search className="h-4 w-4" />
               Search
             </Link>
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden flex items-center">
-            <button
-              onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500"
-            >
-              <span className="sr-only">Open main menu</span>
-              {isOpen ? (
-                <X className="block h-6 w-6" aria-hidden="true" />
-              ) : (
-                <Menu className="block h-6 w-6" aria-hidden="true" />
-              )}
-            </button>
-          </div>
+          <button
+            onClick={toggleMenu}
+            className="lg:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100"
+          >
+            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
         </div>
       </div>
 
       {/* Mobile menu */}
-      <div className={`lg:hidden ${isOpen ? 'block' : 'hidden'}`}>
-        <div className="container mx-auto px-2 pt-2 pb-4 space-y-1 border-t border-gray-200 bg-white">
-          {mainNavigation.map(item => (
-            <div key={item.label}>
-              <button
-                onClick={() => toggleSubmenu(item.label)}
-                className="w-full flex justify-between items-center px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-primary-500"
-              >
-                {item.label}
-                {item.children && (
-                  <ChevronDown
-                    className={`h-5 w-5 transition-transform ${
-                      activeMenu === item.label ? 'transform rotate-180' : ''
-                    }`}
-                  />
-                )}
-              </button>
-              {item.children && activeMenu === item.label && (
-                <div className="pl-6 py-2 space-y-1 bg-gray-50">
-                  {item.children.map(child => (
+      {isOpen && (
+        <div className="lg:hidden border-t border-slate-200 bg-white">
+          <div className="container mx-auto px-4 py-4 space-y-1">
+            {mainNavigation.map(item => (
+              <div key={item.label}>
+                <button
+                  onClick={() =>
+                    item.children ? toggleSubmenu(item.label) : closeMenu()
+                  }
+                  className="w-full flex justify-between items-center px-4 py-3 text-slate-700 hover:bg-slate-50 rounded-lg font-medium"
+                >
+                  {item.children ? (
+                    <>
+                      {item.label}
+                      <ChevronDown
+                        className={`h-5 w-5 transition-transform ${activeMenu === item.label ? 'rotate-180' : ''}`}
+                      />
+                    </>
+                  ) : (
                     <Link
-                      key={child.label}
-                      to={child.href}
+                      to={item.href}
                       onClick={closeMenu}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary-500"
+                      className="w-full text-left"
                     >
-                      {child.label}
+                      {item.label}
                     </Link>
-                  ))}
-                </div>
-              )}
+                  )}
+                </button>
+                {item.children && activeMenu === item.label && (
+                  <div className="ml-4 py-2 space-y-1">
+                    {item.children.map(child => (
+                      <Link
+                        key={child.label}
+                        to={child.href}
+                        onClick={closeMenu}
+                        className="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 rounded-lg"
+                      >
+                        {child.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+            <div className="pt-4 border-t border-slate-200 space-y-1">
+              <Link
+                to="/about"
+                onClick={closeMenu}
+                className="block px-4 py-3 text-slate-700 hover:bg-slate-50 rounded-lg font-medium"
+              >
+                About
+              </Link>
+              <Link
+                to="/search"
+                onClick={closeMenu}
+                className="flex items-center justify-center gap-2 px-4 py-3 bg-primary-600 text-white rounded-lg font-medium"
+              >
+                <Search className="h-4 w-4" />
+                Search
+              </Link>
             </div>
-          ))}
-          <Link
-            to="/about"
-            onClick={closeMenu}
-            className="block px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-primary-500"
-          >
-            About
-          </Link>
-          <Link
-            to="/search"
-            onClick={closeMenu}
-            className="block px-4 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-primary-500"
-          >
-            Search
-          </Link>
+          </div>
         </div>
-      </div>
+      )}
     </nav>
   );
 };
