@@ -1,81 +1,138 @@
-# BetterBacolod.org
+# 🔵 BetterBacolod.org
 
-Open-source civic tech initiative for the people of Bacolod City, Negros Occidental, Philippines.
+Open-source civic tech portal for Bacolod City, Negros Occidental, Philippines.
 
 🌐 **Live:** [betterbacolod.org](https://betterbacolod.org)
+💬 **Discord:** [Join our community](https://discord.gg/EZkdJrhBYV)
 
-## About
+---
+
+## 🔵 About
 
 BetterBacolod makes government information accessible. We compile publicly available data from official sources and present it in a user-friendly format.
 
 **Features:**
-
-- 📋 Government services directory (45+ services)
-- 👥 City officials, departments, and 61 barangays
-- 📊 Transparency data (flood control projects, budget, procurement)
+- 📋 45+ government services with requirements & fees
+- 👥 City officials, departments & 61 barangays
+- 📊 Transparency data (flood control, budget, procurement)
 - 🔍 Search across all content
 - 📱 Mobile responsive
 
-**Not an official government website.** For official transactions, visit [bacolodcity.gov.ph](https://bacolodcity.gov.ph)
+> ⚠️ **Not an official government website.** For official transactions, visit [bacolodcity.gov.ph](https://bacolodcity.gov.ph)
 
-## Tech Stack
+---
 
-- React + TypeScript
-- Vite
-- Tailwind CSS
-- Deployed on Vercel
+## 🔵 Tech Stack
 
-## Development
+| Tool | Purpose |
+|------|---------|
+| React 19 | UI Framework |
+| TypeScript | Type Safety |
+| Vite | Build Tool |
+| Tailwind CSS | Styling |
+| Biome | Linting & Formatting |
+| Bun | Package Manager |
+| Vercel | Hosting |
+
+---
+
+## 🔵 Getting Started
 
 ```bash
-# Install dependencies
-npm install
+# Clone the repo
+git clone https://github.com/betterbacolod/betterbacolod.git
+cd betterbacolod
+
+# Install dependencies (requires Bun)
+bun install
 
 # Start dev server
-npm run dev
+bun run dev
 
 # Build for production
-npm run build
+bun run build
+
+# Lint & format
+bun run lint
+bun run check
 ```
 
-## Contributing
+**Don't have Bun?** Install it: `curl -fsSL https://bun.sh/install | bash`
 
-We welcome contributions! Here's how:
+---
 
-1. **Fork** this repository
-2. **Clone** your fork locally
-3. **Create a branch** for your changes: `git checkout -b feature/your-feature`
-4. **Make your changes** and test locally
-5. **Commit** with a clear message: `git commit -m "Add: your feature"`
-6. **Push** to your fork: `git push origin feature/your-feature`
-7. **Open a Pull Request**
+## 🔵 Project Structure
 
-### What to contribute
+```
+betterbacolod/
+├── src/
+│   ├── components/       # React components
+│   │   ├── government/   # Officials, departments, barangays
+│   │   ├── home/         # Homepage sections
+│   │   ├── layout/       # Navbar, Footer, TopBanner
+│   │   ├── sections/     # Hero, etc.
+│   │   └── ui/           # Reusable UI components
+│   ├── pages/            # Route pages
+│   ├── data/             # YAML data loaders
+│   ├── hooks/            # Custom React hooks
+│   ├── lib/              # Utilities & markdown
+│   └── i18n.ts           # Internationalization
+├── content/
+│   ├── services/         # Service pages (markdown)
+│   └── government/       # Government info (markdown)
+├── public/               # Static assets
+├── biome.json            # Biome config
+├── vercel.json           # Vercel config
+└── package.json
+```
 
-- 🐛 Bug fixes
-- 📝 Content updates (outdated info, new services)
-- 🌐 Translations (Hiligaynon, Filipino)
-- ✨ New features
-- 📖 Documentation improvements
+---
 
-### Code style
+## 🔵 Contributing
 
-- Run `npm run lint` before committing
-- Follow existing patterns in the codebase
+We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
-## Data Sources
+**Quick ways to help:**
+- 🐛 Report bugs via [GitHub Issues](https://github.com/betterbacolod/betterbacolod/issues)
+- 📝 Update outdated info (officials, fees, contacts)
+- 🌐 Add translations (Hiligaynon, Filipino)
+- ✨ Submit new features via PR
+
+**Branch workflow:**
+```bash
+git checkout -b feat/your-feature
+# make changes
+bun run lint
+bun run build
+git commit -m "feat: your feature"
+git push origin feat/your-feature
+# open PR on GitHub
+```
+
+---
+
+## 🔵 Data Sources
 
 - [bacolodcity.gov.ph](https://bacolodcity.gov.ph) - Official city website
 - [PSA](https://psa.gov.ph) - Population data
 - [BetterGov.ph](https://bettergov.ph) - Transparency data
 - [PhilGEPS](https://philgeps.gov.ph) - Procurement data
 
-## License
+---
+
+## 🔵 Community
+
+- 💬 [Discord](https://discord.gg/EZkdJrhBYV) - Chat with contributors
+- 🐦 [Facebook](https://facebook.com/betterbacolod) - Updates & announcements
+
+---
+
+## 🔵 License
 
 MIT License - see [LICENSE](LICENSE)
 
 ---
 
-💸 Cost to build this site: ₱435.39
+💸 **Cost to build:** ₱435.39
 
 Forked from [iyanski/betterlocalgov](https://github.com/iyanski/betterlocalgov) · Inspired by [BetterGov.ph](https://bettergov.ph)
