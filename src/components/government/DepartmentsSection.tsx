@@ -347,7 +347,10 @@ export default function DepartmentsSection({ searchQuery = '' }: Props) {
       `section[id="${id}"]`
     ) as HTMLElement;
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      container.scrollTo({
+        top: element.offsetTop - container.offsetTop,
+        behavior: 'smooth',
+      });
     }
     setActiveSection(id);
   };
