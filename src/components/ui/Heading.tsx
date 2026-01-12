@@ -25,6 +25,6 @@ export function Heading({ level = 1, children, className }: HeadingProps) {
   return React.createElement(
     HeadingTag,
     { className: combinedClasses },
-    children
+    children,
   );
 }

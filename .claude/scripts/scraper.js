@@ -9,12 +9,11 @@
  *   node scraper.js --checklist "../docs/bacolod/SCRAPING-CHECKLIST.md" --category health
  */
 
-import https from 'https';
-import http from 'http';
-import { URL } from 'url';
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from 'node:fs';
+import http from 'node:http';
+import https from 'node:https';
+import path from 'node:path';
+import { fileURLToPath, URL } from 'node:url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -33,8 +32,8 @@ const config = {
   extractPortals: args.includes('--extract-portals'),
   verifyLinks: args.includes('--verify-links'),
   crawl: getArg('--crawl'),
-  maxDepth: parseInt(getArg('--max-depth') || '2'),
-  maxPages: parseInt(getArg('--max-pages') || '50'),
+  maxDepth: parseInt(getArg('--max-depth') || '2', 10),
+  maxPages: parseInt(getArg('--max-pages') || '50', 10),
 };
 
 function getArg(flag) {
@@ -51,10 +50,10 @@ async function main() {
     console.log('\nUsage:');
     console.log('  node scraper.js --url "https://bacolodcity.gov.ph/page"');
     console.log(
-      '  node scraper.js --checklist "path/to/checklist.md" --category health'
+      '  node scraper.js --checklist "path/to/checklist.md" --category health',
     );
     console.log(
-      '  node scraper.js --crawl "https://bacolodcity.gov.ph" --max-depth 2'
+      '  node scraper.js --crawl "https://bacolodcity.gov.ph" --max-depth 2',
     );
     process.exit(1);
   }
@@ -117,14 +116,14 @@ function fetchPage(url) {
     const protocol = url.startsWith('https') ? https : http;
 
     protocol
-      .get(url, res => {
+      .get(url, (res) => {
         if (res.statusCode !== 200) {
           reject(new Error(`HTTP ${res.statusCode}: ${url}`));
           return;
         }
 
         let data = '';
-        res.on('data', chunk => (data += chunk));
+        res.on('data', (chunk) => (data += chunk));
         res.on('end', () => resolve(data));
       })
       .on('error', reject);
@@ -166,7 +165,7 @@ function extractContent(html) {
 
   if (!mainMatch) return '';
 
-  let content = mainMatch[1];
+  const content = mainMatch[1];
 
   // Extract paragraphs
   const paragraphs = [];
@@ -196,11 +195,11 @@ function extractContactInfo(html) {
   // Emails: *@*.gov.ph
   const emailRegex = /[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.gov\.ph/gi;
   const emails = html.match(emailRegex) || [];
-  contact.emails = [...new Set(emails.map(e => e.toLowerCase()))];
+  contact.emails = [...new Set(emails.map((e) => e.toLowerCase()))];
 
   // Hours (basic pattern)
   const hoursMatch = html.match(
-    /([Mm]onday|[Tt]uesday|[Ww]ednesday|[Tt]hursday|[Ff]riday)[^<]{0,50}(\d{1,2}:\d{2}|\d{1,2}\s?[AP]M)/i
+    /([Mm]onday|[Tt]uesday|[Ww]ednesday|[Tt]hursday|[Ff]riday)[^<]{0,50}(\d{1,2}:\d{2}|\d{1,2}\s?[AP]M)/i,
   );
   if (hoursMatch) {
     contact.hours = cleanText(hoursMatch[0]);
@@ -215,13 +214,13 @@ function extractLists(html, keywords) {
   // Look for lists near keywords
   for (const keyword of keywords) {
     const regex = new RegExp(
-      `${keyword}[\\s\\S]{0,200}(<ul[^>]*>[\\s\\S]*?<\/ul>|<ol[^>]*>[\\s\\S]*?<\/ol>)`,
-      'gi'
+      `${keyword}[\\s\\S]{0,200}(<ul[^>]*>[\\s\\S]*?</ul>|<ol[^>]*>[\\s\\S]*?</ol>)`,
+      'gi',
     );
     const matches = html.match(regex);
 
     if (matches) {
-      matches.forEach(match => {
+      matches.forEach((match) => {
         const liRegex = /<li[^>]*>([\s\S]*?)<\/li>/gi;
         let liMatch;
 
@@ -256,7 +255,7 @@ function extractFacebookLinks(html, sourceUrl) {
 
   // Deduplicate
   const unique = {};
-  fbLinks.forEach(link => {
+  fbLinks.forEach((link) => {
     unique[link.url] = link;
   });
 
@@ -291,7 +290,7 @@ function extractPortalLinks(html, sourceUrl) {
 
   // Deduplicate
   const unique = {};
-  portals.forEach(link => {
+  portals.forEach((link) => {
     unique[link.url] = link;
   });
 
@@ -323,7 +322,7 @@ function extractDownloadLinks(html, sourceUrl) {
 }
 
 function categorizePortalLink(url, text) {
-  const lower = (url + ' ' + text).toLowerCase();
+  const lower = `${url} ${text}`.toLowerCase();
 
   if (lower.includes('online') && lower.includes('service'))
     return 'Online Services';
@@ -376,7 +375,7 @@ async function parseChecklist(checklistPath, category) {
 
     // Extract URLs
     if (inCategory) {
-      const urlMatch = line.match(/https?:\/\/[^\s\)]+/);
+      const urlMatch = line.match(/https?:\/\/[^\s)]+/);
       if (urlMatch) {
         urls.push(urlMatch[0]);
       }
@@ -391,7 +390,7 @@ async function saveResults(results, outputFile, append) {
   const markdown = results.map(formatAsMarkdown).join('\n\n---\n\n');
 
   if (append && fs.existsSync(outputFile)) {
-    fs.appendFileSync(outputFile, '\n\n' + markdown);
+    fs.appendFileSync(outputFile, `\n\n${markdown}`);
   } else {
     const header = `# Bacolod Data Collection\n\n> Last updated: ${new Date().toISOString().split('T')[0]}\n\n---\n\n`;
     fs.writeFileSync(outputFile, header + markdown);
@@ -409,7 +408,7 @@ function formatAsMarkdown(data) {
 
   if (data.requirements && data.requirements.length > 0) {
     md += `### Requirements\n\n`;
-    data.requirements.forEach(req => (md += `- ${req}\n`));
+    data.requirements.forEach((req) => (md += `- ${req}\n`));
     md += '\n';
   }
 
@@ -440,7 +439,7 @@ function formatAsMarkdown(data) {
 
   if (data.portalLinks && data.portalLinks.length > 0) {
     md += `### Portal Links\n\n`;
-    data.portalLinks.forEach(link => {
+    data.portalLinks.forEach((link) => {
       md += `- [${link.text}](${link.url}) - ${link.type}\n`;
     });
     md += '\n';
@@ -448,7 +447,7 @@ function formatAsMarkdown(data) {
 
   if (data.facebookLinks && data.facebookLinks.length > 0) {
     md += `### Facebook Pages\n\n`;
-    data.facebookLinks.forEach(link => {
+    data.facebookLinks.forEach((link) => {
       md += `- [Facebook Page](${link.url})\n`;
       md += `  - Verification: ${link.verification}\n`;
       md += `  - Confidence: ${link.confidence}\n`;
@@ -458,7 +457,7 @@ function formatAsMarkdown(data) {
 
   if (data.downloadLinks && data.downloadLinks.length > 0) {
     md += `### Downloads\n\n`;
-    data.downloadLinks.forEach(link => {
+    data.downloadLinks.forEach((link) => {
       md += `- [${link.text}](${link.url}) (${link.type})\n`;
     });
     md += '\n';
@@ -468,7 +467,7 @@ function formatAsMarkdown(data) {
 }
 
 function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 // Crawl site (basic implementation)
@@ -501,7 +500,7 @@ async function crawlSite(startUrl, maxDepth, maxPages) {
       // Find more links to crawl (only from same domain)
       if (depth < maxDepth) {
         const links = extractInternalLinks(html, url);
-        links.forEach(link => {
+        links.forEach((link) => {
           if (!visited.has(link)) {
             queue.push({ url: link, depth: depth + 1 });
           }

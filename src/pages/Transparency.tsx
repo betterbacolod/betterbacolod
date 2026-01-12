@@ -1,21 +1,21 @@
-import { useState } from 'react';
-import Section from '../components/ui/Section';
-import { Heading } from '../components/ui/Heading';
-import { Text } from '../components/ui/Text';
-import { Card, CardContent } from '../components/ui/Card';
-import SEO from '../components/SEO';
 import {
+  Building2,
   ChevronRight,
   Droplets,
-  Building2,
-  FileText,
   ExternalLink,
-  TrendingUp,
   FileSearch,
+  FileText,
   FolderOpen,
   ShoppingCart,
+  TrendingUp,
 } from 'lucide-react';
+import { useState } from 'react';
+import SEO from '../components/SEO';
 import FloodControlSection from '../components/transparency/FloodControlSection';
+import { Card, CardContent } from '../components/ui/Card';
+import { Heading } from '../components/ui/Heading';
+import Section from '../components/ui/Section';
+import { Text } from '../components/ui/Text';
 import budgetData from '../data/transparency/budget-region6.json';
 
 const categories = [
@@ -71,7 +71,7 @@ const Transparency: React.FC = () => {
 
         {/* Mobile: List Tiles */}
         <div className="lg:hidden space-y-2">
-          {categories.map(cat => {
+          {categories.map((cat) => {
             const Icon = cat.icon;
             const isActive = activeSection === cat.slug;
             return (
@@ -109,7 +109,7 @@ const Transparency: React.FC = () => {
         {/* Desktop: Card Grid + Content Below */}
         <div className="hidden lg:block">
           <div className="grid grid-cols-3 gap-6">
-            {categories.map(cat => {
+            {categories.map((cat) => {
               const Icon = cat.icon;
               const isActive = activeSection === cat.slug;
               return (
@@ -261,7 +261,7 @@ const ReportsSection = () => (
         Bacolod City)
       </p>
       <div className="space-y-2">
-        {budgetData.data.slice(-4).map(item => (
+        {budgetData.data.slice(-4).map((item) => (
           <div key={item.year} className="flex items-center gap-3">
             <span className="text-sm text-gray-600 w-12">{item.year}</span>
             <div className="flex-1 bg-gray-100 rounded-full h-6 overflow-hidden">

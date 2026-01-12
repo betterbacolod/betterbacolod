@@ -3,8 +3,8 @@
  */
 
 import {
-  serviceCategories,
   getCategorySubcategories,
+  serviceCategories,
 } from '../data/yamlLoader';
 
 export interface MarkdownContent {
@@ -32,14 +32,14 @@ async function findCategorySlug(documentSlug: string): Promise<string | null> {
       // Use the new async loading approach
       try {
         const subcategories = await getCategorySubcategories(category.slug);
-        const found = subcategories.find(sub => sub.slug === documentSlug);
+        const found = subcategories.find((sub) => sub.slug === documentSlug);
         if (found) {
           return category.slug;
         }
       } catch (error) {
         console.warn(
           `Error loading subcategories for category ${category.slug}:`,
-          error
+          error,
         );
       }
     }
@@ -53,7 +53,7 @@ async function findCategorySlug(documentSlug: string): Promise<string | null> {
  * @returns Promise with markdown content
  */
 export async function loadMarkdownContent(
-  documentSlug: string
+  documentSlug: string,
 ): Promise<MarkdownContent> {
   try {
     console.log(`Loading markdown content for document: ${documentSlug}`);
@@ -91,7 +91,7 @@ export async function loadMarkdownContent(
   } catch (error) {
     console.error(
       `Failed to load markdown content for document: ${documentSlug}`,
-      error
+      error,
     );
     throw new Error(`Document not found: ${documentSlug}`);
   }

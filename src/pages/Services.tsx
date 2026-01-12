@@ -1,18 +1,18 @@
-import Section from '../components/ui/Section';
-import { useParams } from 'react-router-dom';
-import { Heading } from '../components/ui/Heading';
-import { Text } from '../components/ui/Text';
-import {
-  serviceCategories,
-  getCategorySubcategories,
-  type Subcategory,
-} from '../data/yamlLoader';
 import * as LucideIcons from 'lucide-react';
-import Breadcrumbs from '../components/ui/Breadcrumbs';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import ServicesSection from '../components/home/ServicesSection';
 import SEO from '../components/SEO';
+import Breadcrumbs from '../components/ui/Breadcrumbs';
+import { Heading } from '../components/ui/Heading';
 import ListItem from '../components/ui/ListItem';
-import { useState, useEffect } from 'react';
+import Section from '../components/ui/Section';
+import { Text } from '../components/ui/Text';
+import {
+  getCategorySubcategories,
+  type Subcategory,
+  serviceCategories,
+} from '../data/yamlLoader';
 
 const Services: React.FC = () => {
   const { category } = useParams();
@@ -20,7 +20,7 @@ const Services: React.FC = () => {
   const [loading, setLoading] = useState(false);
 
   const getCategory = () => {
-    return serviceCategories.categories.find(c => c.slug === category);
+    return serviceCategories.categories.find((c) => c.slug === category);
   };
 
   const categoryData = getCategory();
@@ -86,7 +86,7 @@ const Services: React.FC = () => {
           </div>
         ) : (
           <div className="space-y-4">
-            {subcategories.map(subcategory => (
+            {subcategories.map((subcategory) => (
               <ListItem
                 key={subcategory.slug}
                 title={subcategory.name}

@@ -1,6 +1,6 @@
 import { Facebook, Github, MessageCircle } from 'lucide-react';
-import { footerNavigation } from '../../data/navigation';
 import { Link } from 'react-router-dom';
+import { footerNavigation } from '../../data/navigation';
 
 const Footer: React.FC = () => {
   return (
@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
               accessible for Bacolodnons.
             </p>
             <div className="flex gap-3">
-              {footerNavigation.socialLinks.map(link => (
+              {footerNavigation.socialLinks.map((link) => (
                 <a
                   key={link.label}
                   href={link.href}
@@ -53,11 +53,11 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Nav sections */}
-          {footerNavigation.mainSections.map(section => (
+          {footerNavigation.mainSections.map((section) => (
             <div key={section.title}>
               <h3 className="font-semibold mb-4">{section.title}</h3>
               <ul className="space-y-2.5">
-                {section.links.map(link =>
+                {section.links.map((link) =>
                   link.href.startsWith('http') ? (
                     <li key={link.label}>
                       <a
@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
                         {link.label}
                       </Link>
                     </li>
-                  )
+                  ),
                 )}
               </ul>
             </div>

@@ -1,5 +1,5 @@
 import { Phone } from 'lucide-react';
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 interface Barangay {
   name: string;
@@ -201,15 +201,15 @@ export default function BarangaysSection({ searchQuery = '' }: Props) {
   const contentRef = useRef<HTMLDivElement>(null);
 
   const filteredGroups = barangayGroups
-    .map(group => ({
+    .map((group) => ({
       ...group,
       barangays: group.barangays.filter(
-        b =>
+        (b) =>
           b.name.toLowerCase().includes(q) ||
-          b.captain.toLowerCase().includes(q)
+          b.captain.toLowerCase().includes(q),
       ),
     }))
-    .filter(group => group.barangays.length > 0);
+    .filter((group) => group.barangays.length > 0);
 
   const groups = q ? filteredGroups : barangayGroups;
 
@@ -220,7 +220,7 @@ export default function BarangaysSection({ searchQuery = '' }: Props) {
     const handleScroll = () => {
       const sections = container.querySelectorAll('section[id]');
       let current = barangayGroups[0].id;
-      sections.forEach(section => {
+      sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
         const containerRect = container.getBoundingClientRect();
         if (rect.top <= containerRect.top + 100) current = section.id;
@@ -235,7 +235,7 @@ export default function BarangaysSection({ searchQuery = '' }: Props) {
     const container = contentRef.current;
     if (!container) return;
     const element = container.querySelector(
-      `section[id="${id}"]`
+      `section[id="${id}"]`,
     ) as HTMLElement;
     if (element) {
       container.scrollTo({
@@ -258,7 +258,7 @@ export default function BarangaysSection({ searchQuery = '' }: Props) {
   if (typeof window !== 'undefined' && window.innerWidth < 1024) {
     return (
       <div className="space-y-6">
-        {groups.map(group => (
+        {groups.map((group) => (
           <section key={group.id}>
             <h2 className="text-sm font-semibold text-gray-900 mb-3 pb-2 border-b border-gray-300 uppercase tracking-wide">
               {group.title}
@@ -305,7 +305,7 @@ export default function BarangaysSection({ searchQuery = '' }: Props) {
           <p className="text-xs text-gray-400 uppercase tracking-wide mt-3 mb-1">
             Urban
           </p>
-          {barangayGroups.slice(0, 4).map(group => (
+          {barangayGroups.slice(0, 4).map((group) => (
             <button
               key={group.id}
               onClick={() => scrollTo(group.id)}
@@ -321,7 +321,7 @@ export default function BarangaysSection({ searchQuery = '' }: Props) {
           <p className="text-xs text-gray-400 uppercase tracking-wide mt-3 mb-1">
             Named
           </p>
-          {barangayGroups.slice(4).map(group => (
+          {barangayGroups.slice(4).map((group) => (
             <button
               key={group.id}
               onClick={() => scrollTo(group.id)}
@@ -337,7 +337,7 @@ export default function BarangaysSection({ searchQuery = '' }: Props) {
         </nav>
       )}
       <div ref={contentRef} className="flex-1 overflow-y-auto pr-2 space-y-6">
-        {groups.map(group => (
+        {groups.map((group) => (
           <section key={group.id} id={group.id}>
             <h2 className="text-sm font-semibold text-gray-900 mb-3 pb-2 border-b border-gray-300 uppercase tracking-wide sticky top-0 bg-white">
               {group.title}

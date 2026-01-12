@@ -1,21 +1,21 @@
-import { Phone, Sun, Cloud, CloudRain, CloudLightning } from 'lucide-react';
+import { Cloud, CloudLightning, CloudRain, Phone, Sun } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 const currencies = ['USD', 'EUR', 'JPY', 'GBP', 'AUD', 'SGD', 'KRW', 'CNY'];
 
 const TopBanner: React.FC = () => {
   const [weather, setWeather] = useState<{ temp: number; code: number } | null>(
-    null
+    null,
   );
   const [rates, setRates] = useState<Record<string, number>>({});
   const [currentIdx, setCurrentIdx] = useState(0);
 
   useEffect(() => {
     fetch(
-      'https://api.open-meteo.com/v1/forecast?latitude=10.6762&longitude=122.9513&current=temperature_2m,weather_code'
+      'https://api.open-meteo.com/v1/forecast?latitude=10.6762&longitude=122.9513&current=temperature_2m,weather_code',
     )
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         setWeather({
           temp: Math.round(data.current?.temperature_2m),
           code: data.current?.weather_code,
@@ -24,14 +24,14 @@ const TopBanner: React.FC = () => {
       .catch(() => {});
 
     fetch('https://api.exchangerate-api.com/v4/latest/PHP')
-      .then(res => res.json())
-      .then(data => setRates(data.rates || {}))
+      .then((res) => res.json())
+      .then((data) => setRates(data.rates || {}))
       .catch(() => {});
   }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIdx(i => (i + 1) % currencies.length);
+      setCurrentIdx((i) => (i + 1) % currencies.length);
     }, 3000);
     return () => clearInterval(interval);
   }, []);

@@ -1,6 +1,6 @@
+import { ChevronRight, Home } from 'lucide-react';
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ChevronRight, Home } from 'lucide-react';
 
 interface BreadcrumbItem {
   label: string;
@@ -28,7 +28,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items, className = '' }) => {
       // Convert segment to readable label
       const label = segment
         .split('-')
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
         .join(' ');
 
       breadcrumbs.push({

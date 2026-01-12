@@ -1,23 +1,23 @@
-import { Heading } from '../components/ui/Heading';
-import Section from '../components/ui/Section';
-import Breadcrumbs from '../components/ui/Breadcrumbs';
-import { Text } from '../components/ui/Text';
-import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
+import { useParams } from 'react-router-dom';
 import remarkGfm from 'remark-gfm';
+import SEO from '../components/SEO';
+import Breadcrumbs from '../components/ui/Breadcrumbs';
+import { Card, CardContent, CardHeader } from '../components/ui/Card';
+import { Heading } from '../components/ui/Heading';
+import Section from '../components/ui/Section';
+import { Text } from '../components/ui/Text';
+import {
+  getCategorySubcategories,
+  serviceCategories,
+} from '../data/yamlLoader';
+import { createMarkdownComponents } from '../lib/markdownComponents';
 import {
   loadMarkdownContent,
   type MarkdownContent,
 } from '../lib/markdownLoader';
-import { createMarkdownComponents } from '../lib/markdownComponents';
-import { Card, CardContent, CardHeader } from '../components/ui/Card';
 import { getTypographyTheme } from '../lib/typographyThemes';
-import {
-  serviceCategories,
-  getCategorySubcategories,
-} from '../data/yamlLoader';
-import SEO from '../components/SEO';
 
 interface DocumentProps {
   theme?: string; // Typography theme name
@@ -33,7 +33,7 @@ export default function Document({
   const [error, setError] = useState<string | null>(null);
 
   const markdownComponents = createMarkdownComponents(
-    getTypographyTheme(initialTheme)
+    getTypographyTheme(initialTheme),
   );
 
   // Generate dynamic breadcrumb items based on document slug
@@ -64,10 +64,10 @@ export default function Document({
           for (const category of serviceCategories.categories) {
             try {
               const subcategories = await getCategorySubcategories(
-                category.slug
+                category.slug,
               );
               const found = subcategories.find(
-                sub => sub.slug === documentSlug
+                (sub) => sub.slug === documentSlug,
               );
 
               if (found) {
@@ -86,14 +86,14 @@ export default function Document({
             } catch (error) {
               console.warn(
                 `Error loading subcategories for category ${category.slug}:`,
-                error
+                error,
               );
             }
           }
         }
       } catch (err) {
         setError(
-          err instanceof Error ? err.message : 'Failed to load document'
+          err instanceof Error ? err.message : 'Failed to load document',
         );
       } finally {
         setLoading(false);

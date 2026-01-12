@@ -1,5 +1,5 @@
-import { Phone, Mail } from 'lucide-react';
-import { useState, useEffect, useRef } from 'react';
+import { Mail, Phone } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
 
 interface Department {
   name: string;
@@ -309,16 +309,16 @@ export default function DepartmentsSection({ searchQuery = '' }: Props) {
   const contentRef = useRef<HTMLDivElement>(null);
 
   const filteredGroups = departmentGroups
-    .map(group => ({
+    .map((group) => ({
       ...group,
       departments: group.departments.filter(
-        d =>
+        (d) =>
           d.name.toLowerCase().includes(q) ||
           d.head.toLowerCase().includes(q) ||
-          d.email?.toLowerCase().includes(q)
+          d.email?.toLowerCase().includes(q),
       ),
     }))
-    .filter(group => group.departments.length > 0);
+    .filter((group) => group.departments.length > 0);
 
   const groups = q ? filteredGroups : departmentGroups;
 
@@ -329,7 +329,7 @@ export default function DepartmentsSection({ searchQuery = '' }: Props) {
     const handleScroll = () => {
       const sections = container.querySelectorAll('section[id]');
       let current = departmentGroups[0].id;
-      sections.forEach(section => {
+      sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
         const containerRect = container.getBoundingClientRect();
         if (rect.top <= containerRect.top + 100) current = section.id;
@@ -344,7 +344,7 @@ export default function DepartmentsSection({ searchQuery = '' }: Props) {
     const container = contentRef.current;
     if (!container) return;
     const element = container.querySelector(
-      `section[id="${id}"]`
+      `section[id="${id}"]`,
     ) as HTMLElement;
     if (element) {
       container.scrollTo({
@@ -367,7 +367,7 @@ export default function DepartmentsSection({ searchQuery = '' }: Props) {
   if (typeof window !== 'undefined' && window.innerWidth < 1024) {
     return (
       <div className="space-y-6">
-        {groups.map(group => (
+        {groups.map((group) => (
           <section key={group.id}>
             <h2 className="text-sm font-semibold text-gray-900 mb-3 pb-2 border-b border-gray-300 uppercase tracking-wide">
               {group.title}
@@ -422,7 +422,7 @@ export default function DepartmentsSection({ searchQuery = '' }: Props) {
             Departments
           </p>
           <div className="space-y-0.5">
-            {departmentGroups.map(group => (
+            {departmentGroups.map((group) => (
               <button
                 key={group.id}
                 onClick={() => scrollTo(group.id)}
@@ -439,7 +439,7 @@ export default function DepartmentsSection({ searchQuery = '' }: Props) {
         </nav>
       )}
       <div ref={contentRef} className="flex-1 overflow-y-auto pr-2 space-y-6">
-        {groups.map(group => (
+        {groups.map((group) => (
           <section key={group.id} id={group.id}>
             <h2 className="text-sm font-semibold text-gray-900 mb-3 pb-2 border-b border-gray-300 uppercase tracking-wide sticky top-0 bg-white">
               {group.title}

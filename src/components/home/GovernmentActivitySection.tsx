@@ -1,12 +1,11 @@
-import Section from '../ui/Section';
 import * as LucideIcons from 'lucide-react';
-import { Heading } from '../ui/Heading';
-import { Text } from '../ui/Text';
+import { Link } from 'react-router-dom';
+import { governmentActivitCategories } from '../../data/yamlLoader';
 import { useTranslation } from '../../hooks/useTranslation';
 import { Card, CardContent } from '../ui/Card';
-import { Link } from 'react-router-dom';
-
-import { governmentActivitCategories } from '../../data/yamlLoader';
+import { Heading } from '../ui/Heading';
+import Section from '../ui/Section';
+import { Text } from '../ui/Text';
 
 interface Category {
   category: string;
@@ -36,7 +35,7 @@ export default function GovernmentActivitySection() {
       </Text>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {displayedCategories.map(category => (
+        {displayedCategories.map((category) => (
           <Link key={category.slug} to={`/government?section=${category.slug}`}>
             <Card hoverable className="border-t-4 border-primary-500 h-full">
               <CardContent className="flex flex-col h-full p-6">

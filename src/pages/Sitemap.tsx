@@ -1,7 +1,7 @@
-import Section from '../components/ui/Section';
-import { Heading } from '../components/ui/Heading';
-import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
+import { Heading } from '../components/ui/Heading';
+import Section from '../components/ui/Section';
 import { serviceCategories } from '../data/yamlLoader';
 
 interface Category {
@@ -23,7 +23,7 @@ const Sitemap: React.FC = () => {
     },
     {
       title: 'Services',
-      links: (serviceCategories.categories as Category[]).map(cat => ({
+      links: (serviceCategories.categories as Category[]).map((cat) => ({
         label: cat.category,
         href: `/services/${cat.slug}`,
       })),
@@ -43,7 +43,7 @@ const Sitemap: React.FC = () => {
             Sitemap
           </Heading>
           <div className="grid md:grid-cols-2 gap-8">
-            {sections.map(section => (
+            {sections.map((section) => (
               <div
                 key={section.title}
                 className="bg-white border rounded-lg p-6"
@@ -52,7 +52,7 @@ const Sitemap: React.FC = () => {
                   {section.title}
                 </h3>
                 <ul className="space-y-2">
-                  {section.links.map(link => (
+                  {section.links.map((link) => (
                     <li key={link.href}>
                       <Link
                         to={link.href}

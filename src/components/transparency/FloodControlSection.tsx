@@ -1,5 +1,5 @@
-import { useState, useMemo } from 'react';
-import { Search, ExternalLink, ChevronDown } from 'lucide-react';
+import { ChevronDown, ExternalLink, Search } from 'lucide-react';
+import { useMemo, useState } from 'react';
 import floodData from '../../data/transparency/flood-control.json';
 
 export default function FloodControlSection() {
@@ -8,7 +8,7 @@ export default function FloodControlSection() {
   const [typeFilter, setTypeFilter] = useState('');
 
   const filtered = useMemo(() => {
-    return floodData.projects.filter(p => {
+    return floodData.projects.filter((p) => {
       const matchSearch =
         !search ||
         p.description.toLowerCase().includes(search.toLowerCase()) ||
@@ -24,7 +24,7 @@ export default function FloodControlSection() {
       count: filtered.length,
       cost: filtered.reduce((s, p) => s + p.cost, 0),
     }),
-    [filtered]
+    [filtered],
   );
 
   return (
@@ -59,18 +59,18 @@ export default function FloodControlSection() {
             type="text"
             placeholder="Search projects..."
             value={search}
-            onChange={e => setSearch(e.target.value)}
+            onChange={(e) => setSearch(e.target.value)}
             className="w-full pl-9 pr-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary-500"
           />
         </div>
         <div className="relative">
           <select
             value={yearFilter}
-            onChange={e => setYearFilter(e.target.value)}
+            onChange={(e) => setYearFilter(e.target.value)}
             className="appearance-none pl-3 pr-8 py-2 border border-gray-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-primary-500"
           >
             <option value="">All Years</option>
-            {floodData.filters.years.map(y => (
+            {floodData.filters.years.map((y) => (
               <option key={y} value={y}>
                 {y}
               </option>
@@ -81,11 +81,11 @@ export default function FloodControlSection() {
         <div className="relative">
           <select
             value={typeFilter}
-            onChange={e => setTypeFilter(e.target.value)}
+            onChange={(e) => setTypeFilter(e.target.value)}
             className="appearance-none pl-3 pr-8 py-2 border border-gray-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-primary-500"
           >
             <option value="">All Types</option>
-            {floodData.filters.types.map(t => (
+            {floodData.filters.types.map((t) => (
               <option key={t} value={t}>
                 {t}
               </option>
@@ -119,7 +119,7 @@ export default function FloodControlSection() {
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100">
-              {filtered.map(p => (
+              {filtered.map((p) => (
                 <tr key={p.id} className="hover:bg-gray-50">
                   <td className="py-2 px-3 text-gray-900">{p.year}</td>
                   <td className="py-2 px-3 text-gray-700">{p.description}</td>

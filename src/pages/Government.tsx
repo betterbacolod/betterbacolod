@@ -1,16 +1,16 @@
-import Section from '../components/ui/Section';
-import { Heading } from '../components/ui/Heading';
-import { Text } from '../components/ui/Text';
-import { governmentActivitCategories } from '../data/yamlLoader';
 import * as LucideIcons from 'lucide-react';
+import { ChevronRight, Search } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
+import BarangaysSection from '../components/government/BarangaysSection';
+import DepartmentsSection from '../components/government/DepartmentsSection';
+import OfficialsSection from '../components/government/OfficialsSection';
 import SEO from '../components/SEO';
 import { Card, CardContent } from '../components/ui/Card';
-import { useState, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
-import OfficialsSection from '../components/government/OfficialsSection';
-import DepartmentsSection from '../components/government/DepartmentsSection';
-import BarangaysSection from '../components/government/BarangaysSection';
-import { ChevronRight, Search } from 'lucide-react';
+import { Heading } from '../components/ui/Heading';
+import Section from '../components/ui/Section';
+import { Text } from '../components/ui/Text';
+import { governmentActivitCategories } from '../data/yamlLoader';
 
 const Government: React.FC = () => {
   const [searchParams] = useSearchParams();
@@ -56,7 +56,7 @@ const Government: React.FC = () => {
 
         {/* Mobile: List Tiles */}
         <div className="lg:hidden space-y-2">
-          {governmentActivitCategories.categories.map(cat => {
+          {governmentActivitCategories.categories.map((cat) => {
             const CatIcon = LucideIcons[
               cat.icon as keyof typeof LucideIcons
             ] as React.ComponentType<{ className?: string }>;
@@ -94,7 +94,7 @@ const Government: React.FC = () => {
                           type="text"
                           placeholder={`Search ${cat.category.toLowerCase()}...`}
                           value={searchQuery}
-                          onChange={e => setSearchQuery(e.target.value)}
+                          onChange={(e) => setSearchQuery(e.target.value)}
                           className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                         />
                       </div>
@@ -110,7 +110,7 @@ const Government: React.FC = () => {
         {/* Desktop: Card Grid + Content Below */}
         <div className="hidden lg:block">
           <div className="grid grid-cols-3 gap-6">
-            {governmentActivitCategories.categories.map(cat => {
+            {governmentActivitCategories.categories.map((cat) => {
               const CatIcon = LucideIcons[
                 cat.icon as keyof typeof LucideIcons
               ] as React.ComponentType<{ className?: string }>;
@@ -153,7 +153,7 @@ const Government: React.FC = () => {
                     type="text"
                     placeholder={`Search...`}
                     value={searchQuery}
-                    onChange={e => setSearchQuery(e.target.value)}
+                    onChange={(e) => setSearchQuery(e.target.value)}
                     className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   />
                 </div>

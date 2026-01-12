@@ -1,4 +1,4 @@
-import React from 'react';
+import type React from 'react';
 import { cn } from '../../lib/utils';
 
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -19,7 +19,7 @@ const Card = ({
         'bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden',
         hoverable &&
           'transition-all duration-300 hover:shadow-md hover:-translate-y-1',
-        className
+        className,
       )}
       role="article"
       aria-label="Service card"
@@ -76,7 +76,7 @@ const CardFooter = ({ children, className, ...props }: CardFooterProps) => {
     <div
       className={cn(
         'p-4 md:p-6 border-t border-gray-200 bg-gray-50',
-        className
+        className,
       )}
       {...props}
     >

@@ -1,18 +1,18 @@
-import { useTranslation } from 'react-i18next';
-import { useState, useMemo } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
 import {
-  Search,
   Briefcase,
-  Heart,
-  Trash2,
   Bus,
   FileText,
   GraduationCap,
+  Heart,
+  Search,
+  Trash2,
 } from 'lucide-react';
+import { useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Link, useNavigate } from 'react-router-dom';
+import { serviceCategories } from '../../data/yamlLoader';
 import { Heading } from '../ui/Heading';
 import { Text } from '../ui/Text';
-import { serviceCategories } from '../../data/yamlLoader';
 
 interface ServiceCategory {
   category: string;
@@ -29,9 +29,9 @@ export default function Hero() {
 
   const allItems = useMemo(() => {
     const items: { title: string; href: string }[] = [];
-    (serviceCategories.categories as ServiceCategory[]).forEach(cat => {
+    (serviceCategories.categories as ServiceCategory[]).forEach((cat) => {
       items.push({ title: cat.category, href: `/services/${cat.slug}` });
-      cat.subcategories?.forEach(sub => {
+      cat.subcategories?.forEach((sub) => {
         items.push({ title: sub.name, href: `/services/${cat.slug}` });
       });
     });
@@ -53,7 +53,7 @@ export default function Hero() {
       'Councilor Celia Flor',
       'Councilor Pao Sy',
     ];
-    officials.forEach(o => items.push({ title: o, href: '/government' }));
+    officials.forEach((o) => items.push({ title: o, href: '/government' }));
     // Departments
     const depts = [
       'City Health Office',
@@ -75,7 +75,7 @@ export default function Hero() {
       'Public Information Office',
       'Human Resource Management Office',
     ];
-    depts.forEach(d => items.push({ title: d, href: '/government' }));
+    depts.forEach((d) => items.push({ title: d, href: '/government' }));
     // Barangays
     const brgys = [
       'Alijis',
@@ -139,8 +139,8 @@ export default function Hero() {
       'Barangay 40',
       'Barangay 41',
     ];
-    brgys.forEach(b =>
-      items.push({ title: `Barangay ${b}`, href: '/government' })
+    brgys.forEach((b) =>
+      items.push({ title: `Barangay ${b}`, href: '/government' }),
     );
     // Pages & Info
     items.push(
@@ -154,7 +154,7 @@ export default function Hero() {
       { title: 'About Bacolod City', href: '/about' },
       { title: 'MassKara Festival', href: '/about' },
       { title: 'City of Smiles', href: '/about' },
-      { title: '911 Emergency', href: '/about' }
+      { title: '911 Emergency', href: '/about' },
     );
     return items;
   }, []);
@@ -162,7 +162,9 @@ export default function Hero() {
   const filtered = useMemo(() => {
     if (!searchQuery.trim()) return [];
     const q = searchQuery.toLowerCase();
-    return allItems.filter(i => i.title.toLowerCase().includes(q)).slice(0, 6);
+    return allItems
+      .filter((i) => i.title.toLowerCase().includes(q))
+      .slice(0, 6);
   }, [searchQuery, allItems]);
 
   const handleSearch = (e: React.FormEvent) => {
@@ -249,7 +251,7 @@ export default function Hero() {
                   <input
                     type="text"
                     value={searchQuery}
-                    onChange={e => {
+                    onChange={(e) => {
                       setSearchQuery(e.target.value);
                       setShowDropdown(true);
                     }}
@@ -280,7 +282,7 @@ export default function Hero() {
                   Popular Services
                 </h4>
                 <div className="grid grid-cols-3 gap-2">
-                  {quickActions.map(action => (
+                  {quickActions.map((action) => (
                     <button
                       key={action.label}
                       onClick={() => navigate(action.path)}

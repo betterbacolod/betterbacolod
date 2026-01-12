@@ -1,18 +1,18 @@
-import { NuqsAdapter } from 'nuqs/adapters/react';
 import { Analytics } from '@vercel/analytics/react';
-import Navbar from './components/layout/Navbar';
+import { NuqsAdapter } from 'nuqs/adapters/react';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Footer from './components/layout/Footer';
+import Navbar from './components/layout/Navbar';
 import TopBanner from './components/layout/TopBanner';
-import Home from './pages/Home';
 import ScrollToTop from './components/ui/ScrollToTop';
-import Services from './pages/Services';
-import Government from './pages/Government';
-import Transparency from './pages/Transparency';
 import About from './pages/About';
-import Sitemap from './pages/Sitemap';
-import Search from './pages/Search';
 import Document from './pages/Document';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Government from './pages/Government';
+import Home from './pages/Home';
+import Search from './pages/Search';
+import Services from './pages/Services';
+import Sitemap from './pages/Sitemap';
+import Transparency from './pages/Transparency';
 
 function App() {
   return (

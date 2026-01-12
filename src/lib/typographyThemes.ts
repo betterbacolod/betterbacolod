@@ -77,7 +77,7 @@ export const typographyThemes: Record<string, TypographyTheme> = {
  * Get a typography theme by name
  */
 export function getTypographyTheme(
-  themeName: string = 'default'
+  themeName: string = 'default',
 ): TypographyTheme {
   return typographyThemes[themeName] || defaultTheme;
 }

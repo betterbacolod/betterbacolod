@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Mail, MapPin, Phone } from 'lucide-react';
 
 const executives = [
   {
@@ -108,16 +108,16 @@ export default function OfficialsSection({ searchQuery = '' }: Props) {
   const q = searchQuery.toLowerCase();
 
   const filteredExecs = executives.filter(
-    e =>
+    (e) =>
       e.name.toLowerCase().includes(q) ||
       e.role.toLowerCase().includes(q) ||
-      e.desc.toLowerCase().includes(q)
+      e.desc.toLowerCase().includes(q),
   );
 
   const filteredCouncilors = councilors.filter(
-    c =>
+    (c) =>
       c.name.toLowerCase().includes(q) ||
-      c.committees.some(com => com.toLowerCase().includes(q))
+      c.committees.some((com) => com.toLowerCase().includes(q)),
   );
 
   const showExec = !q || filteredExecs.length > 0;

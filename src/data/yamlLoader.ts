@@ -24,23 +24,22 @@ export interface CategoryIndexData {
   pages: Subcategory[];
 }
 
-// Import the YAML file as raw text
-import servicesYamlContent from './services.yaml?raw';
-import governmentActivitiesYamlContent from './government.yaml?raw';
-
+import agricultureFisheriesIndex from '../../content/services/agriculture-fisheries/index.yaml?raw';
+import businessIndex from '../../content/services/business/index.yaml?raw';
+import educationIndex from '../../content/services/education/index.yaml?raw';
+import environmentIndex from '../../content/services/environment/index.yaml?raw';
+import garbageWasteDisposalIndex from '../../content/services/garbage-waste-disposal/index.yaml?raw';
 // Import all category index files statically
 import healthServicesIndex from '../../content/services/health-services/index.yaml?raw';
-import educationIndex from '../../content/services/education/index.yaml?raw';
-import businessIndex from '../../content/services/business/index.yaml?raw';
-import socialWelfareIndex from '../../content/services/social-welfare/index.yaml?raw';
-import agricultureFisheriesIndex from '../../content/services/agriculture-fisheries/index.yaml?raw';
-import infrastructurePublicWorksIndex from '../../content/services/infrastructure-public-works/index.yaml?raw';
-import garbageWasteDisposalIndex from '../../content/services/garbage-waste-disposal/index.yaml?raw';
-import environmentIndex from '../../content/services/environment/index.yaml?raw';
 import housingLandUseIndex from '../../content/services/housing-land-use/index.yaml?raw';
-import transportationIndex from '../../content/services/transportation/index.yaml?raw';
-import publicSafetyIndex from '../../content/services/public-safety/index.yaml?raw';
+import infrastructurePublicWorksIndex from '../../content/services/infrastructure-public-works/index.yaml?raw';
 import legalCivilIndex from '../../content/services/legal-civil/index.yaml?raw';
+import publicSafetyIndex from '../../content/services/public-safety/index.yaml?raw';
+import socialWelfareIndex from '../../content/services/social-welfare/index.yaml?raw';
+import transportationIndex from '../../content/services/transportation/index.yaml?raw';
+import governmentActivitiesYamlContent from './government.yaml?raw';
+// Import the YAML file as raw text
+import servicesYamlContent from './services.yaml?raw';
 
 // Create a mapping of category slugs to their YAML content
 const categoryIndexMap: { [key: string]: string } = {
@@ -60,16 +59,16 @@ const categoryIndexMap: { [key: string]: string } = {
 
 // Parse the YAML content
 export const serviceCategories: CategoryData = yaml.load(
-  servicesYamlContent
+  servicesYamlContent,
 ) as CategoryData;
 
 export const governmentActivitCategories: CategoryData = yaml.load(
-  governmentActivitiesYamlContent
+  governmentActivitiesYamlContent,
 ) as CategoryData;
 
 // Function to load category index data
 export async function loadCategoryIndex(
-  categorySlug: string
+  categorySlug: string,
 ): Promise<Subcategory[]> {
   try {
     // Use the statically imported YAML content from the mapping
@@ -81,7 +80,7 @@ export async function loadCategoryIndex(
     }
 
     const indexData: CategoryIndexData = yaml.load(
-      yamlContent
+      yamlContent,
     ) as CategoryIndexData;
     return indexData.pages || [];
   } catch (error) {
@@ -94,7 +93,7 @@ export async function loadCategoryIndex(
 const categoryCache = new Map<string, Subcategory[]>();
 
 export async function getCategorySubcategories(
-  categorySlug: string
+  categorySlug: string,
 ): Promise<Subcategory[]> {
   if (categoryCache.has(categorySlug)) {
     return categoryCache.get(categorySlug)!;

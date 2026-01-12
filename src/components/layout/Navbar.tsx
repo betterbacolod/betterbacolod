@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import { X, Menu, ChevronDown, Search } from 'lucide-react';
-import { mainNavigation } from '../../data/navigation';
+import { ChevronDown, Menu, Search, X } from 'lucide-react';
+import type React from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { mainNavigation } from '../../data/navigation';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,7 +39,7 @@ const Navbar: React.FC = () => {
 
           {/* Desktop navigation - centered */}
           <div className="hidden lg:flex items-center justify-center flex-1 gap-1">
-            {mainNavigation.map(item => (
+            {mainNavigation.map((item) => (
               <div key={item.label} className="relative group">
                 <Link
                   to={item.href}
@@ -52,7 +53,7 @@ const Navbar: React.FC = () => {
                 {item.children && (
                   <div className="absolute left-0 mt-1 w-56 rounded-lg shadow-lg bg-white ring-1 ring-slate-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                     <div className="py-2">
-                      {item.children.map(child => (
+                      {item.children.map((child) => (
                         <Link
                           key={child.label}
                           to={child.href}
@@ -99,7 +100,7 @@ const Navbar: React.FC = () => {
       {isOpen && (
         <div className="lg:hidden border-t border-slate-200 bg-white">
           <div className="container mx-auto px-4 py-4 space-y-1">
-            {mainNavigation.map(item => (
+            {mainNavigation.map((item) => (
               <div key={item.label}>
                 <button
                   onClick={() =>
@@ -126,7 +127,7 @@ const Navbar: React.FC = () => {
                 </button>
                 {item.children && activeMenu === item.label && (
                   <div className="ml-4 py-2 space-y-1">
-                    {item.children.map(child => (
+                    {item.children.map((child) => (
                       <Link
                         key={child.label}
                         to={child.href}

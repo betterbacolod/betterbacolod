@@ -6,26 +6,17 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --write .",
+    "format": "biome format --write .",
+    "format:check": "biome format .",
+    "check": "biome check --write .",
     "preview": "vite preview",
-    "prepare": "husky",
-    "convert-yaml": "node scripts/yaml-to-json.js",
-    "dev:yaml": "npm run convert-yaml && npm run dev",
-    "setup": "node scripts/setup-starter-kit.js",
-    "scrape": "node .claude/scripts/scraper.js",
-    "scrape:health": "node .claude/scripts/scraper.js --checklist docs/bacolod/SCRAPING-CHECKLIST.md --category health --extract-fb --extract-portals",
-    "scrape:business": "node .claude/scripts/scraper.js --checklist docs/bacolod/SCRAPING-CHECKLIST.md --category business --extract-fb --extract-portals"
+    "prepare": "husky"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.{json,css,md}": [
-      "prettier --write"
+    "*.{js,jsx,ts,tsx,json,css,md}": [
+      "biome check --write --no-errors-on-unmatched"
     ]
   },
   "dependencies": {
@@ -50,24 +41,18 @@
     "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.35.0",
+    "@biomejs/biome": "^2.3.11",
     "@types/node": "^24.5.2",
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
     "@types/react-helmet": "^6.1.11",
     "@vitejs/plugin-react": "^5.0.2",
     "autoprefixer": "^10.4.21",
-    "eslint": "^9.35.0",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.20",
-    "globals": "^16.4.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.6",
     "postcss": "^8.5.6",
-    "prettier": "^3.6.2",
     "tailwindcss": "^3.4.0",
     "typescript": "~5.8.3",
-    "typescript-eslint": "^8.43.0",
     "vite": "^7.1.6"
   }
 }

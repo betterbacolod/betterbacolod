@@ -2,15 +2,15 @@
  * Table component with view toggle functionality
  */
 
+import { List, Table } from 'lucide-react';
 import {
-  type ReactNode,
   type HTMLAttributes,
-  useState,
-  useMemo,
+  type ReactNode,
   useEffect,
+  useMemo,
+  useState,
 } from 'react';
-import { Table, List } from 'lucide-react';
-import { type TypographyTheme } from './typographyThemes';
+import type { TypographyTheme } from './typographyThemes';
 
 // Helper functions to extract text from React children
 const extractTextFromChildren = (children: ReactNode): string[] => {
@@ -37,7 +37,7 @@ const extractTextFromChildren = (children: ReactNode): string[] => {
 };
 
 const extractRowsFromChildren = (
-  children: ReactNode
+  children: ReactNode,
 ): Array<Record<string, string>> => {
   const rows: Array<Record<string, string>> = [];
 
@@ -133,17 +133,17 @@ export const TableWithToggle = ({
         // Check by key first (for thead/tbody elements)
         if (elementProps.key?.includes('thead')) {
           const headerCells = extractTextFromChildren(
-            elementProps.props?.children
+            elementProps.props?.children,
           );
           headers.push(...headerCells);
         } else if (elementProps.key?.includes('tbody')) {
           const bodyRows = extractRowsFromChildren(
-            elementProps.props?.children
+            elementProps.props?.children,
           );
           rows.push(...bodyRows);
         } else if (elementProps.key?.includes('tr')) {
           const rowCells = extractTextFromChildren(
-            elementProps.props?.children
+            elementProps.props?.children,
           );
           if (rowCells.length > 0) {
             const row: Record<string, string> = {};
@@ -154,7 +154,7 @@ export const TableWithToggle = ({
           }
         } else if (elementProps.props?.className?.includes('thead')) {
           const headerCells = extractTextFromChildren(
-            elementProps.props.children
+            elementProps.props.children,
           );
           headers.push(...headerCells);
         } else if (elementProps.props?.className?.includes('tbody')) {
@@ -173,7 +173,7 @@ export const TableWithToggle = ({
           // Recursively process children
           if (elementProps.props?.children) {
             if (Array.isArray(elementProps.props.children)) {
-              elementProps.props.children.forEach(child => {
+              elementProps.props.children.forEach((child) => {
                 processTableElement(child);
               });
             } else {
@@ -191,7 +191,7 @@ export const TableWithToggle = ({
     }
 
     // Map row data to headers
-    const mappedRows = rows.map(row => {
+    const mappedRows = rows.map((row) => {
       const mappedRow: Record<string, string> = {};
       headers.forEach((header, index) => {
         mappedRow[header] = row[`column_${index}`] || '';

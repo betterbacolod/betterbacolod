@@ -2,9 +2,9 @@
  * ReactMarkdown components with configurable typography themes
  */
 
-import { type TypographyTheme } from './typographyThemes';
-import { type ReactNode, type HTMLAttributes } from 'react';
+import type { HTMLAttributes, ReactNode } from 'react';
 import { TableWithToggle } from './TableWithToggle';
+import type { TypographyTheme } from './typographyThemes';
 
 // Extended theme type to include dynamic component keys
 type ExtendedTheme = TypographyTheme & {
@@ -95,9 +95,9 @@ export function createMarkdownComponents(theme: TypographyTheme) {
       const hasTaskItems =
         Array.isArray(children) &&
         children.some(
-          child =>
+          (child) =>
             typeof child === 'object' &&
-            child?.props?.className?.includes('task-list-item')
+            child?.props?.className?.includes('task-list-item'),
         );
 
       console.log('Has Task Items:', hasTaskItems);

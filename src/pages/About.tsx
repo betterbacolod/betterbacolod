@@ -1,16 +1,16 @@
-import Section from '../components/ui/Section';
-import { Heading } from '../components/ui/Heading';
-import { Text } from '../components/ui/Text';
-import SEO from '../components/SEO';
 import {
-  MapPin,
-  Users,
   Building2,
   Calendar,
-  Phone,
   ExternalLink,
+  MapPin,
+  Phone,
   Smile,
+  Users,
 } from 'lucide-react';
+import SEO from '../components/SEO';
+import { Heading } from '../components/ui/Heading';
+import Section from '../components/ui/Section';
+import { Text } from '../components/ui/Text';
 
 const About: React.FC = () => {
   const stats = [
@@ -50,7 +50,7 @@ const About: React.FC = () => {
 
           {/* Stats Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-            {stats.map(stat => (
+            {stats.map((stat) => (
               <div
                 key={stat.label}
                 className="bg-white border rounded-lg p-4 text-center"
@@ -90,7 +90,7 @@ const About: React.FC = () => {
               Emergency Hotlines
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-              {hotlines.map(h => (
+              {hotlines.map((h) => (
                 <a
                   key={h.name}
                   href={`tel:${h.number.replace(/[^0-9+]/g, '')}`}

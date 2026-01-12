@@ -1,15 +1,14 @@
-import { useState, useMemo, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
-import Section from '../components/ui/Section';
-import { Heading } from '../components/ui/Heading';
-import SEO from '../components/SEO';
-import { Link } from 'react-router-dom';
 import {
-  Search as SearchIcon,
-  FileText,
   Building2,
+  FileText,
   MapPin,
+  Search as SearchIcon,
 } from 'lucide-react';
+import { useEffect, useMemo, useState } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
+import SEO from '../components/SEO';
+import { Heading } from '../components/ui/Heading';
+import Section from '../components/ui/Section';
 import { serviceCategories } from '../data/yamlLoader';
 
 interface SearchResult {
@@ -41,7 +40,7 @@ const Search: React.FC = () => {
     const items: SearchResult[] = [];
 
     // Services with subcategories
-    (serviceCategories.categories as ServiceCategory[]).forEach(cat => {
+    (serviceCategories.categories as ServiceCategory[]).forEach((cat) => {
       items.push({
         title: cat.category,
         description: cat.description,
@@ -49,7 +48,7 @@ const Search: React.FC = () => {
         type: 'Service',
         keywords: cat.category.toLowerCase(),
       });
-      cat.subcategories?.forEach(sub => {
+      cat.subcategories?.forEach((sub) => {
         items.push({
           title: sub.name,
           description: sub.description || `${cat.category} - ${sub.name}`,
@@ -182,7 +181,7 @@ const Search: React.FC = () => {
         href: '/services/social-services',
         type: 'Service',
         keywords: 'pwd id disability person with disability',
-      }
+      },
     );
 
     return items;
@@ -193,10 +192,10 @@ const Search: React.FC = () => {
     const q = query.toLowerCase();
     return allItems
       .filter(
-        item =>
+        (item) =>
           item.title.toLowerCase().includes(q) ||
           item.description.toLowerCase().includes(q) ||
-          item.keywords?.includes(q)
+          item.keywords?.includes(q),
       )
       .slice(0, 25);
   }, [query, allItems]);
@@ -230,10 +229,9 @@ const Search: React.FC = () => {
             <input
               type="text"
               value={query}
-              onChange={e => setQuery(e.target.value)}
+              onChange={(e) => setQuery(e.target.value)}
               placeholder="Try: business permit, health, barangay, flood..."
               className="w-full pl-12 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-              autoFocus
             />
           </div>
 
@@ -288,7 +286,7 @@ const Search: React.FC = () => {
                   'barangay clearance',
                   'health center',
                   'real property tax',
-                ].map(term => (
+                ].map((term) => (
                   <button
                     key={term}
                     onClick={() => setQuery(term)}

@@ -7,10 +7,10 @@
  * by replacing placeholder content with government-specific information.
  */
 
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import readline from 'readline';
+import fs from 'node:fs';
+import path from 'node:path';
+import readline from 'node:readline';
+import { fileURLToPath } from 'node:url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -24,8 +24,8 @@ const rl = readline.createInterface({
 
 // Helper function to ask questions
 function askQuestion(question) {
-  return new Promise(resolve => {
-    rl.question(question, answer => {
+  return new Promise((resolve) => {
+    rl.question(question, (answer) => {
       resolve(answer.trim());
     });
   });
@@ -56,18 +56,18 @@ async function setupStarterKit() {
   console.log('Please provide your local government information:\n');
 
   const governmentName = await askQuestion(
-    'Government Name (e.g., "City of Manila"): '
+    'Government Name (e.g., "City of Manila"): ',
   );
   const governmentType =
     (await askQuestion('Government Type (City/Municipality) [City]: ')) ||
     'City';
   const region = await askQuestion('Region (e.g., "NCR", "Region VII"): ');
   const province = await askQuestion(
-    'Province (e.g., "Metro Manila", "Cebu"): '
+    'Province (e.g., "Metro Manila", "Cebu"): ',
   );
   const mayor = await askQuestion('Mayor/Governor Name: ');
   const websiteUrl = await askQuestion(
-    'Website URL (e.g., "https://manila.gov.ph"): '
+    'Website URL (e.g., "https://manila.gov.ph"): ',
   );
   const contactEmail = await askQuestion('Contact Email: ');
   const contactPhone = await askQuestion('Contact Phone: ');
@@ -200,7 +200,7 @@ pages:
   console.log('\n🎉 Setup complete!');
   console.log('\nNext steps:');
   console.log(
-    '1. Review and update the .env.local file with your specific information'
+    '1. Review and update the .env.local file with your specific information',
   );
   console.log('2. Customize the content in content/ with your local services');
   console.log('3. Update images and branding in public/ folder');
