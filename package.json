@@ -31,6 +31,7 @@
   "dependencies": {
     "@tailwindcss/typography": "^0.5.18",
     "@types/js-yaml": "^4.0.9",
+    "@vercel/analytics": "^1.6.1",
     "clsx": "^2.1.1",
     "dotenv": "^17.2.2",
     "i18next": "^25.5.2",
