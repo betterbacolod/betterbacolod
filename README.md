@@ -76,8 +76,7 @@ betterbacolod/
 │   ├── pages/            # Route pages
 │   ├── data/             # YAML/JSON data loaders
 │   ├── hooks/            # Custom React hooks
-│   ├── lib/              # Utilities & markdown
-│   └── types/            # TypeScript types
+│   └── lib/              # Utilities & markdown
 ├── content/
 │   ├── services/         # Service pages (markdown)
 │   └── government/       # Government info (markdown)
