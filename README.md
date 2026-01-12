@@ -123,7 +123,7 @@ git push origin feat/your-feature
 ## Community
 
 - 💬 [Discord](https://discord.gg/EZkdJrhBYV) - Chat with contributors
-- 📘 [Facebook](https://facebook.com/betterbacolod) - Updates & announcements
+- 📘 [Facebook](https://facebook.com/betterbacolod.org) - Updates & announcements
 
 ---
 
