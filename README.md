@@ -1,13 +1,13 @@
-# 🔵 BetterBacolod.org
+# BetterBacolod.org
 
 Open-source civic tech portal for Bacolod City, Negros Occidental, Philippines.
 
-🌐 **Live:** [betterbacolod.org](https://betterbacolod.org)
+🌐 **Live:** [betterbacolod.org](https://betterbacolod.org)  
 💬 **Discord:** [Join our community](https://discord.gg/EZkdJrhBYV)
 
 ---
 
-## 🔵 About
+## About
 
 BetterBacolod makes government information accessible. We compile publicly available data from official sources and present it in a user-friendly format.
 
@@ -22,7 +22,7 @@ BetterBacolod makes government information accessible. We compile publicly avail
 
 ---
 
-## 🔵 Tech Stack
+## Tech Stack
 
 | Tool | Purpose |
 |------|---------|
@@ -36,7 +36,7 @@ BetterBacolod makes government information accessible. We compile publicly avail
 
 ---
 
-## 🔵 Getting Started
+## Getting Started
 
 ```bash
 # Clone the repo
@@ -61,7 +61,7 @@ bun run check
 
 ---
 
-## 🔵 Project Structure
+## Project Structure
 
 ```
 betterbacolod/
@@ -88,7 +88,7 @@ betterbacolod/
 
 ---
 
-## 🔵 Contributing
+## Contributing
 
 We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
@@ -111,7 +111,7 @@ git push origin feat/your-feature
 
 ---
 
-## 🔵 Data Sources
+## Data Sources
 
 - [bacolodcity.gov.ph](https://bacolodcity.gov.ph) - Official city website
 - [PSA](https://psa.gov.ph) - Population data
@@ -120,14 +120,14 @@ git push origin feat/your-feature
 
 ---
 
-## 🔵 Community
+## Community
 
 - 💬 [Discord](https://discord.gg/EZkdJrhBYV) - Chat with contributors
-- 🐦 [Facebook](https://facebook.com/betterbacolod) - Updates & announcements
+- 📘 [Facebook](https://facebook.com/betterbacolod) - Updates & announcements
 
 ---
 
-## 🔵 License
+## License
 
 MIT License - see [LICENSE](LICENSE)
 
