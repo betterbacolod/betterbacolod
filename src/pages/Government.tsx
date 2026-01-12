@@ -5,15 +5,22 @@ import { governmentActivitCategories } from '../data/yamlLoader';
 import * as LucideIcons from 'lucide-react';
 import SEO from '../components/SEO';
 import { Card, CardContent } from '../components/ui/Card';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import OfficialsSection from '../components/government/OfficialsSection';
 import DepartmentsSection from '../components/government/DepartmentsSection';
 import BarangaysSection from '../components/government/BarangaysSection';
 import { ChevronRight, Search } from 'lucide-react';
 
 const Government: React.FC = () => {
+  const [searchParams] = useSearchParams();
   const [activeSection, setActiveSection] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
+
+  useEffect(() => {
+    const section = searchParams.get('section');
+    if (section) setActiveSection(section);
+  }, [searchParams]);
 
   const handleSectionClick = (slug: string) => {
     const isActive = activeSection === slug;

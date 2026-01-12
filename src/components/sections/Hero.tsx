@@ -207,7 +207,7 @@ export default function Hero() {
     {
       label: 'Documents',
       icon: FileText,
-      path: '/services',
+      path: '/services/legal-civil',
       color: 'text-purple-600',
     },
   ];
