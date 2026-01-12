@@ -4,6 +4,12 @@
   "framework": "vite",
   "installCommand": "npm install",
   "devCommand": "npm run dev",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [{ "key": "X-Robots-Tag", "value": "all" }]
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
