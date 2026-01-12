@@ -1,5 +1,10 @@
-import type { NavigationItem } from '../types';
 import { serviceCategories as servicesData } from './yamlLoader';
+
+interface NavigationItem {
+  label: string;
+  href: string;
+  children?: NavigationItem[];
+}
 
 interface Subcategory {
   name: string;

@@ -1,7 +1,6 @@
 import * as LucideIcons from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { serviceCategories } from '../../data/yamlLoader';
-import { useTranslation } from '../../hooks/useTranslation';
 import { Card, CardContent } from '../ui/Card';
 import { Heading } from '../ui/Heading';
 import Section from '../ui/Section';
@@ -27,8 +26,6 @@ export default function ServicesSection({
   title?: string;
   description?: string;
 }) {
-  const { t } = useTranslation();
-
   const getIcon = (category: string) => {
     const IconComponent = LucideIcons[
       category as keyof typeof LucideIcons
@@ -41,9 +38,10 @@ export default function ServicesSection({
   return (
     <Section>
       <div className="text-center mb-10">
-        <Heading level={2}>{title || t('services.title')}</Heading>
+        <Heading level={2}>{title || 'Services & Information'}</Heading>
         <Text className="text-gray-600 max-w-2xl mx-auto">
-          {description || t('services.description')}
+          {description ||
+            'Access government services quickly and easily. Find what you need for permits, documents, health, education, and more.'}
         </Text>
       </div>
 

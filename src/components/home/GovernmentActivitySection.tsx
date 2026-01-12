@@ -1,7 +1,6 @@
 import * as LucideIcons from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { governmentActivitCategories } from '../../data/yamlLoader';
-import { useTranslation } from '../../hooks/useTranslation';
 import { Card, CardContent } from '../ui/Card';
 import { Heading } from '../ui/Heading';
 import Section from '../ui/Section';
@@ -15,8 +14,6 @@ interface Category {
 }
 
 export default function GovernmentActivitySection() {
-  const { t } = useTranslation();
-
   const getIcon = (category: string) => {
     const IconComponent = LucideIcons[
       category as keyof typeof LucideIcons
@@ -29,9 +26,9 @@ export default function GovernmentActivitySection() {
 
   return (
     <Section>
-      <Heading level={2}>{t('governmentActivity.title')}</Heading>
+      <Heading level={2}>Government</Heading>
       <Text className="text-gray-600 mb-6">
-        {t('governmentActivity.description')}
+        Learn about your city officials, departments, and barangays.
       </Text>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

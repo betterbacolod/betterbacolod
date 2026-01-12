@@ -8,7 +8,6 @@ import {
   Trash2,
 } from 'lucide-react';
 import { useMemo, useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import { Link, useNavigate } from 'react-router-dom';
 import { serviceCategories } from '../../data/yamlLoader';
 import { Heading } from '../ui/Heading';
@@ -22,7 +21,6 @@ interface ServiceCategory {
 }
 
 export default function Hero() {
-  const { t } = useTranslation();
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
   const [showDropdown, setShowDropdown] = useState(false);
@@ -230,7 +228,8 @@ export default function Hero() {
               BetterBacolod.org
             </Heading>
             <Text className="text-base md:text-lg text-primary-50 leading-relaxed mb-4">
-              {t('hero.subtitle')}
+              Your community portal for Bacolod City government services and
+              information
             </Text>
             <p className="text-sm text-primary-100 leading-relaxed">
               Access government services, permits, and information for Bacolod
