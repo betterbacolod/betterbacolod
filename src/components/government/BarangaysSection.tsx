@@ -232,11 +232,13 @@ export default function BarangaysSection({ searchQuery = '' }: Props) {
   }, [q]);
 
   const scrollTo = (id: string) => {
-    const element = document.getElementById(id);
     const container = contentRef.current;
-    if (element && container) {
-      const offsetTop = element.offsetTop - container.offsetTop;
-      container.scrollTo({ top: offsetTop, behavior: 'smooth' });
+    if (!container) return;
+    const element = container.querySelector(
+      `section[id="${id}"]`
+    ) as HTMLElement;
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
     setActiveSection(id);
   };
