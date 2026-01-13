@@ -16,11 +16,30 @@
 
 ## 2. Where to Get Documents Notarized
 
-| Location            | Details                                                                | Typical Fee |
-| ------------------- | ---------------------------------------------------------------------- | ----------- |
-| Private law offices | Most lawyers in Bacolod are Notaries Public (near City Hall, downtown) | ₱100-₱500   |
-| IBP Bacolod Chapter | May offer notarial services                                            | Varies      |
-| Barangay Hall       | Limited to simple affidavits (free or minimal fee)                     | Free-₱50    |
+| Location                         | Details                                                                 | Typical Fee   |
+| -------------------------------- | ----------------------------------------------------------------------- | ------------- |
+| **Cottage Road (Hall of Justice)** | Notaries right outside Hall of Justice, very convenient for people on-the-go. Typically cheaper than private law offices. | ₱150-₱300     |
+| IBP Bacolod Chapter              | May offer notarial services                                             | Varies        |
+| Barangay Hall                    | Limited to simple affidavits (free or minimal fee)                      | Free-₱50      |
+| **Public Attorney's Office (PAO)** | Free notarization for qualified individuals (see below)                 | **Free**      |
+
+### Free Notarization at PAO
+
+The **Public Attorney's Office** on the **3rd Floor of Hall of Justice** offers free notarization as part of their free legal aid services.
+
+**Who qualifies:**
+- Indigents below the poverty threshold (bring Certificate of Indigency from barangay)
+- Priority groups: PWD, senior citizens, indigenous people
+- Government employees (especially for filing PDS and yearly SALN)
+
+**What to bring:**
+- Document to be notarized
+- Certificate of Indigency from your barangay
+- Valid government ID
+- Photocopy of the document (PAO keeps a copy)
+- Documentary stamp from BIR (for documents that require it, e.g., Deed of Sale) - PAO does not provide these
+
+**Tip:** Go early - lines can be long!
 
 ---
 
@@ -93,4 +112,4 @@
 
 ---
 
-**Source:** [Bacolod City Government - City Legal Office](https://bacolodcity.gov.ph/departments/) — January 11, 2026
+**Source:** [Bacolod City Government - City Legal Office](https://bacolodcity.gov.ph/departments/), [Supreme Court ULAS](https://sc.judiciary.gov.ph/ulas/), community contributions — Updated January 13, 2026
