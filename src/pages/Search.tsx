@@ -171,14 +171,14 @@ const Search: React.FC = () => {
       {
         title: 'Senior Citizen ID',
         description: 'Apply for senior citizen ID and benefits',
-        href: '/services/social-services',
+        href: '/apply-for-senior-citizen-benefits-and-discounts',
         type: 'Service',
         keywords: 'senior citizen id osca elderly',
       },
       {
         title: 'PWD ID',
         description: 'Apply for Person with Disability ID',
-        href: '/services/social-services',
+        href: '/register-for-pwd-id-and-disability-benefits',
         type: 'Service',
         keywords: 'pwd id disability person with disability',
       },
