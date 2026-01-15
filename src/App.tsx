@@ -4,6 +4,7 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Footer from './components/layout/Footer';
 import Navbar from './components/layout/Navbar';
 import TopBanner from './components/layout/TopBanner';
+import StructuredData from './components/StructuredData';
 import ScrollToTop from './components/ui/ScrollToTop';
 import About from './pages/About';
 import Document from './pages/Document';
@@ -18,6 +19,7 @@ function App() {
   return (
     <Router>
       <NuqsAdapter>
+        <StructuredData />
         <div className="min-h-screen flex flex-col">
           <TopBanner />
           <Navbar />
