@@ -158,7 +158,7 @@ PWDs are **exempt from 12% VAT** on purchases of goods and services for personal
 
 ### Department of Social Services and Development (DSSD)
 
-- **OIC:** Alma Gustilo
+- **OIC:** Sally Abelarde
 - **Phone:** (034) 433-5924 / (034) 432-1602
 - **Location:** City Health Compound, BBB-Galo Sts., Bacolod City
 - **Main Hotline:** (034) 434-9122
