@@ -105,9 +105,9 @@ async function generateSearchIndex() {
     await insert(db, page);
   }
 
-  // Save index
+  // Save index to dist (after vite build)
   const index = await save(db);
-  writeFileSync('public/search-index.json', JSON.stringify(index));
+  writeFileSync('dist/search-index.json', JSON.stringify(index));
 
   console.log(
     `✅ Indexed ${indexed} pages + ${servicesData.categories.length} categories`,
