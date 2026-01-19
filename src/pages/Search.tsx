@@ -1,4 +1,4 @@
-import { highlight } from '@orama/highlight';
+import { Highlight } from '@orama/highlight';
 import { search as oramaSearch } from '@orama/orama';
 import { FileText, Search as SearchIcon } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
@@ -19,6 +19,8 @@ interface SearchResult {
     type: string;
   };
 }
+
+const highlighter = new Highlight();
 
 const Search: React.FC = () => {
   const [searchParams] = useSearchParams();
@@ -125,12 +127,12 @@ const Search: React.FC = () => {
 
           <div className="space-y-2">
             {results.map((hit, i) => {
-              const highlightedTitle = highlight(
+              const highlightedTitle = highlighter.highlight(
                 hit.document.title,
                 query,
-              ).toString();
+              ).HTML;
               const highlightedDesc = hit.document.description
-                ? highlight(hit.document.description, query).toString()
+                ? highlighter.highlight(hit.document.description, query).HTML
                 : '';
 
               return (
