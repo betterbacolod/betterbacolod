@@ -33,4 +33,4 @@ dist-ssr
 .env.production
 
 # Kiro CLI
-.kiro/
+.kiro/.claude/
