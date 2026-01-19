@@ -1,215 +1,85 @@
-import {
-  Building2,
-  FileText,
-  MapPin,
-  Search as SearchIcon,
-} from 'lucide-react';
+import { search as oramaSearch } from '@orama/orama';
+import { FileText, Search as SearchIcon } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import SEO from '../components/SEO';
 import { Heading } from '../components/ui/Heading';
 import Section from '../components/ui/Section';
-import { serviceCategories } from '../data/yamlLoader';
+import { getSearchDB, initializeSearch } from '../lib/searchIndex';
 
 interface SearchResult {
-  title: string;
-  description: string;
-  href: string;
-  type: 'Service' | 'Page' | 'Info';
-  keywords?: string;
-}
-
-interface ServiceCategory {
-  category: string;
-  slug: string;
-  description: string;
-  subcategories?: { name: string; slug: string; description?: string }[];
+  id: string;
+  score: number;
+  document: {
+    title: string;
+    description: string;
+    url: string;
+    category: string;
+    type: string;
+  };
 }
 
 const Search: React.FC = () => {
   const [searchParams] = useSearchParams();
   const initialQuery = searchParams.get('q') || '';
   const [query, setQuery] = useState(initialQuery);
+  const [results, setResults] = useState<SearchResult[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [dbReady, setDbReady] = useState(false);
 
+  // Initialize Orama on mount
+  useEffect(() => {
+    initializeSearch().then(() => setDbReady(true));
+  }, []);
+
+  // Update query from URL
   useEffect(() => {
     const q = searchParams.get('q');
     if (q) setQuery(q);
   }, [searchParams]);
 
-  const allItems = useMemo(() => {
-    const items: SearchResult[] = [];
-
-    // Services with subcategories
-    (serviceCategories.categories as ServiceCategory[]).forEach((cat) => {
-      items.push({
-        title: cat.category,
-        description: cat.description,
-        href: `/services/${cat.slug}`,
-        type: 'Service',
-        keywords: cat.category.toLowerCase(),
-      });
-      cat.subcategories?.forEach((sub) => {
-        items.push({
-          title: sub.name,
-          description: sub.description || `${cat.category} - ${sub.name}`,
-          href: `/services/${cat.slug}`,
-          type: 'Service',
-          keywords: `${cat.category} ${sub.name}`.toLowerCase(),
-        });
-      });
-    });
-
-    // Main pages
-    items.push(
-      {
-        title: 'City Officials',
-        description: 'Mayor, Vice Mayor, Congressman, City Councilors',
-        href: '/government',
-        type: 'Page',
-        keywords: 'mayor vice mayor councilor officials government',
-      },
-      {
-        title: 'City Departments',
-        description:
-          '35 departments including City Health, Engineering, Treasury',
-        href: '/government',
-        type: 'Page',
-        keywords: 'department office city hall treasury health engineering',
-      },
-      {
-        title: 'Barangays',
-        description: '61 barangays with captain contact information',
-        href: '/government',
-        type: 'Page',
-        keywords: 'barangay captain brgy village',
-      },
-      {
-        title: 'Flood Control Projects',
-        description: '39 DPWH flood control projects in Bacolod (2021-2024)',
-        href: '/transparency',
-        type: 'Page',
-        keywords: 'flood drainage dpwh infrastructure project',
-      },
-      {
-        title: 'Budget Information',
-        description: 'Region VI General Appropriations Act data',
-        href: '/transparency',
-        type: 'Page',
-        keywords: 'budget gaa appropriation spending',
-      },
-      {
-        title: 'Procurement',
-        description: 'PhilGEPS bidding and procurement data',
-        href: '/transparency',
-        type: 'Page',
-        keywords: 'procurement bid philgeps contract',
-      },
-      {
-        title: 'About Bacolod City',
-        description: 'City of Smiles - population, history, MassKara Festival',
-        href: '/about',
-        type: 'Page',
-        keywords: 'about bacolod city smiles masskara history',
-      },
-      {
-        title: 'Emergency Hotlines',
-        description: '911, CDRRMO, PNP, City Hall contact numbers',
-        href: '/about',
-        type: 'Info',
-        keywords: 'hotline emergency 911 cdrrmo police fire',
-      },
-      {
-        title: 'Birth Certificate',
-        description:
-          'Request or get copy of birth certificate from Civil Registry',
-        href: '/services/civil-registry',
-        type: 'Service',
-        keywords: 'birth certificate psa civil registry baby born',
-      },
-      {
-        title: 'Death Certificate',
-        description: 'Request death certificate from Civil Registry',
-        href: '/services/civil-registry',
-        type: 'Service',
-        keywords: 'death certificate civil registry deceased',
-      },
-      {
-        title: 'Marriage Certificate',
-        description: 'Request marriage certificate from Civil Registry',
-        href: '/services/civil-registry',
-        type: 'Service',
-        keywords: 'marriage certificate wedding civil registry kasal',
-      },
-      {
-        title: 'Barangay Clearance',
-        description: 'Get barangay clearance for employment or business',
-        href: '/government',
-        type: 'Service',
-        keywords: 'barangay clearance brgy certificate employment',
-      },
-      {
-        title: 'Real Property Tax',
-        description: 'Pay real property tax at City Treasurer Office',
-        href: '/services/tax-services',
-        type: 'Service',
-        keywords: 'real property tax amilyar land tax treasurer',
-      },
-      {
-        title: 'Community Tax Certificate (Cedula)',
-        description: 'Get cedula or community tax certificate',
-        href: '/services/tax-services',
-        type: 'Service',
-        keywords: 'cedula community tax certificate ctc',
-      },
-      {
-        title: 'Building Permit',
-        description: 'Apply for building permit at City Engineering Office',
-        href: '/services/permits-licensing',
-        type: 'Service',
-        keywords: 'building permit construction obo engineering',
-      },
-      {
-        title: 'Senior Citizen ID',
-        description: 'Apply for senior citizen ID and benefits',
-        href: '/apply-for-senior-citizen-benefits-and-discounts',
-        type: 'Service',
-        keywords: 'senior citizen id osca elderly',
-      },
-      {
-        title: 'PWD ID',
-        description: 'Apply for Person with Disability ID',
-        href: '/register-for-pwd-id-and-disability-benefits',
-        type: 'Service',
-        keywords: 'pwd id disability person with disability',
-      },
-    );
-
-    return items;
-  }, []);
-
-  const results = useMemo(() => {
-    if (!query.trim()) return [];
-    const q = query.toLowerCase();
-    return allItems
-      .filter(
-        (item) =>
-          item.title.toLowerCase().includes(q) ||
-          item.description.toLowerCase().includes(q) ||
-          item.keywords?.includes(q),
-      )
-      .slice(0, 25);
-  }, [query, allItems]);
-
-  const getIcon = (type: string) => {
-    switch (type) {
-      case 'Service':
-        return <FileText className="h-4 w-4" />;
-      case 'Page':
-        return <Building2 className="h-4 w-4" />;
-      default:
-        return <MapPin className="h-4 w-4" />;
+  // Search with Orama
+  useEffect(() => {
+    if (!dbReady || !query.trim()) {
+      setResults([]);
+      return;
     }
-  };
+
+    const performSearch = async () => {
+      setLoading(true);
+      try {
+        const db = getSearchDB();
+        if (!db) return;
+
+        const searchResults = await oramaSearch(db, {
+          term: query,
+          limit: 20,
+          tolerance: 1,
+        });
+
+        setResults(searchResults.hits);
+      } catch (err) {
+        console.error('Search error:', err);
+        setResults([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    performSearch();
+  }, [query, dbReady]);
+
+  const suggestions = useMemo(
+    () => [
+      'birth certificate',
+      'business permit',
+      'barangay clearance',
+      'cedula',
+      'senior citizen',
+      'pwd id',
+    ],
+    [],
+  );
 
   return (
     <>
@@ -230,12 +100,17 @@ const Search: React.FC = () => {
               type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Try: business permit, health, barangay, flood..."
+              placeholder="Search services, officials, barangays..."
               className="w-full pl-12 pr-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+              disabled={!dbReady}
             />
           </div>
 
-          {query && (
+          {loading && (
+            <p className="text-sm text-gray-500 mb-4">Searching...</p>
+          )}
+
+          {!loading && query && (
             <p className="text-sm text-gray-500 mb-4">
               {results.length} result{results.length !== 1 ? 's' : ''} for "
               {query}"
@@ -243,33 +118,38 @@ const Search: React.FC = () => {
           )}
 
           <div className="space-y-2">
-            {results.map((item, i) => (
+            {results.map((hit, i) => (
               <Link
                 key={i}
-                to={item.href}
+                to={hit.document.url}
                 className="block p-4 bg-white border rounded-lg hover:border-primary-300 hover:bg-primary-50 transition-colors"
               >
                 <div className="flex items-start gap-3">
                   <span className="mt-1 text-gray-400">
-                    {getIcon(item.type)}
+                    <FileText className="h-4 w-4" />
                   </span>
                   <div className="flex-1 min-w-0">
                     <div className="font-medium text-gray-900">
-                      {item.title}
+                      {hit.document.title}
                     </div>
-                    <div className="text-sm text-gray-500 line-clamp-2">
-                      {item.description}
+                    {hit.document.description && (
+                      <div className="text-sm text-gray-500 line-clamp-2">
+                        {hit.document.description}
+                      </div>
+                    )}
+                    <div className="text-xs text-gray-400 mt-1">
+                      {hit.document.category}
                     </div>
                   </div>
                   <span className="text-xs px-2 py-1 bg-gray-100 text-gray-600 rounded flex-shrink-0">
-                    {item.type}
+                    {hit.document.type}
                   </span>
                 </div>
               </Link>
             ))}
           </div>
 
-          {query && results.length === 0 && (
+          {query && results.length === 0 && !loading && (
             <div className="text-center py-12 text-gray-500">
               No results found for "{query}"
             </div>
@@ -279,17 +159,11 @@ const Search: React.FC = () => {
             <div className="text-center py-8">
               <p className="text-gray-400 mb-4">Start typing to search</p>
               <div className="flex flex-wrap justify-center gap-2">
-                {[
-                  'birth certificate',
-                  'business permit',
-                  'mayor',
-                  'barangay clearance',
-                  'health center',
-                  'real property tax',
-                ].map((term) => (
+                {suggestions.map((term) => (
                   <button
                     key={term}
                     onClick={() => setQuery(term)}
+                    type="button"
                     className="px-3 py-1 text-sm bg-gray-100 hover:bg-primary-100 text-gray-600 hover:text-primary-700 rounded-full transition-colors"
                   >
                     {term}
