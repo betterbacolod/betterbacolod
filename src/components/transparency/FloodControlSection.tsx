@@ -1,6 +1,8 @@
 import { ChevronDown, ExternalLink, Search } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import floodData from '../../data/transparency/flood-control.json';
+// 1. Import the new chart component
+import FloodControlChart from './FloodControlChart';
 
 export default function FloodControlSection() {
   const [search, setSearch] = useState('');
@@ -19,13 +21,15 @@ export default function FloodControlSection() {
     });
   }, [search, yearFilter, typeFilter]);
 
-  const filteredStats = useMemo(
-    () => ({
+  const filteredStats = useMemo(() => {
+    const uniqueContractors = new Set(filtered.map((p) => p.contractor)).size;
+
+    return {
       count: filtered.length,
       cost: filtered.reduce((s, p) => s + p.cost, 0),
-    }),
-    [filtered],
-  );
+      contractors: uniqueContractors,
+    };
+  }, [filtered]);
 
   return (
     <div className="space-y-4">
@@ -50,6 +54,9 @@ export default function FloodControlSection() {
           </p>
         </div>
       </div>
+
+      {/* 2. Insert the Chart here */}
+      <FloodControlChart />
 
       {/* Filters */}
       <div className="flex flex-col sm:flex-row gap-2">
