@@ -71,7 +71,7 @@ export default function FloodControlChart() {
                 dy={10}
               />
               <YAxis
-                tickFormatter={(value) => `₱${value / 1e6}M`}
+                tickFormatter={(value: number) => `₱${value / 1e6}M`}
                 axisLine={false}
                 tickLine={false}
                 tick={{ fill: '#6b7280' }}
@@ -83,13 +83,13 @@ export default function FloodControlChart() {
                   border: 'none',
                   boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)',
                 }}
-                formatter={(value: number) => [
-                  `₱${(value / 1e6).toFixed(2)}M`,
+                formatter={(value: number | undefined) => [
+                  `₱${((value ?? 0) / 1e6).toFixed(2)}M`,
                   'Budget',
                 ]}
               />
               <Bar dataKey="cost" radius={[4, 4, 0, 0]} barSize={40}>
-                {barData.map((entry, index) => (
+                {barData.map((_entry, index) => (
                   <Cell
                     key={`cell-${index}`}
                     fill={COLORS[index % COLORS.length]}
@@ -119,7 +119,7 @@ export default function FloodControlChart() {
                 paddingAngle={5}
                 dataKey="value"
               >
-                {pieData.map((entry, index) => (
+                {pieData.map((_entry, index) => (
                   <Cell
                     key={`cell-${index}`}
                     fill={COLORS[index % COLORS.length]}
