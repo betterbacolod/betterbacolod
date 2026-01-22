@@ -120,6 +120,18 @@ git push origin feat/your-feature
 
 ---
 
+## Contributors
+
+Thanks to everyone who has contributed to BetterBacolod! 💙
+
+<a href="https://github.com/betterbacolod/betterbacolod/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=betterbacolod/betterbacolod" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
+
+---
+
 ## Community
 
 - 💬 [Discord](https://discord.gg/EZkdJrhBYV) - Chat with contributors
