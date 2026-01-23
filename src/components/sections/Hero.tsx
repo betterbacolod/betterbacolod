@@ -25,11 +25,6 @@ export default function Hero() {
   >([]);
   const [dbReady, setDbReady] = useState(false);
 
-  // Initialize Orama
-  useEffect(() => {
-    initializeSearch().then(() => setDbReady(true));
-  }, []);
-
   // Get Orama suggestions
   useEffect(() => {
     if (!dbReady || !searchQuery.trim()) {
@@ -59,6 +54,16 @@ export default function Hero() {
   }, [searchQuery, dbReady]);
 
   const [showDropdown, setShowDropdown] = useState(false);
+  const [hasFocused, setHasFocused] = useState(false);
+
+  // Defer search index loading until user focuses on search input
+  const handleSearchFocus = () => {
+    setShowDropdown(true);
+    if (!hasFocused) {
+      setHasFocused(true);
+      initializeSearch().then(() => setDbReady(true));
+    }
+  };
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -149,7 +154,7 @@ export default function Hero() {
                       setSearchQuery(e.target.value);
                       setShowDropdown(true);
                     }}
-                    onFocus={() => setShowDropdown(true)}
+                    onFocus={handleSearchFocus}
                     onBlur={() => setTimeout(() => setShowDropdown(false), 150)}
                     placeholder="Search services, permits, information..."
                     className="w-full pl-10 pr-4 py-2.5 text-sm text-gray-900 bg-white border-2 border-primary-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 placeholder-gray-400 transition-all"
