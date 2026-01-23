@@ -90,6 +90,8 @@ const Navbar: React.FC = () => {
           <button
             onClick={toggleMenu}
             className="lg:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100"
+            aria-label="Toggle navigation menu"
+            aria-expanded={isOpen}
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
