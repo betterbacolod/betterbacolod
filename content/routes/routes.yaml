@@ -1,0 +1,28 @@
+routes:
+  - id: bata-libertad
+    code: "Bata-Libertad"        # What's written on the jeepney
+    color: "#2563eb"              # For map display later
+    schedule:
+      start: "05:00"
+      end: "21:00"
+      frequency: "Every 5-10 minutes"
+    stops:                        # ORDERED sequence — this defines the route path
+      - id: bata-terminal
+        name: Bata Terminal
+        landmark: null            # Or reference a landmark id
+        coordinates:
+          lat: 10.XXXX
+          lng: 122.XXXX
+      - id: lopues-bata
+        name: Lopue's Bata
+        landmark: lopues-bata     # References landmarks.yaml
+        coordinates:
+          lat: 10.XXXX
+          lng: 122.XXXX
+      - id: libertad-terminal
+        name: Libertad Terminal
+        landmark: libertad-terminal
+        coordinates:
+          lat: 10.XXXX
+          lng: 122.XXXX
+    reversible: true              # Can ride this route in reverse?

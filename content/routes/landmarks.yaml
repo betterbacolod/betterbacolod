@@ -1,0 +1,22 @@
+landmarks:
+  - id: sm-city-bacolod
+    name: SM City Bacolod
+    category: shopping mall
+    barangay: Barangay 12
+    coordinates:
+      latitude: 10.6760
+      longitude: 122.9560
+    aliases:
+      - SM City
+      - SM Bacolod
+    
+  - id: robinsons-place-bacolod
+    name: Robinsons Place Bacolod
+    category: shopping mall
+    barangay: Mandalagan
+    coordinates:
+      latitude: 10.6930
+      longitude: 122.6940
+    aliases:
+      - Robinsons Place
+      - Robinsons Bacolod
