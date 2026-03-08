@@ -10,6 +10,7 @@ import About from './pages/About';
 import Document from './pages/Document';
 import Government from './pages/Government';
 import Home from './pages/Home';
+import JeepneyRoutes from './pages/JeepneyRoutes';
 import Search from './pages/Search';
 import Services from './pages/Services';
 import Sitemap from './pages/Sitemap';
@@ -34,6 +35,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/sitemap" element={<Sitemap />} />
               <Route path="/search" element={<Search />} />
+              <Route path="/routes" element={<JeepneyRoutes />} />
               <Route path="/:lang/:documentSlug" element={<Document />} />
               <Route path="/:documentSlug" element={<Document />} />
             </Routes>
