@@ -36,14 +36,20 @@ export const mainNavigation: NavigationItem[] = [
   },
 ];
 
+export const projectsNavigation: NavigationItem[] = [
+  {
+    label: 'Jeepney Routes',
+    href: '/routes',
+  },
+];
+
 export const footerNavigation = {
   mainSections: [
     {
-      title: 'About',
+      title: 'Projects',
       links: [
-        { label: 'About BetterBacolod', href: '/about' },
+        { label: 'Jeepney Routes', href: '/routes' },
         { label: 'Bacolod City Website', href: 'https://bacolodcity.gov.ph' },
-        { label: 'Contact Us', href: '/about' },
       ],
     },
     {

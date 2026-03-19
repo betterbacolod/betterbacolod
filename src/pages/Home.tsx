@@ -1,3 +1,4 @@
+import AboutSection from '../components/home/AboutSection';
 import GovernmentActivitySection from '../components/home/GovernmentActivitySection';
 import ServicesSection from '../components/home/ServicesSection';
 import SEO from '../components/SEO';
@@ -14,6 +15,7 @@ const Home: React.FC = () => {
         <Hero />
         <ServicesSection />
         <GovernmentActivitySection />
+        <AboutSection />
       </main>
     </>
   );
