@@ -99,6 +99,15 @@ async function generateSearchIndex() {
       category: 'Transparency',
       type: 'page',
     },
+    {
+      title: 'Fuel Price Watch',
+      description: 'Weekly DOE retail fuel prices in Bacolod City',
+      content:
+        'fuel prices gas gasoline diesel kerosene petroleum DOE pump price weekly Bacolod RON 91 95 97',
+      url: '/transparency',
+      category: 'Transparency',
+      type: 'page',
+    },
   ];
 
   for (const page of pages) {
