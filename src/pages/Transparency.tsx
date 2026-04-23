@@ -6,12 +6,14 @@ import {
   FileSearch,
   FileText,
   FolderOpen,
+  Fuel,
   ShoppingCart,
   TrendingUp,
 } from 'lucide-react';
 import { useState } from 'react';
 import SEO from '../components/SEO';
 import FloodControlSection from '../components/transparency/FloodControlSection';
+import FuelPricesSection from '../components/transparency/FuelPricesSection';
 import { Card, CardContent } from '../components/ui/Card';
 import { Heading } from '../components/ui/Heading';
 import Section from '../components/ui/Section';
@@ -24,6 +26,12 @@ const categories = [
     name: 'Flood Control Projects',
     icon: Droplets,
     description: '39 DPWH flood control projects in Bacolod City',
+  },
+  {
+    slug: 'fuel-prices',
+    name: 'Fuel Price Watch',
+    icon: Fuel,
+    description: 'Weekly DOE retail fuel prices in Bacolod City',
   },
   {
     slug: 'reports',
@@ -48,6 +56,7 @@ const Transparency: React.FC = () => {
 
   const renderContent = () => {
     if (activeSection === 'flood-control') return <FloodControlSection />;
+    if (activeSection === 'fuel-prices') return <FuelPricesSection />;
     if (activeSection === 'infrastructure') return <InfrastructureSection />;
     if (activeSection === 'reports') return <ReportsSection />;
     return null;
@@ -57,8 +66,8 @@ const Transparency: React.FC = () => {
     <>
       <SEO
         title="Transparency"
-        description="Government transparency data for Bacolod City - flood control projects, infrastructure, procurement, and public reports."
-        keywords="transparency, flood control, infrastructure, procurement, Bacolod City, DPWH"
+        description="Government transparency data for Bacolod City - flood control projects, fuel prices, infrastructure, procurement, and public reports."
+        keywords="transparency, flood control, fuel prices, gas prices, diesel, DOE, infrastructure, procurement, Bacolod City, DPWH"
       />
       <Section className="min-h-[60vh]">
         <div className="text-center mb-6 md:mb-10">
@@ -108,7 +117,7 @@ const Transparency: React.FC = () => {
 
         {/* Desktop: Card Grid + Content Below */}
         <div className="hidden lg:block">
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 xl:grid-cols-4 gap-6">
             {categories.map((cat) => {
               const Icon = cat.icon;
               const isActive = activeSection === cat.slug;
