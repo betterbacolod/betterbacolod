@@ -28,9 +28,13 @@ export default function FuelPricesSection() {
     );
     if (latest.length === 0) return null;
 
-    const prior = fuelData.snapshots.filter(
-      (s) => s.date === fuelData.filters.weeks[1],
-    );
+    const priorWeek = fuelData.filters.weeks
+      .filter((w) => w < fuelData.stats.latestWeek)
+      .sort()
+      .at(-1);
+    const prior = priorWeek
+      ? fuelData.snapshots.filter((s) => s.date === priorWeek)
+      : [];
 
     const sortedByPrice = [...latest].sort((a, b) => a.priceAvg - b.priceAvg);
     const cheapest = sortedByPrice[0];
@@ -53,9 +57,9 @@ export default function FuelPricesSection() {
         <div className="flex items-start gap-2 bg-amber-50 border border-amber-200 rounded-lg p-3 text-xs text-amber-800">
           <Info className="h-4 w-4 flex-shrink-0 mt-0.5" />
           <p>
-            Showing placeholder figures while we finalize the DOE data feed with{' '}
-            <span className="font-medium">@Shiro_Oni</span>. Numbers below are
-            illustrative and should not be used for purchasing decisions.
+            Placeholder figures while we finalize the DOE data feed with{' '}
+            <span className="font-medium">@Shiro_Oni</span>. Do not rely on
+            these for actual prices.
           </p>
         </div>
       )}
@@ -72,7 +76,7 @@ export default function FuelPricesSection() {
             </p>
           </div>
           <div className="bg-primary-50 rounded-lg p-2 sm:p-3">
-            <p className="text-xs text-primary-600">Most expensive</p>
+            <p className="text-xs text-primary-600">Priciest</p>
             <p className="text-lg sm:text-xl font-bold text-primary-700">
               {peso(headline.priciest.priceAvg)}
             </p>
@@ -112,7 +116,7 @@ export default function FuelPricesSection() {
         </div>
       )}
 
-      <FuelPricesChart />
+      {fuelData.snapshots.length > 0 && <FuelPricesChart />}
 
       <div className="flex flex-col sm:flex-row gap-2">
         <div className="relative flex-1">
@@ -128,6 +132,7 @@ export default function FuelPricesSection() {
         </div>
         <div className="relative">
           <select
+            aria-label="Filter by fuel type"
             value={fuelFilter}
             onChange={(e) => setFuelFilter(e.target.value)}
             className="appearance-none pl-3 pr-8 py-2 border border-gray-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-primary-500"
@@ -143,6 +148,7 @@ export default function FuelPricesSection() {
         </div>
         <div className="relative">
           <select
+            aria-label="Filter by week"
             value={weekFilter}
             onChange={(e) => setWeekFilter(e.target.value)}
             className="appearance-none pl-3 pr-8 py-2 border border-gray-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-primary-500"
@@ -245,14 +251,6 @@ export default function FuelPricesSection() {
           className="inline-flex items-center gap-1 px-3 py-1.5 bg-primary-600 text-white rounded text-sm hover:bg-primary-700"
         >
           DOE Oil Monitor <ExternalLink className="h-3 w-3" />
-        </a>
-        <a
-          href="https://www.doe.gov.ph/doe-oil-price-monitor"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 px-3 py-1.5 border border-primary-600 text-primary-600 rounded text-sm hover:bg-primary-50"
-        >
-          Weekly price bulletins <ExternalLink className="h-3 w-3" />
         </a>
       </div>
 
