@@ -1,0 +1,589 @@
+{
+  "placeholder": true,
+  "snapshots": [
+    {
+      "id": "fp-2026-04-15-gas91",
+      "date": "2026-04-15",
+      "fuelType": "Gasoline RON 91",
+      "priceMin": 58.95,
+      "priceAvg": 60.4,
+      "priceMax": 62.1,
+      "stationCount": 24
+    },
+    {
+      "id": "fp-2026-04-15-gas95",
+      "date": "2026-04-15",
+      "fuelType": "Gasoline RON 95",
+      "priceMin": 62.1,
+      "priceAvg": 63.55,
+      "priceMax": 65.3,
+      "stationCount": 28
+    },
+    {
+      "id": "fp-2026-04-15-gas97",
+      "date": "2026-04-15",
+      "fuelType": "Gasoline RON 97",
+      "priceMin": 65.4,
+      "priceAvg": 66.9,
+      "priceMax": 68.8,
+      "stationCount": 19
+    },
+    {
+      "id": "fp-2026-04-15-dsl",
+      "date": "2026-04-15",
+      "fuelType": "Diesel",
+      "priceMin": 54.25,
+      "priceAvg": 55.8,
+      "priceMax": 57.6,
+      "stationCount": 28
+    },
+    {
+      "id": "fp-2026-04-15-krs",
+      "date": "2026-04-15",
+      "fuelType": "Kerosene",
+      "priceMin": 66.8,
+      "priceAvg": 68.1,
+      "priceMax": 69.9,
+      "stationCount": 12
+    },
+
+    {
+      "id": "fp-2026-04-08-gas91",
+      "date": "2026-04-08",
+      "fuelType": "Gasoline RON 91",
+      "priceMin": 59.3,
+      "priceAvg": 60.75,
+      "priceMax": 62.4,
+      "stationCount": 24
+    },
+    {
+      "id": "fp-2026-04-08-gas95",
+      "date": "2026-04-08",
+      "fuelType": "Gasoline RON 95",
+      "priceMin": 62.45,
+      "priceAvg": 63.9,
+      "priceMax": 65.6,
+      "stationCount": 28
+    },
+    {
+      "id": "fp-2026-04-08-gas97",
+      "date": "2026-04-08",
+      "fuelType": "Gasoline RON 97",
+      "priceMin": 65.75,
+      "priceAvg": 67.2,
+      "priceMax": 69.1,
+      "stationCount": 19
+    },
+    {
+      "id": "fp-2026-04-08-dsl",
+      "date": "2026-04-08",
+      "fuelType": "Diesel",
+      "priceMin": 54.6,
+      "priceAvg": 56.1,
+      "priceMax": 57.9,
+      "stationCount": 28
+    },
+    {
+      "id": "fp-2026-04-08-krs",
+      "date": "2026-04-08",
+      "fuelType": "Kerosene",
+      "priceMin": 67.1,
+      "priceAvg": 68.4,
+      "priceMax": 70.2,
+      "stationCount": 12
+    },
+
+    {
+      "id": "fp-2026-04-01-gas91",
+      "date": "2026-04-01",
+      "fuelType": "Gasoline RON 91",
+      "priceMin": 58.7,
+      "priceAvg": 60.15,
+      "priceMax": 61.8,
+      "stationCount": 24
+    },
+    {
+      "id": "fp-2026-04-01-gas95",
+      "date": "2026-04-01",
+      "fuelType": "Gasoline RON 95",
+      "priceMin": 61.85,
+      "priceAvg": 63.3,
+      "priceMax": 65.0,
+      "stationCount": 28
+    },
+    {
+      "id": "fp-2026-04-01-gas97",
+      "date": "2026-04-01",
+      "fuelType": "Gasoline RON 97",
+      "priceMin": 65.15,
+      "priceAvg": 66.6,
+      "priceMax": 68.5,
+      "stationCount": 19
+    },
+    {
+      "id": "fp-2026-04-01-dsl",
+      "date": "2026-04-01",
+      "fuelType": "Diesel",
+      "priceMin": 54.0,
+      "priceAvg": 55.5,
+      "priceMax": 57.3,
+      "stationCount": 28
+    },
+    {
+      "id": "fp-2026-04-01-krs",
+      "date": "2026-04-01",
+      "fuelType": "Kerosene",
+      "priceMin": 66.5,
+      "priceAvg": 67.8,
+      "priceMax": 69.6,
+      "stationCount": 12
+    },
+
+    {
+      "id": "fp-2026-03-25-gas91",
+      "date": "2026-03-25",
+      "fuelType": "Gasoline RON 91",
+      "priceMin": 58.35,
+      "priceAvg": 59.8,
+      "priceMax": 61.45,
+      "stationCount": 23
+    },
+    {
+      "id": "fp-2026-03-25-gas95",
+      "date": "2026-03-25",
+      "fuelType": "Gasoline RON 95",
+      "priceMin": 61.5,
+      "priceAvg": 62.95,
+      "priceMax": 64.65,
+      "stationCount": 27
+    },
+    {
+      "id": "fp-2026-03-25-gas97",
+      "date": "2026-03-25",
+      "fuelType": "Gasoline RON 97",
+      "priceMin": 64.8,
+      "priceAvg": 66.25,
+      "priceMax": 68.15,
+      "stationCount": 19
+    },
+    {
+      "id": "fp-2026-03-25-dsl",
+      "date": "2026-03-25",
+      "fuelType": "Diesel",
+      "priceMin": 53.7,
+      "priceAvg": 55.2,
+      "priceMax": 57.0,
+      "stationCount": 27
+    },
+    {
+      "id": "fp-2026-03-25-krs",
+      "date": "2026-03-25",
+      "fuelType": "Kerosene",
+      "priceMin": 66.2,
+      "priceAvg": 67.5,
+      "priceMax": 69.3,
+      "stationCount": 12
+    },
+
+    {
+      "id": "fp-2026-03-18-gas91",
+      "date": "2026-03-18",
+      "fuelType": "Gasoline RON 91",
+      "priceMin": 58.0,
+      "priceAvg": 59.45,
+      "priceMax": 61.1,
+      "stationCount": 23
+    },
+    {
+      "id": "fp-2026-03-18-gas95",
+      "date": "2026-03-18",
+      "fuelType": "Gasoline RON 95",
+      "priceMin": 61.15,
+      "priceAvg": 62.6,
+      "priceMax": 64.3,
+      "stationCount": 27
+    },
+    {
+      "id": "fp-2026-03-18-gas97",
+      "date": "2026-03-18",
+      "fuelType": "Gasoline RON 97",
+      "priceMin": 64.45,
+      "priceAvg": 65.9,
+      "priceMax": 67.8,
+      "stationCount": 18
+    },
+    {
+      "id": "fp-2026-03-18-dsl",
+      "date": "2026-03-18",
+      "fuelType": "Diesel",
+      "priceMin": 53.4,
+      "priceAvg": 54.9,
+      "priceMax": 56.7,
+      "stationCount": 27
+    },
+    {
+      "id": "fp-2026-03-18-krs",
+      "date": "2026-03-18",
+      "fuelType": "Kerosene",
+      "priceMin": 65.9,
+      "priceAvg": 67.2,
+      "priceMax": 69.0,
+      "stationCount": 11
+    },
+
+    {
+      "id": "fp-2026-03-11-gas91",
+      "date": "2026-03-11",
+      "fuelType": "Gasoline RON 91",
+      "priceMin": 57.7,
+      "priceAvg": 59.1,
+      "priceMax": 60.75,
+      "stationCount": 23
+    },
+    {
+      "id": "fp-2026-03-11-gas95",
+      "date": "2026-03-11",
+      "fuelType": "Gasoline RON 95",
+      "priceMin": 60.85,
+      "priceAvg": 62.25,
+      "priceMax": 63.95,
+      "stationCount": 27
+    },
+    {
+      "id": "fp-2026-03-11-gas97",
+      "date": "2026-03-11",
+      "fuelType": "Gasoline RON 97",
+      "priceMin": 64.1,
+      "priceAvg": 65.55,
+      "priceMax": 67.45,
+      "stationCount": 18
+    },
+    {
+      "id": "fp-2026-03-11-dsl",
+      "date": "2026-03-11",
+      "fuelType": "Diesel",
+      "priceMin": 53.1,
+      "priceAvg": 54.6,
+      "priceMax": 56.4,
+      "stationCount": 27
+    },
+    {
+      "id": "fp-2026-03-11-krs",
+      "date": "2026-03-11",
+      "fuelType": "Kerosene",
+      "priceMin": 65.6,
+      "priceAvg": 66.9,
+      "priceMax": 68.7,
+      "stationCount": 11
+    },
+
+    {
+      "id": "fp-2026-03-04-gas91",
+      "date": "2026-03-04",
+      "fuelType": "Gasoline RON 91",
+      "priceMin": 57.95,
+      "priceAvg": 59.35,
+      "priceMax": 61.0,
+      "stationCount": 22
+    },
+    {
+      "id": "fp-2026-03-04-gas95",
+      "date": "2026-03-04",
+      "fuelType": "Gasoline RON 95",
+      "priceMin": 61.1,
+      "priceAvg": 62.5,
+      "priceMax": 64.2,
+      "stationCount": 26
+    },
+    {
+      "id": "fp-2026-03-04-gas97",
+      "date": "2026-03-04",
+      "fuelType": "Gasoline RON 97",
+      "priceMin": 64.35,
+      "priceAvg": 65.8,
+      "priceMax": 67.7,
+      "stationCount": 18
+    },
+    {
+      "id": "fp-2026-03-04-dsl",
+      "date": "2026-03-04",
+      "fuelType": "Diesel",
+      "priceMin": 53.35,
+      "priceAvg": 54.85,
+      "priceMax": 56.65,
+      "stationCount": 26
+    },
+    {
+      "id": "fp-2026-03-04-krs",
+      "date": "2026-03-04",
+      "fuelType": "Kerosene",
+      "priceMin": 65.8,
+      "priceAvg": 67.1,
+      "priceMax": 68.9,
+      "stationCount": 11
+    },
+
+    {
+      "id": "fp-2026-02-25-gas91",
+      "date": "2026-02-25",
+      "fuelType": "Gasoline RON 91",
+      "priceMin": 58.4,
+      "priceAvg": 59.8,
+      "priceMax": 61.45,
+      "stationCount": 22
+    },
+    {
+      "id": "fp-2026-02-25-gas95",
+      "date": "2026-02-25",
+      "fuelType": "Gasoline RON 95",
+      "priceMin": 61.55,
+      "priceAvg": 62.95,
+      "priceMax": 64.65,
+      "stationCount": 26
+    },
+    {
+      "id": "fp-2026-02-25-gas97",
+      "date": "2026-02-25",
+      "fuelType": "Gasoline RON 97",
+      "priceMin": 64.8,
+      "priceAvg": 66.25,
+      "priceMax": 68.15,
+      "stationCount": 18
+    },
+    {
+      "id": "fp-2026-02-25-dsl",
+      "date": "2026-02-25",
+      "fuelType": "Diesel",
+      "priceMin": 53.8,
+      "priceAvg": 55.3,
+      "priceMax": 57.1,
+      "stationCount": 26
+    },
+    {
+      "id": "fp-2026-02-25-krs",
+      "date": "2026-02-25",
+      "fuelType": "Kerosene",
+      "priceMin": 66.3,
+      "priceAvg": 67.6,
+      "priceMax": 69.4,
+      "stationCount": 11
+    },
+
+    {
+      "id": "fp-2026-02-18-gas91",
+      "date": "2026-02-18",
+      "fuelType": "Gasoline RON 91",
+      "priceMin": 58.7,
+      "priceAvg": 60.1,
+      "priceMax": 61.75,
+      "stationCount": 22
+    },
+    {
+      "id": "fp-2026-02-18-gas95",
+      "date": "2026-02-18",
+      "fuelType": "Gasoline RON 95",
+      "priceMin": 61.85,
+      "priceAvg": 63.25,
+      "priceMax": 64.95,
+      "stationCount": 25
+    },
+    {
+      "id": "fp-2026-02-18-gas97",
+      "date": "2026-02-18",
+      "fuelType": "Gasoline RON 97",
+      "priceMin": 65.1,
+      "priceAvg": 66.55,
+      "priceMax": 68.45,
+      "stationCount": 17
+    },
+    {
+      "id": "fp-2026-02-18-dsl",
+      "date": "2026-02-18",
+      "fuelType": "Diesel",
+      "priceMin": 54.05,
+      "priceAvg": 55.55,
+      "priceMax": 57.35,
+      "stationCount": 25
+    },
+    {
+      "id": "fp-2026-02-18-krs",
+      "date": "2026-02-18",
+      "fuelType": "Kerosene",
+      "priceMin": 66.55,
+      "priceAvg": 67.85,
+      "priceMax": 69.65,
+      "stationCount": 11
+    },
+
+    {
+      "id": "fp-2026-02-11-gas91",
+      "date": "2026-02-11",
+      "fuelType": "Gasoline RON 91",
+      "priceMin": 59.1,
+      "priceAvg": 60.55,
+      "priceMax": 62.2,
+      "stationCount": 21
+    },
+    {
+      "id": "fp-2026-02-11-gas95",
+      "date": "2026-02-11",
+      "fuelType": "Gasoline RON 95",
+      "priceMin": 62.3,
+      "priceAvg": 63.75,
+      "priceMax": 65.45,
+      "stationCount": 25
+    },
+    {
+      "id": "fp-2026-02-11-gas97",
+      "date": "2026-02-11",
+      "fuelType": "Gasoline RON 97",
+      "priceMin": 65.55,
+      "priceAvg": 67.0,
+      "priceMax": 68.9,
+      "stationCount": 17
+    },
+    {
+      "id": "fp-2026-02-11-dsl",
+      "date": "2026-02-11",
+      "fuelType": "Diesel",
+      "priceMin": 54.45,
+      "priceAvg": 55.95,
+      "priceMax": 57.75,
+      "stationCount": 25
+    },
+    {
+      "id": "fp-2026-02-11-krs",
+      "date": "2026-02-11",
+      "fuelType": "Kerosene",
+      "priceMin": 66.9,
+      "priceAvg": 68.2,
+      "priceMax": 70.0,
+      "stationCount": 10
+    },
+
+    {
+      "id": "fp-2026-02-04-gas91",
+      "date": "2026-02-04",
+      "fuelType": "Gasoline RON 91",
+      "priceMin": 59.4,
+      "priceAvg": 60.85,
+      "priceMax": 62.5,
+      "stationCount": 21
+    },
+    {
+      "id": "fp-2026-02-04-gas95",
+      "date": "2026-02-04",
+      "fuelType": "Gasoline RON 95",
+      "priceMin": 62.6,
+      "priceAvg": 64.05,
+      "priceMax": 65.75,
+      "stationCount": 25
+    },
+    {
+      "id": "fp-2026-02-04-gas97",
+      "date": "2026-02-04",
+      "fuelType": "Gasoline RON 97",
+      "priceMin": 65.85,
+      "priceAvg": 67.3,
+      "priceMax": 69.2,
+      "stationCount": 17
+    },
+    {
+      "id": "fp-2026-02-04-dsl",
+      "date": "2026-02-04",
+      "fuelType": "Diesel",
+      "priceMin": 54.75,
+      "priceAvg": 56.25,
+      "priceMax": 58.05,
+      "stationCount": 25
+    },
+    {
+      "id": "fp-2026-02-04-krs",
+      "date": "2026-02-04",
+      "fuelType": "Kerosene",
+      "priceMin": 67.2,
+      "priceAvg": 68.5,
+      "priceMax": 70.3,
+      "stationCount": 10
+    },
+
+    {
+      "id": "fp-2026-01-28-gas91",
+      "date": "2026-01-28",
+      "fuelType": "Gasoline RON 91",
+      "priceMin": 59.8,
+      "priceAvg": 61.25,
+      "priceMax": 62.9,
+      "stationCount": 21
+    },
+    {
+      "id": "fp-2026-01-28-gas95",
+      "date": "2026-01-28",
+      "fuelType": "Gasoline RON 95",
+      "priceMin": 62.95,
+      "priceAvg": 64.4,
+      "priceMax": 66.1,
+      "stationCount": 24
+    },
+    {
+      "id": "fp-2026-01-28-gas97",
+      "date": "2026-01-28",
+      "fuelType": "Gasoline RON 97",
+      "priceMin": 66.2,
+      "priceAvg": 67.65,
+      "priceMax": 69.55,
+      "stationCount": 16
+    },
+    {
+      "id": "fp-2026-01-28-dsl",
+      "date": "2026-01-28",
+      "fuelType": "Diesel",
+      "priceMin": 55.1,
+      "priceAvg": 56.6,
+      "priceMax": 58.4,
+      "stationCount": 24
+    },
+    {
+      "id": "fp-2026-01-28-krs",
+      "date": "2026-01-28",
+      "fuelType": "Kerosene",
+      "priceMin": 67.55,
+      "priceAvg": 68.85,
+      "priceMax": 70.65,
+      "stationCount": 10
+    }
+  ],
+  "filters": {
+    "fuelTypes": [
+      "Gasoline RON 91",
+      "Gasoline RON 95",
+      "Gasoline RON 97",
+      "Diesel",
+      "Kerosene"
+    ],
+    "weeks": [
+      "2026-04-15",
+      "2026-04-08",
+      "2026-04-01",
+      "2026-03-25",
+      "2026-03-18",
+      "2026-03-11",
+      "2026-03-04",
+      "2026-02-25",
+      "2026-02-18",
+      "2026-02-11",
+      "2026-02-04",
+      "2026-01-28"
+    ]
+  },
+  "stats": {
+    "latestWeek": "2026-04-15",
+    "weeksTracked": 12,
+    "fuelTypes": 5,
+    "stationsSurveyed": 28
+  },
+  "source": "DOE Oil Industry Management Bureau",
+  "sourceUrl": "https://www.doe.gov.ph/oil-monitor",
+  "contributor": "Shiro_Oni",
+  "lastUpdated": "2026-04-15"
+}
