@@ -82,6 +82,42 @@ def main(xlsx_path: str) -> None:
                 for (s, mn, mx) in sorted(entries, key=lambda e: e[0])
             ],
         })
+    all_dates = sorted({s['date'] for s in snapshots})
+    all_types = [t for t in PRODUCT_ORDER if any(s['fuelType'] == t for s in snapshots)]
+
+    # Carry-forward: for each fuel type, fill missing weeks (within its reporting
+    # window) with the prior week's values, marked stale so the UI can flag them.
+    # Only real (non-stale) snapshots seed the carry-forward chain, so re-running
+    # the script on already-processed data cannot propagate stale staleSince refs.
+    carried = []
+    for fuel_type in all_types:
+        fuel_snapshots = {
+            s['date']: s
+            for s in snapshots
+            if s['fuelType'] == fuel_type and not s.get('stale')
+        }
+        if not fuel_snapshots:
+            continue
+        real_dates = sorted(fuel_snapshots.keys())
+        first_seen = real_dates[0]
+        last_known = None
+        for week in all_dates:
+            if week < first_seen:
+                continue
+            if week in fuel_snapshots:
+                last_known = fuel_snapshots[week]
+                continue
+            if last_known is None:
+                continue
+            carried.append({
+                **last_known,
+                'id': f'fp-{week}-{slug(fuel_type)}',
+                'date': week,
+                'stale': True,
+                'staleSince': last_known['date'],
+            })
+    snapshots.extend(carried)
+
     snapshots.sort(
         key=lambda s: (
             -int(s['date'].replace('-', '')),
@@ -90,7 +126,6 @@ def main(xlsx_path: str) -> None:
     )
 
     all_dates = sorted({s['date'] for s in snapshots}, reverse=True)
-    all_types = [t for t in PRODUCT_ORDER if any(s['fuelType'] == t for s in snapshots)]
     latest_week = all_dates[0]
     stations_in_latest = set()
     for s in snapshots:

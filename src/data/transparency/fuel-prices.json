@@ -299,6 +299,24 @@
       ]
     },
     {
+      "id": "fp-2026-04-07-dslplus",
+      "date": "2026-04-07",
+      "fuelType": "Diesel Plus",
+      "priceMin": 140.8,
+      "priceAvg": 140.8,
+      "priceMax": 140.8,
+      "stationCount": 1,
+      "byStation": [
+        {
+          "station": "SHELL",
+          "priceMin": 140.8,
+          "priceMax": 140.8
+        }
+      ],
+      "stale": true,
+      "staleSince": "2026-03-31"
+    },
+    {
       "id": "fp-2026-03-31-gas91",
       "date": "2026-03-31",
       "fuelType": "Gasoline RON 91",
@@ -847,6 +865,24 @@
           "priceMax": 86.14
         }
       ]
+    },
+    {
+      "id": "fp-2026-03-10-dslplus",
+      "date": "2026-03-10",
+      "fuelType": "Diesel Plus",
+      "priceMin": 60.99,
+      "priceAvg": 66.57,
+      "priceMax": 72.15,
+      "stationCount": 1,
+      "byStation": [
+        {
+          "station": "SHELL",
+          "priceMin": 60.99,
+          "priceMax": 72.15
+        }
+      ],
+      "stale": true,
+      "staleSince": "2026-03-03"
     },
     {
       "id": "fp-2026-03-03-gas91",
