@@ -1,9 +1,8 @@
 import {
   Area,
+  AreaChart,
   CartesianGrid,
-  ComposedChart,
   Legend,
-  Line,
   ResponsiveContainer,
   Tooltip,
   XAxis,
@@ -64,7 +63,7 @@ export default function FuelPricesChart() {
     <div className="relative bg-gradient-to-br from-white via-white to-primary-50/30 p-4 sm:p-5 rounded-xl border border-gray-200 shadow-sm">
       <div className="h-[260px] sm:h-[320px] w-full text-xs">
         <ResponsiveContainer width="100%" height="100%">
-          <ComposedChart
+          <AreaChart
             data={trendData}
             margin={{ top: 8, right: 12, left: 0, bottom: 0 }}
           >
@@ -76,7 +75,7 @@ export default function FuelPricesChart() {
                     <stop
                       offset="0%"
                       stopColor={FUEL_COLORS[type] ?? '#6b7280'}
-                      stopOpacity={0.18}
+                      stopOpacity={0.2}
                     />
                     <stop
                       offset="100%"
@@ -127,31 +126,22 @@ export default function FuelPricesChart() {
               wrapperStyle={{ fontSize: '11px', paddingTop: 4 }}
             />
             {fuelTypes.map((type) => {
+              const color = FUEL_COLORS[type] ?? '#6b7280';
               const id = `grad-${type.replace(/\s+/g, '-')}`;
               return (
                 <Area
-                  key={`area-${type}`}
+                  key={type}
                   type="monotone"
                   dataKey={type}
-                  stroke="none"
+                  stroke={color}
+                  strokeWidth={2}
                   fill={`url(#${id})`}
-                  isAnimationActive={false}
-                  legendType="none"
+                  fillOpacity={1}
+                  activeDot={{ r: 4, strokeWidth: 2, stroke: '#fff' }}
                 />
               );
             })}
-            {fuelTypes.map((type) => (
-              <Line
-                key={type}
-                type="monotone"
-                dataKey={type}
-                stroke={FUEL_COLORS[type] ?? '#6b7280'}
-                strokeWidth={2}
-                dot={false}
-                activeDot={{ r: 4, strokeWidth: 2, stroke: '#fff' }}
-              />
-            ))}
-          </ComposedChart>
+          </AreaChart>
         </ResponsiveContainer>
       </div>
     </div>
