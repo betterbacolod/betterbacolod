@@ -58,12 +58,17 @@ const formatWeekRange = (iso: string) => {
   const start = new Date(Date.UTC(y, m - 1, d));
   const end = new Date(start);
   end.setUTCDate(end.getUTCDate() + 6);
-  const sameMonth = start.getUTCMonth() === end.getUTCMonth();
-  const startLabel = `${monthNames[start.getUTCMonth()]} ${start.getUTCDate()}`;
+  const sameYear = start.getUTCFullYear() === end.getUTCFullYear();
+  const sameMonth = sameYear && start.getUTCMonth() === end.getUTCMonth();
+  const startMonth = monthNames[start.getUTCMonth()];
+  const endMonth = monthNames[end.getUTCMonth()];
+  if (!sameYear) {
+    return `${startMonth} ${start.getUTCDate()}, ${start.getUTCFullYear()} – ${endMonth} ${end.getUTCDate()}, ${end.getUTCFullYear()}`;
+  }
   const endLabel = sameMonth
     ? `${end.getUTCDate()}`
-    : `${monthNames[end.getUTCMonth()]} ${end.getUTCDate()}`;
-  return `${startLabel} – ${endLabel}, ${end.getUTCFullYear()}`;
+    : `${endMonth} ${end.getUTCDate()}`;
+  return `${startMonth} ${start.getUTCDate()} – ${endLabel}, ${end.getUTCFullYear()}`;
 };
 
 function FuelRow({
@@ -157,12 +162,13 @@ function FuelRow({
       </summary>
 
       <div className="px-4 pb-4 pt-3 border-t border-gray-100 bg-gray-50/40">
-        <div className="flex items-baseline justify-between mb-2">
+        <div className="flex items-baseline justify-between gap-3 mb-2">
           <p className="text-[11px] uppercase tracking-wide text-gray-500 font-semibold">
-            All {snapshot.stationCount} brand
-            {snapshot.stationCount === 1 ? '' : 's'}
+            {snapshot.stationCount === 1
+              ? 'Only 1 brand'
+              : `All ${snapshot.stationCount} brands`}
           </p>
-          <p className="text-[11px] text-gray-500 tabular-nums">
+          <p className="text-[11px] text-gray-500 tabular-nums flex-shrink-0">
             overall {priceRange(snapshot)} · avg {peso(snapshot.priceAvg)}
           </p>
         </div>
@@ -236,8 +242,7 @@ export default function FuelPricesSection() {
           >
             DOE Oil Monitor
             <ExternalLink className="h-3 w-3" />
-          </a>{' '}
-          · DOE publishes a new report each week
+          </a>
         </p>
       </div>
 
@@ -254,11 +259,13 @@ export default function FuelPricesSection() {
 
       {/* Cheapest in latest report — flat list */}
       <div>
-        <div className="flex items-baseline justify-between mb-2">
+        <div className="flex items-baseline justify-between gap-3 mb-2">
           <h3 className="text-sm font-semibold text-gray-900">
             Cheapest by fuel type
           </h3>
-          <p className="text-[11px] text-gray-500">tap a row for all brands</p>
+          <p className="text-[11px] text-gray-500 flex-shrink-0">
+            tap a row for all brands
+          </p>
         </div>
         <div className="space-y-2">
           {latestCards.map(({ snapshot, prior }) => (

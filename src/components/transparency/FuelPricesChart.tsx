@@ -116,7 +116,10 @@ export default function FuelPricesChart() {
                 fontSize: '12px',
               }}
               labelStyle={{ fontWeight: 600, marginBottom: 2 }}
-              formatter={(value) => [`₱${Number(value ?? 0).toFixed(2)}`, '']}
+              formatter={(value, name) => [
+                `₱${Number(value ?? 0).toFixed(2)}`,
+                String(name),
+              ]}
             />
             <Legend
               verticalAlign="bottom"
@@ -137,6 +140,7 @@ export default function FuelPricesChart() {
                   strokeWidth={2}
                   fill={`url(#${id})`}
                   fillOpacity={1}
+                  dot={false}
                   activeDot={{ r: 4, strokeWidth: 2, stroke: '#fff' }}
                 />
               );
