@@ -34,3 +34,6 @@ dist-ssr
 
 # Kiro CLI
 .kiro/
+
+# Claude Code
+.claude/
