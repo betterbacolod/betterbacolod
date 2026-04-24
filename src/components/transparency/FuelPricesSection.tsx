@@ -53,9 +53,17 @@ const monthNames = [
   'November',
   'December',
 ];
-const formatLongDate = (iso: string) => {
-  const [y, m, d] = iso.split('-');
-  return `${monthNames[Number(m) - 1]} ${Number(d)}, ${y}`;
+const formatWeekRange = (iso: string) => {
+  const [y, m, d] = iso.split('-').map(Number);
+  const start = new Date(Date.UTC(y, m - 1, d));
+  const end = new Date(start);
+  end.setUTCDate(end.getUTCDate() + 6);
+  const sameMonth = start.getUTCMonth() === end.getUTCMonth();
+  const startLabel = `${monthNames[start.getUTCMonth()]} ${start.getUTCDate()}`;
+  const endLabel = sameMonth
+    ? `${end.getUTCDate()}`
+    : `${monthNames[end.getUTCMonth()]} ${end.getUTCDate()}`;
+  return `${startLabel} – ${endLabel}, ${end.getUTCFullYear()}`;
 };
 
 function FuelRow({
@@ -148,41 +156,26 @@ function FuelRow({
         </div>
       </summary>
 
-      <div className="px-4 pb-4 pt-2 border-t border-gray-100 bg-gray-50/40">
+      <div className="px-4 pb-4 pt-3 border-t border-gray-100 bg-gray-50/40">
         <div className="flex items-baseline justify-between mb-2">
           <p className="text-[11px] uppercase tracking-wide text-gray-500 font-semibold">
-            All brands
+            All {snapshot.stationCount} brand
+            {snapshot.stationCount === 1 ? '' : 's'}
           </p>
           <p className="text-[11px] text-gray-500 tabular-nums">
-            range {priceRange(snapshot)}
+            overall {priceRange(snapshot)} · avg {peso(snapshot.priceAvg)}
           </p>
         </div>
-        <dl className="space-y-1">
-          {sortedBrands.map((b, idx) => (
+        <dl className="space-y-0.5">
+          {sortedBrands.map((b) => (
             <div
               key={b.station}
-              className={`flex items-center justify-between gap-3 text-sm rounded-md px-2 py-1.5 ${
-                idx === 0 ? 'bg-white border border-gray-200' : ''
-              }`}
+              className="flex items-center justify-between gap-3 text-sm py-1.5 px-2 rounded"
             >
-              <dt className="flex items-center gap-2 text-gray-800">
-                {idx === 0 && (
-                  <span
-                    className="inline-block w-1.5 h-1.5 rounded-full"
-                    style={{ backgroundColor: color }}
-                    aria-hidden="true"
-                  />
-                )}
-                <span className="font-medium">{prettyBrand(b.station)}</span>
-                {idx === 0 && (
-                  <span className="text-[10px] uppercase tracking-wide text-emerald-600 font-semibold">
-                    cheapest
-                  </span>
-                )}
+              <dt className="font-medium text-gray-800">
+                {prettyBrand(b.station)}
               </dt>
-              <dd className="tabular-nums text-gray-900 font-medium">
-                {priceRange(b)}
-              </dd>
+              <dd className="tabular-nums text-gray-900">{priceRange(b)}</dd>
             </div>
           ))}
         </dl>
@@ -228,10 +221,10 @@ export default function FuelPricesSection() {
       {/* Header */}
       <div>
         <p className="text-[11px] uppercase tracking-[0.12em] text-primary-600 font-semibold">
-          Bacolod fuel prices
+          Latest DOE report
         </p>
-        <h2 className="mt-0.5 text-xl sm:text-2xl font-bold text-gray-900">
-          Week of {formatLongDate(fuelData.stats.latestWeek)}
+        <h2 className="mt-0.5 text-xl sm:text-2xl font-bold text-gray-900 tabular-nums">
+          {formatWeekRange(fuelData.stats.latestWeek)}
         </h2>
         <p className="mt-1 text-xs text-gray-500">
           {fuelData.stats.stationsSurveyed} brands surveyed ·{' '}
@@ -244,7 +237,7 @@ export default function FuelPricesSection() {
             DOE Oil Monitor
             <ExternalLink className="h-3 w-3" />
           </a>{' '}
-          · updated weekly
+          · DOE publishes a new report each week
         </p>
       </div>
 
@@ -259,11 +252,14 @@ export default function FuelPricesSection() {
         <FuelPricesChart />
       </div>
 
-      {/* Cheapest this week — flat list */}
+      {/* Cheapest in latest report — flat list */}
       <div>
-        <h3 className="text-sm font-semibold text-gray-900 mb-2">
-          Cheapest this week
-        </h3>
+        <div className="flex items-baseline justify-between mb-2">
+          <h3 className="text-sm font-semibold text-gray-900">
+            Cheapest by fuel type
+          </h3>
+          <p className="text-[11px] text-gray-500">tap a row for all brands</p>
+        </div>
         <div className="space-y-2">
           {latestCards.map(({ snapshot, prior }) => (
             <FuelRow key={snapshot.id} snapshot={snapshot} prior={prior} />
