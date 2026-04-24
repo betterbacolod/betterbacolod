@@ -53,11 +53,29 @@ const monthNames = [
   'November',
   'December',
 ];
-const formatWeekRange = (iso: string) => {
+const monthShort = [
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
+  'May',
+  'Jun',
+  'Jul',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec',
+];
+const weekDates = (iso: string) => {
   const [y, m, d] = iso.split('-').map(Number);
   const start = new Date(Date.UTC(y, m - 1, d));
   const end = new Date(start);
   end.setUTCDate(end.getUTCDate() + 6);
+  return { start, end };
+};
+const formatWeekRange = (iso: string) => {
+  const { start, end } = weekDates(iso);
   const sameYear = start.getUTCFullYear() === end.getUTCFullYear();
   const sameMonth = sameYear && start.getUTCMonth() === end.getUTCMonth();
   const startMonth = monthNames[start.getUTCMonth()];
@@ -69,6 +87,29 @@ const formatWeekRange = (iso: string) => {
     ? `${end.getUTCDate()}`
     : `${endMonth} ${end.getUTCDate()}`;
   return `${startMonth} ${start.getUTCDate()} – ${endLabel}, ${end.getUTCFullYear()}`;
+};
+const formatWeekRangeShort = (iso: string) => {
+  const { start, end } = weekDates(iso);
+  const sameYear = start.getUTCFullYear() === end.getUTCFullYear();
+  const sameMonth = sameYear && start.getUTCMonth() === end.getUTCMonth();
+  const startMonth = monthShort[start.getUTCMonth()];
+  const endMonth = monthShort[end.getUTCMonth()];
+  if (!sameYear) {
+    return `${startMonth} ${start.getUTCDate()} – ${endMonth} ${end.getUTCDate()}`;
+  }
+  return sameMonth
+    ? `${startMonth} ${start.getUTCDate()}–${end.getUTCDate()}`
+    : `${startMonth} ${start.getUTCDate()} – ${endMonth} ${end.getUTCDate()}`;
+};
+const formatDateShort = (iso: string) => {
+  const [y, m, d] = iso.split('-').map(Number);
+  return `${monthShort[m - 1]} ${d}, ${y}`;
+};
+const daysSinceWeekEnd = (iso: string) => {
+  const { end } = weekDates(iso);
+  const now = new Date();
+  const diff = now.getTime() - end.getTime();
+  return Math.floor(diff / (1000 * 60 * 60 * 24));
 };
 
 function FuelRow({
@@ -195,6 +236,12 @@ export default function FuelPricesSection() {
   const [fuelFilter, setFuelFilter] = useState('');
   const [weekFilter, setWeekFilter] = useState('');
 
+  const latestWeek = fuelData.stats.latestWeek;
+  const weekShort = formatWeekRangeShort(latestWeek);
+  const { end: latestEnd } = weekDates(latestWeek);
+  const daysAgo = daysSinceWeekEnd(latestWeek);
+  const latestEndIso = latestEnd.toISOString().slice(0, 10);
+
   const latestCards = useMemo(() => {
     const latestWeek = fuelData.stats.latestWeek;
     const priorWeek = fuelData.filters.weeks
@@ -226,9 +273,29 @@ export default function FuelPricesSection() {
     <div className="space-y-5 lg:space-y-7">
       {/* Header */}
       <div>
-        <p className="text-[11px] uppercase tracking-[0.12em] text-primary-600 font-semibold">
-          Latest DOE report
-        </p>
+        <div className="flex items-center gap-2 flex-wrap">
+          <p className="text-[11px] uppercase tracking-[0.12em] text-primary-600 font-semibold">
+            Latest DOE report
+          </p>
+          {daysAgo >= 0 && (
+            <span
+              className={`inline-flex items-center px-1.5 py-0.5 rounded-full text-[10px] font-medium tabular-nums ${
+                daysAgo <= 7
+                  ? 'bg-emerald-50 text-emerald-700'
+                  : daysAgo <= 14
+                    ? 'bg-amber-50 text-amber-700'
+                    : 'bg-rose-50 text-rose-700'
+              }`}
+            >
+              reported{' '}
+              {daysAgo <= 0
+                ? 'today'
+                : daysAgo === 1
+                  ? '1 day ago'
+                  : `${daysAgo} days ago`}
+            </span>
+          )}
+        </div>
         <h2 className="mt-0.5 text-xl sm:text-2xl font-bold text-gray-900 tabular-nums">
           {formatWeekRange(fuelData.stats.latestWeek)}
         </h2>
@@ -248,11 +315,18 @@ export default function FuelPricesSection() {
 
       {/* Hero: price trend chart */}
       <div>
-        <div className="flex items-baseline justify-between mb-2">
-          <h3 className="text-sm font-semibold text-gray-900">
-            {fuelData.stats.weeksTracked}-week trend
-          </h3>
-          <p className="text-[11px] text-gray-500">tap legend to toggle</p>
+        <div className="flex items-baseline justify-between gap-3 mb-2">
+          <div>
+            <h3 className="text-sm font-semibold text-gray-900">
+              {fuelData.stats.weeksTracked}-week trend
+            </h3>
+            <p className="text-[11px] text-gray-500 tabular-nums">
+              through {formatDateShort(latestEndIso)}
+            </p>
+          </div>
+          <p className="text-[11px] text-gray-500 flex-shrink-0">
+            tap legend to toggle
+          </p>
         </div>
         <FuelPricesChart />
       </div>
@@ -260,9 +334,14 @@ export default function FuelPricesSection() {
       {/* Cheapest in latest report — flat list */}
       <div>
         <div className="flex items-baseline justify-between gap-3 mb-2">
-          <h3 className="text-sm font-semibold text-gray-900">
-            Cheapest by fuel type
-          </h3>
+          <div>
+            <h3 className="text-sm font-semibold text-gray-900">
+              Cheapest by fuel type
+            </h3>
+            <p className="text-[11px] text-gray-500 tabular-nums">
+              as of {weekShort}
+            </p>
+          </div>
           <p className="text-[11px] text-gray-500 flex-shrink-0">
             tap a row for all brands
           </p>
@@ -459,9 +538,9 @@ export default function FuelPricesSection() {
         >
           {fuelData.source}
         </a>{' '}
-        · DOE publishes updated prices weekly · Data contributed by{' '}
-        <span className="font-medium">@{fuelData.contributor}</span> · Last
-        updated <span className="tabular-nums">{fuelData.lastUpdated}</span> ·
+        · Updated weekly · Data contributed by{' '}
+        <span className="font-medium">@{fuelData.contributor}</span> · Covering{' '}
+        <span className="tabular-nums">{formatWeekRange(latestWeek)}</span> ·
         Report issues:{' '}
         <a
           href="https://sumbongsapangulo.ph/"
