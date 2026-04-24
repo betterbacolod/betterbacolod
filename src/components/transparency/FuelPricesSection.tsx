@@ -1,4 +1,4 @@
-import { ChevronDown, ExternalLink, Search } from 'lucide-react';
+import { ChevronDown, ExternalLink } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import fuelData from '../../data/transparency/fuel-prices.json';
 import FuelPricesChart, { FUEL_COLORS } from './FuelPricesChart';
@@ -232,7 +232,6 @@ function FuelRow({
 }
 
 export default function FuelPricesSection() {
-  const [search, setSearch] = useState('');
   const [fuelFilter, setFuelFilter] = useState('');
   const [weekFilter, setWeekFilter] = useState('');
 
@@ -261,13 +260,11 @@ export default function FuelPricesSection() {
 
   const filtered = useMemo(() => {
     return allSnapshots.filter((s) => {
-      const matchSearch =
-        !search || s.fuelType.toLowerCase().includes(search.toLowerCase());
       const matchFuel = !fuelFilter || s.fuelType === fuelFilter;
       const matchWeek = !weekFilter || s.date === weekFilter;
-      return matchSearch && matchFuel && matchWeek;
+      return matchFuel && matchWeek;
     });
-  }, [search, fuelFilter, weekFilter]);
+  }, [fuelFilter, weekFilter]);
 
   return (
     <div className="space-y-5 lg:space-y-7">
@@ -385,24 +382,13 @@ export default function FuelPricesSection() {
           <ChevronDown className="h-4 w-4 text-gray-400 transition-transform group-open:rotate-180" />
         </summary>
         <div className="p-3 space-y-3 border-t border-gray-100">
-          <div className="flex flex-col sm:flex-row gap-2">
-            <div className="relative flex-1">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
-              <input
-                type="text"
-                aria-label="Search fuel type"
-                placeholder="Search fuel type..."
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                className="w-full pl-9 pr-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary-500"
-              />
-            </div>
+          <div className="grid grid-cols-2 gap-2">
             <div className="relative">
               <select
                 aria-label="Filter by fuel type"
                 value={fuelFilter}
                 onChange={(e) => setFuelFilter(e.target.value)}
-                className="appearance-none pl-3 pr-8 py-2 border border-gray-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-primary-500"
+                className="appearance-none w-full pl-3 pr-8 py-2 border border-gray-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-primary-500"
               >
                 <option value="">All fuel types</option>
                 {fuelData.filters.fuelTypes.map((t) => (
@@ -418,12 +404,12 @@ export default function FuelPricesSection() {
                 aria-label="Filter by week"
                 value={weekFilter}
                 onChange={(e) => setWeekFilter(e.target.value)}
-                className="appearance-none pl-3 pr-8 py-2 border border-gray-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-primary-500"
+                className="appearance-none w-full pl-3 pr-8 py-2 border border-gray-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-primary-500"
               >
                 <option value="">All weeks</option>
                 {fuelData.filters.weeks.map((w) => (
                   <option key={w} value={w}>
-                    {w}
+                    {formatWeekRangeShort(w)}
                   </option>
                 ))}
               </select>
@@ -449,25 +435,13 @@ export default function FuelPricesSection() {
                       scope="col"
                       className="text-left py-2 px-3 font-medium text-gray-600"
                     >
-                      Fuel type
-                    </th>
-                    <th
-                      scope="col"
-                      className="text-right py-2 px-3 font-medium text-gray-600 hidden sm:table-cell"
-                    >
-                      Min
+                      Fuel
                     </th>
                     <th
                       scope="col"
                       className="text-right py-2 px-3 font-medium text-gray-600"
                     >
-                      Avg
-                    </th>
-                    <th
-                      scope="col"
-                      className="text-right py-2 px-3 font-medium text-gray-600 hidden sm:table-cell"
-                    >
-                      Max
+                      Price (₱/L)
                     </th>
                     <th
                       scope="col"
@@ -480,32 +454,41 @@ export default function FuelPricesSection() {
                 <tbody className="divide-y divide-gray-100">
                   {filtered.map((s) => {
                     const stale = isStaleSnapshot(s);
+                    const color = FUEL_COLORS[s.fuelType] ?? '#6b7280';
                     return (
                       <tr
                         key={s.id}
                         className={`hover:bg-gray-50 ${stale ? 'text-gray-400' : ''}`}
                       >
-                        <td className="py-2 px-3 whitespace-nowrap tabular-nums">
-                          {s.date}
+                        <td className="py-2 px-3 whitespace-nowrap tabular-nums text-[12px] text-gray-600">
+                          {formatWeekRangeShort(s.date)}
                         </td>
                         <td className="py-2 px-3">
-                          {s.fuelType}
-                          {stale && (
-                            <span className="ml-1.5 text-[10px] uppercase tracking-wide text-amber-600">
-                              stale
+                          <div className="flex items-center gap-2">
+                            <span
+                              className="inline-block w-1.5 h-1.5 rounded-full flex-shrink-0"
+                              style={{ backgroundColor: color }}
+                              aria-hidden="true"
+                            />
+                            <span className="text-[13px]">
+                              {GRADE_LABEL[s.fuelType] ?? s.fuelType}
                             </span>
-                          )}
+                            {stale && (
+                              <span className="text-[10px] uppercase tracking-wide text-amber-600 font-medium">
+                                stale
+                              </span>
+                            )}
+                          </div>
                         </td>
-                        <td className="py-2 px-3 text-right hidden sm:table-cell whitespace-nowrap tabular-nums">
-                          {peso(s.priceMin)}
+                        <td className="py-2 px-3 text-right whitespace-nowrap tabular-nums">
+                          <div className="font-semibold text-gray-900">
+                            {peso(s.priceAvg)}
+                          </div>
+                          <div className="text-[11px] text-gray-500">
+                            {priceRange(s)}
+                          </div>
                         </td>
-                        <td className="py-2 px-3 text-right font-medium whitespace-nowrap tabular-nums">
-                          {peso(s.priceAvg)}
-                        </td>
-                        <td className="py-2 px-3 text-right hidden sm:table-cell whitespace-nowrap tabular-nums">
-                          {peso(s.priceMax)}
-                        </td>
-                        <td className="py-2 px-3 text-right hidden md:table-cell tabular-nums">
+                        <td className="py-2 px-3 text-right hidden md:table-cell tabular-nums text-gray-600">
                           {s.stationCount}
                         </td>
                       </tr>
@@ -514,7 +497,7 @@ export default function FuelPricesSection() {
                   {filtered.length === 0 && (
                     <tr>
                       <td
-                        colSpan={6}
+                        colSpan={4}
                         className="py-8 text-center text-gray-500"
                       >
                         No snapshots for this fuel type in the selected range
