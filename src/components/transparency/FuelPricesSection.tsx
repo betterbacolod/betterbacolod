@@ -4,8 +4,21 @@ import fuelData from '../../data/transparency/fuel-prices.json';
 import FuelPricesChart from './FuelPricesChart';
 
 type Snapshot = (typeof fuelData.snapshots)[number];
+type BrandPrice = { station: string; priceMin: number; priceMax: number };
 
 const peso = (v: number) => `₱${v.toFixed(2)}`;
+const priceRange = (p: { priceMin: number; priceMax: number }) =>
+  p.priceMin === p.priceMax
+    ? peso(p.priceMin)
+    : `${peso(p.priceMin)} – ${peso(p.priceMax)}`;
+
+const prettyBrand = (s: string) =>
+  s === 'INDEPENDENT'
+    ? 'Independent'
+    : s
+        .split(' ')
+        .map((w) => w[0] + w.slice(1).toLowerCase())
+        .join(' ');
 
 export default function FuelPricesSection() {
   const [search, setSearch] = useState('');
@@ -40,15 +53,48 @@ export default function FuelPricesSection() {
     const cheapest = sortedByPrice[0];
     const priciest = sortedByPrice[sortedByPrice.length - 1];
 
-    const latestAvg =
-      latest.reduce((sum, s) => sum + s.priceAvg, 0) / latest.length;
-    const priorAvg =
-      prior.length > 0
-        ? prior.reduce((sum, s) => sum + s.priceAvg, 0) / prior.length
-        : latestAvg;
-    const weeklyChange = latestAvg - priorAvg;
+    const sharedTypes = new Set(
+      latest
+        .map((s) => s.fuelType)
+        .filter((t) => prior.some((p) => p.fuelType === t)),
+    );
+    const latestShared = latest.filter((s) => sharedTypes.has(s.fuelType));
+    const priorShared = prior.filter((s) => sharedTypes.has(s.fuelType));
+    const weeklyChange =
+      priorShared.length > 0
+        ? latestShared.reduce((sum, s) => sum + s.priceAvg, 0) /
+            latestShared.length -
+          priorShared.reduce((sum, s) => sum + s.priceAvg, 0) /
+            priorShared.length
+        : 0;
 
     return { cheapest, priciest, weeklyChange };
+  }, []);
+
+  const latestByBrand = useMemo(() => {
+    const latest = fuelData.snapshots.filter(
+      (s) => s.date === fuelData.stats.latestWeek,
+    );
+    const fuelTypes = latest.map((s) => s.fuelType);
+    const brandSet = new Set<string>();
+    const matrix: Record<string, Record<string, BrandPrice>> = {};
+    for (const snap of latest) {
+      for (const b of snap.byStation as BrandPrice[]) {
+        brandSet.add(b.station);
+        if (!matrix[b.station]) matrix[b.station] = {};
+        matrix[b.station][snap.fuelType] = b;
+      }
+    }
+    const BRAND_PRIORITY = ['SHELL', 'PETRON', 'CALTEX', 'TOTAL', 'SEAOIL'];
+    const brands = [...brandSet].sort((a, b) => {
+      const ai = BRAND_PRIORITY.indexOf(a);
+      const bi = BRAND_PRIORITY.indexOf(b);
+      if (ai !== -1 && bi !== -1) return ai - bi;
+      if (ai !== -1) return -1;
+      if (bi !== -1) return 1;
+      return a.localeCompare(b);
+    });
+    return { brands, fuelTypes, matrix };
   }, []);
 
   return (
@@ -116,7 +162,78 @@ export default function FuelPricesSection() {
         </div>
       )}
 
+      <div className="flex items-start gap-2 bg-primary-50 border border-primary-100 rounded-lg p-3 text-xs text-primary-800">
+        <Info className="h-4 w-4 flex-shrink-0 mt-0.5" />
+        <p>
+          <span className="font-medium">Fuel grade guide:</span> RON is the
+          octane rating. <span className="font-medium">RON 91</span> = regular
+          unleaded, <span className="font-medium">RON 95</span> = premium,{' '}
+          <span className="font-medium">RON 97 / 100</span> = super premium.{' '}
+          <span className="font-medium">Diesel Plus</span> is premium diesel.
+        </p>
+      </div>
+
       {fuelData.snapshots.length > 0 && <FuelPricesChart />}
+
+      {latestByBrand.brands.length > 0 && (
+        <div className="border border-gray-200 rounded-lg overflow-hidden">
+          <div className="bg-gray-50 px-3 py-2 border-b border-gray-200">
+            <h3 className="text-sm font-semibold text-gray-900">
+              Latest week by brand
+            </h3>
+            <p className="text-xs text-gray-500">
+              Price range per brand for the week of {fuelData.stats.latestWeek}.
+              Source: DOE survey.
+            </p>
+          </div>
+          <div className="overflow-x-auto">
+            <table
+              className="w-full text-sm"
+              aria-label="Latest week fuel prices by brand"
+            >
+              <thead className="bg-gray-50">
+                <tr>
+                  <th
+                    scope="col"
+                    className="text-left py-2 px-3 font-medium text-gray-600 whitespace-nowrap"
+                  >
+                    Brand
+                  </th>
+                  {latestByBrand.fuelTypes.map((t) => (
+                    <th
+                      key={t}
+                      scope="col"
+                      className="text-right py-2 px-3 font-medium text-gray-600 whitespace-nowrap"
+                    >
+                      {t.replace('Gasoline ', '')}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                {latestByBrand.brands.map((brand) => (
+                  <tr key={brand} className="hover:bg-gray-50">
+                    <td className="py-2 px-3 font-medium text-gray-900 whitespace-nowrap">
+                      {prettyBrand(brand)}
+                    </td>
+                    {latestByBrand.fuelTypes.map((t) => {
+                      const cell = latestByBrand.matrix[brand]?.[t];
+                      return (
+                        <td
+                          key={t}
+                          className="py-2 px-3 text-right text-gray-700 whitespace-nowrap"
+                        >
+                          {cell ? priceRange(cell) : '—'}
+                        </td>
+                      );
+                    })}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
 
       <div className="flex flex-col sm:flex-row gap-2">
         <div className="relative flex-1">
@@ -264,9 +381,9 @@ export default function FuelPricesSection() {
         >
           {fuelData.source}
         </a>{' '}
-        • Data contributed by{' '}
-        <span className="font-medium">@{fuelData.contributor}</span> • Report
-        issues:{' '}
+        • DOE publishes updated prices weekly • Data contributed by{' '}
+        <span className="font-medium">@{fuelData.contributor}</span> • Last
+        updated {fuelData.lastUpdated} • Report issues:{' '}
         <a
           href="https://sumbongsapangulo.ph/"
           target="_blank"
