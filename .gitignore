@@ -37,3 +37,11 @@ dist-ssr
 
 # Claude Code
 .claude/
+
+# Python (used by scripts/fetch-doe-fuel-prices.py and scripts/import-fuel-prices.py)
+__pycache__/
+*.pyc
+.venv/
+
+# DOE PDF cache (downloaded by fetch-doe-fuel-prices.py)
+/tmp/doe-pdfs/
