@@ -34,6 +34,7 @@ from __future__ import annotations
 import argparse
 import json
 import logging
+import os
 import re
 import sys
 from dataclasses import dataclass
@@ -43,6 +44,8 @@ from statistics import mean
 
 import pdfplumber
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 LOG = logging.getLogger('fetch-doe-fuel-prices')
 
@@ -86,7 +89,16 @@ PRICE_MAX_BOUND = 500.0
 
 EXIT_OK = 0
 EXIT_PARSE_ERROR = 1
+EXIT_NETWORK_ERROR = 2
 EXIT_NOT_PUBLISHED = 78
+
+
+class PDFNotPublished(Exception):
+    """DOE has not yet posted the report for this week (404)."""
+
+
+class PDFFetchError(Exception):
+    """Network or non-404 HTTP error fetching the DOE PDF."""
 
 
 # --- Data shape ----------------------------------------------------------
@@ -133,8 +145,27 @@ def write_error(msg: str) -> None:
 
 # --- PDF fetch + cache ---------------------------------------------------
 
-def fetch_pdf(report_date: date) -> Path | None:
-    """Download the DOE PDF for the given Tuesday. Returns None on 404."""
+def _build_session() -> requests.Session:
+    """Build a requests session with retry on transient HTTP failures."""
+    session = requests.Session()
+    retries = Retry(
+        total=3,
+        backoff_factor=1,
+        status_forcelist=[500, 502, 503, 504],
+        allowed_methods=['GET'],
+        raise_on_status=False,
+    )
+    session.mount('https://', HTTPAdapter(max_retries=retries))
+    session.mount('http://', HTTPAdapter(max_retries=retries))
+    return session
+
+
+def fetch_pdf(report_date: date) -> Path:
+    """Download the DOE PDF for the given Tuesday.
+
+    Raises PDFNotPublished on 404 (DOE has not posted yet).
+    Raises PDFFetchError on any other failure (network, 5xx, malformed PDF).
+    """
     PDF_CACHE.mkdir(parents=True, exist_ok=True)
     cache_path = PDF_CACHE / f'vfo-price-monitoring-{report_date.isoformat()}.pdf'
     if cache_path.exists() and cache_path.stat().st_size > 1024:
@@ -144,19 +175,18 @@ def fetch_pdf(report_date: date) -> Path | None:
     url = url_for(report_date)
     LOG.info('Fetching %s', url)
     try:
-        resp = requests.get(url, timeout=30)
+        resp = _build_session().get(url, timeout=30)
     except requests.RequestException as exc:
-        write_error(f'Network error fetching {url}: {exc}')
-        return None
+        raise PDFFetchError(f'Network error fetching {url}: {exc}') from exc
     if resp.status_code == 404:
         LOG.info('PDF not yet published (404): %s', url)
-        return None
+        raise PDFNotPublished(url)
     if resp.status_code != 200:
-        write_error(f'Unexpected status {resp.status_code} for {url}')
-        return None
+        raise PDFFetchError(f'Unexpected status {resp.status_code} for {url}')
     if not resp.content[:5].startswith(b'%PDF-'):
-        write_error(f'Response is not a PDF (first bytes: {resp.content[:20]!r})')
-        return None
+        raise PDFFetchError(
+            f'Response is not a PDF (first bytes: {resp.content[:20]!r})',
+        )
     cache_path.write_bytes(resp.content)
     return cache_path
 
@@ -412,13 +442,34 @@ def merge_into_json(week_iso: str, new_snapshots: list[dict]) -> bool:
 
 # --- Top-level entry points ----------------------------------------------
 
+def _emit_github_output(key: str, value: str) -> None:
+    """Append a key=value line to $GITHUB_OUTPUT when running inside Actions."""
+    output_path = os.environ.get('GITHUB_OUTPUT')
+    if not output_path:
+        return
+    try:
+        with open(output_path, 'a', encoding='utf-8') as f:
+            f.write(f'{key}={value}\n')
+    except OSError as exc:
+        LOG.warning('Could not write to GITHUB_OUTPUT: %s', exc)
+
+
 def process_week(report_date: date, dry_run: bool, pdf_path_override: Path | None = None) -> int:
+    _emit_github_output('report_date', report_date.isoformat())
+
     if pdf_path_override is not None:
-        pdf_path = pdf_path_override
+        pdf_path = pdf_path_override.resolve()
+        if pdf_path.suffix.lower() != '.pdf':
+            write_error(f'--pdf-path must point to a .pdf file: {pdf_path}')
+            return EXIT_PARSE_ERROR
     else:
-        pdf_path = fetch_pdf(report_date)
-        if pdf_path is None:
+        try:
+            pdf_path = fetch_pdf(report_date)
+        except PDFNotPublished:
             return EXIT_NOT_PUBLISHED
+        except PDFFetchError as exc:
+            write_error(str(exc))
+            return EXIT_NETWORK_ERROR
 
     try:
         by_fuel = parse_bacolod_table(pdf_path)
@@ -494,6 +545,10 @@ def main() -> int:
         level=logging.DEBUG if args.verbose else logging.INFO,
         format='%(levelname)s %(message)s',
     )
+
+    if args.backfill and args.pdf_path:
+        LOG.error('--backfill and --pdf-path are mutually exclusive')
+        return EXIT_PARSE_ERROR
 
     if args.backfill:
         start, end = args.backfill
