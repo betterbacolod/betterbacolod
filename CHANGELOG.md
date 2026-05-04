@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/betterbacolod/betterbacolod/compare/v1.1.0...v1.2.0) (2026-05-04)
+
+
+### Features
+
+* **automation:** auto-refresh DOE fuel prices weekly ([#23](https://github.com/betterbacolod/betterbacolod/issues/23)) ([b7a76ea](https://github.com/betterbacolod/betterbacolod/commit/b7a76eaf8b697d7e3a9eaf36f5cdba8b05efe62d))
+
+
+### Content Updates
+
+* **fuel-prices:** update DOE data for week of April 21 to 27, 2026 ([#22](https://github.com/betterbacolod/betterbacolod/issues/22)) ([d939fa5](https://github.com/betterbacolod/betterbacolod/commit/d939fa59b075cc9168ddc0cc54fbec03816a8169))
+
 ## [1.1.0](https://github.com/betterbacolod/betterbacolod/compare/betterbacolod-v1.0.0...betterbacolod-v1.1.0) (2026-04-24)
 
 
