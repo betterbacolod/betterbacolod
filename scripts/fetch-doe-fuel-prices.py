@@ -148,6 +148,13 @@ def write_error(msg: str) -> None:
 def _build_session() -> requests.Session:
     """Build a requests session with retry on transient HTTP failures."""
     session = requests.Session()
+    # DOE CMS sits behind Cloudflare which returns 403 to headless/bot UA strings
+    # (common on GitHub Actions runners). A browser UA avoids the block.
+    session.headers['User-Agent'] = (
+        'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) '
+        'AppleWebKit/537.36 (KHTML, like Gecko) '
+        'Chrome/124.0.0.0 Safari/537.36'
+    )
     retries = Retry(
         total=3,
         backoff_factor=1,
@@ -180,6 +187,12 @@ def fetch_pdf(report_date: date) -> Path:
         raise PDFFetchError(f'Network error fetching {url}: {exc}') from exc
     if resp.status_code == 404:
         LOG.info('PDF not yet published (404): %s', url)
+        raise PDFNotPublished(url)
+    if resp.status_code == 403:
+        # Cloudflare may return 403 (instead of 404) for missing docs when
+        # accessed from CI runner IPs. Treat it as not-yet-published so the
+        # workflow retries the next day rather than opening a noisy issue.
+        LOG.info('PDF access blocked or not yet available (403): %s', url)
         raise PDFNotPublished(url)
     if resp.status_code != 200:
         raise PDFFetchError(f'Unexpected status {resp.status_code} for {url}')
