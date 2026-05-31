@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.1](https://github.com/betterbacolod/betterbacolod/compare/v1.2.0...v1.2.1) (2026-05-31)
+
+
+### Bug Fixes
+
+* **fuel-prices:** add browser UA and treat 403 as not-yet-published ([5293c28](https://github.com/betterbacolod/betterbacolod/commit/5293c289795e29ed992c329f5b7f77c2a7e5f71e))
+* **fuel-prices:** catch up DOE imports ([#31](https://github.com/betterbacolod/betterbacolod/issues/31)) ([1cf74a3](https://github.com/betterbacolod/betterbacolod/commit/1cf74a375a3abf11ad7e3ab9dbb1981757d31be7))
+
 ## [1.2.0](https://github.com/betterbacolod/betterbacolod/compare/v1.1.0...v1.2.0) (2026-05-04)
 
 
