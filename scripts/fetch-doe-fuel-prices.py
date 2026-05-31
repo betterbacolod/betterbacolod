@@ -255,10 +255,14 @@ def parse_bacolod_table(pdf_path: Path) -> dict[str, list[BrandPrice]]:
         raise RuntimeError('No tables found on page 1 of DOE PDF')
     table = tables[0]
 
-    # Find header row (the one starting with PROVINCE in col 0).
+    # Find header row. DOE occasionally inserts a leading blank column, so do
+    # not assume PROVINCE is always in column 0.
     header_idx = None
     for i, row in enumerate(table):
-        if row and (row[0] or '').strip().upper().startswith(HEADER_PRECEDING):
+        if row and any(
+            (cell or '').strip().upper().startswith(HEADER_PRECEDING)
+            for cell in row
+        ):
             header_idx = i
             break
     if header_idx is None:
@@ -453,6 +457,15 @@ def merge_into_json(week_iso: str, new_snapshots: list[dict]) -> bool:
     return True
 
 
+def real_weeks_in_json() -> list[str]:
+    """Return real (non-stale) imported week dates, newest first."""
+    data = json.loads(JSON_PATH.read_text())
+    return sorted(
+        {s['date'] for s in data['snapshots'] if not s.get('stale')},
+        reverse=True,
+    )
+
+
 # --- Top-level entry points ----------------------------------------------
 
 def _emit_github_output(key: str, value: str) -> None:
@@ -520,6 +533,82 @@ def process_week(report_date: date, dry_run: bool, pdf_path_override: Path | Non
     return EXIT_OK
 
 
+def catch_up_missing_weeks(weeks: int, dry_run: bool) -> int:
+    """
+    Import missing Tuesdays inside a recent rolling window.
+
+    GitHub-hosted runners can get transient 403s from DOE. A weekly-only job can
+    then skip that week forever once the next Tuesday arrives, so automation uses
+    this catch-up path and keeps checking a small rolling window.
+    """
+    target = most_recent_tuesday()
+    imported_weeks = set(real_weeks_in_json())
+    window_start = target - timedelta(days=7 * (weeks - 1))
+    start = window_start
+
+    while start.weekday() != 1:  # 1 = Tuesday
+        start += timedelta(days=1)
+
+    _emit_github_output('report_date', target.isoformat())
+
+    missing_weeks = []
+    current = start
+    while current <= target:
+        if current.isoformat() not in imported_weeks:
+            missing_weeks.append(current)
+        current += timedelta(days=7)
+
+    if not missing_weeks:
+        print(f'No missing DOE weeks to check through {target.isoformat()}')
+        _emit_github_output('parse_errors', '0')
+        _emit_github_output('network_errors', '0')
+        _emit_github_output('not_published', '0')
+        _emit_github_output('checked_weeks', '0')
+        return EXIT_OK
+
+    print(
+        'Checking missing DOE reports: '
+        + ', '.join(week.isoformat() for week in missing_weeks),
+    )
+
+    before = JSON_PATH.read_text()
+    parse_errors = 0
+    network_errors = 0
+    not_published = 0
+    checked = 0
+
+    for current in missing_weeks:
+        checked += 1
+        rc = process_week(current, dry_run)
+        if rc == EXIT_PARSE_ERROR:
+            parse_errors += 1
+        elif rc == EXIT_NETWORK_ERROR:
+            network_errors += 1
+        elif rc == EXIT_NOT_PUBLISHED:
+            not_published += 1
+            print(f'\n• DOE report not published yet for {current.isoformat()}')
+
+    changed = JSON_PATH.read_text() != before
+    latest_after = real_weeks_in_json()
+    latest_label = latest_after[0] if latest_after else target.isoformat()
+
+    _emit_github_output('report_date', latest_label)
+    _emit_github_output('parse_errors', str(parse_errors))
+    _emit_github_output('network_errors', str(network_errors))
+    _emit_github_output('not_published', str(not_published))
+    _emit_github_output('checked_weeks', str(checked))
+
+    print(
+        '\nCatch-up summary: '
+        f'changed={changed}, checked={checked}, parse_errors={parse_errors}, '
+        f'network_errors={network_errors}, not_published={not_published}',
+    )
+
+    # Return success so the workflow can still open a PR for any successful
+    # imports; separate outputs decide whether to file diagnostic issues.
+    return EXIT_OK
+
+
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument(
@@ -538,6 +627,12 @@ def parse_args() -> argparse.Namespace:
         metavar=('START', 'END'),
         type=date.fromisoformat,
         help='Iterate every Tuesday between START and END (inclusive).',
+    )
+    p.add_argument(
+        '--catch-up-weeks',
+        type=int,
+        metavar='N',
+        help='Check up to N recent Tuesdays after the latest imported week.',
     )
     p.add_argument(
         '--pdf-path',
@@ -559,9 +654,16 @@ def main() -> int:
         format='%(levelname)s %(message)s',
     )
 
-    if args.backfill and args.pdf_path:
-        LOG.error('--backfill and --pdf-path are mutually exclusive')
+    if args.catch_up_weeks is not None and args.catch_up_weeks < 1:
+        LOG.error('--catch-up-weeks must be at least 1')
         return EXIT_PARSE_ERROR
+
+    if sum(bool(v) for v in [args.backfill, args.pdf_path, args.catch_up_weeks]) > 1:
+        LOG.error('--backfill, --pdf-path, and --catch-up-weeks are mutually exclusive')
+        return EXIT_PARSE_ERROR
+
+    if args.catch_up_weeks:
+        return catch_up_missing_weeks(args.catch_up_weeks, args.dry_run)
 
     if args.backfill:
         start, end = args.backfill
