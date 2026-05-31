@@ -13,7 +13,8 @@ the DOE Visayas Field Office retail-pump-price report.
 
 1. Computes the most recent Tuesday and downloads the DOE PDF from the
    predictable URL `https://prod-cms.doe.gov.ph/documents/d/guest/vfo-price-monitoring-MMDDYY-pdf`.
-2. Extracts the **Bacolod City** row and merges it into the JSON.
+2. Checks a rolling catch-up window for missing Tuesday reports, extracts the
+   **Bacolod City** row, and merges available weeks into the JSON.
 3. Opens a pull request titled `content(fuel-prices): auto-update from DOE`
    if the JSON has new data.
 
@@ -42,6 +43,9 @@ python3 scripts/fetch-doe-fuel-prices.py --date 2026-04-21 --dry-run
 
 # Backfill a range (every Tuesday inclusive):
 python3 scripts/fetch-doe-fuel-prices.py --backfill 2025-12-30 2026-04-21
+
+# Check recent missing weeks after the latest imported JSON week:
+python3 scripts/fetch-doe-fuel-prices.py --catch-up-weeks 8
 
 # Use a local PDF (for testing / when DOE is unreachable):
 python3 scripts/fetch-doe-fuel-prices.py --pdf-path /tmp/sample.pdf --date 2026-04-21

@@ -2,6 +2,453 @@
   "placeholder": false,
   "snapshots": [
     {
+      "id": "fp-2026-05-12-gas91",
+      "date": "2026-05-12",
+      "fuelType": "Gasoline RON 91",
+      "priceMin": 78.45,
+      "priceAvg": 81.96,
+      "priceMax": 86.5,
+      "stationCount": 7,
+      "byStation": [
+        {
+          "station": "CALTEX",
+          "priceMin": 82.7,
+          "priceMax": 82.75
+        },
+        {
+          "station": "FLYING V",
+          "priceMin": 80.67,
+          "priceMax": 81.87
+        },
+        {
+          "station": "INDEPENDENT",
+          "priceMin": 78.45,
+          "priceMax": 82.0
+        },
+        {
+          "station": "PETRON",
+          "priceMin": 82.8,
+          "priceMax": 82.9
+        },
+        {
+          "station": "SEAOIL",
+          "priceMin": 80.67,
+          "priceMax": 80.67
+        },
+        {
+          "station": "SHELL",
+          "priceMin": 86.4,
+          "priceMax": 86.5
+        },
+        {
+          "station": "TOTAL",
+          "priceMin": 79.5,
+          "priceMax": 79.5
+        }
+      ]
+    },
+    {
+      "id": "fp-2026-05-12-gas95",
+      "date": "2026-05-12",
+      "fuelType": "Gasoline RON 95",
+      "priceMin": 78.95,
+      "priceAvg": 83.38,
+      "priceMax": 91.3,
+      "stationCount": 7,
+      "byStation": [
+        {
+          "station": "CALTEX",
+          "priceMin": 83.7,
+          "priceMax": 83.75
+        },
+        {
+          "station": "FLYING V",
+          "priceMin": 81.67,
+          "priceMax": 82.87
+        },
+        {
+          "station": "INDEPENDENT",
+          "priceMin": 78.95,
+          "priceMax": 82.9
+        },
+        {
+          "station": "PETRON",
+          "priceMin": 83.8,
+          "priceMax": 83.9
+        },
+        {
+          "station": "SEAOIL",
+          "priceMin": 81.67,
+          "priceMax": 81.67
+        },
+        {
+          "station": "SHELL",
+          "priceMin": 91.2,
+          "priceMax": 91.3
+        },
+        {
+          "station": "TOTAL",
+          "priceMin": 79.95,
+          "priceMax": 79.95
+        }
+      ]
+    },
+    {
+      "id": "fp-2026-05-12-dsl",
+      "date": "2026-05-12",
+      "fuelType": "Diesel",
+      "priceMin": 71.33,
+      "priceAvg": 77.35,
+      "priceMax": 92.0,
+      "stationCount": 7,
+      "byStation": [
+        {
+          "station": "CALTEX",
+          "priceMin": 75.16,
+          "priceMax": 75.2
+        },
+        {
+          "station": "FLYING V",
+          "priceMin": 71.33,
+          "priceMax": 84.0
+        },
+        {
+          "station": "INDEPENDENT",
+          "priceMin": 74.0,
+          "priceMax": 92.0
+        },
+        {
+          "station": "PETRON",
+          "priceMin": 72.9,
+          "priceMax": 73.3
+        },
+        {
+          "station": "SEAOIL",
+          "priceMin": 73.0,
+          "priceMax": 73.0
+        },
+        {
+          "station": "SHELL",
+          "priceMin": 72.6,
+          "priceMax": 72.6
+        },
+        {
+          "station": "TOTAL",
+          "priceMin": 86.9,
+          "priceMax": 86.9
+        }
+      ]
+    },
+    {
+      "id": "fp-2026-05-12-dslplus",
+      "date": "2026-05-12",
+      "fuelType": "Diesel Plus",
+      "priceMin": 86.2,
+      "priceAvg": 86.8,
+      "priceMax": 87.4,
+      "stationCount": 1,
+      "byStation": [
+        {
+          "station": "SHELL",
+          "priceMin": 86.2,
+          "priceMax": 87.4
+        }
+      ]
+    },
+    {
+      "id": "fp-2026-05-05-gas91",
+      "date": "2026-05-05",
+      "fuelType": "Gasoline RON 91",
+      "priceMin": 81.0,
+      "priceAvg": 82.42,
+      "priceMax": 86.1,
+      "stationCount": 7,
+      "byStation": [
+        {
+          "station": "CALTEX",
+          "priceMin": 81.4,
+          "priceMax": 83.2
+        },
+        {
+          "station": "FLYING V",
+          "priceMin": 81.21,
+          "priceMax": 85.71
+        },
+        {
+          "station": "INDEPENDENT",
+          "priceMin": 81.2,
+          "priceMax": 82.0
+        },
+        {
+          "station": "PETRON",
+          "priceMin": 81.2,
+          "priceMax": 81.9
+        },
+        {
+          "station": "SEAOIL",
+          "priceMin": 81.0,
+          "priceMax": 81.0
+        },
+        {
+          "station": "SHELL",
+          "priceMin": 86.0,
+          "priceMax": 86.1
+        },
+        {
+          "station": "TOTAL",
+          "priceMin": 81.0,
+          "priceMax": 81.0
+        }
+      ]
+    },
+    {
+      "id": "fp-2026-05-05-gas95",
+      "date": "2026-05-05",
+      "fuelType": "Gasoline RON 95",
+      "priceMin": 82.0,
+      "priceAvg": 83.87,
+      "priceMax": 90.9,
+      "stationCount": 7,
+      "byStation": [
+        {
+          "station": "CALTEX",
+          "priceMin": 82.4,
+          "priceMax": 84.2
+        },
+        {
+          "station": "FLYING V",
+          "priceMin": 82.4,
+          "priceMax": 86.21
+        },
+        {
+          "station": "INDEPENDENT",
+          "priceMin": 82.2,
+          "priceMax": 82.9
+        },
+        {
+          "station": "PETRON",
+          "priceMin": 82.2,
+          "priceMax": 82.9
+        },
+        {
+          "station": "SEAOIL",
+          "priceMin": 82.0,
+          "priceMax": 82.0
+        },
+        {
+          "station": "SHELL",
+          "priceMin": 89.9,
+          "priceMax": 90.9
+        },
+        {
+          "station": "TOTAL",
+          "priceMin": 82.0,
+          "priceMax": 82.0
+        }
+      ]
+    },
+    {
+      "id": "fp-2026-05-05-dsl",
+      "date": "2026-05-05",
+      "fuelType": "Diesel",
+      "priceMin": 79.46,
+      "priceAvg": 84.63,
+      "priceMax": 90.02,
+      "stationCount": 7,
+      "byStation": [
+        {
+          "station": "CALTEX",
+          "priceMin": 80.9,
+          "priceMax": 84.7
+        },
+        {
+          "station": "FLYING V",
+          "priceMin": 79.46,
+          "priceMax": 90.02
+        },
+        {
+          "station": "INDEPENDENT",
+          "priceMin": 80.5,
+          "priceMax": 88.95
+        },
+        {
+          "station": "PETRON",
+          "priceMin": 80.5,
+          "priceMax": 81.5
+        },
+        {
+          "station": "SEAOIL",
+          "priceMin": 90.02,
+          "priceMax": 90.02
+        },
+        {
+          "station": "SHELL",
+          "priceMin": 82.2,
+          "priceMax": 82.2
+        },
+        {
+          "station": "TOTAL",
+          "priceMin": 86.9,
+          "priceMax": 86.9
+        }
+      ]
+    },
+    {
+      "id": "fp-2026-05-05-dslplus",
+      "date": "2026-05-05",
+      "fuelType": "Diesel Plus",
+      "priceMin": 95.8,
+      "priceAvg": 96.4,
+      "priceMax": 97.0,
+      "stationCount": 1,
+      "byStation": [
+        {
+          "station": "SHELL",
+          "priceMin": 95.8,
+          "priceMax": 97.0
+        }
+      ]
+    },
+    {
+      "id": "fp-2026-04-28-gas91",
+      "date": "2026-04-28",
+      "fuelType": "Gasoline RON 91",
+      "priceMin": 78.0,
+      "priceAvg": 80.66,
+      "priceMax": 86.6,
+      "stationCount": 6,
+      "byStation": [
+        {
+          "station": "CALTEX",
+          "priceMin": 79.5,
+          "priceMax": 81.03
+        },
+        {
+          "station": "FLYING V",
+          "priceMin": 78.0,
+          "priceMax": 80.1
+        },
+        {
+          "station": "INDEPENDENT",
+          "priceMin": 79.0,
+          "priceMax": 86.6
+        },
+        {
+          "station": "PETRON",
+          "priceMin": 79.5,
+          "priceMax": 79.6
+        },
+        {
+          "station": "SEAOIL",
+          "priceMin": 78.5,
+          "priceMax": 78.5
+        },
+        {
+          "station": "SHELL",
+          "priceMin": 83.8,
+          "priceMax": 83.8
+        }
+      ]
+    },
+    {
+      "id": "fp-2026-04-28-gas95",
+      "date": "2026-04-28",
+      "fuelType": "Gasoline RON 95",
+      "priceMin": 79.0,
+      "priceAvg": 82.27,
+      "priceMax": 88.6,
+      "stationCount": 6,
+      "byStation": [
+        {
+          "station": "CALTEX",
+          "priceMin": 81.5,
+          "priceMax": 82.03
+        },
+        {
+          "station": "FLYING V",
+          "priceMin": 79.0,
+          "priceMax": 81.5
+        },
+        {
+          "station": "INDEPENDENT",
+          "priceMin": 79.5,
+          "priceMax": 86.9
+        },
+        {
+          "station": "PETRON",
+          "priceMin": 80.5,
+          "priceMax": 81.1
+        },
+        {
+          "station": "SEAOIL",
+          "priceMin": 79.0,
+          "priceMax": 79.0
+        },
+        {
+          "station": "SHELL",
+          "priceMin": 88.6,
+          "priceMax": 88.6
+        }
+      ]
+    },
+    {
+      "id": "fp-2026-04-28-dsl",
+      "date": "2026-04-28",
+      "fuelType": "Diesel",
+      "priceMin": 76.0,
+      "priceAvg": 80.07,
+      "priceMax": 90.56,
+      "stationCount": 6,
+      "byStation": [
+        {
+          "station": "CALTEX",
+          "priceMin": 79.8,
+          "priceMax": 82.06
+        },
+        {
+          "station": "FLYING V",
+          "priceMin": 76.16,
+          "priceMax": 90.56
+        },
+        {
+          "station": "INDEPENDENT",
+          "priceMin": 76.8,
+          "priceMax": 85.3
+        },
+        {
+          "station": "PETRON",
+          "priceMin": 78.7,
+          "priceMax": 80.3
+        },
+        {
+          "station": "SEAOIL",
+          "priceMin": 76.0,
+          "priceMax": 76.0
+        },
+        {
+          "station": "SHELL",
+          "priceMin": 79.6,
+          "priceMax": 79.6
+        }
+      ]
+    },
+    {
+      "id": "fp-2026-04-28-dslplus",
+      "date": "2026-04-28",
+      "fuelType": "Diesel Plus",
+      "priceMin": 93.2,
+      "priceAvg": 93.2,
+      "priceMax": 93.2,
+      "stationCount": 1,
+      "byStation": [
+        {
+          "station": "SHELL",
+          "priceMin": 93.2,
+          "priceMax": 93.2
+        }
+      ]
+    },
+    {
       "id": "fp-2026-04-21-gas91",
       "date": "2026-04-21",
       "fuelType": "Gasoline RON 91",
@@ -2283,6 +2730,9 @@
       "Diesel Plus"
     ],
     "weeks": [
+      "2026-05-12",
+      "2026-05-05",
+      "2026-04-28",
       "2026-04-21",
       "2026-04-14",
       "2026-04-07",
@@ -2300,16 +2750,24 @@
       "2026-01-06",
       "2025-12-30"
     ],
-    "brands": ["CALTEX", "FLYING V", "INDEPENDENT", "PETRON", "SHELL"]
+    "brands": [
+      "CALTEX",
+      "FLYING V",
+      "INDEPENDENT",
+      "PETRON",
+      "SEAOIL",
+      "SHELL",
+      "TOTAL"
+    ]
   },
   "stats": {
-    "latestWeek": "2026-04-21",
-    "weeksTracked": 16,
+    "latestWeek": "2026-05-12",
+    "weeksTracked": 19,
     "fuelTypes": 4,
-    "stationsSurveyed": 5
+    "stationsSurveyed": 7
   },
   "source": "DOE Oil Industry Management Bureau",
   "sourceUrl": "https://doe.gov.ph/articles/group/liquid-fuels?maincat=Retail%20Pump%20Prices&subcategory=Visayas%20Pump%20Prices&display_type=Card",
   "contributor": "Shiro_Oni",
-  "lastUpdated": "2026-04-21"
+  "lastUpdated": "2026-05-12"
 }
