@@ -24,6 +24,11 @@ export interface CategoryIndexData {
   pages: Subcategory[];
 }
 
+export interface DocumentCategoryMatch {
+  category: Category;
+  subcategory: Subcategory;
+}
+
 import agricultureFisheriesIndex from '../../content/services/agriculture-fisheries/index.yaml?raw';
 import businessIndex from '../../content/services/business/index.yaml?raw';
 import educationIndex from '../../content/services/education/index.yaml?raw';
@@ -102,4 +107,29 @@ export async function getCategorySubcategories(
   const subcategories = await loadCategoryIndex(categorySlug);
   categoryCache.set(categorySlug, subcategories);
   return subcategories;
+}
+
+export async function findDocumentCategory(
+  documentSlug: string,
+): Promise<DocumentCategoryMatch | null> {
+  for (const category of serviceCategories.categories) {
+    if (category.subcategories) {
+      const subcategory = category.subcategories.find(
+        (sub) => sub.slug === documentSlug,
+      );
+
+      if (subcategory) {
+        return { category, subcategory };
+      }
+    }
+
+    const subcategories = await getCategorySubcategories(category.slug);
+    const subcategory = subcategories.find((sub) => sub.slug === documentSlug);
+
+    if (subcategory) {
+      return { category, subcategory };
+    }
+  }
+
+  return null;
 }

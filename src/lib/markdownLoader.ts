@@ -3,48 +3,17 @@
  */
 
 import {
-  getCategorySubcategories,
-  serviceCategories,
+  type Category,
+  findDocumentCategory,
+  type Subcategory,
 } from '../data/yamlLoader';
 
 export interface MarkdownContent {
   content: string;
   title?: string;
   description?: string;
-}
-
-/**
- * Finds the category slug for a given document slug by searching through the services YAML
- * @param documentSlug - The document slug to find
- * @returns The category slug or null if not found
- */
-async function findCategorySlug(documentSlug: string): Promise<string | null> {
-  // Search through all categories to find which one contains this document
-  for (const category of serviceCategories.categories) {
-    // Check if category has subcategories (backward compatibility)
-    if (category.subcategories) {
-      for (const subcategory of category.subcategories) {
-        if (subcategory.slug === documentSlug) {
-          return category.slug;
-        }
-      }
-    } else {
-      // Use the new async loading approach
-      try {
-        const subcategories = await getCategorySubcategories(category.slug);
-        const found = subcategories.find((sub) => sub.slug === documentSlug);
-        if (found) {
-          return category.slug;
-        }
-      } catch (error) {
-        console.warn(
-          `Error loading subcategories for category ${category.slug}:`,
-          error,
-        );
-      }
-    }
-  }
-  return null;
+  category?: Category;
+  subcategory?: Subcategory;
 }
 
 /**
@@ -56,20 +25,17 @@ export async function loadMarkdownContent(
   documentSlug: string,
 ): Promise<MarkdownContent> {
   try {
-    console.log(`Loading markdown content for document: ${documentSlug}`);
-
     // Find the category slug from the YAML data
-    const categorySlug = await findCategorySlug(documentSlug);
-    console.log(`Found category slug: ${categorySlug}`);
+    const match = await findDocumentCategory(documentSlug);
 
-    if (!categorySlug) {
+    if (!match) {
       throw new Error(`Category not found for document slug: ${documentSlug}`);
     }
 
     // Import the markdown file dynamically from the services directory
     // Construct the path using the category slug and document slug
     const module = await import(
-      `../../content/services/${categorySlug}/${documentSlug}.md?raw`
+      `../../content/services/${match.category.slug}/${documentSlug}.md?raw`
     );
     const content = module.default;
 
@@ -87,6 +53,8 @@ export async function loadMarkdownContent(
       content,
       title,
       description,
+      category: match.category,
+      subcategory: match.subcategory,
     };
   } catch (error) {
     console.error(
