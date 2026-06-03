@@ -2,7 +2,7 @@ import { ChevronDown, Menu, Search, X } from 'lucide-react';
 import type React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { mainNavigation } from '../../data/navigation';
+import { mainNavigation, projectsNavigation } from '../../data/navigation';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -69,14 +69,28 @@ const Navbar: React.FC = () => {
             ))}
           </div>
 
-          {/* Right side - fixed width to match logo */}
+          {/* Right side - Projects + Search */}
           <div className="hidden lg:flex items-center justify-end gap-2 w-48">
-            <Link
-              to="/about"
-              className="px-4 py-2 text-slate-600 hover:text-primary-600 hover:bg-slate-50 rounded-lg font-medium transition-colors"
-            >
-              About
-            </Link>
+            {/* Projects dropdown */}
+            <div className="relative group">
+              <button className="flex items-center px-3 py-2 text-slate-600 hover:text-primary-600 hover:bg-slate-50 rounded-lg font-medium transition-colors">
+                Projects
+                <ChevronDown className="ml-1 h-4 w-4 opacity-50" />
+              </button>
+              <div className="absolute right-0 mt-1 w-48 rounded-lg shadow-lg bg-white ring-1 ring-slate-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="py-2">
+                  {projectsNavigation.map((project) => (
+                    <Link
+                      key={project.label}
+                      to={project.href}
+                      className="block px-4 py-2 text-sm text-slate-600 hover:bg-primary-50 hover:text-primary-600"
+                    >
+                      {project.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
             <Link
               to="/search"
               className="flex items-center gap-2 px-4 py-2 text-slate-600 hover:text-primary-600 hover:bg-slate-50 rounded-lg font-medium transition-colors"
@@ -143,14 +157,33 @@ const Navbar: React.FC = () => {
                 )}
               </div>
             ))}
-            <div className="pt-4 border-t border-slate-200 space-y-1">
-              <Link
-                to="/about"
-                onClick={closeMenu}
-                className="block px-4 py-3 text-slate-700 hover:bg-slate-50 rounded-lg font-medium"
+            {/* Projects section in mobile */}
+            <div className="pt-2">
+              <button
+                onClick={() => toggleSubmenu('Projects')}
+                className="w-full flex justify-between items-center px-4 py-3 text-slate-700 hover:bg-slate-50 rounded-lg font-medium"
               >
-                About
-              </Link>
+                Projects
+                <ChevronDown
+                  className={`h-5 w-5 transition-transform ${activeMenu === 'Projects' ? 'rotate-180' : ''}`}
+                />
+              </button>
+              {activeMenu === 'Projects' && (
+                <div className="ml-4 py-2 space-y-1">
+                  {projectsNavigation.map((project) => (
+                    <Link
+                      key={project.label}
+                      to={project.href}
+                      onClick={closeMenu}
+                      className="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 rounded-lg"
+                    >
+                      {project.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+            <div className="pt-4 border-t border-slate-200">
               <Link
                 to="/search"
                 onClick={closeMenu}

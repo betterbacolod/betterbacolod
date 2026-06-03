@@ -1,0 +1,79 @@
+landmarks:
+  - id: sm-city-bacolod
+    name: SM City Bacolod
+    category: shopping mall
+    barangay: Barangay 12
+    coordinates:
+      latitude: 10.6760
+      longitude: 122.9560
+    aliases:
+      - SM City
+      - SM Bacolod
+
+  - id: robinsons-place-bacolod
+    name: Robinsons Place Bacolod
+    category: shopping mall
+    barangay: Mandalagan
+    coordinates:
+      latitude: 10.6930
+      longitude: 122.9490
+    aliases:
+      - Robinsons Place
+      - Robinsons Bacolod
+
+  - id: bata-terminal
+    name: Bata Terminal
+    category: transport terminal
+    barangay: Bata
+    coordinates:
+      latitude: 10.6720
+      longitude: 122.9630
+    aliases:
+      - Bata
+      - Bata Jeepney Terminal
+
+  - id: libertad-terminal
+    name: Libertad Terminal
+    category: transport terminal
+    barangay: Libertad
+    coordinates:
+      latitude: 10.6680
+      longitude: 122.9750
+    aliases:
+      - Libertad
+      - Libertad Market
+
+  - id: lopues-bata
+    name: Lopue's Bata
+    category: department store
+    barangay: Bata
+    coordinates:
+      latitude: 10.6710
+      longitude: 122.9610
+    aliases:
+      - Lopues Bata
+      - Lopue's
+
+  - id: bacolod-public-plaza
+    name: Bacolod Public Plaza
+    category: landmark
+    barangay: Downtown
+    coordinates:
+      latitude: 10.6715
+      longitude: 122.9545
+    aliases:
+      - Public Plaza
+      - Plaza
+      - City Plaza
+
+  - id: san-sebastian-church
+    name: San Sebastian Cathedral
+    category: church
+    barangay: Downtown
+    coordinates:
+      latitude: 10.6720
+      longitude: 122.9560
+    aliases:
+      - Cathedral
+      - San Sebastian
+      - Bacolod Cathedral
