@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.2.2](https://github.com/betterbacolod/betterbacolod/compare/v1.2.1...v1.2.2) (2026-06-24)
+
+
+### Bug Fixes
+
+* **fuel-prices:** catch up DOE data through June 16 ([3dfd640](https://github.com/betterbacolod/betterbacolod/commit/3dfd640af95fdda8f8407017a8d39aefb4628238))
+
+
+### Documentation
+
+* **routes:** add routes page plan ([4157d45](https://github.com/betterbacolod/betterbacolod/commit/4157d45e7232c00b3d83f2358f86a77a246b9b16))
+
+
+### Refactors
+
+* **content:** reuse document category lookup ([099cfac](https://github.com/betterbacolod/betterbacolod/commit/099cfac0ff096c9aaac7ed9a8166dd0c9fcb2e6a))
+
 ## [1.2.1](https://github.com/betterbacolod/betterbacolod/compare/v1.2.0...v1.2.1) (2026-05-31)
 
 
