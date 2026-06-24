@@ -248,12 +248,22 @@ def _parse_price_cell(raw: str | None) -> tuple[float, float] | None:
 
 def parse_bacolod_table(pdf_path: Path) -> dict[str, list[BrandPrice]]:
     """Parse the PDF and return {fuel_type: [BrandPrice, ...]} for Bacolod City."""
+    by_fuel: dict[str, list[BrandPrice]] = {}
+
     with pdfplumber.open(pdf_path) as pdf:
-        page = pdf.pages[0]
-        tables = page.extract_tables()
-    if not tables:
-        raise RuntimeError('No tables found on page 1 of DOE PDF')
-    table = tables[0]
+        for page in pdf.pages:
+            for table in page.extract_tables():
+                by_fuel.update(_parse_bacolod_from_table(table))
+                if by_fuel:
+                    return by_fuel
+
+    raise RuntimeError('Could not find Bacolod City prices in DOE PDF')
+
+
+def _parse_bacolod_from_table(table: list[list[str | None]]) -> dict[str, list[BrandPrice]]:
+    """Parse Bacolod City rows from one extracted DOE table."""
+    if not table:
+        return {}
 
     # Find header row. DOE occasionally inserts a leading blank column, so do
     # not assume PROVINCE is always in column 0.
@@ -266,7 +276,7 @@ def parse_bacolod_table(pdf_path: Path) -> dict[str, list[BrandPrice]]:
             header_idx = i
             break
     if header_idx is None:
-        raise RuntimeError('Could not locate header row (PROVINCE column)')
+        return {}
 
     # DOE wraps long header labels (e.g. "CITY/MUNICIPALIT\nY") so collapse all
     # whitespace before matching.
@@ -281,9 +291,7 @@ def parse_bacolod_table(pdf_path: Path) -> dict[str, list[BrandPrice]]:
                 break
     missing_brands = [b for b in EXPECTED_BRAND_COLUMNS if b not in brand_cols]
     if missing_brands:
-        raise RuntimeError(
-            f'Missing expected brand columns in PDF header: {missing_brands}',
-        )
+        return {}
     try:
         product_col = header.index('PRODUCT')
         city_col = next(
@@ -321,10 +329,6 @@ def parse_bacolod_table(pdf_path: Path) -> dict[str, list[BrandPrice]]:
                 BrandPrice(station=brand, price_min=mn, price_max=mx),
             )
 
-    if not by_fuel:
-        raise RuntimeError(
-            f'Found Bacolod row but no usable brand prices (in_bacolod={in_bacolod})',
-        )
     return by_fuel
 
 
