@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/betterbacolod/betterbacolod/compare/v1.2.2...v1.3.0) (2026-06-25)
+
+
+### Features
+
+* **seo:** add Bacolod search guides ([d250d22](https://github.com/betterbacolod/betterbacolod/commit/d250d22685944b22ed4e56a9a77779d7d08db59a))
+
 ## [1.2.2](https://github.com/betterbacolod/betterbacolod/compare/v1.2.1...v1.2.2) (2026-06-24)
 
 
