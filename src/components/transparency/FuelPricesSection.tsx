@@ -1,5 +1,6 @@
 import { ChevronDown, ExternalLink } from 'lucide-react';
 import { useMemo, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import fuelData from '../../data/transparency/fuel-prices.json';
 import FuelPricesChart, { FUEL_COLORS } from './FuelPricesChart';
 
@@ -240,6 +241,34 @@ export default function FuelPricesSection() {
   const { end: latestEnd } = weekDates(latestWeek);
   const daysAgo = daysSinceWeekEnd(latestWeek);
   const latestEndIso = latestEnd.toISOString().slice(0, 10);
+  const datasetSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Dataset',
+    name: 'Bacolod City Fuel Price Watch',
+    description:
+      'Weekly Bacolod City retail pump price summaries for gasoline and diesel products, sourced from DOE Visayas Field Office reports.',
+    url: 'https://betterbacolod.org/transparency',
+    temporalCoverage: `${fuelData.filters.weeks.at(-1)}/${latestEndIso}`,
+    dateModified: fuelData.lastUpdated,
+    creator: {
+      '@type': 'Organization',
+      name: 'BetterBacolod',
+      url: 'https://betterbacolod.org',
+    },
+    isBasedOn: {
+      '@type': 'CreativeWork',
+      name: fuelData.source,
+      url: fuelData.sourceUrl,
+    },
+    spatialCoverage: {
+      '@type': 'City',
+      name: 'Bacolod City',
+      containedInPlace: {
+        '@type': 'AdministrativeArea',
+        name: 'Negros Occidental, Philippines',
+      },
+    },
+  };
 
   const latestCards = useMemo(() => {
     const latestWeek = fuelData.stats.latestWeek;
@@ -268,6 +297,11 @@ export default function FuelPricesSection() {
 
   return (
     <div className="space-y-5 lg:space-y-7">
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(datasetSchema)}
+        </script>
+      </Helmet>
       {/* Header */}
       <div>
         <div className="flex items-center gap-2 flex-wrap">

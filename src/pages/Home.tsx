@@ -7,8 +7,9 @@ const Home: React.FC = () => {
   return (
     <>
       <SEO
-        description="Community portal for Bacolod City government services, officials, departments, barangays, and transparency data. Find permits, hotlines, and more."
-        keywords="Bacolod City, government services, barangay, city hall, permits, civic tech"
+        description="Find Bacolod City government services, public data, barangays, permits, hotlines, fuel prices, and local civic information on BetterBacolod."
+        keywords="Bacolod City services, Bacolod government, Bacolod barangays, Bacolod permits, Bacolod fuel prices, civic tech"
+        url="/"
       />
       <main className="flex-grow">
         <Hero />

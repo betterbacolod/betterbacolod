@@ -1,5 +1,6 @@
 import { ChevronRight, Home } from 'lucide-react';
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link, useLocation } from 'react-router-dom';
 
 interface BreadcrumbItem {
@@ -41,38 +42,56 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items, className = '' }) => {
   };
 
   const breadcrumbItems = items || generateBreadcrumbs();
+  const siteUrl = 'https://betterbacolod.org';
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: breadcrumbItems.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.label,
+      item: `${siteUrl}${item.href || location.pathname}`,
+    })),
+  };
 
   return (
-    <nav
-      className={`flex items-center space-x-1 text-sm text-gray-600 ${className}`}
-      aria-label="Breadcrumb"
-    >
-      {breadcrumbItems.map((item, index) => (
-        <React.Fragment key={index}>
-          {index === 0 && <Home className="h-4 w-4 flex-shrink-0" />}
-          {index > 0 && (
-            <ChevronRight className="h-4 w-4 text-gray-400 flex-shrink-0" />
-          )}
-          {item.href ? (
-            <Link
-              to={item.href}
-              className="hover:text-primary-600 transition-colors duration-200 truncate max-w-[150px]"
-              title={item.label}
-            >
-              {item.label}
-            </Link>
-          ) : (
-            <span
-              className="text-gray-900 font-medium truncate max-w-[200px]"
-              title={item.label}
-              aria-current="page"
-            >
-              {item.label}
-            </span>
-          )}
-        </React.Fragment>
-      ))}
-    </nav>
+    <>
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+      </Helmet>
+      <nav
+        className={`flex items-center space-x-1 text-sm text-gray-600 ${className}`}
+        aria-label="Breadcrumb"
+      >
+        {breadcrumbItems.map((item, index) => (
+          <React.Fragment key={index}>
+            {index === 0 && <Home className="h-4 w-4 flex-shrink-0" />}
+            {index > 0 && (
+              <ChevronRight className="h-4 w-4 text-gray-400 flex-shrink-0" />
+            )}
+            {item.href ? (
+              <Link
+                to={item.href}
+                className="hover:text-primary-600 transition-colors duration-200 truncate max-w-[150px]"
+                title={item.label}
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <span
+                className="text-gray-900 font-medium truncate max-w-[200px]"
+                title={item.label}
+                aria-current="page"
+              >
+                {item.label}
+              </span>
+            )}
+          </React.Fragment>
+        ))}
+      </nav>
+    </>
   );
 };
 

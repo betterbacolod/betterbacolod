@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import { Heading } from '../components/ui/Heading';
 import Section from '../components/ui/Section';
+import { seoGuides } from '../data/seoGuides';
 import { serviceCategories } from '../data/yamlLoader';
 
 interface Category {
@@ -28,14 +29,22 @@ const Sitemap: React.FC = () => {
         href: `/services/${cat.slug}`,
       })),
     },
+    {
+      title: 'Bacolod Guides',
+      links: seoGuides.map((guide) => ({
+        label: guide.title,
+        href: guide.path,
+      })),
+    },
   ];
 
   return (
     <>
       <SEO
         title="Sitemap"
-        description="Complete sitemap of BetterBacolod"
-        keywords="sitemap, navigation, BetterBacolod"
+        description="Complete sitemap of BetterBacolod pages, Bacolod City service categories, and local guides."
+        keywords="BetterBacolod sitemap, Bacolod services, Bacolod guides"
+        url="/sitemap"
       />
       <Section className="min-h-[60vh]">
         <div className="max-w-4xl mx-auto">

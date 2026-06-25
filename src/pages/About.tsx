@@ -30,9 +30,10 @@ const About: React.FC = () => {
   return (
     <>
       <SEO
-        title="About"
-        description="Learn about Bacolod City - the City of Smiles, home of the MassKara Festival."
-        keywords="Bacolod City, City of Smiles, MassKara Festival, Negros Occidental"
+        title="About Bacolod City and BetterBacolod"
+        description="Learn about Bacolod City, the City of Smiles, and BetterBacolod's independent civic information project for local services and public data."
+        keywords="Bacolod City, BetterBacolod, City of Smiles, MassKara Festival, Negros Occidental, Bacolod civic tech"
+        url="/about"
       />
       <Section className="min-h-[60vh]">
         <div className="max-w-4xl mx-auto">

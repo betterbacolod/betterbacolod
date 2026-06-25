@@ -103,9 +103,9 @@ export default function Document({
         title={markdownContent.title || documentSlug}
         description={
           markdownContent.description ||
-          `Government service information for ${documentSlug}`
+          `Bacolod City government service information for ${documentSlug}`
         }
-        keywords={`${documentSlug}, government services, public services, local government`}
+        keywords={`${documentSlug}, Bacolod services, Bacolod government services, public services, local government`}
       />
       <Section className="p-3 mb-12">
         <Breadcrumbs className="mb-8" items={breadcrumbs} />

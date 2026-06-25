@@ -2,6 +2,7 @@ import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { create, insert, save } from '@orama/orama';
 import yaml from 'js-yaml';
+import { seoGuides } from '../src/data/seoGuides';
 
 const schema = {
   title: 'string',
@@ -42,6 +43,7 @@ async function generateSearchIndex() {
     .map((d) => d.name);
 
   let indexed = 0;
+  const servicePageUrls: string[] = [];
   for (const category of categories) {
     const categoryPath = join(servicesDir, category);
     const files = readdirSync(categoryPath).filter((f) => f.endsWith('.md'));
@@ -76,6 +78,7 @@ async function generateSearchIndex() {
         category: category.replace(/-/g, ' '),
         type: 'page',
       });
+      servicePageUrls.push(`/${category}/${slug}`);
       indexed++;
     }
   }
@@ -114,13 +117,69 @@ async function generateSearchIndex() {
     await insert(db, page);
   }
 
+  for (const guide of seoGuides) {
+    await insert(db, {
+      title: guide.title,
+      description: guide.description,
+      content: `${guide.heading} ${guide.intro} ${guide.primaryLinks
+        .map((link) => `${link.label} ${link.description}`)
+        .join(' ')}`,
+      url: guide.path,
+      category: 'Bacolod Guides',
+      type: 'guide',
+    });
+  }
+
   // Save index to dist (after vite build)
   const index = await save(db);
   writeFileSync('dist/search-index.json', JSON.stringify(index));
+  writeFileSync(
+    'dist/sitemap.xml',
+    buildSitemap({
+      categoryUrls: servicesData.categories.map(
+        (category) => `/services/${category.slug}`,
+      ),
+      guideUrls: seoGuides.map((guide) => guide.path),
+      servicePageUrls,
+    }),
+  );
 
   console.log(
-    `✅ Indexed ${indexed} pages + ${servicesData.categories.length} categories`,
+    `✅ Indexed ${indexed} pages + ${servicesData.categories.length} categories + ${seoGuides.length} guides`,
   );
 }
 
 generateSearchIndex().catch(console.error);
+
+function buildSitemap({
+  categoryUrls,
+  guideUrls,
+  servicePageUrls,
+}: {
+  categoryUrls: string[];
+  guideUrls: string[];
+  servicePageUrls: string[];
+}) {
+  const siteUrl = 'https://betterbacolod.org';
+  const lastmod = new Date().toISOString().slice(0, 10);
+  const urls = [
+    { loc: '/', priority: '1.0' },
+    { loc: '/services', priority: '0.9' },
+    { loc: '/government', priority: '0.9' },
+    { loc: '/transparency', priority: '0.9' },
+    { loc: '/about', priority: '0.7' },
+    { loc: '/sitemap', priority: '0.5' },
+    ...guideUrls.map((loc) => ({ loc, priority: '0.8' })),
+    ...categoryUrls.map((loc) => ({ loc, priority: '0.7' })),
+    ...servicePageUrls.map((loc) => ({ loc, priority: '0.6' })),
+  ];
+
+  const body = urls
+    .map(
+      ({ loc, priority }) =>
+        `  <url><loc>${siteUrl}${loc}</loc><lastmod>${lastmod}</lastmod><priority>${priority}</priority></url>`,
+    )
+    .join('\n');
+
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${body}\n</urlset>\n`;
+}

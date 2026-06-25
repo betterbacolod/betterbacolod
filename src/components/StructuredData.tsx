@@ -6,9 +6,10 @@ const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'BetterBacolod',
+  alternateName: 'Better Bacolod',
   url: siteUrl,
   description:
-    'Community portal for Bacolod City government services, officials, and transparency data',
+    'Community portal for Bacolod City services, government information, barangays, and transparency data',
   potentialAction: {
     '@type': 'SearchAction',
     target: `${siteUrl}/search?q={search_term_string}`,
@@ -22,7 +23,8 @@ const organizationSchema = {
   name: 'BetterBacolod',
   url: siteUrl,
   logo: `${siteUrl}/images/icons/B-Logo/BetterBacolod Icons_favicon tp.png`,
-  description: 'Community portal for Bacolod City government services',
+  description:
+    'Independent civic information project for Bacolod City government services, public guides, and transparency data',
   areaServed: {
     '@type': 'City',
     name: 'Bacolod City',

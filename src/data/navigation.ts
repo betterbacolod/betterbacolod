@@ -1,3 +1,4 @@
+import { seoGuides } from './seoGuides';
 import { serviceCategories as servicesData } from './yamlLoader';
 
 interface NavigationItem {
@@ -66,6 +67,13 @@ export const footerNavigation = {
         { label: 'Barangays', href: '/government' },
         { label: 'Transparency', href: '/transparency' },
       ],
+    },
+    {
+      title: 'Bacolod Guides',
+      links: seoGuides.map((guide) => ({
+        label: guide.title,
+        href: guide.path,
+      })),
     },
   ],
   socialLinks: [

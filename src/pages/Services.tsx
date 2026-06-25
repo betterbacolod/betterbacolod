@@ -1,6 +1,6 @@
 import * as LucideIcons from 'lucide-react';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import ServicesSection from '../components/home/ServicesSection';
 import SEO from '../components/SEO';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
@@ -27,6 +27,25 @@ const Services: React.FC = () => {
   const Icon = LucideIcons[
     categoryData?.icon as keyof typeof LucideIcons
   ] as React.ComponentType<{ className?: string }>;
+  const categoryGuideMap: Record<string, { label: string; href: string }> = {
+    'health-services': {
+      label: 'Bacolod Health Services guide',
+      href: '/bacolod-health-services',
+    },
+    education: {
+      label: 'Bacolod Scholarships guide',
+      href: '/bacolod-scholarships',
+    },
+    transportation: {
+      label: 'Bacolod Transportation guide',
+      href: '/bacolod-transportation',
+    },
+    'legal-civil': {
+      label: 'Bacolod Government Services guide',
+      href: '/bacolod-government-services',
+    },
+  };
+  const relatedGuide = category ? categoryGuideMap[category] : undefined;
 
   useEffect(() => {
     if (category && categoryData) {
@@ -42,9 +61,10 @@ const Services: React.FC = () => {
     return (
       <>
         <SEO
-          title="Services"
-          description={`All services provided by the ${import.meta.env.VITE_GOVERNMENT_NAME} government. Find what you need for citizenship, business, education, and more.`}
-          keywords="government services, public services, local government, civic services"
+          title="Bacolod City Services"
+          description="Browse Bacolod City government service guides for permits, health, education, business, legal documents, transport, social welfare, and more."
+          keywords="Bacolod City services, Bacolod government services, Bacolod permits, Bacolod public services"
+          url="/services"
         />
         <ServicesSection
           title={`All local government services`}
@@ -70,15 +90,24 @@ const Services: React.FC = () => {
   return (
     <>
       <SEO
-        title={categoryData.category || category}
-        description={categoryData.description}
-        keywords={`${categoryData.category}, government services, public services, local government`}
+        title={`Bacolod ${categoryData.category || category}`}
+        description={`${categoryData.description} Find Bacolod City service guides, requirements, and related local information.`}
+        keywords={`Bacolod ${categoryData.category}, Bacolod services, government services, public services, local government`}
+        url={`/services/${category}`}
       />
       <Section className="p-3 mb-12">
         <Breadcrumbs className="mb-8" />
         <Icon className="h-8 w-8 mb-4 text-primary-600 rounded-md" />
         <Heading>{categoryData.category || category}</Heading>
         <Text className="text-gray-600 mb-6">{categoryData.description}</Text>
+        {relatedGuide && (
+          <Link
+            to={relatedGuide.href}
+            className="inline-flex mb-6 text-sm text-primary-600 hover:underline"
+          >
+            Related guide: {relatedGuide.label}
+          </Link>
+        )}
 
         {loading ? (
           <div className="flex justify-center items-center p-8">

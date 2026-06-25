@@ -11,6 +11,7 @@ import {
   TrendingUp,
 } from 'lucide-react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import FloodControlSection from '../components/transparency/FloodControlSection';
 import FuelPricesSection from '../components/transparency/FuelPricesSection';
@@ -65,9 +66,10 @@ const Transparency: React.FC = () => {
   return (
     <>
       <SEO
-        title="Transparency"
-        description="Government transparency data for Bacolod City - flood control projects, fuel prices, infrastructure, procurement, and public reports."
-        keywords="transparency, flood control, fuel prices, gas prices, diesel, DOE, infrastructure, procurement, Bacolod City, DPWH"
+        title="Bacolod Transparency Data"
+        description="Explore Bacolod City transparency data, DOE fuel prices, flood control projects, infrastructure links, procurement, and public reports."
+        keywords="Bacolod transparency, Bacolod fuel prices, Bacolod gas prices, Bacolod diesel price, Bacolod flood control, DPWH Bacolod"
+        url="/transparency"
       />
       <Section className="min-h-[60vh]">
         <div className="text-center mb-6 md:mb-10">
@@ -76,6 +78,12 @@ const Transparency: React.FC = () => {
             Access public data on government projects, budgets, and procurement
             in Bacolod City.
           </Text>
+          <Link
+            to="/bacolod-fuel-prices"
+            className="inline-flex mt-3 text-sm text-primary-600 hover:underline"
+          >
+            View the Bacolod fuel prices guide
+          </Link>
         </div>
 
         {/* Mobile: List Tiles */}

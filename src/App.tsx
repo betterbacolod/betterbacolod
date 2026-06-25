@@ -6,11 +6,13 @@ import Navbar from './components/layout/Navbar';
 import TopBanner from './components/layout/TopBanner';
 import StructuredData from './components/StructuredData';
 import ScrollToTop from './components/ui/ScrollToTop';
+import { seoGuides } from './data/seoGuides';
 import About from './pages/About';
 import Document from './pages/Document';
 import Government from './pages/Government';
 import Home from './pages/Home';
 import Search from './pages/Search';
+import SeoLandingPage from './pages/SeoLandingPage';
 import Services from './pages/Services';
 import Sitemap from './pages/Sitemap';
 import Transparency from './pages/Transparency';
@@ -34,6 +36,13 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/sitemap" element={<Sitemap />} />
               <Route path="/search" element={<Search />} />
+              {seoGuides.map((guide) => (
+                <Route
+                  key={guide.path}
+                  path={guide.path}
+                  element={<SeoLandingPage guide={guide} />}
+                />
+              ))}
               <Route path="/:lang/:documentSlug" element={<Document />} />
               <Route path="/:documentSlug" element={<Document />} />
             </Routes>

@@ -1,7 +1,7 @@
 import * as LucideIcons from 'lucide-react';
 import { ChevronRight, Search } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import BarangaysSection from '../components/government/BarangaysSection';
 import DepartmentsSection from '../components/government/DepartmentsSection';
 import OfficialsSection from '../components/government/OfficialsSection';
@@ -41,9 +41,10 @@ const Government: React.FC = () => {
   return (
     <>
       <SEO
-        title="Government"
-        description="Learn about Bacolod City government - officials, departments, and barangays."
-        keywords="government, city officials, departments, barangays, Bacolod City"
+        title="Bacolod City Government"
+        description="Find Bacolod City government officials, departments, barangays, and local office information on BetterBacolod."
+        keywords="Bacolod City government, Bacolod officials, Bacolod departments, Bacolod barangays, Bacolod City Hall"
+        url="/government"
       />
       <Section className="min-h-[60vh]">
         <div className="text-center mb-6 md:mb-10">
@@ -52,6 +53,12 @@ const Government: React.FC = () => {
             Learn about your city officials, government departments, and
             barangays.
           </Text>
+          <Link
+            to="/bacolod-barangays"
+            className="inline-flex mt-3 text-sm text-primary-600 hover:underline"
+          >
+            View the Bacolod barangays guide
+          </Link>
         </div>
 
         {/* Mobile: List Tiles */}

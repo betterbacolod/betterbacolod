@@ -92,9 +92,10 @@ const Search: React.FC = () => {
   return (
     <>
       <SEO
-        title="Search"
-        description="Search BetterBacolod for services and information"
-        keywords="search, Bacolod, services, government"
+        title="Search Bacolod Services"
+        description="Search BetterBacolod for Bacolod City services, permits, government offices, barangays, public data, and local guides."
+        keywords="search Bacolod services, Bacolod government search, Bacolod permits, BetterBacolod search"
+        url="/search"
       />
       <Section className="min-h-[calc(100vh-200px)]">
         <div className="max-w-2xl mx-auto">
