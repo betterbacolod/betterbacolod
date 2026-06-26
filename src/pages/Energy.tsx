@@ -1,5 +1,5 @@
 import { ExternalLink, Factory, Gauge, Search, Zap } from 'lucide-react';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import {
   Bar,
@@ -21,6 +21,7 @@ import Section from '../components/ui/Section';
 import energyData from '../data/energy/electric-grid.json';
 
 type Facility = (typeof energyData.generation.facilities)[number];
+const MOBILE_FACILITY_BATCH_SIZE = 6;
 
 const resourceColors: Record<string, string> = {
   'Ground Mounted': '#0ea5e9',
@@ -246,6 +247,9 @@ function FacilityTable() {
   const [province, setProvince] = useState('');
   const [resource, setResource] = useState('');
   const [query, setQuery] = useState('');
+  const [mobileVisibleCount, setMobileVisibleCount] = useState(
+    MOBILE_FACILITY_BATCH_SIZE,
+  );
 
   const provinces = energyData.generation.byProvince.map((item) => item.name);
   const resources = energyData.generation.byResourceType.map(
@@ -282,7 +286,16 @@ function FacilityTable() {
     (total, facility) => total + facility.dependableMw,
     0,
   );
+  const mobileFacilities = facilities.slice(0, mobileVisibleCount);
+  const hasMoreMobileFacilities = mobileVisibleCount < facilities.length;
+  const nextMobileCount = Math.min(
+    mobileVisibleCount + MOBILE_FACILITY_BATCH_SIZE,
+    facilities.length,
+  );
   const hasFilters = Boolean(province || resource || normalizedQuery);
+  useEffect(() => {
+    setMobileVisibleCount(MOBILE_FACILITY_BATCH_SIZE);
+  }, [province, resource, normalizedQuery]);
   const resetFilters = () => {
     setProvince('');
     setResource('');
@@ -382,7 +395,7 @@ function FacilityTable() {
               No NIR facilities match the current filters.
             </div>
           )}
-          {facilities.map((facility) => (
+          {mobileFacilities.map((facility) => (
             <div
               key={facility.facilityName}
               className="rounded-lg border border-gray-200 bg-white p-3"
@@ -427,6 +440,28 @@ function FacilityTable() {
               </div>
             </div>
           ))}
+          {hasMoreMobileFacilities && (
+            <button
+              type="button"
+              onClick={() => setMobileVisibleCount(nextMobileCount)}
+              className="w-full rounded-lg border border-primary-200 bg-primary-50 px-4 py-3 text-sm font-semibold text-primary-700 transition hover:bg-primary-100"
+            >
+              Show more facilities ({facilities.length - mobileVisibleCount}{' '}
+              remaining)
+            </button>
+          )}
+          {facilities.length > MOBILE_FACILITY_BATCH_SIZE &&
+            !hasMoreMobileFacilities && (
+              <button
+                type="button"
+                onClick={() =>
+                  setMobileVisibleCount(MOBILE_FACILITY_BATCH_SIZE)
+                }
+                className="w-full rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-gray-600 transition hover:bg-gray-50"
+              >
+                Show fewer facilities
+              </button>
+            )}
         </div>
 
         <div className="hidden overflow-x-auto md:block">
