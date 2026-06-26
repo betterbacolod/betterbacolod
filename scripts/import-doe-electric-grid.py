@@ -23,10 +23,10 @@ SOURCE_PLANTS_URL = (
     'https://doe.gov.ph/articles/3501260--list-of-existing-power-plants-grid-connected-as-of-may-2026'
 )
 SYSTEM_DEMAND_DOC_URL = (
-    'https://doe.gov.ph/documents/d/guest/annex-6_system-peak-demand-per-grid-2001-2025-pdf'
+    'https://prod-cms.doe.gov.ph/documents/d/guest/annex-6_system-peak-demand-per-grid-2001-2025-pdf'
 )
 VISAYAS_PLANTS_DOC_URL = (
-    'https://doe.gov.ph/documents/d/guest/02_doe-epimb_loepp-as-of-may-2026_lvm-grid-clean-visayas-pdf'
+    'https://prod-cms.doe.gov.ph/documents/d/guest/02_doe-epimb_loepp-as-of-may-2026_lvm-grid-clean-visayas-pdf'
 )
 
 
