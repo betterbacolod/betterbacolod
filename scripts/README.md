@@ -64,6 +64,19 @@ breaks; will be removed once auto-refresh has a few weeks of stable runs.
 python3 scripts/import-fuel-prices.py ~/Downloads/BacolodFuelPrices/BacolodFuelPrices.xlsx
 ```
 
+## Electric-grid ingestion
+
+The `Energy` page (`/energy`) is backed by
+`src/data/energy/electric-grid.json`, generated from the DOE workbook with
+Visayas demand and NIR generation rows.
+
+```bash
+python3 scripts/import-doe-electric-grid.py ~/Downloads/Electric\ Grid\ Data.xlsx
+```
+
+The importer validates the expected Visayas row count, NIR facility count, and
+summary MW totals before writing JSON.
+
 ### Search index: `generate-search-index.ts`
 
 Run automatically by `bun run build` after Vite finishes. Indexes the site for

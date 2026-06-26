@@ -29,38 +29,26 @@ export interface DocumentCategoryMatch {
   subcategory: Subcategory;
 }
 
-import agricultureFisheriesIndex from '../../content/services/agriculture-fisheries/index.yaml?raw';
-import businessIndex from '../../content/services/business/index.yaml?raw';
-import educationIndex from '../../content/services/education/index.yaml?raw';
-import environmentIndex from '../../content/services/environment/index.yaml?raw';
-import garbageWasteDisposalIndex from '../../content/services/garbage-waste-disposal/index.yaml?raw';
-// Import all category index files statically
-import healthServicesIndex from '../../content/services/health-services/index.yaml?raw';
-import housingLandUseIndex from '../../content/services/housing-land-use/index.yaml?raw';
-import infrastructurePublicWorksIndex from '../../content/services/infrastructure-public-works/index.yaml?raw';
-import legalCivilIndex from '../../content/services/legal-civil/index.yaml?raw';
-import publicSafetyIndex from '../../content/services/public-safety/index.yaml?raw';
-import socialWelfareIndex from '../../content/services/social-welfare/index.yaml?raw';
-import transportationIndex from '../../content/services/transportation/index.yaml?raw';
 import governmentActivitiesYamlContent from './government.yaml?raw';
 // Import the YAML file as raw text
 import servicesYamlContent from './services.yaml?raw';
 
-// Create a mapping of category slugs to their YAML content
-const categoryIndexMap: { [key: string]: string } = {
-  'health-services': healthServicesIndex,
-  education: educationIndex,
-  business: businessIndex,
-  'social-welfare': socialWelfareIndex,
-  'agriculture-fisheries': agricultureFisheriesIndex,
-  'infrastructure-public-works': infrastructurePublicWorksIndex,
-  transportation: transportationIndex,
-  'garbage-waste-disposal': garbageWasteDisposalIndex,
-  environment: environmentIndex,
-  'public-safety': publicSafetyIndex,
-  'housing-land-use': housingLandUseIndex,
-  'legal-civil': legalCivilIndex,
-};
+const categoryIndexModules = import.meta.glob<string>(
+  '../../content/services/*/index.yaml',
+  {
+    query: '?raw',
+    import: 'default',
+    eager: true,
+  },
+);
+
+// Create a mapping of existing category index files to their YAML content.
+const categoryIndexMap: { [key: string]: string } = Object.fromEntries(
+  Object.entries(categoryIndexModules).map(([path, content]) => {
+    const slug = path.match(/content\/services\/([^/]+)\/index\.yaml$/)?.[1];
+    return [slug || path, content];
+  }),
+);
 
 // Parse the YAML content
 export const serviceCategories: CategoryData = yaml.load(

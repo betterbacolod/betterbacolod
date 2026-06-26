@@ -34,6 +34,9 @@ export default function ServicesSection({
   };
 
   const displayedCategories = serviceCategories.categories as Category[];
+  const EnergyIcon = LucideIcons[
+    'Zap' as keyof typeof LucideIcons
+  ] as React.ComponentType<{ className?: string }>;
 
   return (
     <Section>
@@ -63,6 +66,24 @@ export default function ServicesSection({
             </Card>
           </Link>
         ))}
+        <Link to="/energy">
+          <Card hoverable className="border-t-4 border-primary-500 h-full">
+            <CardContent className="flex flex-col h-full p-6">
+              <div className="flex gap-2">
+                <div className="bg-primary-100 text-primary-600 p-3 rounded-md mb-4 self-start">
+                  <EnergyIcon className="h-6 w-6" />
+                </div>
+                <h3 className="text-lg font-semibold mb-4 text-gray-900 self-center">
+                  Energy
+                </h3>
+              </div>
+              <Text className="text-gray-800">
+                Track Visayas demand and Negros Island Region power plant
+                capacity from DOE data.
+              </Text>
+            </CardContent>
+          </Card>
+        </Link>
       </div>
     </Section>
   );

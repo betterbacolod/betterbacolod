@@ -95,6 +95,15 @@ async function generateSearchIndex() {
       type: 'page',
     },
     {
+      title: 'Energy',
+      description: 'Visayas grid demand and NIR power plant capacity',
+      content:
+        'energy electricity power Visayas grid demand Negros Island Region NIR power plants DOE installed dependable capacity',
+      url: '/energy',
+      category: 'Energy',
+      type: 'page',
+    },
+    {
       title: 'Transparency',
       description: 'Flood control projects, budget, procurement data',
       content: 'flood drainage dpwh infrastructure project budget transparency',
@@ -165,6 +174,7 @@ function buildSitemap({
   const urls = [
     { loc: '/', priority: '1.0' },
     { loc: '/services', priority: '0.9' },
+    { loc: '/energy', priority: '0.8' },
     { loc: '/government', priority: '0.9' },
     { loc: '/transparency', priority: '0.9' },
     { loc: '/about', priority: '0.7' },

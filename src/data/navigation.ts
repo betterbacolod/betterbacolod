@@ -51,8 +51,9 @@ export const footerNavigation = {
       title: 'Services',
       links: [
         { label: 'All Services', href: '/services' },
+        { label: 'Energy', href: '/energy' },
         ...(servicesData.categories as Category[])
-          .slice(0, 5)
+          .slice(0, 4)
           .map((category) => ({
             label: category.category,
             href: `/services/${category.slug}`,

@@ -9,6 +9,7 @@ import ScrollToTop from './components/ui/ScrollToTop';
 import { seoGuides } from './data/seoGuides';
 import About from './pages/About';
 import Document from './pages/Document';
+import Energy from './pages/Energy';
 import Government from './pages/Government';
 import Home from './pages/Home';
 import Search from './pages/Search';
@@ -31,6 +32,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/services/:category" element={<Services />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/energy" element={<Energy />} />
               <Route path="/government" element={<Government />} />
               <Route path="/transparency" element={<Transparency />} />
               <Route path="/about" element={<About />} />

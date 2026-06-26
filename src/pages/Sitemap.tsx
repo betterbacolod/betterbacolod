@@ -17,6 +17,7 @@ const Sitemap: React.FC = () => {
       links: [
         { label: 'Home', href: '/' },
         { label: 'Services', href: '/services' },
+        { label: 'Energy', href: '/energy' },
         { label: 'Government', href: '/government' },
         { label: 'Transparency', href: '/transparency' },
         { label: 'About', href: '/about' },

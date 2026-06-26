@@ -1,0 +1,670 @@
+{
+  "source": {
+    "name": "Department of Energy Philippines",
+    "workbook": "Electric Grid Data.xlsx",
+    "articles": [
+      {
+        "title": "2025 Power Statistics",
+        "url": "https://doe.gov.ph/articles/3512596--2025-power-statistics"
+      },
+      {
+        "title": "List of Existing Power Plants (Grid Connected) as of May 2026",
+        "url": "https://doe.gov.ph/articles/3501260--list-of-existing-power-plants-grid-connected-as-of-may-2026"
+      }
+    ],
+    "documents": [
+      {
+        "title": "System Peak Demand per Grid, 2001-2025",
+        "url": "https://doe.gov.ph/documents/d/guest/annex-6_system-peak-demand-per-grid-2001-2025-pdf"
+      },
+      {
+        "title": "Visayas Existing Power Plants as of May 2026",
+        "url": "https://doe.gov.ph/documents/d/guest/02_doe-epimb_loepp-as-of-may-2026_lvm-grid-clean-visayas-pdf"
+      }
+    ]
+  },
+  "lastUpdated": "2026-06-26",
+  "scopeNote": "Visayas demand and NIR generation context only. The dataset does not identify a Bacolod City generation facility.",
+  "demand": {
+    "islandGroup": "Visayas",
+    "unit": "MW",
+    "rows": [
+      {
+        "year": 2001,
+        "demandMw": 898.0,
+        "startOfYear": "2001-01-01"
+      },
+      {
+        "year": 2002,
+        "demandMw": 903.0,
+        "startOfYear": "2002-01-01"
+      },
+      {
+        "year": 2003,
+        "demandMw": 995.0,
+        "startOfYear": "2003-01-01"
+      },
+      {
+        "year": 2004,
+        "demandMw": 1025.0,
+        "startOfYear": "2004-01-01"
+      },
+      {
+        "year": 2005,
+        "demandMw": 1037.0,
+        "startOfYear": "2005-01-01"
+      },
+      {
+        "year": 2006,
+        "demandMw": 1066.0,
+        "startOfYear": "2006-01-01"
+      },
+      {
+        "year": 2007,
+        "demandMw": 1102.0,
+        "startOfYear": "2007-01-01"
+      },
+      {
+        "year": 2008,
+        "demandMw": 1176.0,
+        "startOfYear": "2008-01-01"
+      },
+      {
+        "year": 2009,
+        "demandMw": 1241.0,
+        "startOfYear": "2009-01-01"
+      },
+      {
+        "year": 2010,
+        "demandMw": 1431.0,
+        "startOfYear": "2010-01-01"
+      },
+      {
+        "year": 2011,
+        "demandMw": 1481.0,
+        "startOfYear": "2011-01-01"
+      },
+      {
+        "year": 2012,
+        "demandMw": 1551.0,
+        "startOfYear": "2012-01-01"
+      },
+      {
+        "year": 2013,
+        "demandMw": 1572.0,
+        "startOfYear": "2013-01-01"
+      },
+      {
+        "year": 2014,
+        "demandMw": 1636.0,
+        "startOfYear": "2014-01-01"
+      },
+      {
+        "year": 2015,
+        "demandMw": 1768.0,
+        "startOfYear": "2015-01-01"
+      },
+      {
+        "year": 2016,
+        "demandMw": 1893.0,
+        "startOfYear": "2016-01-01"
+      },
+      {
+        "year": 2017,
+        "demandMw": 1975.0,
+        "startOfYear": "2017-01-01"
+      },
+      {
+        "year": 2018,
+        "demandMw": 2053.0,
+        "startOfYear": "2018-01-01"
+      },
+      {
+        "year": 2019,
+        "demandMw": 2224.0,
+        "startOfYear": "2019-01-01"
+      },
+      {
+        "year": 2020,
+        "demandMw": 2201.0,
+        "startOfYear": "2020-01-01"
+      },
+      {
+        "year": 2021,
+        "demandMw": 2252.0,
+        "startOfYear": "2021-01-01"
+      },
+      {
+        "year": 2022,
+        "demandMw": 2316.0,
+        "startOfYear": "2022-01-01"
+      },
+      {
+        "year": 2023,
+        "demandMw": 2458.0,
+        "startOfYear": "2023-01-01"
+      },
+      {
+        "year": 2024,
+        "demandMw": 2681.0,
+        "startOfYear": "2024-01-01"
+      },
+      {
+        "year": 2025,
+        "demandMw": 2892.0,
+        "startOfYear": "2025-01-01"
+      }
+    ]
+  },
+  "generation": {
+    "region": "NIR",
+    "unit": "MW",
+    "facilities": [
+      {
+        "facilityName": "PALINPINON GPP",
+        "officialName": "Palinpinon-1 Geothermal Power Plant Palinpinon-2 Geothermal Power Plant",
+        "resourceType": "Geothermal",
+        "technologyType": "Single Flash",
+        "connectionType": "Grid",
+        "installedMw": 192.5,
+        "dependableMw": 172.5,
+        "units": 6,
+        "province": "Negros Oriental",
+        "cityMunicipality": "Valencia",
+        "municipalityProvince": "Puhagan, Valencia, Negros Oriental",
+        "operator": "Green Core Geothermal Inc. (GCGI)",
+        "ownerIppa": "Green Core Geothermal Inc. (GCGI)",
+        "commissioned": "May / Jul / Aug 1983",
+        "latestYear": 1983,
+        "startOfYear": "1983-01-01"
+      },
+      {
+        "facilityName": "CALATRAVA SPP",
+        "officialName": "Calatrava Solar Power Plant and its Standby Diesel Engine Generating Unit",
+        "resourceType": "Ground Mounted",
+        "technologyType": "Ground Mounted Solar PVs",
+        "connectionType": "Grid",
+        "installedMw": 169.0,
+        "dependableMw": 137.4,
+        "units": null,
+        "province": "Negros Occidental",
+        "cityMunicipality": "Calatrava",
+        "municipalityProvince": "Barangay San Isidro, Calatrava, Negros Occidental",
+        "operator": "Aboitiz Solar Power Inc.",
+        "ownerIppa": "Aboitiz Solar Power Inc.",
+        "commissioned": "Jul-2025",
+        "latestYear": 2025,
+        "startOfYear": "2025-01-01"
+      },
+      {
+        "facilityName": "HELIOS",
+        "officialName": "Cadiz Solar Power Plant",
+        "resourceType": "Ground Mounted",
+        "technologyType": "Ground Mounted Solar PVs",
+        "connectionType": "Grid",
+        "installedMw": 132.5,
+        "dependableMw": 108.1,
+        "units": null,
+        "province": "Negros Occidental",
+        "cityMunicipality": "Cadiz City",
+        "municipalityProvince": "Brgy., Tinampa-an Cadiz City, Negros Occidental",
+        "operator": "Helios Solar Energy Corporation (HSEC)",
+        "ownerIppa": "Helios Solar Energy Corporation (HSEC)",
+        "commissioned": "Mar-2016",
+        "latestYear": 2016,
+        "startOfYear": "2016-01-01"
+      },
+      {
+        "facilityName": "SACASUN",
+        "officialName": "San Carlos Sun (SACASUN) Solar Power Plant",
+        "resourceType": "Ground Mounted",
+        "technologyType": "Ground Mounted Solar PVs",
+        "connectionType": "Grid",
+        "installedMw": 59.0,
+        "dependableMw": 46.8,
+        "units": null,
+        "province": "Negros Occidental",
+        "cityMunicipality": "San Carlos",
+        "municipalityProvince": "Ecozone Blvd., San Carlos Ecozone, Barangay Punao, San Carlos, Negros Occidental",
+        "operator": "San Carlos Sun Power Inc. (SACASUN)",
+        "ownerIppa": "San Carlos Sun Power Inc. (SACASUN)",
+        "commissioned": "Mar-2016",
+        "latestYear": 2016,
+        "startOfYear": "2016-01-01"
+      },
+      {
+        "facilityName": "NASULO GPP",
+        "officialName": "Nasulo Geothermal Power Plant",
+        "resourceType": "Geothermal",
+        "technologyType": "Single Flash",
+        "connectionType": "Grid",
+        "installedMw": 49.4,
+        "dependableMw": 48.3,
+        "units": 1,
+        "province": "Negros Oriental",
+        "cityMunicipality": "Valencia",
+        "municipalityProvince": "Puhagan, Valencia, Negros Oriental",
+        "operator": "Energy Development Corporation (EDC)",
+        "ownerIppa": "Energy Development Corporation (EDC)",
+        "commissioned": "Sep-2014",
+        "latestYear": 2014,
+        "startOfYear": "2014-01-01"
+      },
+      {
+        "facilityName": "BISCOM",
+        "officialName": "Biomass Cogeneration Power Plant",
+        "resourceType": "Biomass",
+        "technologyType": "Bagasse-fired Cogeneration Plant",
+        "connectionType": "Grid",
+        "installedMw": 48.5,
+        "dependableMw": 12.3,
+        "units": 4,
+        "province": "Negros Occidental",
+        "cityMunicipality": "Himamaylan",
+        "municipalityProvince": "Binalbagan, Himamaylan, Negros Occidental",
+        "operator": "BISCOM, Inc.",
+        "ownerIppa": "BISCOM, Inc.",
+        "commissioned": "Nov-2019",
+        "latestYear": 2019,
+        "startOfYear": "2019-01-01"
+      },
+      {
+        "facilityName": "ISLASOL III",
+        "officialName": "ISLASOL Manapla Solar Power Plant",
+        "resourceType": "Ground Mounted",
+        "technologyType": "Ground Mounted Solar PVs",
+        "connectionType": "Grid",
+        "installedMw": 48.1,
+        "dependableMw": 40.5,
+        "units": null,
+        "province": "Negros Occidental",
+        "cityMunicipality": "Manapla",
+        "municipalityProvince": "Barangay Sta. Teresa, Manapla, Negros Occidental",
+        "operator": "Negros Island Solar Power Inc. (ISLASOL)",
+        "ownerIppa": "Negros Island Solar Power Inc. (ISLASOL)",
+        "commissioned": "Mar-2016",
+        "latestYear": 2016,
+        "startOfYear": "2016-01-01"
+      },
+      {
+        "facilityName": "URC",
+        "officialName": "Kabankalan Biomass Power Plant",
+        "resourceType": "Biomass",
+        "technologyType": "Bagasse-fired Cogeneration Plant",
+        "connectionType": "Grid",
+        "installedMw": 46.0,
+        "dependableMw": 20.0,
+        "units": 2,
+        "province": "Negros Occidental",
+        "cityMunicipality": "Kabankalan",
+        "municipalityProvince": "San Juan, Barangay Camuga, Kabankalan, Negros Occidental",
+        "operator": "Universal Robina Corporation (URC)",
+        "ownerIppa": "Universal Robina Corporation (URC)",
+        "commissioned": "Jan-2015",
+        "latestYear": 2015,
+        "startOfYear": "2015-01-01"
+      },
+      {
+        "facilityName": "VMC EXPANSION",
+        "officialName": "Biomass Co-Generation Power Plant",
+        "resourceType": "Biomass",
+        "technologyType": "Bagasse-fired Cogeneration Plant",
+        "connectionType": "Grid",
+        "installedMw": 40.0,
+        "dependableMw": 40.0,
+        "units": 1,
+        "province": "Negros Occidental",
+        "cityMunicipality": "Victorias City",
+        "municipalityProvince": "Barangay XVI, Victorias City, Negros Occidental",
+        "operator": "Victorias Milling Company Inc. (VMCI)",
+        "ownerIppa": "Victorias Milling Company Inc. (VMCI)",
+        "commissioned": "Feb-2019",
+        "latestYear": 2019,
+        "startOfYear": "2019-01-01"
+      },
+      {
+        "facilityName": "ISLASOL II",
+        "officialName": "ISLASOL La Carlota Solar Power Plant",
+        "resourceType": "Ground Mounted",
+        "technologyType": "Ground Mounted Solar PVs",
+        "connectionType": "Grid",
+        "installedMw": 32.0,
+        "dependableMw": 27.2,
+        "units": null,
+        "province": "Negros Occidental",
+        "cityMunicipality": "La Carlota City",
+        "municipalityProvince": "Barangay Cubay, La Carlota City, Negros Occidental",
+        "operator": "Negros Island Solar Power Inc. (ISLASOL)",
+        "ownerIppa": "Negros Island Solar Power Inc. (ISLASOL)",
+        "commissioned": "Mar-2016",
+        "latestYear": 2016,
+        "startOfYear": "2016-01-01"
+      },
+      {
+        "facilityName": "CALUMANGAN DPP",
+        "officialName": "Calumangan Bunker C - Fired Diesel Power Plant",
+        "resourceType": "Diesel",
+        "technologyType": "Bunker/Diesel Internal Combustion Engine",
+        "connectionType": "Grid",
+        "installedMw": 31.0,
+        "dependableMw": 25.9,
+        "units": 5,
+        "province": "Negros Occidental",
+        "cityMunicipality": "Bago City",
+        "municipalityProvince": "Barangay Calumangan, Bago City, Negros Occidental",
+        "operator": "Central Negros Power Reliability, Inc. (CENPRI)",
+        "ownerIppa": "Central Negros Power Reliability, Inc. (CENPRI)",
+        "commissioned": "U2 - Apr-2016;\nU1 and U3 - Jun-2016; U4 - May-2017\nU5 - Mar 2019",
+        "latestYear": 2019,
+        "startOfYear": "2019-01-01"
+      },
+      {
+        "facilityName": "HPCo",
+        "officialName": "Biomass Cogeneration Power Plant",
+        "resourceType": "Biomass",
+        "technologyType": "Bagasse-fired Cogeneration Plant",
+        "connectionType": "Grid",
+        "installedMw": 28.0,
+        "dependableMw": 17.7,
+        "units": 1,
+        "province": "Negros Occidental",
+        "cityMunicipality": "Silay City",
+        "municipalityProvince": "Silay-Hawaiian Central, Silay City, Negros Occidental",
+        "operator": "Hawaiian Philippines Company (HPCo)",
+        "ownerIppa": "Hawaiian Philippines Company (HPCo)",
+        "commissioned": "Feb-2015",
+        "latestYear": 2015,
+        "startOfYear": "2015-01-01"
+      },
+      {
+        "facilityName": "NORTH NEGROS BIOPOWER",
+        "officialName": "NNBP Biomass Power Plant",
+        "resourceType": "Biomass",
+        "technologyType": "Multi-feedstock Power Plant",
+        "connectionType": "Grid",
+        "installedMw": 25.0,
+        "dependableMw": 22.4,
+        "units": 1,
+        "province": "Negros Occidental",
+        "cityMunicipality": "Manapla",
+        "municipalityProvince": "Barangay Sta. Teresa, Manapla, Negros Occidental",
+        "operator": "North Negros  Biopower, Inc.",
+        "ownerIppa": "North Negros  Biopower, Inc.",
+        "commissioned": "Jun-2022",
+        "latestYear": 2022,
+        "startOfYear": "2022-01-01"
+      },
+      {
+        "facilityName": "SILAY SOLAR",
+        "officialName": "Silay Solar Power Plant",
+        "resourceType": "Ground Mounted",
+        "technologyType": "Ground Mounted Solar PVs",
+        "connectionType": "Grid",
+        "installedMw": 25.0,
+        "dependableMw": 22.0,
+        "units": null,
+        "province": "Negros Occidental",
+        "cityMunicipality": "Silay City",
+        "municipalityProvince": "Barangay Rizal, Silay City, Negros Occidental",
+        "operator": "Citicore Solar Negros Occidental, Inc. (formerly: Silay Solar Power, Inc.)",
+        "ownerIppa": "Citicore Solar Negros Occidental, Inc. (formerly: Silay Solar Power, Inc.)",
+        "commissioned": "Apr-2016",
+        "latestYear": 2016,
+        "startOfYear": "2016-01-01"
+      },
+      {
+        "facilityName": "SOUTH NEGROS BIOPOWER",
+        "officialName": "Biomass Power Plant",
+        "resourceType": "Biomass",
+        "technologyType": "Multi-feedstock Power Plant",
+        "connectionType": "Grid",
+        "installedMw": 25.0,
+        "dependableMw": 22.4,
+        "units": 1,
+        "province": "Negros Occidental",
+        "cityMunicipality": "La Carlota City",
+        "municipalityProvince": "Barangay Cubay, La Carlota City, Negros Occidental",
+        "operator": "South Negros Biopower, Inc.",
+        "ownerIppa": "South Negros Biopower, Inc.",
+        "commissioned": "Jun-2022",
+        "latestYear": 2022,
+        "startOfYear": "2022-01-01"
+      },
+      {
+        "facilityName": "SACASOL I - C & D",
+        "officialName": "SACASOL Phases 1C and 1D Solar Power Plant and its Emergency Diesel Generating Unit",
+        "resourceType": "Ground Mounted",
+        "technologyType": "Ground Mounted Solar PVs",
+        "connectionType": "Grid",
+        "installedMw": 23.0,
+        "dependableMw": 17.1,
+        "units": null,
+        "province": "Negros Occidental",
+        "cityMunicipality": "San Carlos",
+        "municipalityProvince": "Barangay Punao, San Carlos, Negros Occidental",
+        "operator": "San Carlos Solar Energy Inc. (SACASOL)",
+        "ownerIppa": "San Carlos Solar Energy Inc. (SACASOL)",
+        "commissioned": "Sep-2015",
+        "latestYear": 2015,
+        "startOfYear": "2015-01-01"
+      },
+      {
+        "facilityName": "VMC",
+        "officialName": "Biomass Co-Generation Power Plant",
+        "resourceType": "Biomass",
+        "technologyType": "Bagasse-fired Cogeneration Plant",
+        "connectionType": "Grid",
+        "installedMw": 23.0,
+        "dependableMw": 2.5,
+        "units": 4,
+        "province": "Negros Occidental",
+        "cityMunicipality": "Victorias City",
+        "municipalityProvince": "VMC Compound, JJ Osorio St., Barangay XVI, Victorias City, Negros Occidental",
+        "operator": "Victorias Milling Company Inc. (VMCI)",
+        "ownerIppa": "Victorias Milling Company Inc. (VMCI)",
+        "commissioned": "Nov-2015",
+        "latestYear": 2015,
+        "startOfYear": "2015-01-01"
+      },
+      {
+        "facilityName": "FIRST FARMERS",
+        "officialName": "Bagasse-Fired Cogeneration Biomass Power Plant",
+        "resourceType": "Biomass",
+        "technologyType": "Bagasse-fired Cogeneration Plant",
+        "connectionType": "Grid",
+        "installedMw": 21.8,
+        "dependableMw": 11.4,
+        "units": 1,
+        "province": "Negros Occidental",
+        "cityMunicipality": "Talisay City",
+        "municipalityProvince": "Barangay Dos Hermanas, Talisay City, Negros Occidental",
+        "operator": "First Farmers Holding Corporation (FFHC)",
+        "ownerIppa": "First Farmers Holding Corporation (FFHC)",
+        "commissioned": "Feb-2009",
+        "latestYear": 2009,
+        "startOfYear": "2009-01-01"
+      },
+      {
+        "facilityName": "CAB",
+        "officialName": "Biomass Cogeneration Power Plant",
+        "resourceType": "Biomass",
+        "technologyType": "Bagasse-fired Cogeneration Plant",
+        "connectionType": "Grid",
+        "installedMw": 20.0,
+        "dependableMw": 12.0,
+        "units": 2,
+        "province": "Negros Oriental",
+        "cityMunicipality": "Bais City",
+        "municipalityProvince": "Barangay Calasga-an, Bais City, Negros Oriental",
+        "operator": "Central Azucarera de Bais (CAB)",
+        "ownerIppa": "Central Azucarera de Bais (CAB)",
+        "commissioned": "Nov-2019",
+        "latestYear": 2019,
+        "startOfYear": "2019-01-01"
+      },
+      {
+        "facilityName": "SAN CARLOS BIOPOWER (SCBP)",
+        "officialName": "SCBP Biomass Power Plant",
+        "resourceType": "Biomass",
+        "technologyType": "Multi-feedstock Power Plant",
+        "connectionType": "Grid",
+        "installedMw": 20.0,
+        "dependableMw": 18.0,
+        "units": 1,
+        "province": "Negros Occidental",
+        "cityMunicipality": "San Carlos City",
+        "municipalityProvince": "Circumferential Road, San Carlos Economic Zone II, Barangay Palampas, San Carlos City, Negros Occidental",
+        "operator": "San Carlos Biopower, Inc.",
+        "ownerIppa": "San Carlos Biopower, Inc.",
+        "commissioned": "Jun-2022",
+        "latestYear": 2022,
+        "startOfYear": "2022-01-01"
+      },
+      {
+        "facilityName": "MONTESOL",
+        "officialName": "Bais Solar Power Plant",
+        "resourceType": "Ground Mounted",
+        "technologyType": "Ground Mounted Solar PVs",
+        "connectionType": "Grid",
+        "installedMw": 18.0,
+        "dependableMw": 14.4,
+        "units": null,
+        "province": "Negros Oriental",
+        "cityMunicipality": "Bais City",
+        "municipalityProvince": "Barangay Tamisu, Bais City, Negros Oriental",
+        "operator": "Monte Solar Energy Inc. (MONTESOL)",
+        "ownerIppa": "Monte Solar Energy Inc. (MONTESOL)",
+        "commissioned": "Mar-2016",
+        "latestYear": 2016,
+        "startOfYear": "2016-01-01"
+      },
+      {
+        "facilityName": "SACASOL I - A",
+        "officialName": "SACASOL Phase 1A Solar Power Plant",
+        "resourceType": "Ground Mounted",
+        "technologyType": "Ground Mounted Solar PVs",
+        "connectionType": "Grid",
+        "installedMw": 13.0,
+        "dependableMw": 11.7,
+        "units": null,
+        "province": "Negros Occidental",
+        "cityMunicipality": "San Carlos",
+        "municipalityProvince": "Barangay Punao, San Carlos, Negros Occidental",
+        "operator": "San Carlos Solar Energy Inc. (SACASOL)",
+        "ownerIppa": "San Carlos Solar Energy Inc. (SACASOL)",
+        "commissioned": "May-2014",
+        "latestYear": 2014,
+        "startOfYear": "2014-01-01"
+      },
+      {
+        "facilityName": "SACASOL I - B",
+        "officialName": "SACASOL Phase 1B Solar Power Plant and its Emergency Diesel Genereating Unit",
+        "resourceType": "Ground Mounted",
+        "technologyType": "Ground Mounted Solar PVs",
+        "connectionType": "Grid",
+        "installedMw": 9.0,
+        "dependableMw": 8.1,
+        "units": null,
+        "province": "Negros Occidental",
+        "cityMunicipality": "San Carlos",
+        "municipalityProvince": "Barangay Punao, San Carlos, Negros Occidental",
+        "operator": "San Carlos Solar Energy Inc. (SACASOL)",
+        "ownerIppa": "San Carlos Solar Energy Inc. (SACASOL)",
+        "commissioned": "Aug-2014",
+        "latestYear": 2014,
+        "startOfYear": "2014-01-01"
+      },
+      {
+        "facilityName": "SAN CARLOS BIOENERGY (SCBI)",
+        "officialName": "Bagasse Fired Cogeneration Power Plant",
+        "resourceType": "Biomass",
+        "technologyType": "Rice Husk-fired Cogeneration Plant",
+        "connectionType": "Grid",
+        "installedMw": 8.3,
+        "dependableMw": 4.4,
+        "units": 1,
+        "province": "Negros Occidental",
+        "cityMunicipality": "San Carlos City",
+        "municipalityProvince": "San Carlos Ecozone, Barangay Palampas and Punao, San Carlos City, Negros Occidental",
+        "operator": "San Carlos Bioenergy, Inc. (SCBI)",
+        "ownerIppa": "San Carlos Bioenergy, Inc. (SCBI)",
+        "commissioned": "Feb-2009",
+        "latestYear": 2009,
+        "startOfYear": "2009-01-01"
+      },
+      {
+        "facilityName": "AMLAN HEPP",
+        "officialName": "Hydroelectric Power Plant",
+        "resourceType": "ROR",
+        "technologyType": "Run-of-River type HEPP",
+        "connectionType": "Grid",
+        "installedMw": 0.8,
+        "dependableMw": 0.8,
+        "units": 3,
+        "province": "Negros Oriental",
+        "cityMunicipality": "Amlan",
+        "municipalityProvince": "Sitio Pasalan, Barangay Silab, Amlan, Negros Oriental",
+        "operator": "ICS Renewables Inc.",
+        "ownerIppa": "ICS Renewables Inc.",
+        "commissioned": "May-1961",
+        "latestYear": 1961,
+        "startOfYear": "1961-01-01"
+      }
+    ],
+    "byResourceType": [
+      {
+        "name": "Ground Mounted",
+        "facilityCount": 10,
+        "installedMw": 528.6,
+        "dependableMw": 433.3
+      },
+      {
+        "name": "Biomass",
+        "facilityCount": 11,
+        "installedMw": 305.6,
+        "dependableMw": 183.1
+      },
+      {
+        "name": "Geothermal",
+        "facilityCount": 2,
+        "installedMw": 241.9,
+        "dependableMw": 220.8
+      },
+      {
+        "name": "Diesel",
+        "facilityCount": 1,
+        "installedMw": 31.0,
+        "dependableMw": 25.9
+      },
+      {
+        "name": "ROR",
+        "facilityCount": 1,
+        "installedMw": 0.8,
+        "dependableMw": 0.8
+      }
+    ],
+    "byProvince": [
+      {
+        "name": "Negros Occidental",
+        "facilityCount": 20,
+        "installedMw": 827.2,
+        "dependableMw": 615.9
+      },
+      {
+        "name": "Negros Oriental",
+        "facilityCount": 5,
+        "installedMw": 280.7,
+        "dependableMw": 248.0
+      }
+    ]
+  },
+  "stats": {
+    "visayasDemand2025Mw": 2892.0,
+    "visayasDemandGrowthSince2001Pct": 222.0,
+    "visayasDemandRows": 25,
+    "nirFacilities": 25,
+    "nirInstalledMw": 1107.9,
+    "nirDependableMw": 863.9,
+    "negrosOccidentalInstalledMw": 827.2
+  }
+}
