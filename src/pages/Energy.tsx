@@ -1,4 +1,5 @@
 import {
+  ChevronDown,
   ExternalLink,
   Factory,
   Gauge,
@@ -32,6 +33,8 @@ import {
 } from '../data/energy/feederCoverage';
 
 type Facility = (typeof energyData.generation.facilities)[number];
+type EnergyTab = 'feeders' | 'nir';
+
 const MOBILE_FACILITY_BATCH_SIZE = 6;
 const FEEDER_AREA_PREVIEW_COUNT = 8;
 
@@ -55,6 +58,29 @@ const feederStats = {
     0,
   ),
 };
+
+const getFeederGroupKey = (group: { line: string; name: string }) =>
+  `${group.line}-${group.name}`;
+
+const energyTabs: Array<{
+  id: EnergyTab;
+  label: string;
+  helper: string;
+  icon: React.ComponentType<{ className?: string }>;
+}> = [
+  {
+    id: 'feeders',
+    label: 'Feeder Coverage',
+    helper: `${feederStats.feeders} feeders`,
+    icon: PlugZap,
+  },
+  {
+    id: 'nir',
+    label: 'NIR Generation',
+    helper: `${energyData.stats.nirFacilities} facilities`,
+    icon: Factory,
+  },
+];
 
 const resourceColors: Record<string, string> = {
   'Ground Mounted': '#0ea5e9',
@@ -284,6 +310,64 @@ function GenerationChart() {
   );
 }
 
+function EnergyTabs({
+  activeTab,
+  onChange,
+}: {
+  activeTab: EnergyTab;
+  onChange: (tab: EnergyTab) => void;
+}) {
+  return (
+    <div
+      role="tablist"
+      aria-label="Energy data sections"
+      className="mb-6 grid grid-cols-2 gap-1 rounded-lg border border-gray-200 bg-white p-1 shadow-sm sm:mb-8 sm:inline-grid sm:min-w-[420px]"
+    >
+      {energyTabs.map((tab) => {
+        const Icon = tab.icon;
+        const isActive = activeTab === tab.id;
+
+        return (
+          <button
+            key={tab.id}
+            type="button"
+            role="tab"
+            id={`energy-tab-${tab.id}`}
+            aria-selected={isActive}
+            aria-controls={`energy-panel-${tab.id}`}
+            onClick={() => onChange(tab.id)}
+            className={`flex min-h-14 items-center gap-2 rounded-md px-3 py-2 text-left transition focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 ${
+              isActive
+                ? 'bg-primary-600 text-white shadow-sm'
+                : 'text-gray-600 hover:bg-gray-50 hover:text-gray-950'
+            }`}
+          >
+            <span
+              className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-md ${
+                isActive ? 'bg-white/15' : 'bg-gray-100'
+              }`}
+            >
+              <Icon className="h-4 w-4" />
+            </span>
+            <span className="min-w-0">
+              <span className="block truncate text-sm font-semibold">
+                {tab.label}
+              </span>
+              <span
+                className={`block truncate text-xs ${
+                  isActive ? 'text-primary-50' : 'text-gray-500'
+                }`}
+              >
+                {tab.helper}
+              </span>
+            </span>
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
 function FeederAreaList({ areas }: { areas: string[] }) {
   const visibleAreas = areas.slice(0, FEEDER_AREA_PREVIEW_COUNT);
   const hiddenAreas = areas.slice(FEEDER_AREA_PREVIEW_COUNT);
@@ -326,6 +410,9 @@ function FeederCoverageSection() {
   const [line, setLine] = useState('');
   const [groupName, setGroupName] = useState('');
   const [query, setQuery] = useState('');
+  const [openGroupKeys, setOpenGroupKeys] = useState<string[]>([
+    getFeederGroupKey(feederGroups[0]),
+  ]);
 
   const normalizedQuery = query.trim().toLowerCase();
   const filteredGroups = useMemo(() => {
@@ -373,6 +460,24 @@ function FeederCoverageSection() {
     setLine('');
     setGroupName('');
     setQuery('');
+    setOpenGroupKeys([getFeederGroupKey(feederGroups[0])]);
+  };
+  const selectGroup = (selectedGroupName: string) => {
+    setGroupName(selectedGroupName);
+    const selectedGroup = feederGroups.find(
+      (group) => group.name === selectedGroupName,
+    );
+    if (selectedGroup) {
+      setLine('');
+      setOpenGroupKeys([getFeederGroupKey(selectedGroup)]);
+    }
+  };
+  const toggleGroup = (groupKey: string) => {
+    setOpenGroupKeys((currentKeys) =>
+      currentKeys.includes(groupKey)
+        ? currentKeys.filter((key) => key !== groupKey)
+        : [...currentKeys, groupKey],
+    );
   };
 
   return (
@@ -489,62 +594,132 @@ function FeederCoverageSection() {
         </button>
       </div>
 
+      <div className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-6">
+        <button
+          type="button"
+          onClick={resetFilters}
+          className={`rounded-lg border px-3 py-3 text-left transition ${
+            hasFilters
+              ? 'border-gray-200 bg-white text-gray-700 hover:border-primary-200 hover:bg-primary-50'
+              : 'border-primary-200 bg-primary-50 text-primary-800'
+          }`}
+        >
+          <span className="block text-sm font-semibold">All groups</span>
+          <span className="mt-0.5 block text-xs text-gray-500">
+            {feederStats.feeders} feeders
+          </span>
+        </button>
+        {feederGroups.map((group) => {
+          const isSelected = groupName === group.name;
+
+          return (
+            <button
+              key={getFeederGroupKey(group)}
+              type="button"
+              onClick={() => selectGroup(group.name)}
+              className={`rounded-lg border px-3 py-3 text-left transition ${
+                isSelected
+                  ? 'border-primary-300 bg-primary-50 text-primary-800'
+                  : 'border-gray-200 bg-white text-gray-700 hover:border-primary-200 hover:bg-primary-50'
+              }`}
+            >
+              <span className="block text-sm font-semibold">
+                {group.shortName}
+              </span>
+              <span className="mt-0.5 block truncate text-xs text-gray-500">
+                {group.name}
+              </span>
+            </button>
+          );
+        })}
+      </div>
+
       <div className="mt-4 space-y-3">
         {filteredGroups.length === 0 && (
           <div className="rounded-lg border border-dashed border-gray-300 bg-gray-50 p-4 text-sm text-gray-600">
             No feeder coverage matches the current filters.
           </div>
         )}
-        {filteredGroups.map((group) => (
-          <article
-            key={`${group.line}-${group.name}`}
-            className="rounded-lg border border-gray-200 bg-white"
-          >
-            <div className="flex flex-col gap-2 border-b border-gray-100 p-4 sm:flex-row sm:items-start sm:justify-between">
-              <div>
-                <p className="text-xs font-medium uppercase tracking-wide text-gray-500">
-                  {group.line}
-                </p>
-                <h3 className="mt-1 text-base font-semibold text-gray-950">
-                  {group.name} ({group.shortName})
-                </h3>
-              </div>
-              <div className="flex flex-wrap gap-2 text-xs font-medium">
-                <span className="rounded-full bg-primary-50 px-2.5 py-1 text-primary-700">
-                  {group.capacity}
-                </span>
-                <span className="rounded-full bg-gray-100 px-2.5 py-1 text-gray-700">
-                  {group.feeders.length} feeder
-                  {group.feeders.length === 1 ? '' : 's'}
-                </span>
-              </div>
-            </div>
-            <div className="divide-y divide-gray-100">
-              {group.feeders.map((feeder, index) => (
-                <div
-                  key={`${group.shortName}-${feeder.code}-${index}`}
-                  className="p-4"
-                >
-                  <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
-                    <div className="flex items-center gap-2">
-                      <span className="inline-flex h-8 min-w-12 items-center justify-center rounded-md bg-gray-950 px-2 text-sm font-semibold text-white">
-                        {feeder.code}
-                      </span>
-                      <span className="text-sm font-medium text-gray-950">
-                        {feeder.areas.length} covered area
-                        {feeder.areas.length === 1 ? '' : 's'}
-                      </span>
-                    </div>
-                    <span className="text-xs text-gray-500">
-                      {group.shortName} feeder
+        {filteredGroups.map((group) => {
+          const groupKey = getFeederGroupKey(group);
+          const isOpen =
+            Boolean(normalizedQuery) ||
+            filteredGroups.length === 1 ||
+            openGroupKeys.includes(groupKey);
+          const areaCount = group.feeders.reduce(
+            (total, feeder) => total + feeder.areas.length,
+            0,
+          );
+
+          return (
+            <article
+              key={groupKey}
+              className="overflow-hidden rounded-lg border border-gray-200 bg-white"
+            >
+              <button
+                type="button"
+                aria-expanded={Boolean(isOpen)}
+                onClick={() => toggleGroup(groupKey)}
+                className="flex w-full flex-col gap-3 p-4 text-left transition hover:bg-gray-50 sm:flex-row sm:items-center sm:justify-between"
+              >
+                <div className="min-w-0">
+                  <p className="text-xs font-medium uppercase tracking-wide text-gray-500">
+                    {group.line}
+                  </p>
+                  <h3 className="mt-1 text-base font-semibold text-gray-950">
+                    {group.name} ({group.shortName})
+                  </h3>
+                  <p className="mt-1 text-xs text-gray-500">
+                    {areaCount} area entries across {group.feeders.length}{' '}
+                    feeder{group.feeders.length === 1 ? '' : 's'}
+                  </p>
+                </div>
+                <div className="flex items-center justify-between gap-3 sm:justify-end">
+                  <div className="flex flex-wrap gap-2 text-xs font-medium">
+                    <span className="rounded-full bg-primary-50 px-2.5 py-1 text-primary-700">
+                      {group.capacity}
+                    </span>
+                    <span className="rounded-full bg-gray-100 px-2.5 py-1 text-gray-700">
+                      {group.feeders.length} feeder
+                      {group.feeders.length === 1 ? '' : 's'}
                     </span>
                   </div>
-                  <FeederAreaList areas={feeder.areas} />
+                  <ChevronDown
+                    className={`h-5 w-5 shrink-0 text-gray-400 transition-transform ${
+                      isOpen ? 'rotate-180' : ''
+                    }`}
+                  />
                 </div>
-              ))}
-            </div>
-          </article>
-        ))}
+              </button>
+              {isOpen && (
+                <div className="divide-y divide-gray-100 border-t border-gray-100">
+                  {group.feeders.map((feeder, index) => (
+                    <div
+                      key={`${group.shortName}-${feeder.code}-${index}`}
+                      className="p-4"
+                    >
+                      <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
+                        <div className="flex items-center gap-2">
+                          <span className="inline-flex h-8 min-w-12 items-center justify-center rounded-md bg-gray-950 px-2 text-sm font-semibold text-white">
+                            {feeder.code}
+                          </span>
+                          <span className="text-sm font-medium text-gray-950">
+                            {feeder.areas.length} covered area
+                            {feeder.areas.length === 1 ? '' : 's'}
+                          </span>
+                        </div>
+                        <span className="text-xs text-gray-500">
+                          {group.shortName} feeder
+                        </span>
+                      </div>
+                      <FeederAreaList areas={feeder.areas} />
+                    </div>
+                  ))}
+                </div>
+              )}
+            </article>
+          );
+        })}
       </div>
     </section>
   );
@@ -832,7 +1007,53 @@ function FacilityTable() {
   );
 }
 
+function NirGenerationSection() {
+  return (
+    <>
+      <div className="mb-6 grid grid-cols-1 gap-3 sm:mb-8 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
+        <MetricCard
+          label="Visayas 2025 demand"
+          value={formatMw(energyData.stats.visayasDemand2025Mw)}
+          helper="System peak demand"
+          icon={Zap}
+        />
+        <MetricCard
+          label="Demand growth"
+          value={`${energyData.stats.visayasDemandGrowthSince2001Pct}%`}
+          helper="Since 2001"
+          icon={Gauge}
+        />
+        <MetricCard
+          label="NIR installed"
+          value={formatMw(energyData.stats.nirInstalledMw)}
+          helper={`${energyData.stats.nirFacilities} facilities`}
+          icon={Factory}
+        />
+        <MetricCard
+          label="NIR dependable"
+          value={formatMw(energyData.stats.nirDependableMw)}
+          helper={`${formatMw(
+            energyData.stats.negrosOccidentalInstalledMw,
+          )} in Negros Occidental`}
+          icon={Factory}
+        />
+      </div>
+
+      <div className="mb-6 grid gap-4 sm:mb-8 sm:gap-6 lg:grid-cols-2">
+        <DemandChart />
+        <GenerationChart />
+      </div>
+
+      <div className="mb-6 sm:mb-8">
+        <FacilityTable />
+      </div>
+    </>
+  );
+}
+
 export default function Energy() {
+  const [activeTab, setActiveTab] = useState<EnergyTab>('feeders');
+
   return (
     <>
       <SEO
@@ -854,56 +1075,37 @@ export default function Energy() {
               Energy
             </p>
             <Heading className="mt-2 text-3xl leading-tight sm:text-4xl lg:text-5xl">
-              Bacolod energy context, feeder coverage, and Negros power plants
+              Bacolod feeder coverage and energy context
             </Heading>
             <p className="mt-3 text-base text-gray-600">
-              A compact view of DOE power statistics for Visayas demand and NIR
-              generation capacity, plus Negros Power feeder area coverage for
-              Bacolod and nearby service areas.
+              Search Negros Power feeder area coverage for Bacolod and nearby
+              service areas, with DOE Visayas demand and NIR generation data as
+              supporting energy context.
             </p>
           </div>
 
-          <div className="mb-6 grid grid-cols-1 gap-3 sm:mb-8 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
-            <MetricCard
-              label="Visayas 2025 demand"
-              value={formatMw(energyData.stats.visayasDemand2025Mw)}
-              helper="System peak demand"
-              icon={Zap}
-            />
-            <MetricCard
-              label="Demand growth"
-              value={`${energyData.stats.visayasDemandGrowthSince2001Pct}%`}
-              helper="Since 2001"
-              icon={Gauge}
-            />
-            <MetricCard
-              label="NIR installed"
-              value={formatMw(energyData.stats.nirInstalledMw)}
-              helper={`${energyData.stats.nirFacilities} facilities`}
-              icon={Factory}
-            />
-            <MetricCard
-              label="NIR dependable"
-              value={formatMw(energyData.stats.nirDependableMw)}
-              helper={`${formatMw(
-                energyData.stats.negrosOccidentalInstalledMw,
-              )} in Negros Occidental`}
-              icon={Factory}
-            />
-          </div>
+          <EnergyTabs activeTab={activeTab} onChange={setActiveTab} />
 
-          <div className="mb-6 grid gap-4 sm:mb-8 sm:gap-6 lg:grid-cols-2">
-            <DemandChart />
-            <GenerationChart />
-          </div>
+          {activeTab === 'feeders' && (
+            <div
+              id="energy-panel-feeders"
+              role="tabpanel"
+              aria-labelledby="energy-tab-feeders"
+              className="mb-6 sm:mb-8"
+            >
+              <FeederCoverageSection />
+            </div>
+          )}
 
-          <div className="mb-6 sm:mb-8">
-            <FeederCoverageSection />
-          </div>
-
-          <div className="mb-6 sm:mb-8">
-            <FacilityTable />
-          </div>
+          {activeTab === 'nir' && (
+            <div
+              id="energy-panel-nir"
+              role="tabpanel"
+              aria-labelledby="energy-tab-nir"
+            >
+              <NirGenerationSection />
+            </div>
+          )}
 
           <Card>
             <CardContent className="p-4 sm:p-6">
