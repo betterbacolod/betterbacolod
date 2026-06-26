@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/betterbacolod/betterbacolod/compare/v1.3.0...v1.4.0) (2026-06-26)
+
+
+### Features
+
+* **energy:** add Visayas grid dashboard ([acd8924](https://github.com/betterbacolod/betterbacolod/commit/acd8924aa07273e2b0b7f6cb9d4a19760aba57cc))
+
 ## [1.3.0](https://github.com/betterbacolod/betterbacolod/compare/v1.2.2...v1.3.0) (2026-06-25)
 
 
