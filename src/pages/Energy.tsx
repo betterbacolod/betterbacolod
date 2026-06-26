@@ -1,4 +1,11 @@
-import { ExternalLink, Factory, Gauge, Search, Zap } from 'lucide-react';
+import {
+  ExternalLink,
+  Factory,
+  Gauge,
+  PlugZap,
+  Search,
+  Zap,
+} from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import {
@@ -19,9 +26,35 @@ import { Card, CardContent } from '../components/ui/Card';
 import { Heading } from '../components/ui/Heading';
 import Section from '../components/ui/Section';
 import energyData from '../data/energy/electric-grid.json';
+import {
+  feederCoverageSource,
+  feederGroups,
+} from '../data/energy/feederCoverage';
 
 type Facility = (typeof energyData.generation.facilities)[number];
 const MOBILE_FACILITY_BATCH_SIZE = 6;
+const FEEDER_AREA_PREVIEW_COUNT = 8;
+
+const feederLines = Array.from(
+  new Set(feederGroups.map((group) => group.line)),
+);
+const feederStats = {
+  lines: feederLines.length,
+  groups: feederGroups.length,
+  feeders: feederGroups.reduce(
+    (total, group) => total + group.feeders.length,
+    0,
+  ),
+  areas: feederGroups.reduce(
+    (total, group) =>
+      total +
+      group.feeders.reduce(
+        (feederTotal, feeder) => feederTotal + feeder.areas.length,
+        0,
+      ),
+    0,
+  ),
+};
 
 const resourceColors: Record<string, string> = {
   'Ground Mounted': '#0ea5e9',
@@ -47,14 +80,21 @@ const formatMw = (value: number) =>
 const sourceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Dataset',
-  name: 'Visayas Demand and NIR Generation Context',
+  name: 'Visayas Demand, NIR Generation, and Feeder Coverage Context',
   description:
-    'BetterBacolod summary of DOE Visayas system peak demand and NIR power plant capacity data.',
-  creator: {
-    '@type': 'GovernmentOrganization',
-    name: energyData.source.name,
-    url: 'https://doe.gov.ph',
-  },
+    'BetterBacolod summary of DOE Visayas system peak demand, NIR power plant capacity data, and Negros Power feeder area coverage.',
+  creator: [
+    {
+      '@type': 'GovernmentOrganization',
+      name: energyData.source.name,
+      url: 'https://doe.gov.ph',
+    },
+    {
+      '@type': 'Organization',
+      name: 'Negros Power',
+      url: 'https://negrospower.ph',
+    },
+  ],
   spatialCoverage: [
     { '@type': 'AdministrativeArea', name: 'Visayas, Philippines' },
     { '@type': 'AdministrativeArea', name: 'Negros Island Region' },
@@ -65,6 +105,7 @@ const sourceSchema = {
   isBasedOn: [
     ...energyData.source.articles.map((source) => source.url),
     ...energyData.source.documents.map((source) => source.url),
+    feederCoverageSource.url,
   ],
 };
 
@@ -240,6 +281,272 @@ function GenerationChart() {
         </div>
       </CardContent>
     </Card>
+  );
+}
+
+function FeederAreaList({ areas }: { areas: string[] }) {
+  const visibleAreas = areas.slice(0, FEEDER_AREA_PREVIEW_COUNT);
+  const hiddenAreas = areas.slice(FEEDER_AREA_PREVIEW_COUNT);
+
+  return (
+    <div className="mt-3">
+      <div className="flex flex-wrap gap-1.5">
+        {visibleAreas.map((area) => (
+          <span
+            key={area}
+            className="rounded-full bg-gray-100 px-2 py-1 text-xs text-gray-700"
+          >
+            {area}
+          </span>
+        ))}
+      </div>
+      {hiddenAreas.length > 0 && (
+        <details className="mt-2 group">
+          <summary className="cursor-pointer list-none text-xs font-medium text-primary-700 hover:underline">
+            Show {hiddenAreas.length} more area
+            {hiddenAreas.length === 1 ? '' : 's'}
+          </summary>
+          <div className="mt-2 flex flex-wrap gap-1.5">
+            {hiddenAreas.map((area) => (
+              <span
+                key={area}
+                className="rounded-full bg-gray-100 px-2 py-1 text-xs text-gray-700"
+              >
+                {area}
+              </span>
+            ))}
+          </div>
+        </details>
+      )}
+    </div>
+  );
+}
+
+function FeederCoverageSection() {
+  const [line, setLine] = useState('');
+  const [groupName, setGroupName] = useState('');
+  const [query, setQuery] = useState('');
+
+  const normalizedQuery = query.trim().toLowerCase();
+  const filteredGroups = useMemo(() => {
+    return feederGroups
+      .filter((group) => !line || group.line === line)
+      .filter((group) => !groupName || group.name === groupName)
+      .map((group) => {
+        const groupSearchTarget = [
+          group.line,
+          group.name,
+          group.shortName,
+          group.capacity,
+        ]
+          .join(' ')
+          .toLowerCase();
+        const feeders = group.feeders.filter((feeder) => {
+          if (!normalizedQuery) {
+            return true;
+          }
+          const searchTarget = [groupSearchTarget, feeder.code, ...feeder.areas]
+            .join(' ')
+            .toLowerCase();
+          return searchTarget.includes(normalizedQuery);
+        });
+        return { ...group, feeders };
+      })
+      .filter((group) => group.feeders.length > 0);
+  }, [line, groupName, normalizedQuery]);
+
+  const filteredFeederCount = filteredGroups.reduce(
+    (total, group) => total + group.feeders.length,
+    0,
+  );
+  const filteredAreaCount = filteredGroups.reduce(
+    (total, group) =>
+      total +
+      group.feeders.reduce(
+        (feederTotal, feeder) => feederTotal + feeder.areas.length,
+        0,
+      ),
+    0,
+  );
+  const hasFilters = Boolean(line || groupName || normalizedQuery);
+  const resetFilters = () => {
+    setLine('');
+    setGroupName('');
+    setQuery('');
+  };
+
+  return (
+    <section className="rounded-xl border border-gray-200 bg-white p-4 shadow-sm sm:p-6">
+      <div className="flex flex-col gap-3 lg:flex-row lg:items-start lg:justify-between">
+        <div className="flex max-w-3xl gap-3">
+          <div className="mt-1 hidden h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary-50 text-primary-700 sm:flex">
+            <PlugZap className="h-5 w-5" />
+          </div>
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-wide text-primary-700">
+              Feeder Area Coverage
+            </p>
+            <h2 className="mt-1 text-xl font-bold text-gray-950 sm:text-2xl">
+              Find which feeder covers a Bacolod-area barangay
+            </h2>
+            <p className="mt-2 text-sm text-gray-600">
+              Searchable list from Negros Power feeder coverage. A map can come
+              later; this version keeps the areas scannable by line, feeder
+              group, and feeder code.
+            </p>
+          </div>
+        </div>
+        <a
+          href={feederCoverageSource.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1 text-sm font-medium text-primary-700 hover:underline"
+        >
+          {feederCoverageSource.name}
+          <ExternalLink className="h-3.5 w-3.5" />
+        </a>
+      </div>
+
+      <div className="mt-5 grid grid-cols-2 gap-2 sm:grid-cols-4">
+        <div className="rounded-lg border border-gray-200 bg-gray-50 px-3 py-2">
+          <p className="text-[11px] font-medium uppercase tracking-wide text-gray-500">
+            Lines
+          </p>
+          <p className="text-base font-semibold text-gray-950 tabular-nums">
+            {feederStats.lines}
+          </p>
+        </div>
+        <div className="rounded-lg border border-gray-200 bg-gray-50 px-3 py-2">
+          <p className="text-[11px] font-medium uppercase tracking-wide text-gray-500">
+            Groups
+          </p>
+          <p className="text-base font-semibold text-gray-950 tabular-nums">
+            {filteredGroups.length}/{feederStats.groups}
+          </p>
+        </div>
+        <div className="rounded-lg border border-gray-200 bg-gray-50 px-3 py-2">
+          <p className="text-[11px] font-medium uppercase tracking-wide text-gray-500">
+            Feeders
+          </p>
+          <p className="text-base font-semibold text-gray-950 tabular-nums">
+            {filteredFeederCount}/{feederStats.feeders}
+          </p>
+        </div>
+        <div className="rounded-lg border border-gray-200 bg-gray-50 px-3 py-2">
+          <p className="text-[11px] font-medium uppercase tracking-wide text-gray-500">
+            Area entries
+          </p>
+          <p className="text-base font-semibold text-gray-950 tabular-nums">
+            {filteredAreaCount}/{feederStats.areas}
+          </p>
+        </div>
+      </div>
+
+      <div className="mt-4 grid gap-2 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)_minmax(0,1fr)_auto]">
+        <label className="relative">
+          <span className="sr-only">Search feeder coverage</span>
+          <Search className="pointer-events-none absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
+          <input
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder="Search barangay, area, or feeder"
+            className="h-10 w-full rounded-lg border border-gray-300 bg-white pl-9 pr-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500"
+          />
+        </label>
+        <select
+          aria-label="Filter by feeder line"
+          value={line}
+          onChange={(event) => setLine(event.target.value)}
+          className="h-10 rounded-lg border border-gray-300 bg-white px-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500"
+        >
+          <option value="">All lines</option>
+          {feederLines.map((item) => (
+            <option key={item} value={item}>
+              {item}
+            </option>
+          ))}
+        </select>
+        <select
+          aria-label="Filter by feeder group"
+          value={groupName}
+          onChange={(event) => setGroupName(event.target.value)}
+          className="h-10 rounded-lg border border-gray-300 bg-white px-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500"
+        >
+          <option value="">All groups</option>
+          {feederGroups.map((group) => (
+            <option key={group.name} value={group.name}>
+              {group.shortName} - {group.name}
+            </option>
+          ))}
+        </select>
+        <button
+          type="button"
+          onClick={resetFilters}
+          disabled={!hasFilters}
+          className="h-10 rounded-lg border border-gray-200 bg-white px-3 text-sm font-medium text-primary-700 transition hover:bg-primary-50 disabled:cursor-not-allowed disabled:text-gray-400 disabled:hover:bg-white"
+        >
+          Reset
+        </button>
+      </div>
+
+      <div className="mt-4 space-y-3">
+        {filteredGroups.length === 0 && (
+          <div className="rounded-lg border border-dashed border-gray-300 bg-gray-50 p-4 text-sm text-gray-600">
+            No feeder coverage matches the current filters.
+          </div>
+        )}
+        {filteredGroups.map((group) => (
+          <article
+            key={`${group.line}-${group.name}`}
+            className="rounded-lg border border-gray-200 bg-white"
+          >
+            <div className="flex flex-col gap-2 border-b border-gray-100 p-4 sm:flex-row sm:items-start sm:justify-between">
+              <div>
+                <p className="text-xs font-medium uppercase tracking-wide text-gray-500">
+                  {group.line}
+                </p>
+                <h3 className="mt-1 text-base font-semibold text-gray-950">
+                  {group.name} ({group.shortName})
+                </h3>
+              </div>
+              <div className="flex flex-wrap gap-2 text-xs font-medium">
+                <span className="rounded-full bg-primary-50 px-2.5 py-1 text-primary-700">
+                  {group.capacity}
+                </span>
+                <span className="rounded-full bg-gray-100 px-2.5 py-1 text-gray-700">
+                  {group.feeders.length} feeder
+                  {group.feeders.length === 1 ? '' : 's'}
+                </span>
+              </div>
+            </div>
+            <div className="divide-y divide-gray-100">
+              {group.feeders.map((feeder, index) => (
+                <div
+                  key={`${group.shortName}-${feeder.code}-${index}`}
+                  className="p-4"
+                >
+                  <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
+                    <div className="flex items-center gap-2">
+                      <span className="inline-flex h-8 min-w-12 items-center justify-center rounded-md bg-gray-950 px-2 text-sm font-semibold text-white">
+                        {feeder.code}
+                      </span>
+                      <span className="text-sm font-medium text-gray-950">
+                        {feeder.areas.length} covered area
+                        {feeder.areas.length === 1 ? '' : 's'}
+                      </span>
+                    </div>
+                    <span className="text-xs text-gray-500">
+                      {group.shortName} feeder
+                    </span>
+                  </div>
+                  <FeederAreaList areas={feeder.areas} />
+                </div>
+              ))}
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
   );
 }
 
@@ -529,9 +836,9 @@ export default function Energy() {
   return (
     <>
       <SEO
-        title="Visayas Energy and NIR Power Plants"
-        description="Track Visayas grid demand and Negros Island Region power plant capacity using Department of Energy data on BetterBacolod."
-        keywords="Bacolod energy, Visayas grid demand, Negros power plants, NIR energy, Bacolod electricity, DOE power statistics"
+        title="Bacolod Energy, Feeder Coverage, and NIR Power Plants"
+        description="Track Visayas grid demand, Negros Island Region power plant capacity, and searchable Negros Power feeder area coverage on BetterBacolod."
+        keywords="Bacolod energy, Bacolod feeder coverage, Negros Power feeder, Visayas grid demand, Negros power plants, NIR energy, Bacolod electricity, DOE power statistics"
         url="/energy"
       />
       <Helmet>
@@ -547,12 +854,12 @@ export default function Energy() {
               Energy
             </p>
             <Heading className="mt-2 text-3xl leading-tight sm:text-4xl lg:text-5xl">
-              Visayas grid demand and Negros power plants
+              Bacolod energy context, feeder coverage, and Negros power plants
             </Heading>
             <p className="mt-3 text-base text-gray-600">
               A compact view of DOE power statistics for Visayas demand and NIR
-              generation capacity. Bacolod is shown as part of the wider Visayas
-              and Negros grid context.
+              generation capacity, plus Negros Power feeder area coverage for
+              Bacolod and nearby service areas.
             </p>
           </div>
 
@@ -591,6 +898,10 @@ export default function Energy() {
           </div>
 
           <div className="mb-6 sm:mb-8">
+            <FeederCoverageSection />
+          </div>
+
+          <div className="mb-6 sm:mb-8">
             <FacilityTable />
           </div>
 
@@ -601,14 +912,19 @@ export default function Energy() {
               </h2>
               <p className="mt-2 text-sm text-gray-600">
                 Data is derived from DOE power statistics and the DOE list of
-                existing grid-connected power plants. This page intentionally
-                does not claim a Bacolod City power plant; no Bacolod City
-                generation facility is identified in the dataset.
+                existing grid-connected power plants. Feeder area coverage is
+                sourced from Negros Power. This page intentionally does not
+                claim a Bacolod City power plant; no Bacolod City generation
+                facility is identified in the DOE dataset.
               </p>
               <div className="mt-4 flex flex-wrap gap-3">
                 {[
                   ...energyData.source.articles,
                   ...energyData.source.documents,
+                  {
+                    title: feederCoverageSource.name,
+                    url: feederCoverageSource.url,
+                  },
                 ].map((source) => (
                   <a
                     key={source.url}

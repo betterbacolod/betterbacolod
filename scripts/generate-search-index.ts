@@ -96,9 +96,10 @@ async function generateSearchIndex() {
     },
     {
       title: 'Energy',
-      description: 'Visayas grid demand and NIR power plant capacity',
+      description:
+        'Visayas grid demand, NIR power plant capacity, and Negros Power feeder coverage',
       content:
-        'energy electricity power Visayas grid demand Negros Island Region NIR power plants DOE installed dependable capacity',
+        'energy electricity power Visayas grid demand Negros Island Region NIR power plants DOE installed dependable capacity Negros Power feeder coverage feeder area Bacolod barangay Hilangban Burgos Reclamation Sum-ag Murcia Panaogao Talisay Mt View Lopez Alijis Asdes Gonzaga HF BF RF SF MuF PF TF MF LF AF AGF',
       url: '/energy',
       category: 'Energy',
       type: 'page',
