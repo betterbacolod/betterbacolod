@@ -1,7 +1,3 @@
----
-title: About BetterBacolod
-description: Learn about the BetterBacolod project and how we're making local government information more accessible.
----
 
 # About BetterBacolod
 

@@ -1,7 +1,3 @@
----
-title: Transparency
-description: Access transparency documents, reports, and open data from Bacolod City government.
----
 
 # Transparency
 

@@ -4,7 +4,7 @@ Bacolod City offers scholarship programs through the **Public Employment Service
 
 ---
 
-## PESO Scholarship Program
+#### PESO Scholarship Program
 
 The Bacolod City Government provides scholarship assistance to deserving students through PESO.
 
