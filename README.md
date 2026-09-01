@@ -100,7 +100,7 @@ We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 **Branch workflow:**
 ```bash
-git checkout -b feat/your-feature
+git switch -c feat/your-feature
 # make changes
 bun run lint
 bun run build

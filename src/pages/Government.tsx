@@ -1,4 +1,3 @@
-import * as LucideIcons from 'lucide-react';
 import { ChevronRight, Search } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
@@ -11,6 +10,7 @@ import { Heading } from '../components/ui/Heading';
 import Section from '../components/ui/Section';
 import { Text } from '../components/ui/Text';
 import { governmentActivitCategories } from '../data/yamlLoader';
+import { getCategoryIcon } from '../lib/categoryIcons';
 
 const Government: React.FC = () => {
   const [searchParams] = useSearchParams();
@@ -64,9 +64,7 @@ const Government: React.FC = () => {
         {/* Mobile: List Tiles */}
         <div className="lg:hidden space-y-2">
           {governmentActivitCategories.categories.map((cat) => {
-            const CatIcon = LucideIcons[
-              cat.icon as keyof typeof LucideIcons
-            ] as React.ComponentType<{ className?: string }>;
+            const CatIcon = getCategoryIcon(cat.icon);
             const isActive = activeSection === cat.slug;
             return (
               <div key={cat.slug}>
@@ -118,9 +116,7 @@ const Government: React.FC = () => {
         <div className="hidden lg:block">
           <div className="grid grid-cols-3 gap-6">
             {governmentActivitCategories.categories.map((cat) => {
-              const CatIcon = LucideIcons[
-                cat.icon as keyof typeof LucideIcons
-              ] as React.ComponentType<{ className?: string }>;
+              const CatIcon = getCategoryIcon(cat.icon);
               const isActive = activeSection === cat.slug;
               return (
                 <Card

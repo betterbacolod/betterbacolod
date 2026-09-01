@@ -1,4 +1,3 @@
-import * as LucideIcons from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import ServicesSection from '../components/home/ServicesSection';
@@ -13,6 +12,7 @@ import {
   type Subcategory,
   serviceCategories,
 } from '../data/yamlLoader';
+import { getCategoryIcon } from '../lib/categoryIcons';
 
 const Services: React.FC = () => {
   const { category } = useParams();
@@ -24,9 +24,7 @@ const Services: React.FC = () => {
   };
 
   const categoryData = getCategory();
-  const Icon = LucideIcons[
-    categoryData?.icon as keyof typeof LucideIcons
-  ] as React.ComponentType<{ className?: string }>;
+  const Icon = getCategoryIcon(categoryData?.icon);
   const categoryGuideMap: Record<string, { label: string; href: string }> = {
     'health-services': {
       label: 'Bacolod Health Services guide',
@@ -97,7 +95,7 @@ const Services: React.FC = () => {
       />
       <Section className="p-3 mb-12">
         <Breadcrumbs className="mb-8" />
-        <Icon className="h-8 w-8 mb-4 text-primary-600 rounded-md" />
+        {Icon && <Icon className="h-8 w-8 mb-4 text-primary-600 rounded-md" />}
         <Heading>{categoryData.category || category}</Heading>
         <Text className="text-gray-600 mb-6">{categoryData.description}</Text>
         {relatedGuide && (
