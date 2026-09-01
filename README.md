@@ -67,17 +67,15 @@ bun run check
 betterbacolod/
 ├── src/
 │   ├── components/       # React components
-│   │   ├── government/   # Officials, departments, barangays
 │   │   ├── home/         # Homepage sections
 │   │   ├── layout/       # Navbar, Footer, TopBanner
 │   │   ├── sections/     # Hero, etc.
-│   │   ├── transparency/ # Transparency data components
 │   │   └── ui/           # Reusable UI components
-│   ├── pages/            # Route pages
+│   ├── pages/            # Small general route pages
 │   ├── features/         # Feature-owned routes and private components
-│   │   ├── energy/
-│   │   ├── government/
-│   │   └── transparency/
+│   │   ├── energy/       # Energy page
+│   │   ├── government/   # Government page + private components
+│   │   └── transparency/ # Transparency page + private components
 │   ├── data/             # YAML/JSON data loaders
 │   ├── hooks/            # Custom React hooks
 │   └── lib/              # Utilities & markdown
@@ -87,7 +85,8 @@ betterbacolod/
 ├── public/               # Static assets
 ├── biome.json            # Biome config
 ├── vercel.json           # Vercel config
-└── package.json
+├── package.json
+└── AGENTS.md             # Contributor and agent conventions
 ```
 
 ---
