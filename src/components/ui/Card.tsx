@@ -92,4 +92,4 @@ const CardImage = ({ className, ...props }: CardImageProps) => {
   );
 };
 
-export { Card, CardHeader, CardContent, CardFooter, CardImage };
+export { Card, CardContent, CardFooter, CardHeader, CardImage };

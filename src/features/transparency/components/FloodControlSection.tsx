@@ -1,6 +1,6 @@
 import { ChevronDown, ExternalLink, Search } from 'lucide-react';
 import { useMemo, useState } from 'react';
-import floodData from '../../data/transparency/flood-control.json';
+import floodData from '../../../data/transparency/flood-control.json';
 // 1. Import the new chart component
 import FloodControlChart from './FloodControlChart';
 

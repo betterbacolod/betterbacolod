@@ -74,6 +74,10 @@ betterbacolod/
 │   │   ├── transparency/ # Transparency data components
 │   │   └── ui/           # Reusable UI components
 │   ├── pages/            # Route pages
+│   ├── features/         # Feature-owned routes and private components
+│   │   ├── energy/
+│   │   ├── government/
+│   │   └── transparency/
 │   ├── data/             # YAML/JSON data loaders
 │   ├── hooks/            # Custom React hooks
 │   └── lib/              # Utilities & markdown
@@ -100,7 +104,7 @@ We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 **Branch workflow:**
 ```bash
-git checkout -b feat/your-feature
+git switch -c feat/your-feature
 # make changes
 bun run lint
 bun run build

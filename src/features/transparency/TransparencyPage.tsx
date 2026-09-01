@@ -12,14 +12,14 @@ import {
 } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import SEO from '../components/SEO';
-import FloodControlSection from '../components/transparency/FloodControlSection';
-import FuelPricesSection from '../components/transparency/FuelPricesSection';
-import { Card, CardContent } from '../components/ui/Card';
-import { Heading } from '../components/ui/Heading';
-import Section from '../components/ui/Section';
-import { Text } from '../components/ui/Text';
-import budgetData from '../data/transparency/budget-region6.json';
+import SEO from '../../components/SEO';
+import { Card, CardContent } from '../../components/ui/Card';
+import { Heading } from '../../components/ui/Heading';
+import Section from '../../components/ui/Section';
+import { Text } from '../../components/ui/Text';
+import budgetData from '../../data/transparency/budget-region6.json';
+import FloodControlSection from './components/FloodControlSection';
+import FuelPricesSection from './components/FuelPricesSection';
 
 const categories = [
   {

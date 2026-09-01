@@ -11,7 +11,7 @@ import {
   XAxis,
   YAxis,
 } from 'recharts';
-import floodData from '../../data/transparency/flood-control.json';
+import floodData from '../../../data/transparency/flood-control.json';
 
 // Define theme colors (matches your Tailwind config)
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
@@ -83,10 +83,19 @@ export default function FloodControlChart() {
                   border: 'none',
                   boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)',
                 }}
-                formatter={(value: number | undefined) => [
-                  `₱${((value ?? 0) / 1e6).toFixed(2)}M`,
-                  'Budget',
-                ]}
+                formatter={(
+                  value:
+                    | number
+                    | string
+                    | readonly (number | string)[]
+                    | undefined,
+                ) => {
+                  const amount = Array.isArray(value) ? value[0] : value;
+                  return [
+                    `₱${(Number(amount ?? 0) / 1e6).toFixed(2)}M`,
+                    'Budget',
+                  ];
+                }}
               />
               <Bar dataKey="cost" radius={[4, 4, 0, 0]} barSize={40}>
                 {barData.map((_entry, index) => (

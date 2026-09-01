@@ -1,6 +1,6 @@
-import * as LucideIcons from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { serviceCategories } from '../../data/yamlLoader';
+import { getCategoryIcon } from '../../lib/categoryIcons';
 import { Card, CardContent } from '../ui/Card';
 import { Heading } from '../ui/Heading';
 import Section from '../ui/Section';
@@ -26,17 +26,8 @@ export default function ServicesSection({
   title?: string;
   description?: string;
 }) {
-  const getIcon = (category: string) => {
-    const IconComponent = LucideIcons[
-      category as keyof typeof LucideIcons
-    ] as React.ComponentType<{ className?: string }>;
-    return IconComponent ? <IconComponent className="h-6 w-6" /> : null;
-  };
-
   const displayedCategories = serviceCategories.categories as Category[];
-  const EnergyIcon = LucideIcons[
-    'Zap' as keyof typeof LucideIcons
-  ] as React.ComponentType<{ className?: string }>;
+  const EnergyIcon = getCategoryIcon('Zap');
 
   return (
     <Section>
@@ -55,7 +46,10 @@ export default function ServicesSection({
               <CardContent className="flex flex-col h-full p-6">
                 <div className="flex gap-2">
                   <div className="bg-primary-100 text-primary-600 p-3 rounded-md mb-4 self-start">
-                    {getIcon(category.icon)}
+                    {(() => {
+                      const Icon = getCategoryIcon(category.icon);
+                      return Icon ? <Icon className="h-6 w-6" /> : null;
+                    })()}
                   </div>
                   <h3 className="text-lg font-semibold mb-4 text-gray-900 self-center">
                     {category.category}
@@ -71,7 +65,7 @@ export default function ServicesSection({
             <CardContent className="flex flex-col h-full p-6">
               <div className="flex gap-2">
                 <div className="bg-primary-100 text-primary-600 p-3 rounded-md mb-4 self-start">
-                  <EnergyIcon className="h-6 w-6" />
+                  {EnergyIcon && <EnergyIcon className="h-6 w-6" />}
                 </div>
                 <h3 className="text-lg font-semibold mb-4 text-gray-900 self-center">
                   Energy
