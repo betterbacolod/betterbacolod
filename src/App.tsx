@@ -8,6 +8,7 @@ import StructuredData from './components/StructuredData';
 import ScrollToTop from './components/ui/ScrollToTop';
 import { seoGuides } from './data/seoGuides';
 import About from './pages/About';
+import BacolodFlights from './pages/BacolodFlights';
 import Document from './pages/Document';
 import Energy from './pages/Energy';
 import Government from './pages/Government';
@@ -36,6 +37,7 @@ function App() {
               <Route path="/government" element={<Government />} />
               <Route path="/transparency" element={<Transparency />} />
               <Route path="/about" element={<About />} />
+              <Route path="/bacolod-flights" element={<BacolodFlights />} />
               <Route path="/sitemap" element={<Sitemap />} />
               <Route path="/search" element={<Search />} />
               {seoGuides.map((guide) => (

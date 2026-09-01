@@ -157,6 +157,7 @@ export const seoGuides: SeoGuide[] = [
     ],
     relatedLinks: [
       { label: 'Fuel Price Watch', href: '/bacolod-fuel-prices' },
+      { label: 'Bacolod–Silay Flights', href: '/bacolod-flights' },
       {
         label: 'Traffic Violations',
         href: '/transportation/report-traffic-violations-and-check-penalties',
