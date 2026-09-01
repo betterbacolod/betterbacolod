@@ -47,6 +47,12 @@ jobs:
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Fail when the official source has a prolonged gap
+        if: steps.fetch.outputs.stale_source == 'true'
+        run: |
+          echo "DOE has no discovered report for a week older than 14 days."
+          exit 1
+
       - name: Open PR with new fuel-price data
         if: steps.fetch.outputs.exit_code == '0' && steps.diff.outputs.changed == 'true'
         uses: peter-evans/create-pull-request@v6
