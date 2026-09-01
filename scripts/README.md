@@ -12,7 +12,9 @@ the DOE Visayas Field Office retail-pump-price report.
 09:00 PHT** (01:00 UTC). Each run:
 
 1. Computes the most recent Tuesday and downloads the DOE PDF from the
-   predictable URL `https://prod-cms.doe.gov.ph/documents/d/guest/vfo-price-monitoring-MMDDYY-pdf`.
+   official [DOE Visayas Pump Prices listing](https://doe.gov.ph/data-and-prices/liquid-fuels/retail-pump-prices/visayas-pump-prices),
+   then downloads the dated PDF attachment. This matters because DOE periodically
+   changes attachment filenames.
 2. Checks a rolling catch-up window for missing Tuesday reports, extracts the
    **Bacolod City** row, and merges available weeks into the JSON.
 3. Opens a pull request titled `content(fuel-prices): auto-update from DOE`

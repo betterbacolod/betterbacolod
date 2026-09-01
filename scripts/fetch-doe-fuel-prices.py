@@ -3,8 +3,9 @@
 Fetch DOE Visayas Field Office weekly retail-pump-price PDF, extract Bacolod City
 prices, and merge into src/data/transparency/fuel-prices.json.
 
-DOE publishes a fresh PDF every Tuesday at:
-    https://prod-cms.doe.gov.ph/documents/d/guest/vfo-price-monitoring-MMDDYY-pdf
+DOE publishes the reports on its Visayas Pump Prices listing. Attachment filenames
+change over time, so the importer discovers links from that official listing instead
+of treating a filename convention as an API contract.
 
 The PDF covers the Tuesday->Monday week starting on the report date.
 Bacolod City is always the first city block on page 1.
@@ -38,7 +39,7 @@ import os
 import re
 import sys
 from dataclasses import dataclass
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta
 from pathlib import Path
 from statistics import mean
 
@@ -55,9 +56,19 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 JSON_PATH = REPO_ROOT / 'src' / 'data' / 'transparency' / 'fuel-prices.json'
 PDF_CACHE = Path('/tmp/doe-pdfs')
 ERROR_LOG = PDF_CACHE / 'error.log'
-URL_TEMPLATE = (
+LEGACY_URL_TEMPLATE = (
     'https://prod-cms.doe.gov.ph/documents/d/guest/vfo-price-monitoring-{mmddyy}-pdf'
 )
+DOE_VISAYAS_PUMP_PRICES_URL = (
+    'https://doe.gov.ph/data-and-prices/liquid-fuels/'
+    'retail-pump-prices/visayas-pump-prices'
+)
+REPORT_URL_PATTERN = re.compile(
+    r'https://prod-cms\.doe\.gov\.ph/documents/d/[^"\\\s<>]+',
+    re.IGNORECASE,
+)
+REPORT_DATE_PATTERN = re.compile(r'(?<!\d)(\d{6})(?!\d)')
+PUBLISHING_GRACE_DAYS = 14
 
 EXPECTED_BRAND_COLUMNS = [
     'PETRON',
@@ -121,7 +132,7 @@ def most_recent_tuesday(today: date | None = None) -> date:
 
 
 def url_for(report_date: date) -> str:
-    return URL_TEMPLATE.format(mmddyy=report_date.strftime('%m%d%y'))
+    return LEGACY_URL_TEMPLATE.format(mmddyy=report_date.strftime('%m%d%y'))
 
 
 # --- Slug + helpers ------------------------------------------------------
@@ -167,7 +178,42 @@ def _build_session() -> requests.Session:
     return session
 
 
-def fetch_pdf(report_date: date) -> Path:
+def discover_report_urls() -> dict[date, str]:
+    """Return dated Visayas report attachments from DOE's official listing.
+
+    DOE has changed its document slugs several times. The listing is the stable
+    first-party index; the legacy predictable URL is only a compatibility fallback.
+    """
+    LOG.info('Discovering reports from %s', DOE_VISAYAS_PUMP_PRICES_URL)
+    try:
+        response = _build_session().get(DOE_VISAYAS_PUMP_PRICES_URL, timeout=30)
+        response.raise_for_status()
+    except requests.RequestException as exc:
+        raise PDFFetchError(
+            f'Could not load DOE Visayas report listing: {exc}',
+        ) from exc
+
+    reports: dict[date, str] = {}
+    for raw_url in REPORT_URL_PATTERN.findall(response.text):
+        url = raw_url.replace('\\u0026', '&').replace('&amp;', '&')
+        if 'vfo' not in url.lower() or 'price-monitoring' not in url.lower():
+            continue
+        match = REPORT_DATE_PATTERN.search(url)
+        if not match:
+            continue
+        try:
+            report_date = datetime.strptime(match.group(1), '%m%d%y').date()
+        except ValueError:
+            continue
+        # The listing can contain duplicate links. Keep the first (newest entry).
+        reports.setdefault(report_date, url)
+
+    if not reports:
+        raise PDFFetchError('DOE listing contained no dated Visayas price reports')
+    return reports
+
+
+def fetch_pdf(report_date: date, source_url: str | None = None) -> Path:
     """Download the DOE PDF for the given Tuesday.
 
     Raises PDFNotPublished on 404 (DOE has not posted yet).
@@ -179,7 +225,7 @@ def fetch_pdf(report_date: date) -> Path:
         LOG.info('Using cached PDF: %s', cache_path)
         return cache_path
 
-    url = url_for(report_date)
+    url = source_url or url_for(report_date)
     LOG.info('Fetching %s', url)
     try:
         resp = _build_session().get(url, timeout=30)
@@ -484,7 +530,12 @@ def _emit_github_output(key: str, value: str) -> None:
         LOG.warning('Could not write to GITHUB_OUTPUT: %s', exc)
 
 
-def process_week(report_date: date, dry_run: bool, pdf_path_override: Path | None = None) -> int:
+def process_week(
+    report_date: date,
+    dry_run: bool,
+    pdf_path_override: Path | None = None,
+    source_url: str | None = None,
+) -> int:
     _emit_github_output('report_date', report_date.isoformat())
 
     if pdf_path_override is not None:
@@ -494,7 +545,7 @@ def process_week(report_date: date, dry_run: bool, pdf_path_override: Path | Non
             return EXIT_PARSE_ERROR
     else:
         try:
-            pdf_path = fetch_pdf(report_date)
+            pdf_path = fetch_pdf(report_date, source_url)
         except PDFNotPublished:
             return EXIT_NOT_PUBLISHED
         except PDFFetchError as exc:
@@ -575,6 +626,17 @@ def catch_up_missing_weeks(weeks: int, dry_run: bool) -> int:
         + ', '.join(week.isoformat() for week in missing_weeks),
     )
 
+    try:
+        discovered_reports = discover_report_urls()
+    except PDFFetchError as exc:
+        write_error(str(exc))
+        _emit_github_output('parse_errors', '0')
+        _emit_github_output('network_errors', '1')
+        _emit_github_output('not_published', '0')
+        _emit_github_output('stale_source', 'true')
+        _emit_github_output('checked_weeks', '0')
+        return EXIT_NETWORK_ERROR
+
     before = JSON_PATH.read_text()
     parse_errors = 0
     network_errors = 0
@@ -583,7 +645,7 @@ def catch_up_missing_weeks(weeks: int, dry_run: bool) -> int:
 
     for current in missing_weeks:
         checked += 1
-        rc = process_week(current, dry_run)
+        rc = process_week(current, dry_run, source_url=discovered_reports.get(current))
         if rc == EXIT_PARSE_ERROR:
             parse_errors += 1
         elif rc == EXIT_NETWORK_ERROR:
@@ -601,6 +663,12 @@ def catch_up_missing_weeks(weeks: int, dry_run: bool) -> int:
     _emit_github_output('network_errors', str(network_errors))
     _emit_github_output('not_published', str(not_published))
     _emit_github_output('checked_weeks', str(checked))
+    oldest_missing = min(missing_weeks)
+    stale_source = (
+        not_published > 0
+        and (date.today() - oldest_missing).days > PUBLISHING_GRACE_DAYS
+    )
+    _emit_github_output('stale_source', str(stale_source).lower())
 
     print(
         '\nCatch-up summary: '
@@ -608,9 +676,9 @@ def catch_up_missing_weeks(weeks: int, dry_run: bool) -> int:
         f'network_errors={network_errors}, not_published={not_published}',
     )
 
-    # Return success so the workflow can still open a PR for any successful
-    # imports; separate outputs decide whether to file diagnostic issues.
-    return EXIT_OK
+    # Successful imports can still open a PR. An aged missing report must fail
+    # the workflow so a broken DOE source cannot look healthy indefinitely.
+    return EXIT_NETWORK_ERROR if stale_source else EXIT_OK
 
 
 def parse_args() -> argparse.Namespace:
@@ -671,12 +739,21 @@ def main() -> int:
 
     if args.backfill:
         start, end = args.backfill
+        try:
+            discovered_reports = discover_report_urls()
+        except PDFFetchError as exc:
+            write_error(str(exc))
+            return EXIT_NETWORK_ERROR
         # Snap start to next Tuesday-on-or-after.
         while start.weekday() != 1:  # 1 = Tuesday
             start += timedelta(days=1)
         last_exit = EXIT_OK
         while start <= end:
-            rc = process_week(start, args.dry_run)
+            rc = process_week(
+                start,
+                args.dry_run,
+                source_url=discovered_reports.get(start),
+            )
             if rc == EXIT_PARSE_ERROR:
                 return rc
             if rc != EXIT_OK:
@@ -690,7 +767,18 @@ def main() -> int:
             'Target date %s is %s; DOE reports are dated Tuesdays. Continuing anyway.',
             target.isoformat(), target.strftime('%A'),
         )
-    return process_week(target, args.dry_run, args.pdf_path)
+    if args.pdf_path:
+        return process_week(target, args.dry_run, args.pdf_path)
+    try:
+        discovered_reports = discover_report_urls()
+    except PDFFetchError as exc:
+        write_error(str(exc))
+        return EXIT_NETWORK_ERROR
+    return process_week(
+        target,
+        args.dry_run,
+        source_url=discovered_reports.get(target),
+    )
 
 
 if __name__ == '__main__':
