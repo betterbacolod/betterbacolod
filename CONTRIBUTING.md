@@ -34,10 +34,10 @@ git clone https://github.com/YOUR_USERNAME/betterbacolod.git
 cd betterbacolod
 
 # Install dependencies
-npm install
+bun install
 
 # Start dev server
-npm run dev
+bun run dev
 ```
 
 ## Content Structure
@@ -58,7 +58,7 @@ src/
 
 ## Submitting Changes
 
-1. Create a branch: `git checkout -b fix/your-fix`
+1. Create a branch: `git switch -c fix/your-fix`
 2. Make changes and test locally
 3. Commit: `git commit -m "fix: description"`
 4. Push: `git push origin fix/your-fix`
