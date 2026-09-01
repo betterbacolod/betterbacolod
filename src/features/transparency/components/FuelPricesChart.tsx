@@ -8,7 +8,7 @@ import {
   XAxis,
   YAxis,
 } from 'recharts';
-import fuelData from '../../data/transparency/fuel-prices.json';
+import fuelData from '../../../data/transparency/fuel-prices.json';
 
 export const FUEL_COLORS: Record<string, string> = {
   'Gasoline RON 91': '#0ea5e9',

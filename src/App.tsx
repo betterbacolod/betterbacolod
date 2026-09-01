@@ -12,13 +12,15 @@ import Home from './pages/Home';
 
 const About = lazy(() => import('./pages/About'));
 const Document = lazy(() => import('./pages/Document'));
-const Energy = lazy(() => import('./pages/Energy'));
-const Government = lazy(() => import('./pages/Government'));
+const Energy = lazy(() => import('./features/energy/EnergyPage'));
+const Government = lazy(() => import('./features/government/GovernmentPage'));
 const Search = lazy(() => import('./pages/Search'));
 const SeoLandingPage = lazy(() => import('./pages/SeoLandingPage'));
 const Services = lazy(() => import('./pages/Services'));
 const Sitemap = lazy(() => import('./pages/Sitemap'));
-const Transparency = lazy(() => import('./pages/Transparency'));
+const Transparency = lazy(
+  () => import('./features/transparency/TransparencyPage'),
+);
 
 function App() {
   return (

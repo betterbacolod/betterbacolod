@@ -74,6 +74,10 @@ betterbacolod/
 │   │   ├── transparency/ # Transparency data components
 │   │   └── ui/           # Reusable UI components
 │   ├── pages/            # Route pages
+│   ├── features/         # Feature-owned routes and private components
+│   │   ├── energy/
+│   │   ├── government/
+│   │   └── transparency/
 │   ├── data/             # YAML/JSON data loaders
 │   ├── hooks/            # Custom React hooks
 │   └── lib/              # Utilities & markdown

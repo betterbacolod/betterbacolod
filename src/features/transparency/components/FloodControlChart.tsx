@@ -11,7 +11,7 @@ import {
   XAxis,
   YAxis,
 } from 'recharts';
-import floodData from '../../data/transparency/flood-control.json';
+import floodData from '../../../data/transparency/flood-control.json';
 
 // Define theme colors (matches your Tailwind config)
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];

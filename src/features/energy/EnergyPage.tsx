@@ -21,16 +21,16 @@ import {
   XAxis,
   YAxis,
 } from 'recharts';
-import SEO from '../components/SEO';
-import Breadcrumbs from '../components/ui/Breadcrumbs';
-import { Card, CardContent } from '../components/ui/Card';
-import { Heading } from '../components/ui/Heading';
-import Section from '../components/ui/Section';
-import energyData from '../data/energy/electric-grid.json';
+import SEO from '../../components/SEO';
+import Breadcrumbs from '../../components/ui/Breadcrumbs';
+import { Card, CardContent } from '../../components/ui/Card';
+import { Heading } from '../../components/ui/Heading';
+import Section from '../../components/ui/Section';
+import energyData from '../../data/energy/electric-grid.json';
 import {
   feederCoverageSource,
   feederGroups,
-} from '../data/energy/feederCoverage';
+} from '../../data/energy/feederCoverage';
 
 type Facility = (typeof energyData.generation.facilities)[number];
 type EnergyTab = 'feeders' | 'nir';

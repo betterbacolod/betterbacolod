@@ -13,22 +13,22 @@ This is a sound lightweight structure for the current site. The main pressure
 points are the large Energy, Transparency, and Government feature modules and
 their adjacent data/components being spread across several top-level folders.
 
-## Incremental target
+## Feature ownership
 
-Move files only while changing their feature. Avoid a repository-wide rename.
+Energy, Government, and Transparency now own their route page and private
+components under `src/features`. Move other files only while changing their
+feature; avoid a repository-wide rename.
 
 ```text
 src/
-  app/              # Router, app providers, global composition
   features/
-    energy/         # page, feature components, feature-only data
+    energy/         # route page and feature-only code
     government/
     transparency/
-  shared/
-    components/     # UI primitives and layout
-    hooks/
-    lib/
-  content/          # runtime content loaders and indexes
+  components/       # shared UI primitives and layout
+  hooks/            # shared hooks
+  lib/              # shared helpers, renderers, icon registry
+  data/             # shared site datasets and content indexes
 ```
 
 Feature modules may import `shared`, but features should not import another

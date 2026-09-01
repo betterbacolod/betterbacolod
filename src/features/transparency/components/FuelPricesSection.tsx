@@ -1,7 +1,7 @@
 import { ChevronDown, ExternalLink } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import fuelData from '../../data/transparency/fuel-prices.json';
+import fuelData from '../../../data/transparency/fuel-prices.json';
 import FuelPricesChart, { FUEL_COLORS } from './FuelPricesChart';
 
 type RawSnapshot = (typeof fuelData.snapshots)[number];

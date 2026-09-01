@@ -1,16 +1,16 @@
 import { ChevronRight, Search } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
-import BarangaysSection from '../components/government/BarangaysSection';
-import DepartmentsSection from '../components/government/DepartmentsSection';
-import OfficialsSection from '../components/government/OfficialsSection';
-import SEO from '../components/SEO';
-import { Card, CardContent } from '../components/ui/Card';
-import { Heading } from '../components/ui/Heading';
-import Section from '../components/ui/Section';
-import { Text } from '../components/ui/Text';
-import { governmentActivitCategories } from '../data/yamlLoader';
-import { getCategoryIcon } from '../lib/categoryIcons';
+import SEO from '../../components/SEO';
+import { Card, CardContent } from '../../components/ui/Card';
+import { Heading } from '../../components/ui/Heading';
+import Section from '../../components/ui/Section';
+import { Text } from '../../components/ui/Text';
+import { governmentActivitCategories } from '../../data/yamlLoader';
+import { getCategoryIcon } from '../../lib/categoryIcons';
+import BarangaysSection from './components/BarangaysSection';
+import DepartmentsSection from './components/DepartmentsSection';
+import OfficialsSection from './components/OfficialsSection';
 
 const Government: React.FC = () => {
   const [searchParams] = useSearchParams();
