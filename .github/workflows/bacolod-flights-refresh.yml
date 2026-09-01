@@ -2,19 +2,24 @@ name: bacolod-flights-refresh
 
 on:
   schedule:
-    # 23:00 UTC is 07:00 PHT the following day.
-    - cron: '0 23 * * *'
+    # 16:05 UTC is 00:05 PHT, keeping the timetable aligned to local dates.
+    - cron: '5 16 * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
-  pull-requests: write
+
+concurrency:
+  group: bacolod-flights-refresh
+  cancel-in-progress: false
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - uses: actions/setup-python@v5
         with:
@@ -25,18 +30,14 @@ jobs:
           AVIATIONSTACK_ACCESS_KEY: ${{ secrets.AVIATIONSTACK_ACCESS_KEY }}
         run: python3 scripts/fetch-aviationstack-bacolod-flights.py
 
-      - name: Open review PR when the snapshot changes
-        uses: peter-evans/create-pull-request@v6
-        with:
-          branch: auto/bacolod-flights-daily
-          base: main
-          commit-message: 'content(flights): refresh Bacolod–Silay snapshot'
-          title: 'content(flights): refresh Bacolod–Silay snapshot'
-          body: |
-            🤖 Daily Aviationstack snapshot for Bacolod–Silay Airport (BCD/RPVB).
-
-            This update uses two source requests: arrivals and departures.
-            Review the timestamp and flight records before merging.
-          labels: |
-            auto-generated
-            content/flights
+      - name: Publish a changed timetable
+        run: |
+          git add src/data/flights/bacolod-silay.json
+          if git diff --cached --quiet; then
+            echo 'No timetable changes to publish.'
+            exit 0
+          fi
+          git config user.name 'betterbacolod-bot[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'content(flights): refresh Bacolod–Silay schedule'
+          git push origin HEAD:main

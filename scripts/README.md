@@ -68,10 +68,12 @@ python3 scripts/import-fuel-prices.py ~/Downloads/BacolodFuelPrices/BacolodFuelP
 
 ## Bacolod–Silay flight snapshot
 
-`/bacolod-flights` uses a dated Aviationstack snapshot rather than a browser-side
-live API call. `.github/workflows/bacolod-flights-refresh.yml` runs daily at
-**07:00 PHT**, makes exactly two requests (BCD arrivals and departures), then
-opens a review PR only if the JSON changes.
+`/bacolod-flights` uses a dated, deduplicated Aviationstack timetable rather
+than a browser-side live API call. It lists scheduled BCD arrivals and
+departures for today and tomorrow; live operational details remain with the
+airlines. `.github/workflows/bacolod-flights-refresh.yml` runs daily at
+**00:05 PHT**, makes exactly two requests (BCD arrivals and departures), and
+commits a validated data-only update to `main` only when the JSON changes.
 
 Set `AVIATIONSTACK_ACCESS_KEY` as a GitHub Actions secret. Keep the raw local key
 in ignored `.env-flight`, then run the updater locally without committing the key:
