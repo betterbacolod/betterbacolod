@@ -66,6 +66,25 @@ breaks; will be removed once auto-refresh has a few weeks of stable runs.
 python3 scripts/import-fuel-prices.py ~/Downloads/BacolodFuelPrices/BacolodFuelPrices.xlsx
 ```
 
+## Bacolod–Silay flight snapshot
+
+`/bacolod-flights` uses a dated Aviationstack snapshot rather than a browser-side
+live API call. `.github/workflows/bacolod-flights-refresh.yml` runs daily at
+**07:00 PHT**, makes exactly two requests (BCD arrivals and departures), then
+opens a review PR only if the JSON changes.
+
+Set `AVIATIONSTACK_ACCESS_KEY` as a GitHub Actions secret. Keep the raw local key
+in ignored `.env-flight`, then run the updater locally without committing the key:
+
+```bash
+AVIATIONSTACK_ACCESS_KEY="$(tr -d '[:space:]' < .env-flight)" \
+  python3 scripts/fetch-aviationstack-bacolod-flights.py
+
+# Inspect the provider response after normalization without writing the snapshot:
+AVIATIONSTACK_ACCESS_KEY="$(tr -d '[:space:]' < .env-flight)" \
+  python3 scripts/fetch-aviationstack-bacolod-flights.py --dry-run
+```
+
 ## Electric-grid ingestion
 
 The `Energy` page (`/energy`) is backed by

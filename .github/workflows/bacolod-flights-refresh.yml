@@ -1,0 +1,42 @@
+name: bacolod-flights-refresh
+
+on:
+  schedule:
+    # 23:00 UTC is 07:00 PHT the following day.
+    - cron: '0 23 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Fetch Aviationstack BCD snapshot
+        env:
+          AVIATIONSTACK_ACCESS_KEY: ${{ secrets.AVIATIONSTACK_ACCESS_KEY }}
+        run: python3 scripts/fetch-aviationstack-bacolod-flights.py
+
+      - name: Open review PR when the snapshot changes
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: auto/bacolod-flights-daily
+          base: main
+          commit-message: 'content(flights): refresh Bacolod–Silay snapshot'
+          title: 'content(flights): refresh Bacolod–Silay snapshot'
+          body: |
+            🤖 Daily Aviationstack snapshot for Bacolod–Silay Airport (BCD/RPVB).
+
+            This update uses two source requests: arrivals and departures.
+            Review the timestamp and flight records before merging.
+          labels: |
+            auto-generated
+            content/flights

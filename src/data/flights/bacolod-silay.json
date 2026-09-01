@@ -1,0 +1,1053 @@
+{
+  "airport": {
+    "name": "Bacolod–Silay International Airport",
+    "iata": "BCD",
+    "icao": "RPVB",
+    "timezone": "Asia/Manila"
+  },
+  "source": {
+    "name": "Aviationstack",
+    "url": "https://aviationstack.com/"
+  },
+  "retrievedAt": "2026-09-01T15:22:42.084062+00:00",
+  "windowEndsAt": "2026-09-03T23:22:42.084062+08:00",
+  "refreshCadence": "daily",
+  "arrivals": [
+    {
+      "id": "arrivals-5J487-2026-09-02T00:10:00+08:00",
+      "airline": "Cebu Pacific",
+      "flightNumber": "5J487",
+      "status": "landed",
+      "origin": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "destination": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "scheduled": "2026-09-02T00:10:00+08:00",
+      "estimated": "2026-09-02T00:05:00+08:00",
+      "actual": "2026-09-02T00:03:00+08:00",
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "arrivals-5J477-2026-09-02T01:15:00+08:00",
+      "airline": "Cebu Pacific",
+      "flightNumber": "5J477",
+      "status": "active",
+      "origin": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "destination": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "scheduled": "2026-09-02T01:15:00+08:00",
+      "estimated": "2026-09-02T00:58:00+08:00",
+      "actual": null,
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "arrivals-2P2135-2026-09-02T01:35:00+08:00",
+      "airline": "Philippine Airlines",
+      "flightNumber": "2P2135",
+      "status": "landed",
+      "origin": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "destination": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "scheduled": "2026-09-02T01:35:00+08:00",
+      "estimated": "2026-09-02T01:15:00+08:00",
+      "actual": "2026-09-02T01:13:00+08:00",
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "arrivals-NH5253-2026-09-02T01:35:00+08:00",
+      "airline": "All Nippon Airways",
+      "flightNumber": "NH5253",
+      "status": "landed",
+      "origin": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "destination": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "scheduled": "2026-09-02T01:35:00+08:00",
+      "estimated": "2026-09-02T01:15:00+08:00",
+      "actual": "2026-09-02T01:13:00+08:00",
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "arrivals-MH5935-2026-09-02T01:35:00+08:00",
+      "airline": "Malaysia Airlines",
+      "flightNumber": "MH5935",
+      "status": "landed",
+      "origin": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "destination": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "scheduled": "2026-09-02T01:35:00+08:00",
+      "estimated": "2026-09-02T01:15:00+08:00",
+      "actual": "2026-09-02T01:13:00+08:00",
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "arrivals-SQ5065-2026-09-02T01:35:00+08:00",
+      "airline": "Singapore Airlines",
+      "flightNumber": "SQ5065",
+      "status": "landed",
+      "origin": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "destination": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "scheduled": "2026-09-02T01:35:00+08:00",
+      "estimated": "2026-09-02T01:15:00+08:00",
+      "actual": "2026-09-02T01:13:00+08:00",
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "arrivals-PR2135-2026-09-02T01:35:00+08:00",
+      "airline": "Philippine Airlines",
+      "flightNumber": "PR2135",
+      "status": "scheduled",
+      "origin": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "destination": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "scheduled": "2026-09-02T01:35:00+08:00",
+      "estimated": null,
+      "actual": null,
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "arrivals-DG6460-2026-09-02T02:20:00+08:00",
+      "airline": "Cebu Pacific",
+      "flightNumber": "DG6460",
+      "status": "landed",
+      "origin": {
+        "name": "Mactan-Cebu International",
+        "iata": "CEB",
+        "icao": "RPVM"
+      },
+      "destination": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "scheduled": "2026-09-02T02:20:00+08:00",
+      "estimated": null,
+      "actual": "2026-09-02T01:55:00+08:00",
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "arrivals-5J6460-2026-09-02T02:20:00+08:00",
+      "airline": "Cebu Pacific",
+      "flightNumber": "5J6460",
+      "status": "scheduled",
+      "origin": {
+        "name": "Mactan-Cebu International",
+        "iata": "CEB",
+        "icao": "RPVM"
+      },
+      "destination": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "scheduled": "2026-09-02T02:20:00+08:00",
+      "estimated": null,
+      "actual": null,
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "arrivals-5J2590-2026-09-02T02:40:00+08:00",
+      "airline": "Cebu Pacific",
+      "flightNumber": "5J2590",
+      "status": "landed",
+      "origin": {
+        "name": "Francisco Bangoy International",
+        "iata": "DVO",
+        "icao": "RPMD"
+      },
+      "destination": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "scheduled": "2026-09-02T02:40:00+08:00",
+      "estimated": null,
+      "actual": "2026-09-02T02:15:00+08:00",
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "arrivals-2P2287-2026-09-02T03:20:00+08:00",
+      "airline": "Philippine Airlines",
+      "flightNumber": "2P2287",
+      "status": "landed",
+      "origin": {
+        "name": "Mactan-Cebu International",
+        "iata": "CEB",
+        "icao": "RPVM"
+      },
+      "destination": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "scheduled": "2026-09-02T03:20:00+08:00",
+      "estimated": null,
+      "actual": "2026-09-02T03:00:00+08:00",
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "arrivals-PR2287-2026-09-02T03:20:00+08:00",
+      "airline": "Philippine Airlines",
+      "flightNumber": "PR2287",
+      "status": "scheduled",
+      "origin": {
+        "name": "Mactan-Cebu International",
+        "iata": "CEB",
+        "icao": "RPVM"
+      },
+      "destination": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "scheduled": "2026-09-02T03:20:00+08:00",
+      "estimated": null,
+      "actual": null,
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "arrivals-5J471-2026-09-02T05:40:00+08:00",
+      "airline": "Cebu Pacific",
+      "flightNumber": "5J471",
+      "status": "landed",
+      "origin": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "destination": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "scheduled": "2026-09-02T05:40:00+08:00",
+      "estimated": null,
+      "actual": "2026-09-02T05:33:00+08:00",
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "arrivals-Z2605-2026-09-02T06:05:00+08:00",
+      "airline": "Philippines AirAsia",
+      "flightNumber": "Z2605",
+      "status": "landed",
+      "origin": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "destination": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "scheduled": "2026-09-02T06:05:00+08:00",
+      "estimated": "2026-09-02T05:53:00+08:00",
+      "actual": "2026-09-02T05:52:00+08:00",
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "arrivals-Z2605-2026-09-02T06:05:00+08:00",
+      "airline": "Philippines AirAsia",
+      "flightNumber": "Z2605",
+      "status": "scheduled",
+      "origin": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "destination": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "scheduled": "2026-09-02T06:05:00+08:00",
+      "estimated": null,
+      "actual": null,
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "arrivals-5J475-2026-09-02T06:50:00+08:00",
+      "airline": "Cebu Pacific",
+      "flightNumber": "5J475",
+      "status": "landed",
+      "origin": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "destination": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "scheduled": "2026-09-02T06:50:00+08:00",
+      "estimated": null,
+      "actual": "2026-09-02T06:34:00+08:00",
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "arrivals-5J479-2026-09-02T07:15:00+08:00",
+      "airline": "Cebu Pacific",
+      "flightNumber": "5J479",
+      "status": "active",
+      "origin": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "destination": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "scheduled": "2026-09-02T07:15:00+08:00",
+      "estimated": "2026-09-02T07:21:00+08:00",
+      "actual": null,
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": 6
+    },
+    {
+      "id": "arrivals-Z2603-2026-09-02T12:10:00+08:00",
+      "airline": "Philippines AirAsia",
+      "flightNumber": "Z2603",
+      "status": "scheduled",
+      "origin": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "destination": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "scheduled": "2026-09-02T12:10:00+08:00",
+      "estimated": null,
+      "actual": null,
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "arrivals-PR2129-2026-09-02T13:25:00+08:00",
+      "airline": "Philippine Airlines",
+      "flightNumber": "PR2129",
+      "status": "scheduled",
+      "origin": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "destination": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "scheduled": "2026-09-02T13:25:00+08:00",
+      "estimated": null,
+      "actual": null,
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "arrivals-QR4442-2026-09-02T13:25:00+08:00",
+      "airline": "Qatar Airways",
+      "flightNumber": "QR4442",
+      "status": "scheduled",
+      "origin": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "destination": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "scheduled": "2026-09-02T13:25:00+08:00",
+      "estimated": null,
+      "actual": null,
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "arrivals-NH5251-2026-09-02T13:25:00+08:00",
+      "airline": "All Nippon Airways",
+      "flightNumber": "NH5251",
+      "status": "scheduled",
+      "origin": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "destination": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "scheduled": "2026-09-02T13:25:00+08:00",
+      "estimated": null,
+      "actual": null,
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "arrivals-MH5915-2026-09-02T13:25:00+08:00",
+      "airline": "Malaysia Airlines",
+      "flightNumber": "MH5915",
+      "status": "scheduled",
+      "origin": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "destination": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "scheduled": "2026-09-02T13:25:00+08:00",
+      "estimated": null,
+      "actual": null,
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "arrivals-5J6468-2026-09-02T13:35:00+08:00",
+      "airline": "Cebu Pacific",
+      "flightNumber": "5J6468",
+      "status": "scheduled",
+      "origin": {
+        "name": "Mactan-Cebu International",
+        "iata": "CEB",
+        "icao": "RPVM"
+      },
+      "destination": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "scheduled": "2026-09-02T13:35:00+08:00",
+      "estimated": null,
+      "actual": null,
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    }
+  ],
+  "departures": [
+    {
+      "id": "departures-2P2134-2026-09-01T23:30:00+08:00",
+      "airline": "Philippine Airlines",
+      "flightNumber": "2P2134",
+      "status": "landed",
+      "origin": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "destination": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "scheduled": "2026-09-01T23:30:00+08:00",
+      "estimated": "2026-09-01T23:30:00+08:00",
+      "actual": "2026-09-01T23:37:00+08:00",
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "departures-PR2134-2026-09-01T23:30:00+08:00",
+      "airline": "Philippine Airlines",
+      "flightNumber": "PR2134",
+      "status": "active",
+      "origin": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "destination": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "scheduled": "2026-09-01T23:30:00+08:00",
+      "estimated": "2026-09-01T23:30:00+08:00",
+      "actual": null,
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "departures-QR4960-2026-09-01T23:30:00+08:00",
+      "airline": "Qatar Airways",
+      "flightNumber": "QR4960",
+      "status": "landed",
+      "origin": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "destination": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "scheduled": "2026-09-01T23:30:00+08:00",
+      "estimated": "2026-09-01T23:30:00+08:00",
+      "actual": "2026-09-01T23:37:00+08:00",
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "departures-MH5938-2026-09-01T23:30:00+08:00",
+      "airline": "Malaysia Airlines",
+      "flightNumber": "MH5938",
+      "status": "landed",
+      "origin": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "destination": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "scheduled": "2026-09-01T23:30:00+08:00",
+      "estimated": "2026-09-01T23:30:00+08:00",
+      "actual": "2026-09-01T23:37:00+08:00",
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "departures-SQ5122-2026-09-01T23:30:00+08:00",
+      "airline": "Singapore Airlines",
+      "flightNumber": "SQ5122",
+      "status": "landed",
+      "origin": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "destination": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "scheduled": "2026-09-01T23:30:00+08:00",
+      "estimated": "2026-09-01T23:30:00+08:00",
+      "actual": "2026-09-01T23:37:00+08:00",
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "departures-5J488-2026-09-02T01:25:00+08:00",
+      "airline": "Cebu Pacific",
+      "flightNumber": "5J488",
+      "status": "active",
+      "origin": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "destination": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "scheduled": "2026-09-02T01:25:00+08:00",
+      "estimated": "2026-09-02T01:25:00+08:00",
+      "actual": "2026-09-02T01:27:00+08:00",
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "departures-5J478-2026-09-02T02:15:00+08:00",
+      "airline": "Cebu Pacific",
+      "flightNumber": "5J478",
+      "status": "active",
+      "origin": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "destination": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "scheduled": "2026-09-02T02:15:00+08:00",
+      "estimated": "2026-09-02T02:15:00+08:00",
+      "actual": "2026-09-02T02:20:00+08:00",
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "departures-2P2136-2026-09-02T02:30:00+08:00",
+      "airline": "Philippine Airlines",
+      "flightNumber": "2P2136",
+      "status": "landed",
+      "origin": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "destination": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "scheduled": "2026-09-02T02:30:00+08:00",
+      "estimated": "2026-09-02T02:30:00+08:00",
+      "actual": "2026-09-02T02:29:00+08:00",
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "departures-PR2136-2026-09-02T02:30:00+08:00",
+      "airline": "Philippine Airlines",
+      "flightNumber": "PR2136",
+      "status": "active",
+      "origin": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "destination": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "scheduled": "2026-09-02T02:30:00+08:00",
+      "estimated": "2026-09-02T02:30:00+08:00",
+      "actual": null,
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "departures-VN3182-2026-09-02T02:30:00+08:00",
+      "airline": "Vietnam Airlines",
+      "flightNumber": "VN3182",
+      "status": "active",
+      "origin": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "destination": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "scheduled": "2026-09-02T02:30:00+08:00",
+      "estimated": "2026-09-02T02:30:00+08:00",
+      "actual": "2026-09-02T02:29:00+08:00",
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "departures-QR4961-2026-09-02T02:30:00+08:00",
+      "airline": "Qatar Airways",
+      "flightNumber": "QR4961",
+      "status": "active",
+      "origin": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "destination": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "scheduled": "2026-09-02T02:30:00+08:00",
+      "estimated": "2026-09-02T02:30:00+08:00",
+      "actual": "2026-09-02T02:29:00+08:00",
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "departures-MH5552-2026-09-02T02:30:00+08:00",
+      "airline": "Malaysia Airlines",
+      "flightNumber": "MH5552",
+      "status": "active",
+      "origin": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "destination": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "scheduled": "2026-09-02T02:30:00+08:00",
+      "estimated": "2026-09-02T02:30:00+08:00",
+      "actual": "2026-09-02T02:29:00+08:00",
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "departures-DG6461-2026-09-02T02:40:00+08:00",
+      "airline": "Cebu Pacific",
+      "flightNumber": "DG6461",
+      "status": "landed",
+      "origin": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "destination": {
+        "name": "Mactan-Cebu International",
+        "iata": "CEB",
+        "icao": "RPVM"
+      },
+      "scheduled": "2026-09-02T02:40:00+08:00",
+      "estimated": "2026-09-02T02:40:00+08:00",
+      "actual": "2026-09-02T02:35:00+08:00",
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "departures-5J6461-2026-09-02T02:40:00+08:00",
+      "airline": "Cebu Pacific",
+      "flightNumber": "5J6461",
+      "status": "active",
+      "origin": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "destination": {
+        "name": "Mactan-Cebu International",
+        "iata": "CEB",
+        "icao": "RPVM"
+      },
+      "scheduled": "2026-09-02T02:40:00+08:00",
+      "estimated": "2026-09-02T02:40:00+08:00",
+      "actual": null,
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "departures-5J2591-2026-09-02T03:10:00+08:00",
+      "airline": "Cebu Pacific",
+      "flightNumber": "5J2591",
+      "status": "active",
+      "origin": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "destination": {
+        "name": "Francisco Bangoy International",
+        "iata": "DVO",
+        "icao": "RPMD"
+      },
+      "scheduled": "2026-09-02T03:10:00+08:00",
+      "estimated": "2026-09-02T03:10:00+08:00",
+      "actual": "2026-09-02T03:04:00+08:00",
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "departures-2P2288-2026-09-02T03:45:00+08:00",
+      "airline": "Philippine Airlines",
+      "flightNumber": "2P2288",
+      "status": "active",
+      "origin": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "destination": {
+        "name": "Mactan-Cebu International",
+        "iata": "CEB",
+        "icao": "RPVM"
+      },
+      "scheduled": "2026-09-02T03:45:00+08:00",
+      "estimated": "2026-09-02T03:45:00+08:00",
+      "actual": "2026-09-02T03:35:00+08:00",
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "departures-PR2288-2026-09-02T03:45:00+08:00",
+      "airline": "Philippine Airlines",
+      "flightNumber": "PR2288",
+      "status": "scheduled",
+      "origin": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "destination": {
+        "name": "Mactan-Cebu International",
+        "iata": "CEB",
+        "icao": "RPVM"
+      },
+      "scheduled": "2026-09-02T03:45:00+08:00",
+      "estimated": "2026-09-02T03:45:00+08:00",
+      "actual": null,
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "departures-Z2606-2026-09-02T06:35:00+08:00",
+      "airline": "Philippines AirAsia",
+      "flightNumber": "Z2606",
+      "status": "active",
+      "origin": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "destination": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "scheduled": "2026-09-02T06:35:00+08:00",
+      "estimated": "2026-09-02T06:35:00+08:00",
+      "actual": "2026-09-02T06:41:00+08:00",
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "departures-Z2606-2026-09-02T06:35:00+08:00",
+      "airline": "Philippines AirAsia",
+      "flightNumber": "Z2606",
+      "status": "active",
+      "origin": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "destination": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "scheduled": "2026-09-02T06:35:00+08:00",
+      "estimated": "2026-09-02T06:35:00+08:00",
+      "actual": null,
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "departures-5J472-2026-09-02T07:00:00+08:00",
+      "airline": "Cebu Pacific",
+      "flightNumber": "5J472",
+      "status": "active",
+      "origin": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "destination": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "scheduled": "2026-09-02T07:00:00+08:00",
+      "estimated": "2026-09-02T07:00:00+08:00",
+      "actual": "2026-09-02T06:55:00+08:00",
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "departures-5J476-2026-09-02T07:20:00+08:00",
+      "airline": "Cebu Pacific",
+      "flightNumber": "5J476",
+      "status": "active",
+      "origin": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "destination": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "scheduled": "2026-09-02T07:20:00+08:00",
+      "estimated": "2026-09-02T07:20:00+08:00",
+      "actual": null,
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "departures-5J480-2026-09-02T07:50:00+08:00",
+      "airline": "Cebu Pacific",
+      "flightNumber": "5J480",
+      "status": "active",
+      "origin": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "destination": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "scheduled": "2026-09-02T07:50:00+08:00",
+      "estimated": "2026-09-02T07:50:00+08:00",
+      "actual": null,
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "departures-Z2604-2026-09-02T13:00:00+08:00",
+      "airline": "Philippines AirAsia",
+      "flightNumber": "Z2604",
+      "status": "scheduled",
+      "origin": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "destination": {
+        "name": "Ninoy Aquino International",
+        "iata": "MNL",
+        "icao": "RPLL"
+      },
+      "scheduled": "2026-09-02T13:00:00+08:00",
+      "estimated": "2026-09-02T13:00:00+08:00",
+      "actual": null,
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    },
+    {
+      "id": "departures-5J6469-2026-09-02T13:55:00+08:00",
+      "airline": "Cebu Pacific",
+      "flightNumber": "5J6469",
+      "status": "scheduled",
+      "origin": {
+        "name": "Bacolod",
+        "iata": "BCD",
+        "icao": "RPVB"
+      },
+      "destination": {
+        "name": "Mactan-Cebu International",
+        "iata": "CEB",
+        "icao": "RPVM"
+      },
+      "scheduled": "2026-09-02T13:55:00+08:00",
+      "estimated": "2026-09-02T13:55:00+08:00",
+      "actual": null,
+      "terminal": null,
+      "gate": null,
+      "delayMinutes": null
+    }
+  ]
+}

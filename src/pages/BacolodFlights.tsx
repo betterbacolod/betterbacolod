@@ -1,94 +1,57 @@
-import {
-  ArrowDownToLine,
-  ArrowUpFromLine,
-  Clock3,
-  ExternalLink,
-  MapPin,
-  Plane,
-  Radio,
-} from 'lucide-react';
+import { Clock3, ExternalLink, MapPin, Plane, Radio } from 'lucide-react';
 import { useState } from 'react';
 import SEO from '../components/SEO';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
 import { Card, CardContent } from '../components/ui/Card';
 import { Heading } from '../components/ui/Heading';
 import Section from '../components/ui/Section';
+import flightSnapshot from '../data/flights/bacolod-silay.json';
 
-type Direction = 'departures' | 'arrivals';
+type Direction = 'arrivals' | 'departures';
+type Flight = (typeof flightSnapshot.arrivals)[number];
 
-type Flight = {
-  airline: string;
-  flightNumber: string;
-  place: string;
-  code: string;
-  scheduledTime: string;
-  estimatedTime: string;
-  status: 'On time' | 'Delayed' | 'Boarding' | 'Landed';
+const statusClasses: Record<string, string> = {
+  active: 'bg-sky-50 text-sky-800',
+  landed: 'bg-emerald-50 text-emerald-800',
+  scheduled: 'bg-gray-100 text-gray-700',
+  cancelled: 'bg-rose-50 text-rose-800',
+  incident: 'bg-rose-50 text-rose-800',
+  diverted: 'bg-amber-50 text-amber-800',
 };
 
-// Intentionally local-only until a licensed live-status provider is connected.
-const localFlightBoard: Record<Direction, Flight[]> = {
-  departures: [
-    {
-      airline: 'Cebu Pacific',
-      flightNumber: '5J 474',
-      place: 'Manila',
-      code: 'MNL',
-      scheduledTime: '06:30',
-      estimatedTime: '06:30',
-      status: 'On time',
-    },
-    {
-      airline: 'Philippine Airlines',
-      flightNumber: 'PR 2132',
-      place: 'Manila',
-      code: 'MNL',
-      scheduledTime: '11:35',
-      estimatedTime: '11:50',
-      status: 'Delayed',
-    },
-    {
-      airline: 'Cebu Pacific',
-      flightNumber: '5J 2280',
-      place: 'Cebu',
-      code: 'CEB',
-      scheduledTime: '12:20',
-      estimatedTime: '12:20',
-      status: 'Boarding',
-    },
-  ],
-  arrivals: [
-    {
-      airline: 'Cebu Pacific',
-      flightNumber: '5J 473',
-      place: 'Manila',
-      code: 'MNL',
-      scheduledTime: '08:30',
-      estimatedTime: '08:42',
-      status: 'Landed',
-    },
-    {
-      airline: 'Philippine Airlines',
-      flightNumber: 'PR 2131',
-      place: 'Manila',
-      code: 'MNL',
-      scheduledTime: '10:25',
-      estimatedTime: '10:25',
-      status: 'On time',
-    },
-    {
-      airline: 'Cebu Pacific',
-      flightNumber: '5J 2279',
-      place: 'Cebu',
-      code: 'CEB',
-      scheduledTime: '11:40',
-      estimatedTime: '11:55',
-      status: 'Delayed',
-    },
-  ],
-};
+const statusLabel = (status: string) =>
+  status.charAt(0).toUpperCase() + status.slice(1);
 
-const airlineLinks = [
+function formatTime(value: string | null) {
+  if (!value) return '—';
+  return new Intl.DateTimeFormat('en-PH', {
+    timeZone: flightSnapshot.airport.timezone,
+    hour: 'numeric',
+    minute: '2-digit',
+  }).format(new Date(value));
+}
+
+function formatDateTime(value: string) {
+  return new Intl.DateTimeFormat('en-PH', {
+    timeZone: flightSnapshot.airport.timezone,
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+    timeZoneName: 'short',
+  }).format(new Date(value));
+}
+
+const statusLinks = [
+  {
+    name: 'FlightAware RPVB airport board',
+    href: 'https://www.flightaware.com/live/airport/RPVB',
+  },
+  {
+    name: 'Flightradar24 BCD airport board',
+    href: 'https://www.flightradar24.com/data/airports/bcd',
+  },
   {
     name: 'Cebu Pacific flight status',
     href: 'https://www.cebupacificair.com/en-PH/pages/travel-info/flight-status',
@@ -97,30 +60,18 @@ const airlineLinks = [
     name: 'Philippine Airlines flight status',
     href: 'https://www.philippineairlines.com/ph/en/flight-status.html',
   },
-  {
-    name: 'AirAsia Philippines',
-    href: 'https://www.airasia.com/',
-  },
 ];
-
-const statusClasses: Record<Flight['status'], string> = {
-  'On time': 'bg-emerald-50 text-emerald-800',
-  Delayed: 'bg-amber-50 text-amber-800',
-  Boarding: 'bg-sky-50 text-sky-800',
-  Landed: 'bg-gray-100 text-gray-700',
-};
 
 export default function BacolodFlights() {
   const [direction, setDirection] = useState<Direction>('departures');
-  const flights = localFlightBoard[direction];
-  const DirectionIcon =
-    direction === 'departures' ? ArrowUpFromLine : ArrowDownToLine;
+  const flights = flightSnapshot[direction];
+  const locationLabel = direction === 'arrivals' ? 'From' : 'To';
 
   return (
     <>
       <SEO
         title="Bacolod–Silay Airport Flights"
-        description="A local Bacolod–Silay Airport flight-board preview with airport information and official airline flight-status links."
+        description="A daily Bacolod–Silay Airport arrivals and departures snapshot, with official airline flight-status links."
         keywords="Bacolod flights, Bacolod Silay Airport flights, BCD flights, RPVB flights, Bacolod arrivals, Bacolod departures"
         url="/bacolod-flights"
       />
@@ -141,9 +92,9 @@ export default function BacolodFlights() {
                 </p>
                 <Heading className="text-white">Flights from Bacolod</Heading>
                 <p className="mt-3 max-w-2xl text-sm leading-relaxed text-primary-100 sm:text-base">
-                  A local-first flight-board preview for Bacolod–Silay Airport.
-                  Live data is not connected yet, so the board below uses sample
-                  records and is never a source for travel decisions.
+                  A daily snapshot of listed arrivals and departures for the
+                  next 48 hours. Confirm check-in, gates, delays, and
+                  cancellations directly with your airline.
                 </p>
               </div>
               <div className="flex shrink-0 items-center gap-3 rounded-xl bg-white/10 px-4 py-3 ring-1 ring-white/20">
@@ -187,11 +138,9 @@ export default function BacolodFlights() {
               <CardContent className="flex gap-3 p-4">
                 <Radio className="mt-0.5 h-5 w-5 shrink-0 text-primary-700" />
                 <div>
-                  <p className="font-semibold text-gray-900">
-                    Live board planned
-                  </p>
+                  <p className="font-semibold text-gray-900">Daily snapshot</p>
                   <p className="mt-1 text-sm text-gray-600">
-                    This page is ready for a licensed status-data provider.
+                    Updated once daily, not a live airport board.
                   </p>
                 </div>
               </CardContent>
@@ -204,10 +153,11 @@ export default function BacolodFlights() {
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                   <div>
                     <h2 className="font-semibold text-gray-950">
-                      Flight board
+                      Latest flight snapshot
                     </h2>
                     <p className="mt-1 text-sm text-gray-600">
-                      Local demo data — live flight status is not connected.
+                      Listed flights through{' '}
+                      {formatDateTime(flightSnapshot.windowEndsAt)}.
                     </p>
                   </div>
                   <div
@@ -236,84 +186,112 @@ export default function BacolodFlights() {
               </div>
 
               <div className="overflow-x-auto">
-                <table className="w-full min-w-[640px] text-left text-sm">
+                <table className="w-full min-w-[700px] text-left text-sm">
                   <thead className="bg-gray-50 text-xs uppercase tracking-wide text-gray-500">
                     <tr>
                       <th className="px-4 py-3 font-semibold sm:px-6">
                         Flight
                       </th>
                       <th className="px-4 py-3 font-semibold">
-                        {direction === 'departures' ? 'To' : 'From'}
+                        {locationLabel}
                       </th>
                       <th className="px-4 py-3 font-semibold">Scheduled</th>
-                      <th className="px-4 py-3 font-semibold">Estimate</th>
+                      <th className="px-4 py-3 font-semibold">Latest time</th>
                       <th className="px-4 py-3 font-semibold">Status</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-100">
-                    {flights.map((flight) => (
-                      <tr key={`${direction}-${flight.flightNumber}`}>
-                        <td className="px-4 py-4 sm:px-6">
-                          <p className="font-medium text-gray-950">
-                            {flight.flightNumber}
-                          </p>
-                          <p className="mt-0.5 text-xs text-gray-500">
-                            {flight.airline}
-                          </p>
-                        </td>
-                        <td className="px-4 py-4">
-                          <div className="flex items-center gap-2 text-gray-900">
-                            <DirectionIcon
-                              className="h-4 w-4 text-primary-700"
-                              aria-hidden="true"
-                            />
-                            <span>{flight.place}</span>
-                            <span className="text-xs text-gray-500">
-                              {flight.code}
+                    {flights.map((flight: Flight) => {
+                      const location =
+                        direction === 'arrivals'
+                          ? flight.origin
+                          : flight.destination;
+                      const latestTime = flight.actual ?? flight.estimated;
+                      return (
+                        <tr key={flight.id}>
+                          <td className="px-4 py-4 sm:px-6">
+                            <p className="font-medium text-gray-950">
+                              {flight.flightNumber}
+                            </p>
+                            <p className="mt-0.5 text-xs text-gray-500">
+                              {flight.airline}
+                            </p>
+                          </td>
+                          <td className="px-4 py-4 text-gray-900">
+                            <span>{location.name ?? 'Unknown airport'}</span>
+                            {location.iata && (
+                              <span className="ml-2 text-xs text-gray-500">
+                                {location.iata}
+                              </span>
+                            )}
+                          </td>
+                          <td className="px-4 py-4 tabular-nums text-gray-700">
+                            {formatTime(flight.scheduled)}
+                          </td>
+                          <td className="px-4 py-4 tabular-nums text-gray-700">
+                            {formatTime(latestTime)}
+                          </td>
+                          <td className="px-4 py-4">
+                            <span
+                              className={`rounded-full px-2.5 py-1 text-xs font-semibold ${statusClasses[flight.status] ?? 'bg-gray-100 text-gray-700'}`}
+                            >
+                              {statusLabel(flight.status)}
                             </span>
-                          </div>
-                        </td>
-                        <td className="px-4 py-4 tabular-nums text-gray-700">
-                          {flight.scheduledTime}
-                        </td>
-                        <td className="px-4 py-4 tabular-nums text-gray-700">
-                          {flight.estimatedTime}
-                        </td>
-                        <td className="px-4 py-4">
-                          <span
-                            className={`rounded-full px-2.5 py-1 text-xs font-semibold ${statusClasses[flight.status]}`}
-                          >
-                            {flight.status}
-                          </span>
+                          </td>
+                        </tr>
+                      );
+                    })}
+                    {flights.length === 0 && (
+                      <tr>
+                        <td
+                          className="px-4 py-8 text-center text-gray-600 sm:px-6"
+                          colSpan={5}
+                        >
+                          No listed {direction} were returned for this snapshot
+                          window.
                         </td>
                       </tr>
-                    ))}
+                    )}
                   </tbody>
                 </table>
               </div>
             </CardContent>
           </Card>
 
+          <p className="mt-3 text-xs leading-relaxed text-gray-500">
+            Snapshot retrieved {formatDateTime(flightSnapshot.retrievedAt)} ·
+            Data:{' '}
+            <a
+              className="underline hover:text-primary-800"
+              href={flightSnapshot.source.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {flightSnapshot.source.name}
+            </a>
+            . Times shown in Philippine time.
+          </p>
+
           <div className="mt-6 grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
             <Card>
               <CardContent className="p-5 sm:p-6">
                 <h2 className="font-semibold text-gray-950">
-                  Confirm directly with your airline
+                  Confirm flight status
                 </h2>
                 <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                  Airline status is the authority for check-in, gate, delay, and
-                  cancellation updates.
+                  This is a dated information snapshot. Your airline is the
+                  authority for check-in, gates, delays, and cancellations.
                 </p>
                 <div className="mt-4 flex flex-col gap-2">
-                  {airlineLinks.map((airline) => (
+                  {statusLinks.map((link) => (
                     <a
-                      key={airline.name}
-                      href={airline.href}
+                      key={link.name}
+                      href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-between rounded-lg border border-gray-200 px-3 py-2.5 text-sm font-medium text-primary-800 transition-colors hover:bg-primary-50"
                     >
-                      {airline.name}
+                      {link.name}
                       <ExternalLink className="h-4 w-4" aria-hidden="true" />
                     </a>
                   ))}
@@ -322,19 +300,12 @@ export default function BacolodFlights() {
             </Card>
             <Card>
               <CardContent className="p-5 sm:p-6">
-                <h2 className="font-semibold text-gray-950">What comes next</h2>
-                <ol className="mt-3 space-y-2 text-sm leading-relaxed text-gray-600">
-                  <li>
-                    1. Connect a licensed airport-status feed on the server.
-                  </li>
-                  <li>
-                    2. Replace these sample records with a cached live board.
-                  </li>
-                  <li>
-                    3. Add a separate nearby-aircraft map with source
-                    attribution.
-                  </li>
-                </ol>
+                <h2 className="font-semibold text-gray-950">About this data</h2>
+                <p className="mt-3 text-sm leading-relaxed text-gray-600">
+                  Aviationstack data is captured once daily to keep this service
+                  low-cost. Flight information can change after the snapshot is
+                  published.
+                </p>
               </CardContent>
             </Card>
           </div>
