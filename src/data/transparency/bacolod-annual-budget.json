@@ -1,0 +1,288 @@
+{
+  "schemaVersion": 1,
+  "currency": "PHP",
+  "measure": "Proposed annual budget",
+  "sourcePage": "https://bacolodcity.gov.ph/full-disclosure-policy/",
+  "reports": [
+    {
+      "year": 2022,
+      "workbook": "2022_abr-1.xlsx",
+      "workbookSha256": "e22991e4dacd9aabf5154d89195551d95ce542a9f739fcdefec63b12b3a77446",
+      "sheet": "LBP Form 1",
+      "sourceUrl": "https://bacolodcity.gov.ph/wp-content/uploads/2022/08/2022_abr-1.xlsx",
+      "sourceRows": {
+        "taxRevenue": "C18:S18",
+        "nonTaxRevenue": "C29:S29",
+        "externalSources": "C39:S39",
+        "totalReceipts": "C42:S42",
+        "personnelServices": "E70:S70",
+        "maintenanceAndOperating": "E124:S124",
+        "financialExpenses": "E128:S128",
+        "propertyPlantAndEquipment": "E164:S164",
+        "specialPurposeAppropriations": "E198:S198",
+        "totalExpenditures": "A199:S199"
+      },
+      "proposedAmountCentavos": 325000000000,
+      "totalReceiptsCentavos": 325000000000,
+      "financing": {
+        "localSourcesCentavos": 109309480100,
+        "externalSourcesCentavos": 215690519900
+      },
+      "expenditures": {
+        "personnelServicesCentavos": 80409360900,
+        "maintenanceAndOperatingCentavos": 159721632700,
+        "financialExpensesCentavos": 3422289000,
+        "propertyPlantAndEquipmentCentavos": 54230104000,
+        "specialPurposeAppropriationsCentavos": 27216613400
+      },
+      "topSpendingItems": [
+        {
+          "label": "Other General Services",
+          "category": "MOOE",
+          "amountCentavos": 61954200000,
+          "sourceRow": "S102"
+        },
+        {
+          "label": "Salaries and Wages - Regular Pay",
+          "category": "Personnel services",
+          "amountCentavos": 46829160000,
+          "sourceRow": "S48"
+        },
+        {
+          "label": "20% Development Fund",
+          "category": "Capital outlay",
+          "amountCentavos": 41838104000,
+          "sourceRow": "S163"
+        },
+        {
+          "label": "Environment/ Sanitary Services",
+          "category": "MOOE",
+          "amountCentavos": 20000000000,
+          "sourceRow": "S100"
+        },
+        {
+          "label": "Other Professional Services",
+          "category": "MOOE",
+          "amountCentavos": 18020800000,
+          "sourceRow": "S99"
+        },
+        {
+          "label": "Disaster Risk Reduction Mgt. Fund",
+          "category": "Special purpose",
+          "amountCentavos": 16250000000,
+          "sourceRow": "S167"
+        }
+      ]
+    },
+    {
+      "year": 2023,
+      "workbook": "2023_abr.xlsx",
+      "workbookSha256": "264041daadf9413be63a866144621047ef0919a037c7b07c80300d8def7899f5",
+      "sheet": "Sheet1",
+      "sourceUrl": "https://bacolodcity.gov.ph/wp-content/uploads/2023/02/2023_abr.xlsx",
+      "sourceRows": {
+        "taxRevenue": "C18:S18",
+        "nonTaxRevenue": "C29:S29",
+        "externalSources": "C39:S39",
+        "totalReceipts": "C41:S41",
+        "personnelServices": "E71:S71",
+        "maintenanceAndOperating": "E124:S124",
+        "financialExpenses": "E128:S128",
+        "propertyPlantAndEquipment": "E161:S161",
+        "specialPurposeAppropriations": "E195:S195",
+        "totalExpenditures": "A196:S196"
+      },
+      "proposedAmountCentavos": 325000000000,
+      "totalReceiptsCentavos": 325000000000,
+      "financing": {
+        "localSourcesCentavos": 139079141800,
+        "externalSourcesCentavos": 185920858200
+      },
+      "expenditures": {
+        "personnelServicesCentavos": 91071057000,
+        "maintenanceAndOperatingCentavos": 141399905500,
+        "financialExpensesCentavos": 6241652000,
+        "propertyPlantAndEquipmentCentavos": 50491619000,
+        "specialPurposeAppropriationsCentavos": 35795766500
+      },
+      "topSpendingItems": [
+        {
+          "label": "Salaries and Wages - Regular Pay",
+          "category": "Personnel services",
+          "amountCentavos": 52118132400,
+          "sourceRow": "S48"
+        },
+        {
+          "label": "20% Development Fund",
+          "category": "Capital outlay",
+          "amountCentavos": 35784172000,
+          "sourceRow": "S160"
+        },
+        {
+          "label": "Other General Services",
+          "category": "MOOE",
+          "amountCentavos": 33888000000,
+          "sourceRow": "S103"
+        },
+        {
+          "label": "Environment/ Sanitary Services",
+          "category": "MOOE",
+          "amountCentavos": 25000000000,
+          "sourceRow": "S101"
+        },
+        {
+          "label": "Other Professional Services",
+          "category": "MOOE",
+          "amountCentavos": 18942800000,
+          "sourceRow": "S100"
+        },
+        {
+          "label": "Disaster Risk Reduction Mgt. Fund",
+          "category": "Special purpose",
+          "amountCentavos": 16250000000,
+          "sourceRow": "S164"
+        }
+      ]
+    },
+    {
+      "year": 2024,
+      "workbook": "ABR-2024.xlsx",
+      "workbookSha256": "2773489202011ebf8bc760d24300fecd2daefcb3594a3a767a012711e23f6913",
+      "sheet": "LBP Form 1",
+      "sourceUrl": "https://bacolodcity.gov.ph/wp-content/uploads/2024/02/ABR-2024.xlsx",
+      "sourceRows": {
+        "taxRevenue": "C18:S18",
+        "nonTaxRevenue": "C29:S29",
+        "externalSources": "C39:S39",
+        "totalReceipts": "C41:S41",
+        "personnelServices": "E72:S72",
+        "maintenanceAndOperating": "E126:S126",
+        "financialExpenses": "E130:S130",
+        "propertyPlantAndEquipment": "E164:S164",
+        "specialPurposeAppropriations": "E197:S197",
+        "totalExpenditures": "A198:S198"
+      },
+      "proposedAmountCentavos": 360000000000,
+      "totalReceiptsCentavos": 360000000000,
+      "financing": {
+        "localSourcesCentavos": 162987000000,
+        "externalSourcesCentavos": 197013000000
+      },
+      "expenditures": {
+        "personnelServicesCentavos": 95016307100,
+        "maintenanceAndOperatingCentavos": 159604268900,
+        "financialExpensesCentavos": 16888927500,
+        "propertyPlantAndEquipmentCentavos": 52664730000,
+        "specialPurposeAppropriationsCentavos": 35825766500
+      },
+      "topSpendingItems": [
+        {
+          "label": "Salaries and Wages - Regular Pay",
+          "category": "Personnel services",
+          "amountCentavos": 55307506800,
+          "sourceRow": "S48"
+        },
+        {
+          "label": "20% Development Fund",
+          "category": "Capital outlay",
+          "amountCentavos": 38000000000,
+          "sourceRow": "S163"
+        },
+        {
+          "label": "Other General Services",
+          "category": "MOOE",
+          "amountCentavos": 34380720000,
+          "sourceRow": "S104"
+        },
+        {
+          "label": "Environment/ Sanitary Services",
+          "category": "MOOE",
+          "amountCentavos": 25000000000,
+          "sourceRow": "S102"
+        },
+        {
+          "label": "Other Professional Services",
+          "category": "MOOE",
+          "amountCentavos": 22040640000,
+          "sourceRow": "S101"
+        },
+        {
+          "label": "Disaster Risk Reduction Mgt. Fund",
+          "category": "Special purpose",
+          "amountCentavos": 18000000000,
+          "sourceRow": "S167"
+        }
+      ]
+    },
+    {
+      "year": 2025,
+      "workbook": "2025_ABR.xlsx",
+      "workbookSha256": "8a778fd19a2c58240fa52ff13ce5937f9061d448706b71f06441e49fcdbbb819",
+      "sheet": "LBP Form 1",
+      "sourceUrl": "https://bacolodcity.gov.ph/wp-content/uploads/2022/08/2025_ABR.xlsx",
+      "sourceRows": {
+        "taxRevenue": "C21:S21",
+        "nonTaxRevenue": "C29:S29",
+        "externalSources": "C41:S41",
+        "totalReceipts": "C61:S61",
+        "personnelServices": "E89:S89",
+        "maintenanceAndOperating": "E144:S144",
+        "financialExpenses": "E148:S148",
+        "propertyPlantAndEquipment": "E183:S183",
+        "specialPurposeAppropriations": "E221:S221",
+        "totalExpenditures": "A222:S222"
+      },
+      "proposedAmountCentavos": 440000000000,
+      "totalReceiptsCentavos": 440000000000,
+      "financing": {
+        "localSourcesCentavos": 206542601800,
+        "externalSourcesCentavos": 232557398200
+      },
+      "expenditures": {
+        "personnelServicesCentavos": 106756225300,
+        "maintenanceAndOperatingCentavos": 186508230700,
+        "financialExpensesCentavos": 26500194000,
+        "propertyPlantAndEquipmentCentavos": 55107750000,
+        "specialPurposeAppropriationsCentavos": 65127600000
+      },
+      "topSpendingItems": [
+        {
+          "label": "Salaries and Wages - Regular Pay",
+          "category": "Personnel services",
+          "amountCentavos": 59723133600,
+          "sourceRow": "S65"
+        },
+        {
+          "label": "20% Development Fund",
+          "category": "Capital outlay",
+          "amountCentavos": 44891500000,
+          "sourceRow": "S182"
+        },
+        {
+          "label": "Other General Services",
+          "category": "MOOE",
+          "amountCentavos": 39501000000,
+          "sourceRow": "S121"
+        },
+        {
+          "label": "Environment/ Sanitary Services",
+          "category": "MOOE",
+          "amountCentavos": 33190000000,
+          "sourceRow": "S119"
+        },
+        {
+          "label": "Donations",
+          "category": "MOOE",
+          "amountCentavos": 29966800000,
+          "sourceRow": "S142"
+        },
+        {
+          "label": "Interest Expense",
+          "category": "Financial expenses",
+          "amountCentavos": 24186826000,
+          "sourceRow": "S146"
+        }
+      ]
+    }
+  ]
+}
