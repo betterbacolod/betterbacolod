@@ -50,11 +50,17 @@ content/
 │   └── ...
 src/
 ├── components/
-│   └── government/     # Officials, departments, barangays data
+│   └── ui/             # Shared UI primitives
+├── features/
+│   ├── government/     # Government page and private components
+│   └── transparency/   # Transparency page and private components
 ├── data/
 │   ├── services.yaml   # Service categories
 │   └── government.yaml # Government categories
 ```
+
+See [AGENTS.md](AGENTS.md) for commands, architecture conventions, and change
+discipline.
 
 ## Submitting Changes
 

@@ -2,16 +2,17 @@
 
 ## Current shape
 
-- `src/pages` owns route-level composition.
-- `src/components` contains reusable UI plus feature-specific sections.
+- `src/pages` contains small, general route pages.
+- `src/features` owns feature route composition and private components.
+- `src/components` contains reusable shared UI and layout.
 - `src/data` contains site datasets and content indexes; `content` holds editable
   Markdown/YAML content.
 - `src/lib` holds shared helpers and renderers; `scripts` owns ingestion and
   content-generation utilities.
 
-This is a sound lightweight structure for the current site. The main pressure
-points are the large Energy, Transparency, and Government feature modules and
-their adjacent data/components being spread across several top-level folders.
+This is a sound lightweight structure for the current site. The largest route
+features are now grouped by ownership; remaining page/data changes can migrate
+incrementally as those features evolve.
 
 ## Feature ownership
 

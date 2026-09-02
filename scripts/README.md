@@ -79,6 +79,22 @@ python3 scripts/import-doe-electric-grid.py ~/Downloads/Electric\ Grid\ Data.xls
 The importer validates the expected Visayas row count, NIR facility count, and
 summary MW totals before writing JSON.
 
+## Bacolod annual-budget ingestion
+
+The Transparency `City Budget` card is backed by the four Annual Budget Report
+(ABR) workbooks published by the [Bacolod Full Disclosure Policy](https://bacolodcity.gov.ph/full-disclosure-policy/).
+The runtime dataset contains only comparable, proposed-budget totals; it never
+loads a workbook in the browser.
+
+```bash
+pip install -r requirements.txt
+python3 scripts/import-annual-budgets.py ~/Downloads
+python3 scripts/import-annual-budgets.py ~/Downloads --check
+```
+
+The importer records source URLs, worksheet row coordinates, and SHA-256
+hashes. It fails if total receipts and total expenditures do not reconcile.
+
 ### Search index: `generate-search-index.ts`
 
 Run automatically by `bun run build` after Vite finishes. Indexes the site for

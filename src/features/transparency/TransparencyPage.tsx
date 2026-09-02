@@ -7,10 +7,11 @@ import {
   FileText,
   FolderOpen,
   Fuel,
+  Landmark,
   ShoppingCart,
   TrendingUp,
 } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../../components/SEO';
 import { Card, CardContent } from '../../components/ui/Card';
@@ -18,6 +19,7 @@ import { Heading } from '../../components/ui/Heading';
 import Section from '../../components/ui/Section';
 import { Text } from '../../components/ui/Text';
 import budgetData from '../../data/transparency/budget-region6.json';
+import CityBudgetSection from './components/CityBudgetSection';
 import FloodControlSection from './components/FloodControlSection';
 import FuelPricesSection from './components/FuelPricesSection';
 
@@ -41,6 +43,12 @@ const categories = [
     description: 'Regional budget allocation and government contracts',
   },
   {
+    slug: 'city-budget',
+    name: 'City Budget',
+    icon: Landmark,
+    description: 'Bacolod annual budget reports and funding trends',
+  },
+  {
     slug: 'infrastructure',
     name: 'Infrastructure (DIME)',
     icon: Building2,
@@ -50,16 +58,29 @@ const categories = [
 
 const Transparency: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string | null>(null);
+  const expandedContentRef = useRef<HTMLDivElement>(null);
+  const shouldScrollToContent = useRef(false);
 
-  const handleSectionClick = (slug: string) => {
+  const handleSectionClick = (slug: string, scrollAfterOpen = false) => {
+    shouldScrollToContent.current = activeSection !== slug && scrollAfterOpen;
     setActiveSection(activeSection === slug ? null : slug);
   };
+
+  useEffect(() => {
+    if (!activeSection || !shouldScrollToContent.current) return;
+    expandedContentRef.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+    shouldScrollToContent.current = false;
+  }, [activeSection]);
 
   const renderContent = () => {
     if (activeSection === 'flood-control') return <FloodControlSection />;
     if (activeSection === 'fuel-prices') return <FuelPricesSection />;
     if (activeSection === 'infrastructure') return <InfrastructureSection />;
     if (activeSection === 'reports') return <ReportsSection />;
+    if (activeSection === 'city-budget') return <CityBudgetSection />;
     return null;
   };
 
@@ -100,6 +121,7 @@ const Transparency: React.FC = () => {
                       : 'border-gray-200 bg-white hover:bg-gray-50'
                   }`}
                   onClick={() => handleSectionClick(cat.slug)}
+                  aria-expanded={isActive}
                 >
                   <div
                     className={`p-2 rounded-lg ${isActive ? 'bg-primary-600 text-white' : 'bg-gray-100 text-gray-600'}`}
@@ -125,18 +147,18 @@ const Transparency: React.FC = () => {
 
         {/* Desktop: Card Grid + Content Below */}
         <div className="hidden lg:block">
-          <div className="grid grid-cols-2 xl:grid-cols-4 gap-6">
-            {categories.map((cat) => {
+          <div className="grid grid-cols-2 gap-5 xl:grid-cols-6 xl:gap-6">
+            {categories.map((cat, index) => {
               const Icon = cat.icon;
               const isActive = activeSection === cat.slug;
               return (
                 <Card
                   key={cat.slug}
                   hoverable
-                  className={`border-t-4 cursor-pointer transition-all ${isActive ? 'border-primary-600 ring-2 ring-primary-200' : 'border-primary-500'}`}
-                  onClick={() => handleSectionClick(cat.slug)}
+                  className={`border-t-4 cursor-pointer transition-all xl:col-span-2 ${index === 3 ? 'xl:col-start-2' : ''} ${isActive ? 'border-primary-600 ring-2 ring-primary-200' : 'border-primary-500'}`}
+                  onClick={() => handleSectionClick(cat.slug, true)}
                 >
-                  <CardContent className="flex flex-col h-full p-6">
+                  <CardContent className="p-5">
                     <div className="flex gap-3 items-start">
                       <div
                         className={`p-3 rounded-md ${isActive ? 'bg-primary-600 text-white' : 'bg-primary-100 text-primary-600'}`}
@@ -159,9 +181,11 @@ const Transparency: React.FC = () => {
           </div>
 
           {activeSection && (
-            <Card className="mt-8">
-              <CardContent className="p-6">{renderContent()}</CardContent>
-            </Card>
+            <div ref={expandedContentRef} className="mt-8 scroll-mt-24">
+              <Card>
+                <CardContent className="p-6">{renderContent()}</CardContent>
+              </Card>
+            </div>
           )}
         </div>
       </Section>

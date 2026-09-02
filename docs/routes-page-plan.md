@@ -1,12 +1,17 @@
 # Routes Page Plan
 
+> **Status: deferred.** This is a product-research document, not an implemented
+> BetterBacolod feature. There is no published routes dataset or route-finder
+> page in the repository. Do not present these proposed routes or schedules as
+> current public transport information.
+
 ## Goal
 
 Build the Bacolod routes page so it is useful with partial data, clear about its coverage, and easy to expand as routes are verified.
 
-## Current Issue
+## Why this is deferred
 
-The routes PR currently has a working route-finder concept, but the data is too thin for a public page:
+The earlier route-finder concept had data too thin for a public page:
 
 - 1 route: Bata-Libertad
 - 4 stops
