@@ -1,5 +1,46 @@
 # Changelog
 
+## [1.5.0](https://github.com/betterbacolod/betterbacolod/compare/v1.4.0...v1.5.0) (2026-09-02)
+
+
+### Features
+
+* **energy:** add feeder coverage list ([7ffcc51](https://github.com/betterbacolod/betterbacolod/commit/7ffcc517e4fcd204fa752a1ac2c9f497414b9030))
+* **energy:** organize feeder coverage into tabs ([3d954ee](https://github.com/betterbacolod/betterbacolod/commit/3d954eedcc7d0c15650307f05cffcbfe544a6e71))
+* **transparency:** add Bacolod city budget explorer ([ee7fa15](https://github.com/betterbacolod/betterbacolod/commit/ee7fa155f54c9731b36d9bcc1628b95195321a09))
+* **transparency:** add Bacolod city budget explorer ([813f65e](https://github.com/betterbacolod/betterbacolod/commit/813f65e19b37a6fa8d003ac1dccc77c20fda320a))
+
+
+### Bug Fixes
+
+* **energy:** limit mobile facility list ([f1c9b22](https://github.com/betterbacolod/betterbacolod/commit/f1c9b22a1e392b20e0a12fead439e768117ef906))
+* **energy:** point DOE document links to PDFs ([8e91630](https://github.com/betterbacolod/betterbacolod/commit/8e916306973165e3e6a2ada269d35659c48b9e56))
+* **fuel-prices:** discover DOE report attachments ([fc42286](https://github.com/betterbacolod/betterbacolod/commit/fc42286c7b210e06457d71e2a7f53dbd77eba4a2))
+* **fuel-prices:** discover DOE report attachments ([a3b41d1](https://github.com/betterbacolod/betterbacolod/commit/a3b41d116a56c9455113516c427e7cc8517c0e73))
+* **navigation:** add energy to services menu ([097a669](https://github.com/betterbacolod/betterbacolod/commit/097a66970e1804192d0c5923ec3ec3dee7e52c0b))
+
+
+### Performance
+
+* tree-shake category icons ([4bf7ff9](https://github.com/betterbacolod/betterbacolod/commit/4bf7ff97fd239c1661b48b4805ea37b8064e0d3e))
+
+
+### Content Updates
+
+* refresh service content ([ce18063](https://github.com/betterbacolod/betterbacolod/commit/ce18063dc730beb8fa5f9093bfa87e5fd27d78aa))
+
+
+### Documentation
+
+* clarify annual budget dataset scope ([7cc8f8e](https://github.com/betterbacolod/betterbacolod/commit/7cc8f8ee7de61954cd38fa5d4468ab4f61131966))
+* clarify annual budget dataset scope ([a232951](https://github.com/betterbacolod/betterbacolod/commit/a2329514beea71b42da990e7c54ddeeb2094418b))
+* refresh contributor guidance ([b26d499](https://github.com/betterbacolod/betterbacolod/commit/b26d49988e57e8fb8d7f118771a906b7d3857384))
+
+
+### Refactors
+
+* group feature-owned modules ([23f9bff](https://github.com/betterbacolod/betterbacolod/commit/23f9bff1a6722862ca9cd40b403702de7cbb0f4b))
+
 ## [1.4.0](https://github.com/betterbacolod/betterbacolod/compare/v1.3.0...v1.4.0) (2026-06-26)
 
 
