@@ -22,10 +22,13 @@ export const mainNavigation: NavigationItem[] = [
   {
     label: 'Services',
     href: '/services',
-    children: (servicesData.categories as Category[]).map((category) => ({
-      label: category.category,
-      href: `/services/${category.slug}`,
-    })),
+    children: [
+      { label: 'Energy', href: '/energy' },
+      ...(servicesData.categories as Category[]).map((category) => ({
+        label: category.category,
+        href: `/services/${category.slug}`,
+      })),
+    ],
   },
   {
     label: 'Government',
