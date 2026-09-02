@@ -120,6 +120,7 @@ git push origin feat/your-feature
 - [PSA](https://psa.gov.ph) - Population data
 - [BetterGov.ph](https://bettergov.ph) - Transparency data
 - [PhilGEPS](https://philgeps.gov.ph) - Procurement data
+- [Bacolod City Full Disclosure Policy](https://bacolodcity.gov.ph/full-disclosure-policy/) - Annual Budget Reports
 
 ---
 

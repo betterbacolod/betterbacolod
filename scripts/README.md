@@ -83,8 +83,11 @@ summary MW totals before writing JSON.
 
 The Transparency `City Budget` card is backed by the four Annual Budget Report
 (ABR) workbooks published by the [Bacolod Full Disclosure Policy](https://bacolodcity.gov.ph/full-disclosure-policy/).
-The runtime dataset contains only comparable, proposed-budget totals; it never
-loads a workbook in the browser.
+The runtime dataset contains comparable proposed-budget totals plus the six
+largest individual appropriation lines for each report year; it never loads a
+workbook in the browser. These figures are proposed appropriations, not a
+record of actual spending. The item-level rows are labelled as budget objects,
+not departments or completed projects.
 
 ```bash
 pip install -r requirements.txt
@@ -93,7 +96,8 @@ python3 scripts/import-annual-budgets.py ~/Downloads --check
 ```
 
 The importer records source URLs, worksheet row coordinates, and SHA-256
-hashes. It fails if total receipts and total expenditures do not reconcile.
+hashes. It fails if total receipts and total expenditures do not reconcile,
+or if the five published expenditure classes do not add up to the total.
 
 ### Search index: `generate-search-index.ts`
 
