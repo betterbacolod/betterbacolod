@@ -575,6 +575,16 @@ def real_weeks_in_json() -> list[str]:
     )
 
 
+def has_stale_source_gap(
+    unpublished_weeks: list[date], today: date | None = None
+) -> bool:
+    """Return whether an official-listing gap has exceeded the grace period."""
+    if not unpublished_weeks:
+        return False
+    current_date = today or date.today()
+    return (current_date - min(unpublished_weeks)).days > PUBLISHING_GRACE_DAYS
+
+
 # --- Top-level entry points ----------------------------------------------
 
 def _emit_github_output(key: str, value: str) -> None:
@@ -701,6 +711,7 @@ def catch_up_missing_weeks(weeks: int, dry_run: bool) -> int:
     network_errors = 0
     not_published = 0
     checked = 0
+    unpublished_weeks: list[date] = []
 
     for current in missing_weeks:
         checked += 1
@@ -711,6 +722,7 @@ def catch_up_missing_weeks(weeks: int, dry_run: bool) -> int:
             network_errors += 1
         elif rc == EXIT_NOT_PUBLISHED:
             not_published += 1
+            unpublished_weeks.append(current)
             print(f'\n• DOE report not published yet for {current.isoformat()}')
 
     changed = JSON_PATH.read_text() != before
@@ -722,11 +734,7 @@ def catch_up_missing_weeks(weeks: int, dry_run: bool) -> int:
     _emit_github_output('network_errors', str(network_errors))
     _emit_github_output('not_published', str(not_published))
     _emit_github_output('checked_weeks', str(checked))
-    oldest_missing = min(missing_weeks)
-    stale_source = (
-        not_published > 0
-        and (date.today() - oldest_missing).days > PUBLISHING_GRACE_DAYS
-    )
+    stale_source = has_stale_source_gap(unpublished_weeks)
     _emit_github_output('stale_source', str(stale_source).lower())
 
     print(
