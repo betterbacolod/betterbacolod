@@ -26,6 +26,11 @@ jobs:
           python-version: '3.13'
           cache: pip
 
+      - uses: oven-sh/setup-bun@v2
+
+      - name: Install Bun dependencies
+        run: bun install --frozen-lockfile
+
       - name: Install Python deps
         run: pip install -r requirements.txt
 
@@ -36,6 +41,10 @@ jobs:
           python3 scripts/fetch-doe-fuel-prices.py --catch-up-weeks 8
           echo "exit_code=$?" >> "$GITHUB_OUTPUT"
           set -e
+
+      - name: Format generated fuel-price data
+        if: steps.fetch.outputs.exit_code == '0'
+        run: bunx biome format --write src/data/transparency/fuel-prices.json
 
       - name: Detect JSON change
         id: diff
@@ -73,8 +82,7 @@ jobs:
 
             **Latest imported week**: ${{ steps.fetch.outputs.report_date }} (Tuesday → Monday)
 
-            Source: DOE Visayas Field Office weekly retail-pump-price report
-            (`https://prod-cms.doe.gov.ph/documents/d/guest/vfo-price-monitoring-MMDDYY-pdf`).
+            Source: [DOE Visayas Pump Prices listing](https://doe.gov.ph/data-and-prices/liquid-fuels/retail-pump-prices/visayas-pump-prices).
 
             Catch-up summary:
             - Weeks checked: ${{ steps.fetch.outputs.checked_weeks }}
