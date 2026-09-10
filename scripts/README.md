@@ -14,7 +14,7 @@ the DOE Visayas Field Office retail-pump-price report.
 1. Computes the most recent Tuesday and downloads the DOE PDF from the
    official [DOE Visayas Pump Prices listing](https://doe.gov.ph/data-and-prices/liquid-fuels/retail-pump-prices/visayas-pump-prices),
    then downloads the dated PDF attachment. This matters because DOE periodically
-   changes attachment filenames.
+   changes attachment hosts and filenames.
 2. Checks a rolling catch-up window for missing Tuesday reports, extracts the
    **Bacolod City** row, and merges available weeks into the JSON.
 3. Opens a pull request titled `content(fuel-prices): auto-update from DOE`
@@ -24,7 +24,9 @@ Reviewer just merges the PR — `release-please` picks it up and proposes the
 next version bump.
 
 If DOE is late, the workflow exits cleanly (status code `78`) and retries the
-next morning. If parsing fails, it opens a GitHub issue with the error log.
+next morning. It fails only when the official listing itself has lacked a report
+for more than 14 days. If parsing fails, it opens a GitHub issue with the error
+log.
 
 You can also trigger the workflow manually from the GitHub Actions UI
 (`workflow_dispatch`).
@@ -51,6 +53,9 @@ python3 scripts/fetch-doe-fuel-prices.py --catch-up-weeks 8
 
 # Use a local PDF (for testing / when DOE is unreachable):
 python3 scripts/fetch-doe-fuel-prices.py --pdf-path /tmp/sample.pdf --date 2026-04-21
+
+# Run the attachment-discovery regression tests:
+python3 -m unittest scripts/tests/test_fetch_doe_fuel_prices.py
 ```
 
 Exit codes: `0` success or no-op · `78` DOE has not yet published · `1` parse
