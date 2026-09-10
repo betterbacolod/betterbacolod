@@ -59,6 +59,18 @@ class DiscoverReportUrlsTests(unittest.TestCase):
         with self.assertRaises(fuel_prices.PDFNotPublished):
             fuel_prices.fetch_pdf(date(2026, 9, 8))
 
+    def test_stale_guard_uses_only_weeks_still_unpublished(self) -> None:
+        self.assertFalse(
+            fuel_prices.has_stale_source_gap(
+                [date(2026, 9, 8)], today=date(2026, 9, 10)
+            )
+        )
+        self.assertTrue(
+            fuel_prices.has_stale_source_gap(
+                [date(2026, 8, 25)], today=date(2026, 9, 10)
+            )
+        )
+
 
 if __name__ == '__main__':
     unittest.main()
