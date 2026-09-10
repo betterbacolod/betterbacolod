@@ -40,8 +40,10 @@ import re
 import sys
 from dataclasses import dataclass
 from datetime import date, datetime, timedelta
+from html.parser import HTMLParser
 from pathlib import Path
 from statistics import mean
+from urllib.parse import unquote, urljoin, urlparse
 
 import pdfplumber
 import requests
@@ -56,18 +58,20 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 JSON_PATH = REPO_ROOT / 'src' / 'data' / 'transparency' / 'fuel-prices.json'
 PDF_CACHE = Path('/tmp/doe-pdfs')
 ERROR_LOG = PDF_CACHE / 'error.log'
-LEGACY_URL_TEMPLATE = (
-    'https://prod-cms.doe.gov.ph/documents/d/guest/vfo-price-monitoring-{mmddyy}-pdf'
-)
 DOE_VISAYAS_PUMP_PRICES_URL = (
     'https://doe.gov.ph/data-and-prices/liquid-fuels/'
     'retail-pump-prices/visayas-pump-prices'
 )
-REPORT_URL_PATTERN = re.compile(
-    r'https://prod-cms\.doe\.gov\.ph/documents/d/[^"\\\s<>]+',
-    re.IGNORECASE,
-)
 REPORT_DATE_PATTERN = re.compile(r'(?<!\d)(\d{6})(?!\d)')
+REPORT_RANGE_PATTERN = re.compile(
+    r'(?i)(?:for\s+)?(\d{1,2})(?:\s*(?:to|-)\s*\d{1,2})?\s+'
+    r'(january|february|march|april|may|june|july|august|september|october|november|december)\s+'
+    r'(20\d{2})',
+)
+DOE_ATTACHMENT_HOSTS = {
+    'prod-cms.doe.gov.ph',
+    'd24qbtp4vooyzi.cloudfront.net',
+}
 PUBLISHING_GRACE_DAYS = 14
 
 EXPECTED_BRAND_COLUMNS = [
@@ -121,18 +125,12 @@ class BrandPrice:
     price_max: float
 
 
-# --- Date helpers --------------------------------------------------------
-
 def most_recent_tuesday(today: date | None = None) -> date:
     """Return the most recent Tuesday on-or-before today."""
     today = today or date.today()
     # Mon=0, Tue=1, ..., Sun=6 -> map to days back to last Tuesday.
     days_back = (today.weekday() - 1) % 7
     return today - timedelta(days=days_back)
-
-
-def url_for(report_date: date) -> str:
-    return LEGACY_URL_TEMPLATE.format(mmddyy=report_date.strftime('%m%d%y'))
 
 
 # --- Slug + helpers ------------------------------------------------------
@@ -178,11 +176,81 @@ def _build_session() -> requests.Session:
     return session
 
 
+class AnchorCollector(HTMLParser):
+    """Collect links with their visible text from the DOE listing."""
+
+    def __init__(self) -> None:
+        super().__init__()
+        self.links: list[tuple[str, str]] = []
+        self._href: str | None = None
+        self._text: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag == 'a':
+            self._href = dict(attrs).get('href')
+            self._text = []
+
+    def handle_data(self, data: str) -> None:
+        if self._href is not None:
+            self._text.append(data)
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag == 'a' and self._href is not None:
+            self.links.append((self._href, ' '.join(self._text)))
+            self._href = None
+            self._text = []
+
+
+def report_date_from_link(url: str, label: str) -> date | None:
+    """Read a report week from either DOE attachment naming convention."""
+    source_text = unquote(f'{url} {label}')
+    compact_match = REPORT_DATE_PATTERN.search(source_text)
+    if compact_match:
+        try:
+            return datetime.strptime(compact_match.group(1), '%m%d%y').date()
+        except ValueError:
+            pass
+
+    range_match = REPORT_RANGE_PATTERN.search(source_text)
+    if not range_match:
+        return None
+    try:
+        return datetime.strptime(
+            f'{range_match.group(1)} {range_match.group(2)} {range_match.group(3)}',
+            '%d %B %Y',
+        ).date()
+    except ValueError:
+        return None
+
+
+def discover_report_urls_from_listing(listing_html: str) -> dict[date, str]:
+    """Extract dated Visayas report attachments from an official DOE listing."""
+    collector = AnchorCollector()
+    collector.feed(listing_html)
+
+    reports: dict[date, str] = {}
+    for href, label in collector.links:
+        url = urljoin(DOE_VISAYAS_PUMP_PRICES_URL, href).replace('&amp;', '&')
+        if urlparse(url).hostname not in DOE_ATTACHMENT_HOSTS:
+            continue
+        source_text = f'{unquote(url)} {label}'.lower()
+        is_legacy_vfo = 'vfo-price-monitoring' in source_text
+        is_named_visayas_report = 'visayas' in source_text and (
+            'price' in source_text or 'monitoring' in source_text
+        )
+        if not (is_legacy_vfo or is_named_visayas_report):
+            continue
+        report_date = report_date_from_link(url, label)
+        if report_date is not None:
+            reports.setdefault(report_date, url)
+    return reports
+
+
 def discover_report_urls() -> dict[date, str]:
     """Return dated Visayas report attachments from DOE's official listing.
 
-    DOE has changed its document slugs several times. The listing is the stable
-    first-party index; the legacy predictable URL is only a compatibility fallback.
+    DOE has changed attachment hosts and document slugs several times. The
+    listing is the stable first-party index, so unknown weeks are never guessed.
     """
     LOG.info('Discovering reports from %s', DOE_VISAYAS_PUMP_PRICES_URL)
     try:
@@ -193,20 +261,7 @@ def discover_report_urls() -> dict[date, str]:
             f'Could not load DOE Visayas report listing: {exc}',
         ) from exc
 
-    reports: dict[date, str] = {}
-    for raw_url in REPORT_URL_PATTERN.findall(response.text):
-        url = raw_url.replace('\\u0026', '&').replace('&amp;', '&')
-        if 'vfo' not in url.lower() or 'price-monitoring' not in url.lower():
-            continue
-        match = REPORT_DATE_PATTERN.search(url)
-        if not match:
-            continue
-        try:
-            report_date = datetime.strptime(match.group(1), '%m%d%y').date()
-        except ValueError:
-            continue
-        # The listing can contain duplicate links. Keep the first (newest entry).
-        reports.setdefault(report_date, url)
+    reports = discover_report_urls_from_listing(response.text)
 
     if not reports:
         raise PDFFetchError('DOE listing contained no dated Visayas price reports')
@@ -225,7 +280,11 @@ def fetch_pdf(report_date: date, source_url: str | None = None) -> Path:
         LOG.info('Using cached PDF: %s', cache_path)
         return cache_path
 
-    url = source_url or url_for(report_date)
+    if source_url is None:
+        raise PDFNotPublished(
+            f'No official DOE listing attachment for {report_date.isoformat()}',
+        )
+    url = source_url
     LOG.info('Fetching %s', url)
     try:
         resp = _build_session().get(url, timeout=30)
