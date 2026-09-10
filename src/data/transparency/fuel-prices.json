@@ -2,6 +2,181 @@
   "placeholder": false,
   "snapshots": [
     {
+      "id": "fp-2026-09-01-gas91",
+      "date": "2026-09-01",
+      "fuelType": "Gasoline RON 91",
+      "priceMin": 75.5,
+      "priceAvg": 76.15,
+      "priceMax": 77.4,
+      "stationCount": 3,
+      "byStation": [
+        {
+          "station": "CALTEX",
+          "priceMin": 75.5,
+          "priceMax": 75.62
+        },
+        {
+          "station": "PETRON",
+          "priceMin": 75.5,
+          "priceMax": 75.5
+        },
+        {
+          "station": "SHELL",
+          "priceMin": 77.4,
+          "priceMax": 77.4
+        }
+      ]
+    },
+    {
+      "id": "fp-2026-09-01-gas95",
+      "date": "2026-09-01",
+      "fuelType": "Gasoline RON 95",
+      "priceMin": 75.8,
+      "priceAvg": 78.6,
+      "priceMax": 83.1,
+      "stationCount": 3,
+      "byStation": [
+        {
+          "station": "CALTEX",
+          "priceMin": 75.8,
+          "priceMax": 76.62
+        },
+        {
+          "station": "PETRON",
+          "priceMin": 76.5,
+          "priceMax": 76.5
+        },
+        {
+          "station": "SHELL",
+          "priceMin": 83.1,
+          "priceMax": 83.1
+        }
+      ]
+    },
+    {
+      "id": "fp-2026-09-01-dsl",
+      "date": "2026-09-01",
+      "fuelType": "Diesel",
+      "priceMin": 83.5,
+      "priceAvg": 85.62,
+      "priceMax": 87.7,
+      "stationCount": 3,
+      "byStation": [
+        {
+          "station": "CALTEX",
+          "priceMin": 84.6,
+          "priceMax": 86.7
+        },
+        {
+          "station": "PETRON",
+          "priceMin": 83.5,
+          "priceMax": 83.5
+        },
+        {
+          "station": "SHELL",
+          "priceMin": 87.7,
+          "priceMax": 87.7
+        }
+      ]
+    },
+    {
+      "id": "fp-2026-09-01-dslplus",
+      "date": "2026-09-01",
+      "fuelType": "Diesel Plus",
+      "priceMin": 93.1,
+      "priceAvg": 93.1,
+      "priceMax": 93.1,
+      "stationCount": 1,
+      "byStation": [
+        {
+          "station": "SHELL",
+          "priceMin": 93.1,
+          "priceMax": 93.1
+        }
+      ]
+    },
+    {
+      "id": "fp-2026-08-25-gas91",
+      "date": "2026-08-25",
+      "fuelType": "Gasoline RON 91",
+      "priceMin": 75.2,
+      "priceAvg": 75.68,
+      "priceMax": 75.92,
+      "stationCount": 2,
+      "byStation": [
+        {
+          "station": "CALTEX",
+          "priceMin": 75.8,
+          "priceMax": 75.92
+        },
+        {
+          "station": "PETRON",
+          "priceMin": 75.2,
+          "priceMax": 75.8
+        }
+      ]
+    },
+    {
+      "id": "fp-2026-08-25-gas95",
+      "date": "2026-08-25",
+      "fuelType": "Gasoline RON 95",
+      "priceMin": 76.1,
+      "priceAvg": 76.5,
+      "priceMax": 76.92,
+      "stationCount": 2,
+      "byStation": [
+        {
+          "station": "CALTEX",
+          "priceMin": 76.1,
+          "priceMax": 76.92
+        },
+        {
+          "station": "PETRON",
+          "priceMin": 76.2,
+          "priceMax": 76.8
+        }
+      ]
+    },
+    {
+      "id": "fp-2026-08-25-dsl",
+      "date": "2026-08-25",
+      "fuelType": "Diesel",
+      "priceMin": 88.4,
+      "priceAvg": 89.3,
+      "priceMax": 90.5,
+      "stationCount": 2,
+      "byStation": [
+        {
+          "station": "CALTEX",
+          "priceMin": 88.4,
+          "priceMax": 90.5
+        },
+        {
+          "station": "PETRON",
+          "priceMin": 88.5,
+          "priceMax": 89.8
+        }
+      ]
+    },
+    {
+      "id": "fp-2026-08-25-dslplus",
+      "date": "2026-08-25",
+      "fuelType": "Diesel Plus",
+      "priceMin": 94.1,
+      "priceAvg": 94.1,
+      "priceMax": 94.1,
+      "stationCount": 1,
+      "byStation": [
+        {
+          "station": "SHELL",
+          "priceMin": 94.1,
+          "priceMax": 94.1
+        }
+      ],
+      "stale": true,
+      "staleSince": "2026-08-11"
+    },
+    {
       "id": "fp-2026-08-18-gas91",
       "date": "2026-08-18",
       "fuelType": "Gasoline RON 91",
@@ -3841,6 +4016,8 @@
       "Diesel Plus"
     ],
     "weeks": [
+      "2026-09-01",
+      "2026-08-25",
       "2026-08-18",
       "2026-08-11",
       "2026-08-04",
@@ -3871,16 +4048,20 @@
       "2026-01-06",
       "2025-12-30"
     ],
-    "brands": ["CALTEX", "PETRON"]
+    "brands": [
+      "CALTEX",
+      "PETRON",
+      "SHELL"
+    ]
   },
   "stats": {
-    "latestWeek": "2026-08-18",
-    "weeksTracked": 29,
+    "latestWeek": "2026-09-01",
+    "weeksTracked": 31,
     "fuelTypes": 4,
-    "stationsSurveyed": 2
+    "stationsSurveyed": 3
   },
   "source": "DOE Oil Industry Management Bureau",
   "sourceUrl": "https://doe.gov.ph/articles/group/liquid-fuels?maincat=Retail%20Pump%20Prices&subcategory=Visayas%20Pump%20Prices&display_type=Card",
   "contributor": "Shiro_Oni",
-  "lastUpdated": "2026-08-18"
+  "lastUpdated": "2026-09-01"
 }
