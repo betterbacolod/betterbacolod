@@ -1,5 +1,54 @@
 # Changelog
 
+## [1.5.0](https://github.com/betterbacolod/betterbacolod/compare/v1.4.0...v1.5.0) (2026-09-10)
+
+
+### Features
+
+* **energy:** add feeder coverage list ([7ffcc51](https://github.com/betterbacolod/betterbacolod/commit/7ffcc517e4fcd204fa752a1ac2c9f497414b9030))
+* **energy:** organize feeder coverage into tabs ([3d954ee](https://github.com/betterbacolod/betterbacolod/commit/3d954eedcc7d0c15650307f05cffcbfe544a6e71))
+* **transparency:** add Bacolod city budget explorer ([ee7fa15](https://github.com/betterbacolod/betterbacolod/commit/ee7fa155f54c9731b36d9bcc1628b95195321a09))
+* **transparency:** add Bacolod city budget explorer ([813f65e](https://github.com/betterbacolod/betterbacolod/commit/813f65e19b37a6fa8d003ac1dccc77c20fda320a))
+
+
+### Bug Fixes
+
+* **energy:** limit mobile facility list ([f1c9b22](https://github.com/betterbacolod/betterbacolod/commit/f1c9b22a1e392b20e0a12fead439e768117ef906))
+* **energy:** point DOE document links to PDFs ([8e91630](https://github.com/betterbacolod/betterbacolod/commit/8e916306973165e3e6a2ada269d35659c48b9e56))
+* **fuel-prices:** auto-update from DOE through 2026-09-01 ([79acd5b](https://github.com/betterbacolod/betterbacolod/commit/79acd5b2bc120857feb98b946005b57a49c1b736))
+* **fuel-prices:** auto-update from DOE through 2026-09-01 ([17fd790](https://github.com/betterbacolod/betterbacolod/commit/17fd7908051bd1f4b81761486a9fa5f5a5552e52))
+* **fuel-prices:** discover DOE report attachments ([fc42286](https://github.com/betterbacolod/betterbacolod/commit/fc42286c7b210e06457d71e2a7f53dbd77eba4a2))
+* **fuel-prices:** discover DOE report attachments ([a3b41d1](https://github.com/betterbacolod/betterbacolod/commit/a3b41d116a56c9455113516c427e7cc8517c0e73))
+* **fuel-prices:** format automated data updates ([ba29590](https://github.com/betterbacolod/betterbacolod/commit/ba295906ab07e3b6c77d675bbfb3d6219156cbf9))
+* **fuel-prices:** format automated data updates ([1fe1729](https://github.com/betterbacolod/betterbacolod/commit/1fe1729cb9d5a738b34595e24995e4c747730396))
+* **fuel-prices:** ignore imported weeks in stale guard ([6eea571](https://github.com/betterbacolod/betterbacolod/commit/6eea571d87b99c879d5d931e610ac6fc34d2ba0c))
+* **fuel-prices:** ignore imported weeks in stale guard ([c900086](https://github.com/betterbacolod/betterbacolod/commit/c900086c56629d480ba56931336a906ed14a4be5))
+* **fuel-prices:** support DOE CloudFront reports ([3907d02](https://github.com/betterbacolod/betterbacolod/commit/3907d02be283af0f808e62dc2602392d672b6b9c))
+* **fuel-prices:** support DOE CloudFront reports ([154c243](https://github.com/betterbacolod/betterbacolod/commit/154c2431fce318e897d11da0f99405ec8b833d76))
+* **navigation:** add energy to services menu ([097a669](https://github.com/betterbacolod/betterbacolod/commit/097a66970e1804192d0c5923ec3ec3dee7e52c0b))
+
+
+### Performance
+
+* tree-shake category icons ([4bf7ff9](https://github.com/betterbacolod/betterbacolod/commit/4bf7ff97fd239c1661b48b4805ea37b8064e0d3e))
+
+
+### Content Updates
+
+* refresh service content ([ce18063](https://github.com/betterbacolod/betterbacolod/commit/ce18063dc730beb8fa5f9093bfa87e5fd27d78aa))
+
+
+### Documentation
+
+* clarify annual budget dataset scope ([7cc8f8e](https://github.com/betterbacolod/betterbacolod/commit/7cc8f8ee7de61954cd38fa5d4468ab4f61131966))
+* clarify annual budget dataset scope ([a232951](https://github.com/betterbacolod/betterbacolod/commit/a2329514beea71b42da990e7c54ddeeb2094418b))
+* refresh contributor guidance ([b26d499](https://github.com/betterbacolod/betterbacolod/commit/b26d49988e57e8fb8d7f118771a906b7d3857384))
+
+
+### Refactors
+
+* group feature-owned modules ([23f9bff](https://github.com/betterbacolod/betterbacolod/commit/23f9bff1a6722862ca9cd40b403702de7cbb0f4b))
+
 ## [1.4.0](https://github.com/betterbacolod/betterbacolod/compare/v1.3.0...v1.4.0) (2026-06-26)
 
 
