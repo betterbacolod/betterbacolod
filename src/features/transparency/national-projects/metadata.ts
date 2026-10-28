@@ -7,11 +7,10 @@ export const nationalProjectsMetadata = {
   keywords:
     'Bacolod budget 2027, NIR budget leaderboard, Negros Island Region, DPWH projects, Bacolod congressman, Negros Occidental, Negros Oriental, Siquijor, NEP House budget comparison',
   url: '/transparency/national-projects',
-  image: `${siteUrl}/images/social/nir-projects-2027.png`,
-  imageAlt:
-    '2027 NIR Budget Leaderboard: compare proposed DPWH funding and explore local projects on BetterBacolod.',
-  imageWidth: 1200,
-  imageHeight: 630,
+  image: `${siteUrl}/images/icons/1080x1080/og-image.png`,
+  imageAlt: 'BetterBacolod civic information portal',
+  imageWidth: 1080,
+  imageHeight: 1080,
 };
 
 export const nationalProjectsStructuredData = [
