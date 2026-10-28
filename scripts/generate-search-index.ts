@@ -3,6 +3,7 @@ import { join } from 'node:path';
 import { create, insert, save } from '@orama/orama';
 import yaml from 'js-yaml';
 import { seoGuides } from '../src/data/seoGuides';
+import { writeNationalProjectsHtml } from './national-projects-seo';
 
 const schema = {
   title: 'string',
@@ -86,6 +87,16 @@ async function generateSearchIndex() {
   // Index main pages
   const pages = [
     {
+      title: '2027 National Projects in Bacolod & NIR',
+      description:
+        'Compare live DPWH Executive and House budget proposals across Negros Island Region',
+      content:
+        'national projects NIR Negros Occidental Oriental Siquijor Bacolod DPWH NEP House FY2027 infrastructure roads drainage proposed budget',
+      url: '/transparency/national-projects',
+      category: 'Transparency',
+      type: 'page',
+    },
+    {
       title: 'Government',
       description: 'City officials, departments, and 61 barangays',
       content:
@@ -157,9 +168,13 @@ async function generateSearchIndex() {
   console.log(
     `✅ Indexed ${indexed} pages + ${servicesData.categories.length} categories + ${seoGuides.length} guides`,
   );
+  writeNationalProjectsHtml();
 }
 
-generateSearchIndex().catch(console.error);
+generateSearchIndex().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});
 
 function buildSitemap({
   categoryUrls,
@@ -178,6 +193,7 @@ function buildSitemap({
     { loc: '/energy', priority: '0.8' },
     { loc: '/government', priority: '0.9' },
     { loc: '/transparency', priority: '0.9' },
+    { loc: '/transparency/national-projects', priority: '0.8' },
     { loc: '/about', priority: '0.7' },
     { loc: '/sitemap', priority: '0.5' },
     ...guideUrls.map((loc) => ({ loc, priority: '0.8' })),

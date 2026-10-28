@@ -28,6 +28,14 @@
   ],
   "rewrites": [
     {
+      "source": "/transparency/national-projects",
+      "destination": "/transparency/national-projects/index.html"
+    },
+    {
+      "source": "/transparency/national-projects/",
+      "destination": "/transparency/national-projects/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

@@ -6,6 +6,10 @@ interface SEOProps {
   description?: string;
   keywords?: string;
   image?: string;
+  imageAlt?: string;
+  imageWidth?: number;
+  imageHeight?: number;
+  structuredData?: Record<string, unknown>[];
   url?: string;
   type?: string;
 }
@@ -15,6 +19,10 @@ export default function SEO({
   description,
   keywords,
   image,
+  imageAlt = 'BetterBacolod civic information portal',
+  imageWidth = 1080,
+  imageHeight = 1080,
+  structuredData = [],
   url,
   type = 'website',
 }: SEOProps) {
@@ -49,6 +57,9 @@ export default function SEO({
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={fullDescription} />
       <meta property="og:image" content={fullImage} />
+      <meta property="og:image:alt" content={imageAlt} />
+      <meta property="og:image:width" content={String(imageWidth)} />
+      <meta property="og:image:height" content={String(imageHeight)} />
       <meta property="og:site_name" content={siteName} />
 
       {/* Twitter */}
@@ -56,6 +67,12 @@ export default function SEO({
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={fullDescription} />
       <meta name="twitter:image" content={fullImage} />
+      <meta name="twitter:image:alt" content={imageAlt} />
+      {structuredData.map((data) => (
+        <script key={String(data['@type'])} type="application/ld+json">
+          {JSON.stringify(data).replace(/</g, '\\u003c')}
+        </script>
+      ))}
     </Helmet>
   );
 }

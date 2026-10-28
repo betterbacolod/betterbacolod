@@ -21,6 +21,10 @@ const Sitemap = lazy(() => import('./pages/Sitemap'));
 const Transparency = lazy(
   () => import('./features/transparency/TransparencyPage'),
 );
+const NationalProjects = lazy(
+  () =>
+    import('./features/transparency/national-projects/NationalProjectsPage'),
+);
 
 function App() {
   return (
@@ -49,6 +53,10 @@ function App() {
                 <Route path="/energy" element={<Energy />} />
                 <Route path="/government" element={<Government />} />
                 <Route path="/transparency" element={<Transparency />} />
+                <Route
+                  path="/transparency/national-projects"
+                  element={<NationalProjects />}
+                />
                 <Route path="/about" element={<About />} />
                 <Route path="/sitemap" element={<Sitemap />} />
                 <Route path="/search" element={<Search />} />
