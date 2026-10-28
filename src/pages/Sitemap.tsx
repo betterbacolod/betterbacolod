@@ -20,6 +20,10 @@ const Sitemap: React.FC = () => {
         { label: 'Energy', href: '/energy' },
         { label: 'Government', href: '/government' },
         { label: 'Transparency', href: '/transparency' },
+        {
+          label: '2027 National Projects',
+          href: '/transparency/national-projects',
+        },
         { label: 'About', href: '/about' },
       ],
     },

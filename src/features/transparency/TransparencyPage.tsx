@@ -23,7 +23,13 @@ import CityBudgetSection from './components/CityBudgetSection';
 import FloodControlSection from './components/FloodControlSection';
 import FuelPricesSection from './components/FuelPricesSection';
 
-const categories = [
+const categories: {
+  slug: string;
+  name: string;
+  icon: typeof Building2;
+  description: string;
+  href?: string;
+}[] = [
   {
     slug: 'flood-control',
     name: 'Flood Control Projects',
@@ -53,6 +59,13 @@ const categories = [
     name: 'Infrastructure (DIME)',
     icon: Building2,
     description: 'Major infrastructure projects tracking',
+  },
+  {
+    slug: 'national-projects',
+    name: '2027 National Projects',
+    icon: FileSearch,
+    description: 'Compare proposed DPWH projects across Bacolod and NIR',
+    href: '/transparency/national-projects',
   },
 ];
 
@@ -112,6 +125,25 @@ const Transparency: React.FC = () => {
           {categories.map((cat) => {
             const Icon = cat.icon;
             const isActive = activeSection === cat.slug;
+            if (cat.href)
+              return (
+                <Link
+                  key={cat.slug}
+                  to={cat.href}
+                  className="flex min-h-20 items-center gap-4 rounded-lg border border-gray-200 bg-white p-4 text-left hover:bg-primary-50"
+                >
+                  <div className="rounded-lg bg-primary-50 p-2 text-primary-700">
+                    <Icon className="h-5 w-5" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-medium text-gray-900">{cat.name}</h3>
+                    <p className="mt-1 text-xs text-gray-500">
+                      {cat.description}
+                    </p>
+                  </div>
+                  <ChevronRight className="h-5 w-5 text-gray-400" />
+                </Link>
+              );
             return (
               <div key={cat.slug}>
                 <button
@@ -148,14 +180,43 @@ const Transparency: React.FC = () => {
         {/* Desktop: Card Grid + Content Below */}
         <div className="hidden lg:block">
           <div className="grid grid-cols-2 gap-5 xl:grid-cols-6 xl:gap-6">
-            {categories.map((cat, index) => {
+            {categories.map((cat) => {
               const Icon = cat.icon;
               const isActive = activeSection === cat.slug;
+              if (cat.href)
+                return (
+                  <Link
+                    key={cat.slug}
+                    to={cat.href}
+                    className="rounded-lg focus-visible:outline-primary-500 xl:col-span-2"
+                  >
+                    <Card
+                      hoverable
+                      className="h-full border-t-4 border-primary-500"
+                    >
+                      <CardContent className="p-5">
+                        <div className="flex items-start gap-3">
+                          <div className="rounded-md bg-primary-100 p-3 text-primary-600">
+                            <Icon className="h-6 w-6" />
+                          </div>
+                          <div>
+                            <h3 className="text-lg font-semibold text-gray-900">
+                              {cat.name}
+                            </h3>
+                            <Text className="mt-1 text-sm text-gray-600">
+                              {cat.description}
+                            </Text>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                );
               return (
                 <Card
                   key={cat.slug}
                   hoverable
-                  className={`border-t-4 cursor-pointer transition-all xl:col-span-2 ${index === 3 ? 'xl:col-start-2' : ''} ${isActive ? 'border-primary-600 ring-2 ring-primary-200' : 'border-primary-500'}`}
+                  className={`border-t-4 cursor-pointer transition-all xl:col-span-2 ${isActive ? 'border-primary-600 ring-2 ring-primary-200' : 'border-primary-500'}`}
                   onClick={() => handleSectionClick(cat.slug, true)}
                 >
                   <CardContent className="p-5">

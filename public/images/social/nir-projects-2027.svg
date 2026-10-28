@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <title>2027 NIR Budget Leaderboard — BetterBacolod</title>
+  <rect width="1200" height="630" fill="#f8fafc"/>
+  <rect x="0" y="0" width="1200" height="12" fill="#0066eb"/>
+  <rect x="52" y="48" width="1096" height="534" rx="24" fill="white" stroke="#e2e8f0" stroke-width="2"/>
+  <rect x="88" y="88" width="312" height="38" rx="9" fill="#e6f0fd"/>
+  <text x="106" y="114" font-family="Arial,sans-serif" font-weight="700" font-size="19" fill="#003d8d" letter-spacing="1">PROPOSED FY2027 · DPWH</text>
+  <text x="88" y="201" font-family="Arial,sans-serif" font-weight="700" font-size="58" fill="#00142f">2027 NIR Budget</text>
+  <text x="88" y="269" font-family="Arial,sans-serif" font-weight="700" font-size="58" fill="#0066eb">Leaderboard</text>
+  <text x="90" y="326" font-family="Arial,sans-serif" font-size="24" fill="#475569">Compare proposed funding and explore local projects.</text>
+  <text x="90" y="367" font-family="Arial,sans-serif" font-size="21" fill="#64748b">Bacolod · Negros Occidental · Negros Oriental · Siquijor</text>
+  <rect x="88" y="410" width="340" height="58" rx="12" fill="#0052bc"/>
+  <text x="112" y="447" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="white">Find your district →</text>
+  <text x="90" y="534" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#003d8d">BetterBacolod.org</text>
+  <text x="1110" y="534" text-anchor="end" font-family="Arial,sans-serif" font-size="17" fill="#64748b">Public data. Closer to home.</text>
+  <rect x="882" y="116" width="210" height="312" rx="16" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="904" y="151" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="#64748b">EXPLORE</text>
+  <rect x="902" y="175" width="170" height="60" rx="10" fill="#e6f0fd"/>
+  <circle cx="928" cy="205" r="11" fill="#0066eb"/>
+  <text x="952" y="212" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#003d8d">Districts</text>
+  <rect x="902" y="251" width="170" height="60" rx="10" fill="white" stroke="#e2e8f0"/>
+  <circle cx="928" cy="281" r="11" fill="#008c78"/>
+  <text x="952" y="288" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#334155">Projects</text>
+  <rect x="902" y="327" width="170" height="60" rx="10" fill="white" stroke="#e2e8f0"/>
+  <circle cx="928" cy="357" r="11" fill="#f58900"/>
+  <text x="952" y="364" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#334155">Charts</text>
+</svg>
