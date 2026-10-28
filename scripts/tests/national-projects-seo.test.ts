@@ -11,7 +11,7 @@ describe('national projects crawler HTML', () => {
     expect(html.match(/property="og:title"/g)).toHaveLength(1);
     expect(html).toContain(nationalProjectsMetadata.image);
     expect(html).toContain('name="twitter:card" content="summary_large_image"');
-    expect(html).toContain('property="og:image:width" content="1200"');
+    expect(html).toContain('property="og:image:width" content="1080"');
     expect(html).toContain(
       'rel="canonical" href="https://betterbacolod.org/transparency/national-projects"',
     );

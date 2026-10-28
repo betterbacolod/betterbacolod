@@ -60,6 +60,5 @@ React replaces the static introduction when it starts; live amounts are never
 cached into the crawler HTML. Shared metadata lives beside the feature so the
 build and browser descriptions stay aligned.
 
-The 1200x630 PNG share image has an editable SVG source in `public/images/social`.
-It describes the feature without publishing budget figures that could become
-outdated. Filtering query parameters share the main page's canonical URL.
+Link previews use the existing BetterBacolod site image. Filtering query
+parameters share the main page's canonical URL.
