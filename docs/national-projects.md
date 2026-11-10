@@ -37,11 +37,24 @@ Uncertainty flags stay visible in both the results and source details. Compariso
 candidates alone do not establish irregularity or political responsibility.
 CSV exports preserve nulls, source revision/date, flags and upstream record URLs.
 
+The Project type filter offers Multipurpose buildings. It matches project titles,
+not PAP budget categories, so a road categorized under multipurpose facilities is
+excluded. Matching accepts hyphenated, spaced, and unhyphenated forms and the
+source's explicit `Mult-Purpose Building` spelling. Source titles and amounts are
+never rewritten. Construction, completion, and rehabilitation entries are included;
+the number of entries is not a count of individual buildings. General text search
+still searches titles, offices, programs, and PAP categories.
+
+The type filter applies to both chart dimensions, summary totals, pagination, and
+CSV exports. The project list shows House and Executive counts and totals separately
+from comparison-record counts. The type chip can be removed independently;
+Reset filters also clears the type selection.
+
 ## Development checks
 
 Run `bun test scripts/tests/national-projects.test.ts`, `bun run check`, and
 `bun run build`. Check the live screen and API-failure behavior at mobile and
-desktop widths. Shareable query parameters are `q`, `office`, `program`, `group`,
+desktop widths. Shareable query parameters are `q`, `office`, `program`, `type`, `group`,
 `held`, `sort`, `page`, and `project`. This feature has no server-side API route.
 Leaderboard state also uses `view`, `district`, `area`, and `rank`. District
 figures use `/api/v1/hgab/2027/districts?region=NIR&limit=254` and must match the
