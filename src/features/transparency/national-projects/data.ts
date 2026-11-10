@@ -68,6 +68,7 @@ export interface Filters {
   q: string;
   office: string;
   program: string;
+  type: string;
   group: string;
   held: string;
 }
@@ -208,6 +209,9 @@ export function filterProjects(rows: Project[], filters: Filters) {
       words.every((word) => text.includes(word)) &&
       (!filters.office || row.office === filters.office) &&
       (!filters.program || row.program === filters.program) &&
+      (filters.type !== 'multipurpose_building' ||
+        // Match titles, not PAP categories; preserve the source's "Mult-Purpose" typo.
+        /\bmult(?:i)?[\s-]*purpose\s+buildings?\b/i.test(row.title)) &&
       (!filters.group || row.bridge_group === filters.group) &&
       (filters.held !== 'only' || row.held || row.flags.length > 0) &&
       (filters.held !== 'hide' || (!row.held && row.flags.length === 0))

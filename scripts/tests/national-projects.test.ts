@@ -103,6 +103,7 @@ describe('proposal arithmetic and local filters', () => {
       q: 'bacolod',
       office: BACOLOD_OFFICE,
       program: '',
+      type: '',
       group: '',
       held: 'all',
     };
@@ -126,10 +127,117 @@ describe('proposal arithmetic and local filters', () => {
         q: '',
         office: '',
         program: '',
+        type: '',
         group: '',
         held: 'only',
       }),
     ).toHaveLength(2);
+  });
+
+  test.each([
+    'Construction of Multi-Purpose Building, Barangay Handumanan',
+    'Construction (Completion) of Multi-Purpose Buildings, Barangay Taculing',
+    'Rehabilitation of Mult-Purpose Building, Barangay Banago',
+    'Rehabilitation of multipurpose building, Barangay Granada',
+    'Construction of Multi Purpose Building, Barangay Cabug',
+  ])('multipurpose type matches the building title: %s', (title) => {
+    const project = row('building', { title, pap: null });
+    expect(
+      filterProjects([project], {
+        q: '',
+        office: '',
+        program: '',
+        type: 'multipurpose_building',
+        group: '',
+        held: 'all',
+      }),
+    ).toEqual([project]);
+  });
+
+  test('multipurpose type excludes roads even when their budget category says buildings', () => {
+    const projects = [
+      row('building', {
+        title: 'Rehabilitation of Mult-Purpose Building, Barangay Banago',
+      }),
+      row('road', {
+        title:
+          'Rehabilitation of Road at Crispino V. Ramos Avenue, Barangay Taculing',
+        pap: 'BIP - Multi-Purpose Buildings/ Facilities to support Social Services',
+      }),
+      row('facilities', { title: 'Construction of Multi-Purpose facilities' }),
+    ];
+    const filters = {
+      q: '',
+      office: '',
+      program: '',
+      type: 'multipurpose_building',
+      group: '',
+      held: 'all',
+    };
+    const result = filterProjects(projects, filters);
+    expect(result.map((project) => project.id)).toEqual(['building']);
+    expect(result[0]).toBe(projects[0]);
+    expect(filterProjects(projects, { ...filters, type: '' })).toEqual(
+      projects,
+    );
+  });
+
+  test('project type combines with other filters and keeps both budget versions', () => {
+    const projects = [
+      row('house', {
+        title: 'Construction of Multi-Purpose Building, Handumanan',
+        nep_php: null,
+        hgab3_php: 30,
+        flags: ['house_only'],
+        bridge_group: 'house_only',
+      }),
+      row('nep', {
+        title: 'Construction of Multi-Purpose Building, Handumanan',
+        nep_php: 10,
+        hgab3_php: null,
+      }),
+      row('central', {
+        title: 'Construction of Multi-Purpose Building, Handumanan',
+        office: 'Central Office',
+      }),
+      row('zero', {
+        title: 'Rehabilitation of Mult-Purpose Building, Banago',
+        nep_php: 0,
+        hgab3_php: 0,
+      }),
+    ];
+    const filters = {
+      q: '',
+      office: BACOLOD_OFFICE,
+      program: 'Flood control',
+      type: 'multipurpose_building',
+      group: '',
+      held: 'all',
+    };
+    const selected = filterProjects(projects, filters);
+    expect(selected.map((project) => project.id)).toEqual([
+      'house',
+      'nep',
+      'zero',
+    ]);
+    expect(totals(selected)).toMatchObject({
+      houseCount: 2,
+      nepCount: 2,
+      house: 30,
+      nep: 10,
+    });
+    expect(
+      filterProjects(projects, { ...filters, q: 'Handumanan' }),
+    ).toHaveLength(2);
+    expect(filterProjects(projects, { ...filters, held: 'hide' })).toHaveLength(
+      2,
+    );
+    expect(
+      filterProjects(projects, { ...filters, group: 'house_only' }),
+    ).toHaveLength(1);
+    const csv = projectsCsv(selected, meta);
+    expect(csv).toContain('Rehabilitation of Mult-Purpose Building, Banago');
+    expect(csv).not.toContain('"central"');
   });
 
   test('CSV preserves missing amounts and provenance and neutralizes formulas', () => {

@@ -14,7 +14,12 @@ import {
   Share2,
   X,
 } from 'lucide-react';
-import { parseAsInteger, parseAsString, useQueryStates } from 'nuqs';
+import {
+  parseAsInteger,
+  parseAsString,
+  parseAsStringLiteral,
+  useQueryStates,
+} from 'nuqs';
 import {
   useCallback,
   useDeferredValue,
@@ -173,6 +178,7 @@ export default function NationalProjectsPage() {
       q: parseAsString.withDefault(''),
       office: parseAsString.withDefault(''),
       program: parseAsString.withDefault(''),
+      type: parseAsStringLiteral(['', 'multipurpose_building']).withDefault(''),
       group: parseAsString.withDefault(''),
       held: parseAsString.withDefault('all'),
       sort: parseAsString.withDefault('house'),
@@ -237,13 +243,22 @@ export default function NationalProjectsPage() {
     q: search,
     office: query.office,
     program: query.program,
+    type: query.type,
     group: query.group,
     held: query.held,
   };
   const allRows = snapshot?.rows ?? [];
   const filtered = useMemo(
     () => filterProjects(allRows, filters),
-    [allRows, search, query.office, query.program, query.group, query.held],
+    [
+      allRows,
+      search,
+      query.office,
+      query.program,
+      query.type,
+      query.group,
+      query.held,
+    ],
   );
   const sorted = useMemo(
     () => sortProjects(filtered, query.sort),
@@ -253,11 +268,11 @@ export default function NationalProjectsPage() {
   // Ignore the chart's own dimension when drawing its choices, so a second click clears the selection.
   const officeChartRows = useMemo(
     () => filterProjects(allRows, { ...filters, office: '' }),
-    [allRows, search, query.program, query.group, query.held],
+    [allRows, search, query.program, query.type, query.group, query.held],
   );
   const programChartRows = useMemo(
     () => filterProjects(allRows, { ...filters, program: '' }),
-    [allRows, search, query.office, query.group, query.held],
+    [allRows, search, query.office, query.type, query.group, query.held],
   );
   const options = (key: 'office' | 'program') =>
     [...new Set(allRows.flatMap((row) => (row[key] ? [row[key]] : [])))].sort();
@@ -271,6 +286,10 @@ export default function NationalProjectsPage() {
     ['q', query.q ? `Search: ${query.q}` : ''],
     ['office', query.office],
     ['program', query.program],
+    [
+      'type',
+      query.type === 'multipurpose_building' ? 'Multipurpose buildings' : '',
+    ],
     ['group', GROUPS.find(([key]) => key === query.group)?.[1] ?? query.group],
     [
       'held',
@@ -529,6 +548,7 @@ export default function NationalProjectsPage() {
                       office,
                       q: '',
                       program: '',
+                      type: '',
                       group: '',
                       held: 'all',
                       page: 1,
@@ -643,6 +663,11 @@ export default function NationalProjectsPage() {
                         “Bacolod” can pass through another city; search results
                         are not geographic city totals.
                       </p>
+                      <p>
+                        Project type matches project titles, not budget
+                        categories. A project entry can cover several buildings
+                        or repairs to an existing building.
+                      </p>
                     </div>
                   </details>
                   <section
@@ -677,9 +702,17 @@ export default function NationalProjectsPage() {
                         {renderFilters()}
                       </div>
                     </details>
-                    <div className="mt-3 hidden grid-cols-4 gap-3 lg:grid">
+                    <div className="mt-3 hidden gap-3 lg:grid lg:grid-cols-3 xl:grid-cols-5">
                       {renderFilters()}
                     </div>
+                    {query.type === 'multipurpose_building' && (
+                      <p className="mt-3 text-xs leading-5 text-slate-500">
+                        Matches building titles, including the source’s
+                        “Mult-Purpose” spelling. Includes construction,
+                        completion, and rehabilitation—not a count of individual
+                        buildings.
+                      </p>
+                    )}
                     {chips.length > 0 && (
                       <div className="mt-3 flex flex-wrap items-center gap-2">
                         {chips.map(([key, label]) => (
@@ -707,6 +740,7 @@ export default function NationalProjectsPage() {
                               q: '',
                               office: '',
                               program: '',
+                              type: '',
                               group: '',
                               held: 'all',
                               sort: 'house',
@@ -762,6 +796,16 @@ export default function NationalProjectsPage() {
                             {filtered.length.toLocaleString()} of{' '}
                             {allRows.length.toLocaleString()} comparison records
                             {busy ? ' · refreshing source…' : ''}
+                          </p>
+                          <p className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs leading-5 text-slate-600">
+                            <span className="font-medium text-teal-700">
+                              House: {money(stats.house, true)} ·{' '}
+                              {stats.houseCount.toLocaleString()} entries
+                            </span>
+                            <span>
+                              Executive: {money(stats.nep, true)} ·{' '}
+                              {stats.nepCount.toLocaleString()} entries
+                            </span>
                           </p>
                         </div>
                         <label className="flex items-center gap-2 text-xs text-slate-500">
@@ -1002,6 +1046,19 @@ export default function NationalProjectsPage() {
   function renderFilters() {
     return (
       <>
+        <label className="text-xs text-slate-500">
+          Project type
+          <select
+            className={`${control} mt-1`}
+            value={query.type}
+            onChange={(event) => updateFilter('type', event.target.value)}
+          >
+            <option value="">All project types</option>
+            <option value="multipurpose_building">
+              Multipurpose buildings
+            </option>
+          </select>
+        </label>
         <label className="text-xs text-slate-500">
           Implementing office
           <select
