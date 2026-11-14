@@ -1,159 +1,76 @@
-# Public Transport Routes, Schedules & Real-Time Transit Information — Bacolod City
+# Public Transport & Commute Guide — Bacolod City
 
-Getting around Bacolod City is easy with **jeepneys, buses, taxis, and tricycles** serving all major areas and barangays. Use **CommuteBacolod.com** for real-time route planning and transit updates.
+Plan jeepney trips with Lagaw.ph, formerly Commute Bacolod, and find official sources for fares, ferry bookings, and transport concerns.
 
----
+**Last reviewed:** November 14, 2026
 
-## 1) CommuteBacolod — Your Smart Transit Guide
+## 1) Plan a Jeepney Trip with Lagaw.ph
 
-**Website:** [commutebacolod.com](https://www.commutebacolod.com/)
-**Twitter:** [@CommuteBacolod](https://twitter.com/CommuteBacolod)
+[Open Lagaw.ph](https://lagaw.ph/) · [iPhone app](https://apps.apple.com/app/id6793345740) · [Android app](https://play.google.com/store/apps/details?id=com.commutebacolod.mobile)
 
-**CommuteBacolod** is the primary platform for Bacolod City commuters, offering:
+Lagaw.ph is an independently developed service. BetterBacolod links to it; this page is not a route planner or a government transport service.
 
-- **Real-time jeepney and bus routes**
-- **Route planning between any two locations**
-- **Public transport schedules**
-- **Fare information**
-- **Commute tips and updates**
+The developer describes these features:
 
-### How to Use
+- Suggested jeepney journeys and alternative routes
+- Estimated fares, distances, and number of rides
+- Walking, transfer, and jeepney directions
+- Phone-location guidance while following a trip
+- The option to avoid selected jeepney routes
 
-1. Visit [commutebacolod.com](https://www.commutebacolod.com/)
-2. Enter your starting point and destination
-3. Get step-by-step directions with route numbers
-4. Check real-time updates on transit schedules
+Lagaw's website lists coverage for **Bacolod, Talisay, Silay, and Murcia**. Check the service for the routes currently available. If no route appears, ask a driver or local operator about other options.
 
----
+Route suggestions and phone-location guidance should not be treated as live vehicle tracking or arrival predictions. This guide does not provide bus or ferry timetables.
 
-## 2) Jeepney Routes
+### Before You Board
 
-Jeepneys are the **primary mode of public transportation** in Bacolod City, covering all major areas, barangays, downtown districts, and key destinations.
+1. Open the website or app and choose your starting point and destination.
+2. Review the walking sections, transfers, and estimated fare before choosing a journey.
+3. Check the vehicle's route signboard and confirm your destination and fare with the driver or conductor.
 
-### Finding Your Route
+## 2) Check the Fare for Your Trip
 
-- **CommuteBacolod.com** — Most comprehensive and up-to-date route database
-- **Route signboards** — Check the front and side of jeepneys for destination boards
-- **Ask the driver** — Drivers are familiar with all routes and can confirm if they pass your destination
-- **Barangay information desks** — Can provide local jeepney route details
+An app estimate is not an official fare matrix. Check the approved fare displayed in the vehicle and consult [LTFRB announcements and fare references](https://ltfrb.gov.ph/) for regulated services.
 
-### Common Routes
+- **Jeepneys:** Confirm the fare for your route, distance, and vehicle type. Do not assume traditional and modern jeepneys charge the same amount.
+- **Metered taxis:** Check the meter and applicable fare information. For an app booking, review the quoted price and any charges before confirming.
+- **Tricycles:** Ask for the posted local fare or confirm the price before the trip, including whether it is per passenger or for the whole vehicle.
 
-Jeepney routes typically serve:
+This guide does not publish a fixed minimum fare or guarantee taxi, tricycle, or ride-hailing availability at a particular time or location.
 
-- Downtown Bacolod (Lacson St., Araneta St., Plaza Mart areas)
-- Major barangays (Mandalagan, Villamonte, Taculing, Bata, etc.)
-- Public Market and terminal areas
-- Shopping centers and malls
-- Schools and universities
-- Government Center (Circumferential Rd.)
+## 3) Taking a Ferry to or from Iloilo
 
-**Fare:** Standard jeepney fares follow LTFRB-approved rates (minimum ₱13 for first 4 km as of 2026)
+Use the operator's booking service for your travel date and check its advisories before leaving for the port. Fares, sailings, and journey times can change.
 
----
+### OceanJet: Check the Terminal on Your Ticket
 
-## 3) Taxis
+OceanJet lists its Bacolod ticketing office at **Simplicio Palanca Seaport Terminal, BREDCO Port 2, Reclamation Area, Bacolod City**. Its Iloilo office is listed at the PPA Fast Craft Terminal in Lapuz, Iloilo City.
 
-Metered taxis are available 24/7 in major areas of Bacolod City.
+- [OceanJet booking website](https://www.oceanjet.net/)
+- [OceanJet ticketing offices and contacts](https://oceanjet.net/contact-us)
+- [OceanJet travel advisories](https://oceanjet.net/travel-advisories)
 
-### Standard Rates
+Do not use **BREDCO Port** and **Banago Port** interchangeably. Confirm the departure and arrival terminal shown on your ticket. Other operators may use different terminals or ports; check directly before arranging a transfer.
 
-- **Flag down rate:** ₱40 (first 500 meters)
-- **Per kilometer:** Check current LTFRB rates
-- **Available:** 24/7 in downtown, malls, terminals, and busy areas
+## 4) Airport Transfers
 
-### Booking Options
+For airport information, airline booking links, and transfer-planning advice, see the [Bacolod-Silay Airport guide](/transportation/bacolod-silay-airport).
 
-- **Hail on the street** — Available in downtown and commercial areas
-- **Ride-hailing apps** — Grab, Move It (where available)
-- **Hotel/mall taxi queues** — Organized pickup points
+Confirm any shuttle or other transfer directly with the provider. A route to Silay does not by itself confirm a direct service to the airport.
 
----
+## 5) Transport Concerns and Local Information
 
-## 4) Tricycles
+The city's contact directory lists the **Bacolod Traffic Authority Office (BTAO)** at [btao@bacolodcity.gov.ph](mailto:btao@bacolodcity.gov.ph).
 
-Tricycles serve **barangay routes** and short-distance trips within neighborhoods.
+Use the [Bacolod City contact directory](https://bacolodcity.gov.ph/contact-us/) for published office contacts. For a booking, fare quote, cancellation, or terminal question, contact the transport provider directly.
 
-### Usage
+## Sources and Review Notes
 
-- **Fixed rates** within barangay zones (typically ₱10-₱20 per person)
-- **Negotiate fare** for special trips or longer distances
-- **Available in all barangays** — primary transport within residential areas
+- [Lagaw.ph](https://lagaw.ph/) — current name, coverage, and official app links
+- [Lagaw.ph on the App Store](https://apps.apple.com/app/id6793345740) — developer's rebranding announcement
+- [Lagaw.ph on Google Play](https://play.google.com/store/apps/details?id=com.commutebacolod.mobile) — developer-described trip-planning features
+- [LTFRB](https://ltfrb.gov.ph/) — regulator's portal; consult the applicable fare matrix and current advisories
+- [OceanJet](https://www.oceanjet.net/) and its [contact directory](https://oceanjet.net/contact-us) — booking and terminal information
+- [Bacolod City contact directory](https://bacolodcity.gov.ph/contact-us/) — BTAO email
 
----
-
-## 5) Inter-Island Transport (Ferry Services)
-
-### BREDCO — Banago Port (Bacolod ↔ Iloilo Routes)
-
-**BREDCO (Bacolod Real Estate Development Corporation)** operates Banago Port for inter-island ferry services.
-
-**Routes:**
-
-- **Bacolod to Iloilo** — Departs Banago Port (Bacolod) → Arrives Iloilo City Port
-- **Iloilo to Bacolod** — Departs Iloilo City Port → Arrives Banago Port (Bacolod)
-- Regular ferry services both directions daily
-- Bus + Ferry combination packages available
-
-**Ferry Operators:**
-
-- Weesam Express
-- FastCat
-- Ocean Jet (check current schedules)
-
-**Travel Time:** Approximately **1 hour** by fast ferry (both directions)
-
-**Booking:**
-
-- Visit Banago Port ticket counters
-- Book online via ferry operator websites
-- Available combination bus+ferry tickets for seamless travel
-
-**Banago Port Location:** Banago, Bacolod City
-
----
-
-## 6) Contact for Transportation Information
-
-### Bacolod Traffic and Transport Management Division (BTTMD)
-
-- **Email:** bttmd@bacolodcity.gov.ph
-- **Location:** Bacolod City Government Center, Circumferential Rd, Brgy. Villamonte, Bacolod City
-- **Website:** [bacolodcity.gov.ph](https://bacolodcity.gov.ph)
-
-### Bacolod Traffic Authority Office (BTAO)
-
-- **Email:** btao@bacolodcity.gov.ph
-- **For:** Traffic management, violations, road concerns
-
----
-
-## 7) Peak Hours & Commute Tips
-
-### Peak Traffic Hours
-
-- **Morning rush:** 6:00 AM - 9:00 AM
-- **Evening rush:** 5:00 PM - 8:00 PM
-- Allow extra travel time during these hours
-
-### Safety & Smart Commuting
-
-- Keep valuables secure and be aware of your surroundings
-- Have exact fare ready for jeepneys
-- Use well-lit stops and terminals at night
-- Check CommuteBacolod.com before traveling for route updates
-- Consider carpooling or public transport to reduce traffic
-
----
-
-**Sources:**
-
-- [Bacolod City Government Departments](https://bacolodcity.gov.ph/departments/) — Jan 10, 2026
-- [CommuteBacolod](https://www.commutebacolod.com/) — Jan 10, 2026
-- [Bacolod City Contact Information](https://bacolodcity.gov.ph/contact-us/) — Jan 10, 2026
-
----
-
-### Key Reminder
-
-✅ For the most **accurate and real-time** route information, always check **[CommuteBacolod.com](https://www.commutebacolod.com/)** before your trip.
+Reviewed November 14, 2026. Links lead to external providers or government sources; BetterBacolod does not operate these transport services or guarantee their availability.

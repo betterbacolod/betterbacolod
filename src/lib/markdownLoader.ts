@@ -44,7 +44,9 @@ export async function loadMarkdownContent(
     const title = titleMatch ? titleMatch[1] : undefined;
 
     // Extract description from the first paragraph after the title
-    const descriptionMatch = content.match(/^#\s+.+$\n\n(.+?)(?:\n\n|$)/s);
+    const descriptionMatch = content.match(
+      /^#[\t ]+[^\r\n]+\r?\n\r?\n(.+?)(?:\r?\n\r?\n|$)/s,
+    );
     const description = descriptionMatch
       ? descriptionMatch[1].replace(/^>\s*/, '').trim()
       : undefined;
