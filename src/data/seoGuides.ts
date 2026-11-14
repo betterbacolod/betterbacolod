@@ -130,11 +130,11 @@ export const seoGuides: SeoGuide[] = [
     title: 'Bacolod Transportation',
     heading: 'Bacolod Transportation',
     description:
-      'Find Bacolod transportation services, public routes, airport information, traffic violations, parking permits, and franchise guides.',
+      'Find Lagaw.ph jeepney planning, ferry booking links, airport transfer advice, and Bacolod transport service guides.',
     keywords:
-      'Bacolod transportation, Bacolod jeepney routes, Bacolod public transport, Bacolod traffic violations, Bacolod airport',
+      'Bacolod transportation, Lagaw.ph, Commute Bacolod, Bacolod jeepney routes, Bacolod public transport, Bacolod airport',
     intro:
-      'This guide groups Bacolod transport information for commuters, drivers, operators, and residents looking for route and permit details.',
+      'Start with Lagaw.ph, formerly Commute Bacolod, for jeepney trip planning, or use these guides for ferry bookings, airport transfers, and transport services.',
     primaryLinks: [
       {
         label: 'Transportation Services',
@@ -143,16 +143,16 @@ export const seoGuides: SeoGuide[] = [
           'Browse transport routes, permits, parking, traffic violations, and airport information.',
       },
       {
-        label: 'Public Transport Routes & Schedules',
+        label: 'Public Transport & Commute Guide',
         href: '/transportation/check-public-transport-routes-and-schedules',
         description:
-          'Find public route and commute information currently collected for Bacolod.',
+          'Find Lagaw.ph jeepney planning, fare-checking advice, ferry booking links, and published transport contacts.',
       },
       {
         label: 'Bacolod-Silay International Airport',
         href: '/transportation/bacolod-silay-airport',
         description:
-          'Airport guide, flight information, and transportation options to and from Bacolod.',
+          'Check airport information, official airline booking links, and advice for arranging your transfer.',
       },
     ],
     relatedLinks: [

@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import remarkGfm from 'remark-gfm';
 import SEO from '../components/SEO';
 import Breadcrumbs from '../components/ui/Breadcrumbs';
-import { Card, CardContent, CardHeader } from '../components/ui/Card';
+import { Card, CardHeader } from '../components/ui/Card';
 import { Heading } from '../components/ui/Heading';
 import Section from '../components/ui/Section';
 import { Text } from '../components/ui/Text';
@@ -111,9 +111,6 @@ export default function Document({
         <Breadcrumbs className="mb-8" items={breadcrumbs} />
         <Card className="mb-8 markdown-content">
           <CardHeader>
-            {markdownContent.description && (
-              <CardContent>{markdownContent.description}</CardContent>
-            )}
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
               components={markdownComponents}

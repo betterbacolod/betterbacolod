@@ -2,9 +2,9 @@
 # This file contains all the pages/services available under the Transportation category
 
 pages:
-  - name: 'Public Transport Routes & Schedules'
+  - name: 'Public Transport & Commute Guide'
     slug: 'check-public-transport-routes-and-schedules'
-    description: 'Jeepney routes, ferry schedules, and commute guides. Access real-time transit info via CommuteBacolod.com.'
+    description: 'Plan jeepney trips with Lagaw.ph, formerly Commute Bacolod. Find fare-checking advice, ferry booking links, and transport contacts.'
 
   - name: 'Transport Permits & Franchise Registration'
     slug: 'apply-for-transport-permits-and-franchise-registration'
@@ -20,4 +20,4 @@ pages:
 
   - name: 'Bacolod-Silay International Airport'
     slug: 'bacolod-silay-airport'
-    description: 'Flight info, airlines (Cebu Pacific, PAL, AirAsia), airport shuttle, and how to get there.'
+    description: 'Airport information, official airline booking links, and advice for arranging transfers to and from Bacolod.'
