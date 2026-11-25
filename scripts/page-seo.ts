@@ -1,4 +1,12 @@
+import { existsSync, readFileSync } from 'node:fs';
 import { siteMetadata, siteStructuredData } from '../src/data/siteMetadata';
+
+export function readSpaTemplate() {
+  return readFileSync(
+    existsSync('dist/spa.html') ? 'dist/spa.html' : 'dist/index.html',
+    'utf8',
+  );
+}
 
 export const escapeHtml = (value: string) =>
   value.replace(

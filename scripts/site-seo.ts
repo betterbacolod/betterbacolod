@@ -6,7 +6,7 @@ import {
   departmentBudgetsMetadata,
   departmentBudgetsStructuredData,
 } from '../src/features/transparency/department-budgets/metadata';
-import { escapeHtml, renderPageHtml } from './page-seo';
+import { escapeHtml, readSpaTemplate, renderPageHtml } from './page-seo';
 
 const main = (body: string) =>
   `<main style="max-width:960px;margin:32px auto;padding:24px;font-family:Arial,sans-serif;line-height:1.6;color:#0f172a"><nav aria-label="Main"><a href="/">BetterBacolod</a> · <a href="/services">Services</a> · <a href="/government">Government</a> · <a href="/transparency">Transparency</a></nav>${body}</main>`;
@@ -32,9 +32,10 @@ export function renderDepartmentBudgetsHtml(
 }
 
 export function writeSiteSeoHtml() {
-  const template = readFileSync('dist/index.html', 'utf8');
+  const template = readSpaTemplate();
+  writeFileSync('dist/spa.html', template);
   const write = (path: string, html: string) => {
-    const directory = path === '/' ? 'dist/home' : `dist${path}`;
+    const directory = path === '/' ? 'dist' : `dist${path}`;
     mkdirSync(directory, { recursive: true });
     writeFileSync(`${directory}/index.html`, html);
   };

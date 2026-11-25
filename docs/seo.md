@@ -12,9 +12,11 @@ publishes Dataset metadata with a JSON download, source URLs, build date, scope,
 and proposal/actual-spending caveats. No unverified data licence is claimed.
 `src/data/siteMetadata.ts` is shared by runtime and build-time metadata.
 
-Explicit Vercel rewrites select the generated HTML before the SPA fallback.
-The homepage is emitted separately to `dist/home/index.html` so unrelated SPA
-routes are not served a homepage canonical or homepage body. Base Open Graph
+Vercel prioritizes existing filesystem pages over rewrites. The homepage is
+therefore emitted at `dist/index.html`, while the neutral application shell is
+saved to `dist/spa.html` for the catch-all rewrite. Other generated pages also
+have explicit rewrites. Unrelated SPA routes are not served a homepage canonical
+or homepage body. Base Open Graph
 tags are marked for Helmet to manage rather than leaving duplicate generic tags
 after client navigation. Filter URLs canonicalize to the unfiltered collection.
 
@@ -36,6 +38,7 @@ First-party guidance:
 - [Google: AI features and your website](https://developers.google.com/search/docs/appearance/ai-features)
 - [Google: Dataset structured data](https://developers.google.com/search/docs/appearance/structured-data/dataset)
 - [Google: Sitemap guidance](https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap)
+- [Vercel: rewrite and filesystem precedence](https://vercel.com/docs/project-configuration/vercel-json)
 
 Google's AI search features do not require special AI text files or special
 schema. This work improves readable content, source attribution, link discovery,

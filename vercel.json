@@ -27,7 +27,6 @@
     }
   ],
   "rewrites": [
-    { "source": "/", "destination": "/home/index.html" },
     { "source": "/transparency", "destination": "/transparency/index.html" },
     { "source": "/transparency/", "destination": "/transparency/index.html" },
     {
@@ -96,7 +95,7 @@
     },
     {
       "source": "/(.*)",
-      "destination": "/index.html"
+      "destination": "/spa.html"
     }
   ]
 }

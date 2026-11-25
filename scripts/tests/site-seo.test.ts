@@ -66,7 +66,6 @@ describe('standard SEO and machine-readable source attribution', () => {
   test('every generated guide and budget page has an explicit Vercel rewrite before the fallback', () => {
     const config = JSON.parse(readFileSync('vercel.json', 'utf8'));
     const paths = [
-      '/',
       '/transparency',
       '/transparency/department-budgets',
       ...seoGuides.map((guide) => guide.path),
@@ -77,11 +76,14 @@ describe('standard SEO and machine-readable source attribution', () => {
       );
       expect(index).toBeGreaterThanOrEqual(0);
       expect(index).toBeLessThan(config.rewrites.length - 1);
-      expect(config.rewrites[index].destination).toBe(
-        path === '/' ? '/home/index.html' : `${path}/index.html`,
-      );
+      expect(config.rewrites[index].destination).toBe(`${path}/index.html`);
     }
-    expect(config.rewrites.at(-1).destination).toBe('/index.html');
+    expect(
+      config.rewrites.some(
+        (rewrite: { source: string }) => rewrite.source === '/',
+      ),
+    ).toBe(false);
+    expect(config.rewrites.at(-1).destination).toBe('/spa.html');
     expect(siteMetadata.description).toContain('Bacolod');
   });
 });
