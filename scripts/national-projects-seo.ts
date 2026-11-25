@@ -1,8 +1,9 @@
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync } from 'node:fs';
 import {
   nationalProjectsMetadata as meta,
   nationalProjectsStructuredData,
 } from '../src/features/transparency/national-projects/metadata';
+import { readSpaTemplate } from './page-seo';
 
 const escapeHtml = (value: string) =>
   value.replace(
@@ -76,6 +77,6 @@ export function writeNationalProjectsHtml() {
   mkdirSync(directory, { recursive: true });
   writeFileSync(
     `${directory}/index.html`,
-    renderNationalProjectsHtml(readFileSync('dist/index.html', 'utf8')),
+    renderNationalProjectsHtml(readSpaTemplate()),
   );
 }
