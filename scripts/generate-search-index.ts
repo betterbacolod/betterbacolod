@@ -4,6 +4,7 @@ import { create, insert, save } from '@orama/orama';
 import yaml from 'js-yaml';
 import { seoGuides } from '../src/data/seoGuides';
 import { writeNationalProjectsHtml } from './national-projects-seo';
+import { writeSiteSeoHtml } from './site-seo';
 
 const schema = {
   title: 'string',
@@ -87,6 +88,16 @@ async function generateSearchIndex() {
   // Index main pages
   const pages = [
     {
+      title: '2027 Department Budgets: Bacolod & NIR',
+      description:
+        'Explore proposed DepEd, DOH, and DSWD budgets, with Bacolod division and NIR entries and source documents',
+      content:
+        'DepEd education school Bacolod division NIR Negros Island Region DOH health DSWD social welfare department budget 2027 NEP House bill proposal MOOE personnel source',
+      url: '/transparency/department-budgets',
+      category: 'Transparency',
+      type: 'page',
+    },
+    {
       title: '2027 National Projects in Bacolod & NIR',
       description:
         'Compare live DPWH Executive and House budget proposals across Negros Island Region',
@@ -169,6 +180,7 @@ async function generateSearchIndex() {
     `✅ Indexed ${indexed} pages + ${servicesData.categories.length} categories + ${seoGuides.length} guides`,
   );
   writeNationalProjectsHtml();
+  writeSiteSeoHtml();
 }
 
 generateSearchIndex().catch((error) => {
@@ -186,7 +198,6 @@ function buildSitemap({
   servicePageUrls: string[];
 }) {
   const siteUrl = 'https://betterbacolod.org';
-  const lastmod = new Date().toISOString().slice(0, 10);
   const urls = [
     { loc: '/', priority: '1.0' },
     { loc: '/services', priority: '0.9' },
@@ -194,6 +205,7 @@ function buildSitemap({
     { loc: '/government', priority: '0.9' },
     { loc: '/transparency', priority: '0.9' },
     { loc: '/transparency/national-projects', priority: '0.8' },
+    { loc: '/transparency/department-budgets', priority: '0.8' },
     { loc: '/about', priority: '0.7' },
     { loc: '/sitemap', priority: '0.5' },
     ...guideUrls.map((loc) => ({ loc, priority: '0.8' })),
@@ -204,7 +216,7 @@ function buildSitemap({
   const body = urls
     .map(
       ({ loc, priority }) =>
-        `  <url><loc>${siteUrl}${loc}</loc><lastmod>${lastmod}</lastmod><priority>${priority}</priority></url>`,
+        `  <url><loc>${siteUrl}${loc}</loc><priority>${priority}</priority></url>`,
     )
     .join('\n');
 

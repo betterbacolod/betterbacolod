@@ -27,6 +27,65 @@
     }
   ],
   "rewrites": [
+    { "source": "/", "destination": "/home/index.html" },
+    { "source": "/transparency", "destination": "/transparency/index.html" },
+    { "source": "/transparency/", "destination": "/transparency/index.html" },
+    {
+      "source": "/transparency/department-budgets",
+      "destination": "/transparency/department-budgets/index.html"
+    },
+    {
+      "source": "/transparency/department-budgets/",
+      "destination": "/transparency/department-budgets/index.html"
+    },
+    {
+      "source": "/bacolod-government-services",
+      "destination": "/bacolod-government-services/index.html"
+    },
+    {
+      "source": "/bacolod-government-services/",
+      "destination": "/bacolod-government-services/index.html"
+    },
+    {
+      "source": "/bacolod-fuel-prices",
+      "destination": "/bacolod-fuel-prices/index.html"
+    },
+    {
+      "source": "/bacolod-fuel-prices/",
+      "destination": "/bacolod-fuel-prices/index.html"
+    },
+    {
+      "source": "/bacolod-health-services",
+      "destination": "/bacolod-health-services/index.html"
+    },
+    {
+      "source": "/bacolod-health-services/",
+      "destination": "/bacolod-health-services/index.html"
+    },
+    {
+      "source": "/bacolod-transportation",
+      "destination": "/bacolod-transportation/index.html"
+    },
+    {
+      "source": "/bacolod-transportation/",
+      "destination": "/bacolod-transportation/index.html"
+    },
+    {
+      "source": "/bacolod-scholarships",
+      "destination": "/bacolod-scholarships/index.html"
+    },
+    {
+      "source": "/bacolod-scholarships/",
+      "destination": "/bacolod-scholarships/index.html"
+    },
+    {
+      "source": "/bacolod-barangays",
+      "destination": "/bacolod-barangays/index.html"
+    },
+    {
+      "source": "/bacolod-barangays/",
+      "destination": "/bacolod-barangays/index.html"
+    },
     {
       "source": "/transparency/national-projects",
       "destination": "/transparency/national-projects/index.html"

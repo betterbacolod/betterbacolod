@@ -24,6 +24,10 @@ const Sitemap: React.FC = () => {
           label: '2027 National Projects',
           href: '/transparency/national-projects',
         },
+        {
+          label: '2027 Department Budgets',
+          href: '/transparency/department-budgets',
+        },
         { label: 'About', href: '/about' },
       ],
     },

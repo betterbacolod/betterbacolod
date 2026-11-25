@@ -1,50 +1,14 @@
 import { Helmet } from 'react-helmet-async';
-
-const siteUrl = 'https://betterbacolod.org';
-
-const websiteSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: 'BetterBacolod',
-  alternateName: 'Better Bacolod',
-  url: siteUrl,
-  description:
-    'Community portal for Bacolod City services, government information, barangays, and transparency data',
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: `${siteUrl}/search?q={search_term_string}`,
-    'query-input': 'required name=search_term_string',
-  },
-};
-
-const organizationSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'BetterBacolod',
-  url: siteUrl,
-  logo: `${siteUrl}/images/icons/B-Logo/BetterBacolod Icons_favicon tp.png`,
-  description:
-    'Independent civic information project for Bacolod City government services, public guides, and transparency data',
-  areaServed: {
-    '@type': 'City',
-    name: 'Bacolod City',
-    containedInPlace: {
-      '@type': 'AdministrativeArea',
-      name: 'Negros Occidental, Philippines',
-    },
-  },
-  sameAs: ['https://facebook.com/betterbacolod.org'],
-};
+import { siteStructuredData } from '../data/siteMetadata';
 
 export default function StructuredData() {
   return (
     <Helmet>
-      <script type="application/ld+json">
-        {JSON.stringify(websiteSchema)}
-      </script>
-      <script type="application/ld+json">
-        {JSON.stringify(organizationSchema)}
-      </script>
+      {siteStructuredData.map((data) => (
+        <script key={data['@type']} type="application/ld+json">
+          {JSON.stringify(data)}
+        </script>
+      ))}
     </Helmet>
   );
 }

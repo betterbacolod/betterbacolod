@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
+import { siteMetadata } from '../data/siteMetadata';
 
 interface SEOProps {
   title?: string;
@@ -19,7 +20,7 @@ export default function SEO({
   description,
   keywords,
   image,
-  imageAlt = 'BetterBacolod civic information portal',
+  imageAlt = siteMetadata.imageAlt,
   imageWidth = 1080,
   imageHeight = 1080,
   structuredData = [],
@@ -27,12 +28,10 @@ export default function SEO({
   type = 'website',
 }: SEOProps) {
   const location = useLocation();
-  const siteName = 'BetterBacolod';
-  const siteUrl = 'https://betterbacolod.org';
-  const defaultTitle =
-    'BetterBacolod | Bacolod City Services, Government Info & Public Data';
-  const defaultDescription =
-    'Find Bacolod City services, government offices, barangay information, transparency data, fuel prices, and public guides in one civic portal.';
+  const siteName = siteMetadata.name;
+  const siteUrl = siteMetadata.url;
+  const defaultTitle = siteMetadata.title;
+  const defaultDescription = siteMetadata.description;
   const defaultKeywords =
     'bacolod city, bacolod services, bacolod government, bacolod barangays, bacolod fuel prices, negros occidental, civic tech';
 
@@ -42,7 +41,7 @@ export default function SEO({
   const fullUrl = canonicalPath.startsWith('http')
     ? canonicalPath
     : `${siteUrl}${canonicalPath}`;
-  const fullImage = image || `${siteUrl}/images/icons/1080x1080/og-image.png`;
+  const fullImage = image || siteMetadata.image;
 
   return (
     <Helmet>
