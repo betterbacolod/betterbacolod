@@ -25,6 +25,10 @@ const NationalProjects = lazy(
   () =>
     import('./features/transparency/national-projects/NationalProjectsPage'),
 );
+const DepartmentBudgets = lazy(
+  () =>
+    import('./features/transparency/department-budgets/DepartmentBudgetsPage'),
+);
 
 function App() {
   return (
@@ -56,6 +60,10 @@ function App() {
                 <Route
                   path="/transparency/national-projects"
                   element={<NationalProjects />}
+                />
+                <Route
+                  path="/transparency/department-budgets"
+                  element={<DepartmentBudgets />}
                 />
                 <Route path="/about" element={<About />} />
                 <Route path="/sitemap" element={<Sitemap />} />

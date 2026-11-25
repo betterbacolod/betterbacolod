@@ -1,5 +1,13 @@
 # scripts
 
+## Department-budget snapshot
+
+Run `bun run scripts/import-department-budgets.ts` to refresh the saved FY2027
+DepEd, DOH, and DSWD comparison. The importer validates public BetterGov JSON,
+retains exact NIR hierarchies and source-page evidence, and records source hashes.
+See [department-budgets.md](../docs/department-budgets.md) for scope, checks, and
+double-counting caveats. Do not edit the generated JSON by hand.
+
 ## Fuel-price ingestion
 
 The `Fuel Price Watch` page (`/transparency` → Fuel Price Watch tile) is backed

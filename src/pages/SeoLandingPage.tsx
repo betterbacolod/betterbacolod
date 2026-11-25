@@ -6,6 +6,7 @@ import { Heading } from '../components/ui/Heading';
 import Section from '../components/ui/Section';
 import { Text } from '../components/ui/Text';
 import type { SeoGuide } from '../data/seoGuides';
+import { pageStructuredData } from '../data/siteMetadata';
 
 function GuideLink({
   href,
@@ -45,6 +46,11 @@ export default function SeoLandingPage({ guide }: { guide: SeoGuide }) {
         description={guide.description}
         keywords={guide.keywords}
         url={guide.path}
+        structuredData={pageStructuredData(
+          guide.path,
+          guide.title,
+          guide.description,
+        )}
       />
       <Section className="min-h-[60vh]">
         <div className="max-w-5xl mx-auto">

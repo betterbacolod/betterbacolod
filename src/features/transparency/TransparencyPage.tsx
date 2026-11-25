@@ -18,6 +18,7 @@ import { Card, CardContent } from '../../components/ui/Card';
 import { Heading } from '../../components/ui/Heading';
 import Section from '../../components/ui/Section';
 import { Text } from '../../components/ui/Text';
+import { pageStructuredData } from '../../data/siteMetadata';
 import budgetData from '../../data/transparency/budget-region6.json';
 import CityBudgetSection from './components/CityBudgetSection';
 import FloodControlSection from './components/FloodControlSection';
@@ -67,6 +68,13 @@ const categories: {
     description: 'Compare proposed DPWH projects across Bacolod and NIR',
     href: '/transparency/national-projects',
   },
+  {
+    slug: 'department-budgets',
+    name: '2027 Department Budgets',
+    icon: FolderOpen,
+    description: 'DepEd, DOH, and DSWD proposals with Bacolod and NIR entries',
+    href: '/transparency/department-budgets',
+  },
 ];
 
 const Transparency: React.FC = () => {
@@ -104,6 +112,11 @@ const Transparency: React.FC = () => {
         description="Explore Bacolod City transparency data, DOE fuel prices, flood control projects, infrastructure links, procurement, and public reports."
         keywords="Bacolod transparency, Bacolod fuel prices, Bacolod gas prices, Bacolod diesel price, Bacolod flood control, DPWH Bacolod"
         url="/transparency"
+        structuredData={pageStructuredData(
+          '/transparency',
+          'Bacolod Transparency Data',
+          'Explore Bacolod City transparency data, DOE fuel prices, flood control projects, infrastructure links, procurement, and public reports.',
+        )}
       />
       <Section className="min-h-[60vh]">
         <div className="text-center mb-6 md:mb-10">

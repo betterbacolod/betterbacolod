@@ -30,6 +30,7 @@ import {
 } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../../../components/SEO';
+import BudgetViews from '../components/BudgetViews';
 import { loadOfficeContext, loadProjects } from './api';
 import ComparisonChart from './ComparisonChart';
 import DistrictLeaderboard from './DistrictLeaderboard';
@@ -379,6 +380,7 @@ export default function NationalProjectsPage() {
               <ArrowLeft size={15} />
               Transparency
             </Link>
+            <BudgetViews />
             <div className="mt-1 flex flex-col justify-between gap-3 lg:flex-row lg:items-end">
               <div className="max-w-2xl">
                 <div className="flex flex-wrap gap-2 text-[11px] font-semibold uppercase tracking-widest">
